@@ -8,6 +8,7 @@ function Nav() {
         <NavLink linkText='servicios' />
         <NavLink linkText='Librerías' />
         <NavLink linkText='Casos de éxito' />
+        <NavLink linkText='blog' />
       </ul>
     </nav>
   );

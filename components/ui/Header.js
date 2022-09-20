@@ -11,10 +11,9 @@ function Header() {
             <Link href="/">
                 <Image className='object-contain cursor-pointer' src="/logo.png" alt="México developer center"  width={46} height={46}></Image>
             </Link>
-            <div className='flex flex-col'>
-              <h1 className='relative uppercase text-slate-50 font-RobotoCondense ml-3 opacity-60 text-lg font-normal leading-none'>Mexico</h1>
-              <span className='uppercase text-slate-50 font-RobotoCondense ml-3 opacity-60 text-lg font-light tracking-wide leading-none' >DEVELOPMENT CENTER</span>
-
+            <div className=''>
+              <h1 className='relative uppercase text-slate-50 font-RobotoCondense ml-3 opacity-60 text-lg font-normal leading-none'>Mexico <br></br>
+              <span className='uppercase text-slate-50 font-RobotoCondense opacity-60 text-lg font-light tracking-wide leading-none' >DEVELOPMENT CENTER</span></h1>
             </div>
         </div>
         <Nav/>

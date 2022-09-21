@@ -10,6 +10,7 @@ function Header() {
         <div className='w-11/12 flex justify-between mx-auto  '>
           <LogoNav />
           <Nav />
+          <button className='md:hidden bg-none text-white font-RobotoCondense uppercase tracking-widest'>Menu</button>
         </div>
       </header>
     </div>

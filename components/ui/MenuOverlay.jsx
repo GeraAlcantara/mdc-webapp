@@ -1,15 +1,21 @@
 import LogoNav from "./LogoNav";
-
+import { useState } from 'react';
 import MENU_ITEMS from "../data/MenuItems";
 import Link from "next/link";
-let year = new Date()
+
 function MenuOverlay() {
+  let year = new Date()
+  const [overlay, setoverlay] = useState(false)
+
+  const handleMenuOverlay = () =>{
+    setoverlay(!overlay)
+  }
   return (
-    <div className='opacity-100 visible bg-black h-full left-0 fixed top-0 w-full z-50 px-8 py-10'>
+    <div className={overlay ? 'opacity-100 visible bg-black h-full left-0 fixed top-0 w-full z-50 px-8 py-10': 'hidden bg-black h-full left-0 fixed top-0 w-full z-50 px-8 py-10' }>
       <header className='flex justify-between'>
         <LogoNav></LogoNav>
         <nav>
-          <button className='bg-none text-white font-RobotoCondense uppercase tracking-widest'>CLOSE</button>
+          <button onClick={handleMenuOverlay} className='bg-none text-white font-RobotoCondense uppercase tracking-widest'>CLOSE</button>
         </nav>
       </header>
       <div className='mt-16 flex flex-wrap gap-8'>

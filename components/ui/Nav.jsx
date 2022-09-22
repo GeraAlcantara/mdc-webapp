@@ -6,7 +6,7 @@ function Nav() {
     <nav className='hidden md:flex items-center'>
       <ul className='flex items-center'>
         {
-          MENU_ITEMS.map((item, idx) => <NavLink linkText={item.name} slug={item.slug} key={idx} />)
+          MENU_ITEMS.map((item, idx) => <NavLink linkText={item.name} slug={item.slug} key={item.slug+idx} />)
         }
       </ul>
     </nav>

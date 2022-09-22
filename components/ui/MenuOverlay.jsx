@@ -17,7 +17,7 @@ function MenuOverlay({istoggle}) {
           <button onClick={istoggle} className='bg-none text-white font-RobotoCondense uppercase tracking-widest'>CLOSE</button>
         </nav>
       </header>
-      <div className='mt-16 flex flex-wrap gap-8'>
+      <div className='mt-16 flex flex-wrap gap-8 '>
         {MENU_ITEMS.map((item, idx) => {
           return (
             <Link href={item.slug} key={idx + item.name}>
@@ -27,7 +27,7 @@ function MenuOverlay({istoggle}) {
         })}
       </div>
     
-      <h6 className='absolute bottom-0 left-0 px-10 py-8 font-RobotoCondense text-white uppercase ' style={{textShadow: 'rgb(91 175 87 / 74%) -1px -1px 6px, rgb(42 113 178 / 60%) 1px 1px 6px', overflowWrap: 'break-word'}} >Copyright © {year.getFullYear()} México Development Center. | All right reserved.  </h6>
+      <h6 className='absolute bottom-0 landscape:bottom-auto left-0 px-10 py-8 font-RobotoCondense text-white uppercase ' style={{textShadow: 'rgb(91 175 87 / 74%) -1px -1px 6px, rgb(42 113 178 / 60%) 1px 1px 6px', overflowWrap: 'break-word'}} >Copyright © {year.getFullYear()} México Development Center. | All right reserved.  </h6>
     </>
 
     

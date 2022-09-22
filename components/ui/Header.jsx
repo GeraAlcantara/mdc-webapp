@@ -19,7 +19,7 @@ function Header() {
 
       </div>
       
-      <header className='w-full  bg-black bg-opacity-80 py-2'>
+      <header className='w-full  bg-black py-4'>
         <div className='w-11/12 flex justify-between mx-auto  '>
           <LogoNav />
           <Nav />

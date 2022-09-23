@@ -14,8 +14,8 @@ module.exports = {
         bg_primary: '#001323'
       },
       fontFamily: {
-        RobotoCondense: ["Roboto Condensed", ...defaultTheme.fontFamily.sans],
-        'sans': ['Roboto Condensed', ...defaultTheme.fontFamily.sans]
+        RobotoCondense: ["Lato", ...defaultTheme.fontFamily.sans],
+        'sans': ['Lato', ...defaultTheme.fontFamily.sans]
       },
     },
   },

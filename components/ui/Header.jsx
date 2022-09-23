@@ -19,8 +19,8 @@ function Header() {
 
       </div>
       
-      <header className='w-full  bg-black py-4'>
-        <div className='w-11/12 flex justify-between mx-auto  '>
+      <header className='w-full py-4 '>
+        <div className=' flex justify-between sm:justify-between md:justify-between mx-auto  '>
           <LogoNav />
           <Nav />
           <button onClick={handleMenu} className='md:hidden bg-none text-white uppercase tracking-widest' >Menu</button>

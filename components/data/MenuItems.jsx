@@ -1,8 +1,8 @@
 export const MENU_ITEMS = [
-        {name:'inicio', slug: 'inicio' },
+        {name:'inicio', slug: '/' },
         {name:'servicios', slug: 'servicios' },
-        {name:'Librerías', slug: 'Librerías' },
-        {name:'Casos de éxito', slug: 'Casos de éxito' },
+        {name:'Librerías', slug: 'Librerias' },
+        {name:'Casos de éxito', slug: 'Casos-de-exito' },
         {name:'blog', slug: 'blog' },
       ]
 export default MENU_ITEMS

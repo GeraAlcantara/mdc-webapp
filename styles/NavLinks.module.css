@@ -1,0 +1,62 @@
+.navbar__item {
+  width: max-content;
+}
+
+.navbar__item a {
+  letter-spacing: 2px;
+  font-weight: 100;
+  display: block;
+  position: relative;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+.navbar__item a:hover {
+  opacity: 0.95;
+}
+
+.navbar__item a:hover::before, .navbar__item a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.navbar__item a.active {
+  opacity: 1;
+}
+
+.navbar__item a.active:before {
+  z-index: 2000;
+}
+
+.navbar__item a::before {
+  transition: width 0.25s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+  background: #4c76b8;
+}
+
+.navbar__item a::after, .navbar__item a::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 5px);
+  width: 0;
+  right: 0;
+  height: 4px;
+}
+
+.active {
+  opacity: 1;
+}
+.active:after {
+  background: #7cb25f;
+  background-image: linear-gradient(to right top, #008793, #00bf72, #a8eb12);
+  width: 100% !important;
+  left: 0;
+}
+.active:before {
+  z-index: 2000;
+}
+
+.navbar__item a::after {
+  transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+  background: #7cb25f;
+  background-image: linear-gradient(to right top, #7cb25f, #3b967c, #4cafb8);
+}

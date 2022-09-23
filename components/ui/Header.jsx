@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 
 function Header() {
-  const [toogleON, setToggleOn] = useState(true)
+  const [toogleON, setToggleOn] = useState(false)
 
   const handleMenu = () => {
     setToggleOn((prev)=> !prev)

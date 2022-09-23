@@ -23,7 +23,7 @@ function Header() {
         <div className='w-11/12 flex justify-between mx-auto  '>
           <LogoNav />
           <Nav />
-          <button onClick={handleMenu} className='md:hidden bg-none text-white font-RobotoCondense uppercase tracking-widest' >Menu</button>
+          <button onClick={handleMenu} className='md:hidden bg-none text-white uppercase tracking-widest' >Menu</button>
         </div>
       </header>
     </>

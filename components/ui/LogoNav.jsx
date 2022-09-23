@@ -8,9 +8,9 @@ function LogoNav() {
         <a className='flex items-center cursor-pointer'>
         <Image className='object-contain cursor-pointer' src='/logo.png' alt='México developer center' width={36} height={36}></Image>
       <div className='hidden md:block md:portrait:hidden '>
-        <h1 className='relative uppercase text-slate-50 ml-3 opacity-60 text-sm leading-none'>
+        <h1 className='relative uppercase text-slate-50 ml-3 opacity-60 text-sm leading-tight'>
           Mexico <br></br>
-          <span className='uppercase text-slate-50 opacity-60 text-sm tracking-wide leading-none'>DEVELOPMENT CENTER</span>
+          <span className='uppercase text-slate-50 opacity-60 text-sm tracking-wide leading-tight'>DEVELOPMENT CENTER</span>
         </h1>
       </div>
         </a>

@@ -1,11 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import Header from '../components/ui/Header';
+import Hero from '../components/ui/Hero';
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
     <>
+      <Hero></Hero>
       <div className='h-screen'>
         <p>some content</p>
       </div>

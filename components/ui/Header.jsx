@@ -18,14 +18,15 @@ function Header() {
       <MenuOverlay istoggle={handleMenu} ></MenuOverlay>
 
       </div>
-      
-      <header className='w-full py-4 '>
-        <div className=' flex justify-between sm:justify-between md:justify-between mx-auto  '>
-          <LogoNav />
-          <Nav />
-          <button onClick={handleMenu} className='md:hidden bg-none text-white uppercase tracking-widest' >Menu</button>
-        </div>
-      </header>
+      <div className='mdc-ui-container'>
+        <header className='max-w-screen-2xl py-4 '>
+          <div className=' flex justify-between sm:justify-between md:justify-between mx-auto  '>
+            <LogoNav />
+            <Nav />
+            <button onClick={handleMenu} className='md:hidden bg-none text-white uppercase tracking-widest' >Menu</button>
+          </div>
+        </header>
+      </div>
     </>
   );
 }

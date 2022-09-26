@@ -8,11 +8,13 @@ export default function Home() {
   return (
     <>
       <Hero></Hero>
-      <div className='h-96'>
-        <p>some content</p>
-      </div>
+      <section>
+        <div className=' mdc-ui-container h-96'>
+          <p>some content</p>
+        </div>
+      </section>
 
-      <footer >
+      <footer className='mdc-ui-container' >
         <a
           href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
           target='_blank'

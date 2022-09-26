@@ -5,9 +5,9 @@ import Header from '../components/ui/Header';
 
 export default function Servicios() {
     return (
-      <div >
+      <section >
         
-        <div className='h-screen'>
+        <div className='h-screen mdc-ui-container'>
           <p>Servicios</p>
         </div>
   
@@ -23,7 +23,7 @@ export default function Servicios() {
             </span>
           </a>
         </footer>
-      </div>
+      </section>
     );
   }
   

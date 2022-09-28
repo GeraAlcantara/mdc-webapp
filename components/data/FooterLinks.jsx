@@ -1,3 +1,8 @@
+import Facebook from "../svgs/facebook.svg";
+import Twitter from "../svgs/twitter.svg";
+import Instagram from "../svgs/instagram.svg";
+import Linkedin from "../svgs/linkedin.svg";
+
 export const FooterLinks = [
   {
     categories: {
@@ -8,7 +13,7 @@ export const FooterLinks = [
           HB: {
             name: "Habilidades Blandas",
             slug: "habilidades-blandas",
-            curses: {
+            course: {
               EA: { name: "Escucha Activa", slug: "escucha-activa" },
               ME: { name: "Manejo de estres", slug: "manejo-de-estress" },
             },
@@ -16,7 +21,7 @@ export const FooterLinks = [
           HD: {
             name: "Habilidades Directivas",
             slug: "habilidades-directivas",
-            curses: {
+            course: {
               HD01: { name: "Liderazgo Effectivo", slug: "liderazgo-effectivo" },
               HD02: { name: "Equipos de alto rendimiento", slug: "equipos-de-alto-rendimiento" },
               HD03: { name: "Comunicación efectiva", slug: "comunicación-efectiva" },
@@ -29,7 +34,7 @@ export const FooterLinks = [
           HT: {
             name: "Habilidades Tecnologicas",
             slug: "habilidades-tecnologicas",
-            curses: {
+            course: {
               TT101: { name: "Mejores prácticas para el teletrabajo", slug: "mejores-practicas-para-el-teletrabajo" },
               TT201: { name: "Teletrabajo Supervisores", slug: "teletrabajo-supervisores" },
             },
@@ -37,7 +42,7 @@ export const FooterLinks = [
           J: {
             name: "Juridico",
             slug: "juridico",
-            curses: {
+            course: {
               N35: { name: "Nom35", slug: "nom35" },
               VL101: { name: "Prevención de violencia laboral y acoso sexual", slug: "prevencion-de-violencia-laboral-y-acoso-sexual" },
               VL201: {
@@ -55,14 +60,14 @@ export const FooterLinks = [
           E: {
             name: "Esenciales",
             slug: "esenciales",
-            curses: {
+            course: {
               E101: { name: "Seguridad Informatica", slug: "seguridad-informatica" },
             },
           },
           MM: {
             name: "Micro Módulos",
             slug: "micro-modulos",
-            curses: {
+            course: {
               C01: { name: "contraseñas Seguras", slug: "contrasenas-seguras" },
               M01: { name: "Malware mini modulo", slug: "malware" },
               P01: { name: "Phishing", slug: "phishing" },
@@ -77,7 +82,7 @@ export const FooterLinks = [
           PV: {
             name: "Capacitación en el Proceso de Ventas",
             slug: "capacitacion-en-el-proceso-de-ventas",
-            curses: {
+            course: {
               PV101: { name: "Proceso de Ventas", slug: "proceso-de-ventas" },
             },
           },
@@ -161,23 +166,27 @@ export const footerLinks = [
 export const socialMedia = [
   {
     id: "social-media-1",
-    icon: "instagram.svg",
-    link: "https://www.instagram.com/",
+    Icon: Instagram,
+    link: "https://www.instagram.com/mexicodc/",
+    name: "instagram",
   },
   {
     id: "social-media-2",
-    icon: "facebook.svg",
-    link: "https://www.facebook.com/",
+    Icon: Facebook,
+    link: "https://www.facebook.com/mexicodevelopmentcenter",
+    name: "facebook",
   },
   {
     id: "social-media-3",
-    icon: "twitter.svg",
-    link: "https://www.twitter.com/",
+    Icon: Twitter,
+    link: "https://twitter.com/MexicoDC",
+    name: "twitter",
   },
   {
     id: "social-media-4",
-    icon: "linkedin.svg",
-    link: "https://www.linkedin.com/",
+    Icon: Linkedin,
+    link: "https://www.linkedin.com/company/mexico-development-center/",
+    name: "linkedin",
   },
 ];
 

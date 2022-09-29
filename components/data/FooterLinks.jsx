@@ -3,7 +3,7 @@ import Twitter from "../svgs/twitter.svg";
 import Instagram from "../svgs/instagram.svg";
 import Linkedin from "../svgs/linkedin.svg";
 
-export const FooterLinks = [
+export const coursesLinks = [
   {
     categories: {
       R: {
@@ -97,67 +97,96 @@ export const FooterLinks = [
   { name: "blog", slug: "blog" },
 ];
 
-export const footerLinks = [
+export const FooterLinks = [
   {
-    title: "Useful Links",
+    title: "Compañia",
     links: [
       {
-        name: "Content",
-        link: "https://www.hoobank.com/content/",
+        name: "Sobre MDC",
+        link: "about",
       },
       {
-        name: "How it Works",
-        link: "https://www.hoobank.com/how-it-works/",
+        name: "¡Estamos Contratando!",
+        link: "trabaja-con-nosotros",
       },
       {
-        name: "Create",
-        link: "https://www.hoobank.com/create/",
-      },
-      {
-        name: "Explore",
-        link: "https://www.hoobank.com/explore/",
-      },
-      {
-        name: "Terms & Services",
-        link: "https://www.hoobank.com/terms-and-services/",
+        name: "Precios",
+        link: "precios",
       },
     ],
   },
   {
-    title: "Community",
+    title: "Site Map",
     links: [
       {
-        name: "Help Center",
-        link: "https://www.hoobank.com/help-center/",
+        name: "Inicio",
+        link: "/",
       },
       {
-        name: "Partners",
-        link: "https://www.hoobank.com/partners/",
+        name: "Servicios",
+        link: "servicios",
       },
       {
-        name: "Suggestions",
-        link: "https://www.hoobank.com/suggestions/",
+        name: "Librerías",
+        link: "librerias",
       },
       {
-        name: "Blog",
-        link: "https://www.hoobank.com/blog/",
+        name: "Casos de éxito",
+        link: "casos-de-exito",
       },
       {
-        name: "Newsletters",
-        link: "https://www.hoobank.com/newsletters/",
+        name: "blog",
+        link: "blog",
       },
     ],
   },
   {
-    title: "Partner",
+    title: "Categorias",
     links: [
       {
-        name: "Our Partner",
-        link: "https://www.hoobank.com/our-partner/",
+        name: "Recursos Humanos",
+        link: "recursos-humanos",
       },
       {
-        name: "Become a Partner",
-        link: "https://www.hoobank.com/become-a-partner/",
+        name: "Seguridad de la informacion",
+        link: "seguridad-de-la-informacion",
+      },
+      {
+        name: "Ventas",
+        link: "ventas",
+      },
+    ],
+  },
+  {
+    title: "Subcategorías",
+    links: [
+      {
+        name: "Habilidades Blandas",
+        link: "habilidades-blandas",
+      },
+      {
+        name: "Habilidades Directivas",
+        link: "habilidades-directivas",
+      },
+      {
+        name: "Habilidades Tecnologicas",
+        link: "habilidades-tecnologicas",
+      },
+      {
+        name: "Juridico",
+        link: "juridico",
+      },
+      {
+        name: "Seguridad Esenciales",
+        link: "esenciales",
+      },
+      {
+        name: "Micro Módulos",
+        link: "micro-modulos",
+      },
+      {
+        name: "Proceso de Ventas",
+        link: "capacitacion-en-el-proceso-de-ventas",
       },
     ],
   },

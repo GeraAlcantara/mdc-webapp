@@ -1,4 +1,5 @@
 import Head from "next/head";
+import CourseSpecs from "../components/ui/CourseSpecs";
 import Hero from "../components/ui/Hero";
 
 export default function Home() {
@@ -6,9 +7,7 @@ export default function Home() {
     <>
       <Hero></Hero>
       <section>
-        <div className=' mdc-ui-container h-96'>
-          <p>some content</p>
-        </div>
+        <CourseSpecs />
       </section>
     </>
   );

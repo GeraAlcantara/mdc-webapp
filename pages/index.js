@@ -1,7 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import Footer from "../components/ui/Footer";
-import Header from "../components/ui/Header";
 import Hero from "../components/ui/Hero";
 
 export default function Home() {
@@ -13,8 +10,6 @@ export default function Home() {
           <p>some content</p>
         </div>
       </section>
-
-      <Footer></Footer>
     </>
   );
 }

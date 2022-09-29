@@ -1,13 +1,14 @@
-import Header from './Header'
+import Footer from "./Footer";
+import Header from "./Header";
 
-
-function layout({children}) {
+function layout({ children }) {
   return (
     <div className=' mx-auto'>
-        <Header></Header>
-        <main>{children}</main>
+      <Header />
+      <main>{children}</main>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default layout
+export default layout;

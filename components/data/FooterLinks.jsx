@@ -15,14 +15,14 @@ export const coursesLinks = [
             slug: "habilidades-blandas",
             course: {
               EA: { name: "Escucha Activa", slug: "escucha-activa" },
-              ME: { name: "Manejo de estres", slug: "manejo-de-estress" },
+              ME: { name: "Manejo de estrés", slug: "manejo-de-estres" },
             },
           },
           HD: {
             name: "Habilidades Directivas",
             slug: "habilidades-directivas",
             course: {
-              HD01: { name: "Liderazgo Effectivo", slug: "liderazgo-effectivo" },
+              HD01: { name: "Liderazgo Efectivo", slug: "liderazgo-efectivo" },
               HD02: { name: "Equipos de alto rendimiento", slug: "equipos-de-alto-rendimiento" },
               HD03: { name: "Comunicación efectiva", slug: "comunicación-efectiva" },
               HD04: { name: "Inteligencia emocional para la gestión de conflictos", slug: "inteligencia-emocional-para-la-gestion-de-conflictos" },
@@ -32,7 +32,7 @@ export const coursesLinks = [
             },
           },
           HT: {
-            name: "Habilidades Tecnologicas",
+            name: "Habilidades Tecnológicas",
             slug: "habilidades-tecnologicas",
             course: {
               TT101: { name: "Mejores prácticas para el teletrabajo", slug: "mejores-practicas-para-el-teletrabajo" },
@@ -40,7 +40,7 @@ export const coursesLinks = [
             },
           },
           J: {
-            name: "Juridico",
+            name: "Jurídico",
             slug: "juridico",
             course: {
               N35: { name: "Nom35", slug: "nom35" },
@@ -54,22 +54,22 @@ export const coursesLinks = [
         },
       },
       S: {
-        name: "Seguridad de la informacion",
+        name: "Seguridad de la información",
         slug: "seguridad-de-la-informacion",
         subcategories: {
           E: {
             name: "Esenciales",
             slug: "esenciales",
             course: {
-              E101: { name: "Seguridad Informatica", slug: "seguridad-informatica" },
+              E101: { name: "Seguridad Informática", slug: "seguridad-informatica" },
             },
           },
           MM: {
             name: "Micro Módulos",
             slug: "micro-modulos",
             course: {
-              C01: { name: "contraseñas Seguras", slug: "contrasenas-seguras" },
-              M01: { name: "Malware mini modulo", slug: "malware" },
+              C01: { name: "Contraseñas Seguras", slug: "contrasenas-seguras" },
+              M01: { name: "Malware mini módulo", slug: "malware" },
               P01: { name: "Phishing", slug: "phishing" },
             },
           },
@@ -99,7 +99,7 @@ export const coursesLinks = [
 
 export const FooterLinks = [
   {
-    title: "Compañia",
+    title: "Compañía",
     links: [
       {
         name: "Sobre MDC",
@@ -135,20 +135,20 @@ export const FooterLinks = [
         link: "casos-de-exito",
       },
       {
-        name: "blog",
+        name: "Blog",
         link: "blog",
       },
     ],
   },
   {
-    title: "Categorias",
+    title: "Categorías",
     links: [
       {
         name: "Recursos Humanos",
         link: "recursos-humanos",
       },
       {
-        name: "Seguridad de la informacion",
+        name: "Seguridad de la información",
         link: "seguridad-de-la-informacion",
       },
       {
@@ -169,11 +169,11 @@ export const FooterLinks = [
         link: "habilidades-directivas",
       },
       {
-        name: "Habilidades Tecnologicas",
+        name: "Habilidades Tecnológicas",
         link: "habilidades-tecnologicas",
       },
       {
-        name: "Juridico",
+        name: "Jurídico",
         link: "juridico",
       },
       {

@@ -177,8 +177,8 @@ export const FooterLinks = [
         link: "juridico",
       },
       {
-        name: "Seguridad Esenciales",
-        link: "esenciales",
+        name: "Prácticas Esenciales",
+        link: "practicas-esenciales",
       },
       {
         name: "Micro Módulos",

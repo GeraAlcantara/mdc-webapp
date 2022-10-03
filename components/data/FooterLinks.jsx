@@ -47,7 +47,7 @@ export const coursesLinks = [
               VL101: { name: "Prevención de violencia laboral y acoso sexual", slug: "prevencion-de-violencia-laboral-y-acoso-sexual" },
               VL201: {
                 name: "Prevención, atención y erradicación de la violencia laboral para supervisores.",
-                slug: "prevencion-atención-y-erradicacion-de-la-violencia-laboral",
+                slug: "prevencion-atencion-y-erradicacion-de-la-violencia-laboral",
               },
             },
           },

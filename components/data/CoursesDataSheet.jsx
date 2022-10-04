@@ -1,3 +1,9 @@
+import Iconinteract from "../svgs/interact.svg";
+import Iconvideo from "../svgs/video.svg";
+import IcontxtLocucion from "../svgs/txtLocucion.svg";
+import Iconautoeval from "../svgs/autoeval.svg";
+import Iconcuestionario from "../svgs/cuestionario.svg";
+
 export const DataSheet = {
   library: { name: "Recursos Humanos", skuPrefix: "R" },
   subcategory: { name: "Habilidades directivas", skuPrefix: "HD" },
@@ -21,9 +27,9 @@ export const DataSheet = {
     "La motivación",
   ],
   features: [
-    { id: 1, name: "Texto + Locucion", qt: 1 },
-    { id: 2, name: "Autoevaluación", qt: 1 },
-    { id: 3, name: "Video de Introducción" },
-    { id: 3, name: "Interactividades", qt: 2 },
+    { id: 1, name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
+    { id: 2, name: "Autoevaluación", qt: 1, ICON: Iconautoeval },
+    { id: 3, name: "Video de Introducción", qt: 1, ICON: Iconvideo },
+    { id: 3, name: "Interactividades", qt: 2, ICON: Iconinteract },
   ],
 };

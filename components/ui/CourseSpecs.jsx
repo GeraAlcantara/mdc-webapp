@@ -63,6 +63,24 @@ function CourseSpecs() {
               ))}
             </ul>
           </div>
+
+          <div className='p-5 mt-8 border border-gray-100 rounded-md dark:border-gray-700'>
+            <h4 className='text-3xl font-bold mb-3'>Características</h4>
+            <div className='flex flex-wrap flex-col md:flex-row justify-around'>
+              {DataSheet.features.map(({ id, ICON, name, qt }, index) => (
+                <div className=' flex flex-col justify-center items-center my-4 ' key={id + name.substring(0, 3)}>
+                  <ICON className='text-7xl'></ICON>
+                  {qt > 1 ? (
+                    <h5 className='text-center'>
+                      <span>{qt}</span> {name}
+                    </h5>
+                  ) : (
+                    <h5 className='text-center'>{name}</h5>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>

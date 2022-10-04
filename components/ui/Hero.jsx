@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 // @ts-ignore
-import imgHero from "../../public/7250d493.webp";
+import imgHero from "../../public/girl.png";
 
 function Hero() {
   return (

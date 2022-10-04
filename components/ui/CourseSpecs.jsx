@@ -14,7 +14,7 @@ function CourseSpecs() {
             <div className='flex items-center justify-center md:hidden my-4'>
               <Link href={DataSheet.slug}>
                 <a>
-                  <Image src='/hook.png' width={260} height={260} alt='hook'></Image>
+                  <Image src='/ilustracion.png' width={260} height={260} alt='remotework' objectFit='contain'></Image>
                 </a>
               </Link>
             </div>
@@ -44,13 +44,25 @@ function CourseSpecs() {
             </div>
           </div>
 
-          {/* description */}
-          <h4 className='text-3xl font-bold mb-3'>Descripción</h4>
-          {DataSheet.description.map((paragrah, index) => (
-            <p className='text-white md:prose-lg dark:text-gray-100 mb-2 md:mb-0 ' key={index}>
-              {paragrah}
-            </p>
-          ))}
+          <div className='p-5 mt-8 border border-gray-100 rounded-md dark:border-gray-700'>
+            <h4 className='text-3xl font-bold mb-3'>Descripción</h4>
+            {DataSheet.description.map((paragrah, index) => (
+              <p className='text-white md:prose-lg dark:text-gray-100 mb-2 md:mb-0 ' key={index}>
+                {paragrah}
+              </p>
+            ))}
+          </div>
+
+          <div className='p-5 mt-8 border border-gray-100 rounded-md dark:border-gray-700'>
+            <h4 className='text-3xl font-bold mb-3'>Contenidos</h4>
+            <ul className='list-disc list-inside '>
+              {DataSheet.topics.map((topics, index) => (
+                <li className='text-white md:prose-lg dark:text-gray-100 mb-2 md:mb-0 ' key={index + topics.substring(0, 5)}>
+                  {topics}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>

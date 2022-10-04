@@ -69,7 +69,7 @@ function CourseSpecs() {
             <div className='flex flex-wrap flex-col md:flex-row justify-around'>
               {DataSheet.features.map(({ id, ICON, name, qt }, index) => (
                 <div className=' flex flex-col justify-center items-center my-4 ' key={id + name.substring(0, 3)}>
-                  <ICON className='text-7xl'></ICON>
+                  <ICON className='text-7xl mb-2'></ICON>
                   {qt > 1 ? (
                     <h5 className='text-center'>
                       <span>{qt}</span> {name}

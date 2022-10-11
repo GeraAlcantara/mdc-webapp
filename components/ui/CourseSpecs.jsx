@@ -4,8 +4,9 @@ import { DataSheet } from "../data/CoursesDataSheet";
 import LogoSolid from "../svgs/logoSolid.svg";
 import TimeIcon from "../svgs/time.svg";
 import CCIcon from "../svgs/closecaption.svg";
-import { RiArrowRightSFill } from "react-icons/ri";
+import { RiArrowRightSFill, RiReactjsFill } from "react-icons/ri";
 import ilustration from "../../public/ilustracion.png";
+import CourseContent from "./CourseContent";
 
 function CourseSpecs() {
   return (
@@ -103,6 +104,8 @@ function CourseSpecs() {
               </Link>
             </div>
           </div>
+          {/* course Content */}
+          <CourseContent />
         </div>
       </div>
     </div>

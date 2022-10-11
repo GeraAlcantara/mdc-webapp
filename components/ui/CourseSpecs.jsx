@@ -4,17 +4,19 @@ import { DataSheet } from "../data/CoursesDataSheet";
 import LogoSolid from "../svgs/logoSolid.svg";
 import TimeIcon from "../svgs/time.svg";
 import CCIcon from "../svgs/closecaption.svg";
+import { RiArrowRightSFill } from "react-icons/ri";
+import ilustration from "../../public/ilustracion.png";
 
 function CourseSpecs() {
   return (
     <div className=' mdc-ui-container'>
-      <div className='grid w-full grid-cols-1 gap-5 mt-10 mb-4 md:grid-col-5 md:gap-16'>
+      <div className='grid w-full grid-cols-1 gap-5 mt-10 mb-4 md:grid-cols-5 md:gap-16'>
         <div className='flex flex-col w-full h-full mx-auto md:col-span-3 md:row-start-auto max-w-screen-2xl'>
           <header>
             <div className='flex items-center justify-center md:hidden my-4'>
               <Link href={DataSheet.slug}>
                 <a>
-                  <Image src='/ilustracion.png' width={260} height={260} alt='remotework' objectFit='contain'></Image>
+                  <Image src={ilustration} alt='remotework'></Image>
                 </a>
               </Link>
             </div>
@@ -79,6 +81,26 @@ function CourseSpecs() {
                   )}
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+        {/* right side */}
+        <div className='flex flex-col items-center justify-start mb-4 md:col-span-2 md:mb-0'>
+          <div className='hidden md:block'>
+            <Link href={DataSheet.slug}>
+              <a>
+                <Image src={ilustration} alt='remotework'></Image>
+              </a>
+            </Link>
+          </div>
+          <div className='hidden space-y-6 md:block '>
+            <div className='flex justify-center mt-10 mb-4 '>
+              <Link href='#'>
+                <a className='inline-flex items-center justify-center px-6 py-4 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 '>
+                  <RiArrowRightSFill className='text-3xl mr-2 ' />
+                  <span>Comienza</span>
+                </a>
+              </Link>
             </div>
           </div>
         </div>

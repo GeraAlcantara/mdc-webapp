@@ -1,39 +1,6 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html,
-body {
-  padding: 0;
-  margin: 0;
-}
-
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-body {
-  background-color: #011321;
-  color: white;
-}
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
-
-.test {
-  color: #1070e5;
-}
 
 .mdc-ui-container {
   width: calc(100% - 40px);

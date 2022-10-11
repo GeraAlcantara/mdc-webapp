@@ -3,3 +3,7 @@ declare module "*.svg" {
   const component: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   export default component;
 }
+declare module "*.png";
+declare module "*.jpg";
+declare module "*.jpeg";
+declare module "*.gif";

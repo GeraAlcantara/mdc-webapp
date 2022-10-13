@@ -5,7 +5,7 @@ import imgHero2 from "../../public/hero2.png";
 import imgHero3 from "../../public/hero3.png";
 import imgHero4 from "../../public/hero4.png";
 
-/* TODO: 
+/* TODO: #1 
  Find a better way to handle the source of the randomze images array
 */
 

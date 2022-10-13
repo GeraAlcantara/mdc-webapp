@@ -11,6 +11,7 @@ function Header() {
   };
 
   return (
+    /* TODO: #2 Add UseRef to check when user as scroll the page to add the backgroung color to #001322 with opacity .80  */
     <div className='fixed top-0 w-full z-50'>
       <div
         className={

@@ -11,11 +11,11 @@ function Header() {
   };
 
   return (
-    <>
+    <div className='fixed top-0 w-full z-50'>
       <div
         className={
           toogleON
-            ? "opacity-100 visible md:hidden bg-black h-full left-0 fixed top-0 w-full z-50 px-8 py-10 max-h-full bottom-3 landscape:overflow-y-scroll"
+            ? "opacity-100 visible md:hidden bg-black h-full left-0 fixed top-0 w-full px-8 py-10 max-h-full bottom-3 landscape:overflow-y-scroll"
             : "hidden "
         }
         aria-selected={toogleON}
@@ -23,7 +23,7 @@ function Header() {
         <MenuOverlay istoggle={handleMenu}></MenuOverlay>
       </div>
       <div className='mdc-ui-container'>
-        <header className='py-4 '>
+        <header className={`py-4 ${toogleON ? "hidden" : ""} `}>
           <div className=' flex justify-between sm:justify-between md:justify-between mx-auto  '>
             <LogoNav />
             <Nav />
@@ -33,7 +33,7 @@ function Header() {
           </div>
         </header>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,5 +1,4 @@
 import LogoNav from "./LogoNav";
-import { useEffect, useState } from "react";
 import MENU_ITEMS from "../data/MenuItems";
 import Link from "next/link";
 

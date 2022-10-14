@@ -1,10 +1,22 @@
 import LogoNav from "./LogoNav";
 import MenuOverlay from "./MenuOverlay";
 import Nav from "./Nav";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Header() {
   const [toogleON, setToggleOn] = useState(false);
+  const [background, setBackground] = useState(false);
+
+  // Attach the scroll listener to the div
+  useEffect(() => {
+    const handleScroll = () => {
+      window.scrollY > 68 ? setBackground(true) : setBackground(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleMenu = () => {
     setToggleOn((prev) => !prev);
@@ -12,7 +24,7 @@ function Header() {
 
   return (
     /* TODO: #2 Add UseRef to check when user as scroll the page to add the backgroung color to #001322 with opacity .80  */
-    <div className='fixed top-0 w-full z-50'>
+    <div className={`fixed top-0 w-full z-50 transition-all duration-300 ${background ? "bg-black" : "bg-none"} `}>
       <div
         className={
           toogleON

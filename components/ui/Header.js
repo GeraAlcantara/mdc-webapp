@@ -7,7 +7,6 @@ function Header() {
   const [toogleON, setToggleOn] = useState(false);
   const [background, setBackground] = useState(false);
 
-  // Attach the scroll listener to the div
   useEffect(() => {
     const handleScroll = () => {
       window.scrollY > 68 ? setBackground(true) : setBackground(false);

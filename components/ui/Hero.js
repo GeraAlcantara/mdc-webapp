@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState, useMemo } from "react";
 import imgHero1 from "../../public/hero1.png";
 import imgHero2 from "../../public/hero2.png";
 import imgHero3 from "../../public/hero3.png";
@@ -8,15 +9,46 @@ import imgHero4 from "../../public/hero4.png";
 /* TODO: #1 
  Find a better way to handle the source of the randomze images array
 */
+const initimages = [imgHero1, imgHero2, imgHero3, imgHero4];
+const initImagesData = [
+  {
+    id: "hero1",
+    alt: "alt text image 1",
+    src: imgHero1,
+  },
+  {
+    id: "hero2",
+    alt: "alt text image 2",
+    src: imgHero2,
+  },
+  {
+    id: "hero3",
+    alt: "alt text image 3",
+    src: imgHero3,
+  },
+  {
+    id: "hero4",
+    alt: "alt text image 4",
+    src: imgHero4,
+  },
+];
 
 function Hero() {
-  const images = [imgHero1, imgHero2, imgHero3, imgHero4];
-  const currImage = images[Math.floor(Math.random() * images.length)];
+  /* obj logic */
+  const [imageData, setImageData] = useState(initImagesData);
+  const [currImgData, setcurrImgData] = useState(imageData[0]);
+
+  const updateImageData = useMemo(() => imageData[Math.floor(Math.random() * imageData.length)], [imageData]);
+
+  useEffect(() => {
+    setcurrImgData(updateImageData);
+  }, [currImgData, updateImageData]);
+
   return (
     <section className='pb-8 md:grid md:grid-cols-2 landscape:grid landscape:grid-cols-2 max-h-screen'>
       {/* cover images  */}
       <div className='-z-10 md:col-span-2 md:row-start-1 md:col-start-1 landscape:col-span-2 landscape:row-start-1 landscape:col-start-1 flex justify-end'>
-        <Image src={currImage} alt='test images' objectFit='fill' />
+        <Image src={currImgData.src} alt={currImgData.alt} placeholder='blur' loading='lazy' objectFit='fill' />
       </div>
       {/* cover text */}
       <div className='md:col-span-2 md:col-start-1 md:row-start-1 landscape:col-span-2 landscape:col-start-1 landscape:row-start-1 mdc-ui-container mt-[70px] md:mt-0 md:self-center '>

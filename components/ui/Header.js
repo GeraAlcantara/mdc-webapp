@@ -35,7 +35,7 @@ function Header() {
       </div>
       <div className='mdc-ui-container'>
         <header className={`py-4 ${toogleON ? "hidden" : ""} `}>
-          <div className=' flex justify-between sm:justify-between md:justify-between mx-auto  '>
+          <div className=' flex justify-between sm:justify-between md:justify-between mx-auto'>
             <LogoNav />
             <Nav />
             <button onClick={handleMenu} className='md:hidden bg-none text-white uppercase tracking-widest'>

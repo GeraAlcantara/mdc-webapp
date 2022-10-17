@@ -50,8 +50,8 @@ export default function Home() {
               </div>
             </div>
             <div className='md:w-1/2 flex flex-col md:items-start md:justify-center py-4 md:p-8'>
-              <h2 className='font-bold text-2xl xl:text-4xl mb-8 '>CURSOS MULTIPREMIADOS</h2>
-              <p className='max-w-prose md:text-left xl:text-xl mb-8'>
+              <h2 className='font-bold text-3xl mb-8 uppercase '>CURSOS MULTIPREMIADOS</h2>
+              <p className='max-w-prose md:text-left mb-8'>
                 Nuestros productos han tenido reconocimiento internacional ganando más de 40 premios como MarCom Awards, Davey Awards, W³ Awards, Golden Bridge
                 Awards, Summit Creative Awards, Network Products Guide IT World Awards, Omni Awards, Interactive Media Awards.
               </p>
@@ -69,8 +69,8 @@ export default function Home() {
           {/* section cards right */}
           <div className='mdc-ui-container flex flex-col-reverse gap-4 md:gap-8 md:flex-row py-4 md:py-16'>
             <div className='md:w-1/2 flex flex-col md:items-end md:justify-center py-4 md:p-8'>
-              <h2 className='font-bold text-2xl xl:text-4xl mb-8 '>INTERACTIVIDAD</h2>
-              <p className='max-w-prose md:text-right xl:text-xl mb-8'>
+              <h2 className='font-bold text-3xl mb-8 uppercase'>INTERACTIVIDAD</h2>
+              <p className='max-w-prose md:text-right mb-8'>
                 En México DC lo visual es tan importante como el contenido, diseñamos cursos con video y animaciones personalizadas para impulsar el
                 aprendizaje. Este tipo de factores generan entusiasmo y aumenta el interes en sus empleados a la hora de tomar un curso.
               </p>
@@ -95,8 +95,8 @@ export default function Home() {
               <Image src={ImgTimeline3} alt='text alt '></Image>
             </div>
             <div className='md:w-1/2 flex flex-col md:items-start md:justify-center py-4 md:p-8'>
-              <h2 className='font-bold text-2xl xl:text-4xl mb-8 '>MOBILE READY</h2>
-              <p className='max-w-prose md:text-left xl:text-xl mb-8'>
+              <h2 className='font-bold text-3xl mb-8 uppercase '>MOBILE READY</h2>
+              <p className='max-w-prose md:text-left mb-8'>
                 Creamos cursos fácilmente accesibles en tabletas o dispositivos móviles. Estos materiales no solo son aptos para dispositivos móviles. Cada
                 aspecto de la capacitación se diseñó cuidadosamente, desde el contenido hasta la pantalla, para proporcionar los materiales más efectivos y de
                 fácil acceso.
@@ -115,8 +115,8 @@ export default function Home() {
           {/* section cards right */}
           <div className='mdc-ui-container flex flex-col-reverse gap-4 md:gap-8 md:flex-row py-4 md:py-16'>
             <div className='md:w-1/2 flex flex-col md:items-end md:justify-center py-4 md:p-8'>
-              <h2 className='font-bold text-2xl xl:text-4xl mb-8 '>Plataforma LMS Intuitiva</h2>
-              <p className='max-w-prose md:text-right xl:text-xl mb-8'>
+              <h2 className='font-bold text-3xl mb-8 uppercase md:text-right '>Plataforma LMS Intuitiva</h2>
+              <p className='max-w-prose md:text-right mb-8'>
                 Nuestros productos han tenido reconocimiento internacional ganando más de 40 premios como MarCom Awards, Davey Awards, W³ Awards, Golden Bridge
                 Awards, Summit Creative Awards, Network Products Guide IT World Awards, Omni Awards, Interactive Media Awards.
               </p>

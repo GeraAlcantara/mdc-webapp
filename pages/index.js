@@ -4,6 +4,8 @@ import Link from "next/link";
 import Hero from "../components/ui/Hero";
 import Escudo from "../public/icons/escudo.svg";
 import ImgTimeline1 from "../public/timeline1.png";
+import ImgTimeline2 from "../public/timeline2.jpg";
+import ImgTimeline4 from "../public/timeline4.jpg";
 import ImgLaptop from "../public/laptop.jpg";
 import ImgTrofeo from "../public/trofeo.png";
 
@@ -33,9 +35,9 @@ export default function Home() {
         <hr className='border border-[#4cafb8] animate-section-hr m-auto ' />
       </div>
 
-      <section className='relative bg-black '>
+      <section className='relative '>
         {/* timeline  */}
-        <div className='w-[1px] bg-green-500 h-full md:absolute left-1/2 translate-x-1/2 '></div>
+        <div className='w-[2px] bg-[#4cafb8] h-full md:absolute left-1/2 translate-x-1/2 '></div>
         <article className='bg-white text-gray-900'>
           {/* section cards left */}
           <div className='mdc-ui-container flex flex-col gap-4 md:gap-8 md:flex-row py-4 md:py-16'>
@@ -61,7 +63,7 @@ export default function Home() {
           </div>
           {/* END section cards left */}
         </article>
-        <article className='bg-black'>
+        <article>
           {/* section cards right */}
           <div className='mdc-ui-container flex flex-col-reverse gap-4 md:gap-8 md:flex-row py-4 md:py-16'>
             <div className='md:w-1/2 flex flex-col md:items-end md:justify-center py-4 md:p-8'>
@@ -79,16 +81,16 @@ export default function Home() {
               </Link>
             </div>
             <div className='md:p-8 md:w-1/2'>
-              <Image src={ImgTimeline1} alt='text alt '></Image>
+              <Image src={ImgTimeline2} alt='text alt '></Image>
             </div>
           </div>
           {/* End section cards right */}
         </article>
-        <article className='bg-black'>
+        <article>
           {/* section cards left */}
           <div className='mdc-ui-container flex flex-col gap-4 md:gap-8 md:flex-row py-4 md:py-16'>
             <div className='md:p-8 md:w-1/2'>
-              <Image src={ImgTimeline1} alt='text alt '></Image>
+              <Image src={ImgTimeline2} alt='text alt '></Image>
             </div>
             <div className='md:w-1/2 flex flex-col md:items-start md:justify-center py-4 md:p-8'>
               <h2 className='font-bold text-2xl xl:text-4xl mb-8 '>MOBILE READY</h2>
@@ -107,7 +109,7 @@ export default function Home() {
           </div>
           {/* END section cards left */}
         </article>
-        <article className='bg-black'>
+        <article className='bg-bg_primary'>
           {/* section cards right */}
           <div className='mdc-ui-container flex flex-col-reverse gap-4 md:gap-8 md:flex-row py-4 md:py-16'>
             <div className='md:w-1/2 flex flex-col md:items-end md:justify-center py-4 md:p-8'>
@@ -125,7 +127,7 @@ export default function Home() {
               </Link>
             </div>
             <div className='md:p-8 md:w-1/2'>
-              <Image src={ImgTimeline1} alt='text alt '></Image>
+              <Image src={ImgTimeline4} alt='text alt '></Image>
             </div>
           </div>
           {/* End section cards right */}

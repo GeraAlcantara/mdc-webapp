@@ -44,7 +44,7 @@ function Hero() {
     <section className='pb-8 md:grid md:grid-cols-2 landscape:grid landscape:grid-cols-2 max-h-screen'>
       {/* cover images  */}
       <div className='-z-10 md:col-span-2 md:row-start-1 md:col-start-1 landscape:col-span-2 landscape:row-start-1 landscape:col-start-1 flex justify-end'>
-        <Image src={currImgData.src} alt={currImgData.alt} loading='lazy' objectFit='fill' />
+        <Image src={currImgData.src} alt={currImgData.alt} loading='eager' objectFit='fill' />
       </div>
       {/* cover text */}
       <div className='md:col-span-2 md:col-start-1 md:row-start-1 landscape:col-span-2 landscape:col-start-1 landscape:row-start-1 mdc-ui-container mt-[70px] md:mt-0 md:self-center '>

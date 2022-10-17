@@ -3,11 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Hero from "../components/ui/Hero";
 import Escudo from "../public/icons/escudo.svg";
-import ImgTimeline1 from "../public/timeline1.png";
 import ImgTimeline2 from "../public/timeline2.jpg";
+import ImgTimeline3 from "../public/timeline3.jpg";
 import ImgTimeline4 from "../public/timeline4.jpg";
 import ImgLaptop from "../public/laptop.jpg";
 import ImgTrofeo from "../public/trofeo.png";
+import Clients from "../components/ui/Clients";
 
 export default function Home() {
   return (
@@ -20,7 +21,8 @@ export default function Home() {
         />
         <title>Mexico Development Center | Elearning</title>
       </Head>
-      <Hero></Hero>
+      <Hero />
+      <Clients />
       <div className=' md:text-center bg-white text-gray-900 py-4 lg:py-8 xl:py-12'>
         <div className=' p-10'>
           <Escudo className='text-8xl m-auto mb-4' />
@@ -34,7 +36,7 @@ export default function Home() {
         </div>
         <hr className='border border-[#4cafb8] animate-section-hr m-auto ' />
       </div>
-
+      {/* Section Timeline */}
       <section className='relative '>
         {/* timeline  */}
         <div className='w-[2px] bg-[#4cafb8] h-full md:absolute left-1/2 translate-x-1/2 '></div>
@@ -90,7 +92,7 @@ export default function Home() {
           {/* section cards left */}
           <div className='mdc-ui-container flex flex-col gap-4 md:gap-8 md:flex-row py-4 md:py-16'>
             <div className='md:p-8 md:w-1/2'>
-              <Image src={ImgTimeline2} alt='text alt '></Image>
+              <Image src={ImgTimeline3} alt='text alt '></Image>
             </div>
             <div className='md:w-1/2 flex flex-col md:items-start md:justify-center py-4 md:p-8'>
               <h2 className='font-bold text-2xl xl:text-4xl mb-8 '>MOBILE READY</h2>
@@ -133,6 +135,7 @@ export default function Home() {
           {/* End section cards right */}
         </article>
       </section>
+      {/* END Section Timeline */}
     </>
   );
 }

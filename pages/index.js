@@ -11,7 +11,6 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>My page title</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <meta
           name='description'
@@ -54,7 +53,7 @@ export default function Home() {
               </p>
               {/* Link style as Button */}
               <Link href='#'>
-                <a className='place-self-start py-2 px-10 bg-gradient-to-r from-cyan-500 to-secondary rounded-full text-white uppercase hover:from-cyan-500 hover:to-blue-600 hover:scale-[.99] transition-all '>
+                <a className='place-self-start py-2 px-10 bg-gradient-to-r from-cyan-500 to-secondary rounded-full text-white uppercase hover:from-cyan-500 hover:to-blue-600 transition-all '>
                   <span>Casos de exito</span>
                 </a>
               </Link>
@@ -74,7 +73,7 @@ export default function Home() {
 
               {/* Link style as Button */}
               <Link href='#'>
-                <a className='place-self-start md:place-self-auto py-2 px-10 bg-gradient-to-r from-cyan-500 to-secondary rounded-full text-white uppercase hover:from-cyan-500 hover:to-blue-600 hover:scale-[.99] transition-all '>
+                <a className='place-self-start md:place-self-auto py-2 px-10 bg-gradient-to-r from-cyan-500 to-secondary rounded-full text-white uppercase hover:from-cyan-500 hover:to-blue-600 transition-all '>
                   <span>Ver demos</span>
                 </a>
               </Link>
@@ -100,7 +99,7 @@ export default function Home() {
               </p>
               {/* Link style as Button */}
               <Link href='#'>
-                <a className='place-self-start py-2 px-10 bg-gradient-to-r from-cyan-500 to-secondary rounded-full text-white uppercase hover:from-cyan-500 hover:to-blue-600 hover:scale-[.99] transition-all '>
+                <a className='place-self-start py-2 px-10 bg-gradient-to-r from-cyan-500 to-secondary rounded-full text-white uppercase hover:from-cyan-500 hover:to-blue-600 transition-all '>
                   <span>Catalogos de cursos</span>
                 </a>
               </Link>
@@ -120,7 +119,7 @@ export default function Home() {
 
               {/* Link style as Button */}
               <Link href='#'>
-                <a className='place-self-start md:place-self-auto py-2 px-10 bg-gradient-to-r from-cyan-500 to-secondary rounded-full text-white uppercase hover:from-cyan-500 hover:to-blue-600 hover:scale-[.99] transition-all '>
+                <a className='place-self-start md:place-self-auto py-2 px-10 bg-gradient-to-r from-cyan-500 to-secondary rounded-full text-white uppercase hover:from-cyan-500 hover:to-blue-600 transition-all '>
                   <span>Planes y precios</span>
                 </a>
               </Link>

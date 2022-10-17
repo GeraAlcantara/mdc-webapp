@@ -36,7 +36,9 @@ function Hero() {
 
   const updateImageData = useMemo(() => imageData[Math.floor(Math.random() * imageData.length)], [imageData]);
 
-  setcurrImgData(updateImageData);
+  useEffect(() => {
+    setcurrImgData(updateImageData);
+  }, [updateImageData]);
 
   return (
     <section className='pb-8 md:grid md:grid-cols-2 landscape:grid landscape:grid-cols-2 max-h-screen'>

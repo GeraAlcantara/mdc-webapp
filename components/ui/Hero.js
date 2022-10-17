@@ -47,25 +47,23 @@ function Hero() {
         <Image src={currImgData.src} alt={currImgData.alt} loading='lazy' objectFit='fill' />
       </div>
       {/* cover text */}
-      <div className='md:col-span-2 md:col-start-1 md:row-start-1 landscape:col-span-2 landscape:col-start-1 landscape:row-start-1 mdc-ui-container mt-[70px] md:mt-0 md:self-center '>
-        <div>
-          <h1 className=' text-6xl md:text-7xl xl:text-9xl leading-[60px] text-accent font-extrabold md:pb-8'>
-            <small className='text-white text-2xl md:text-4xl xl:text-6xl leading-normal flex-1'>Concientización de</small>
-            <br></br>Seguridad{" "}
-          </h1>
-          <div className='my-4 pb-4 w-full sm:landscape:w-1/2 md:w-2/4'>
-            <p>Sus empleados podrían ser el punto más debil en la infrestructura de seguridad en su empresa. !Hágalos más fuertes!</p>
-          </div>
-          <div className='flex justify-around md:justify-start sm:landscape:w-1/2'>
-            <div className='flex justify-center items-center rounded-lg bg-secondary px-4 py-2 md:px-12 md:py-2 mx-2'>
-              <Link href='soluciones'>
-                <a className=' align-middle leading-none'>Soluciones</a>
-              </Link>
-            </div>
-            <Link href='https://vimeo.com/425231198'>
-              <a className='underline px-2 md:ml-8'>Vea Nuestro Demo Reel</a>
+      <div className='md:col-span-2 md:col-start-1 md:row-start-1 landscape:col-span-2 landscape:col-start-1 landscape:row-start-1 mdc-ui-container -mt-5 md:mt-0 md:self-center landscape:mt-[68px] md:landscape:mt-0 '>
+        <h1 className=' portrait:text-center md:portrait:text-left md:text-left text-6xl md:text-7xl xl:text-9xl leading-[60px] text-accent font-extrabold md:pb-8'>
+          <small className='text-white text-2xl md:text-4xl xl:text-6xl leading-normal flex-1'>Concientización de</small>
+          <br></br>Seguridad{" "}
+        </h1>
+        <div className='my-4 pb-4 w-full sm:landscape:w-1/2 md:w-2/4'>
+          <p>Sus empleados podrían ser el punto más debil en la infrestructura de seguridad en su empresa. !Hágalos más fuertes!</p>
+        </div>
+        <div className='flex justify-around md:justify-start sm:landscape:w-1/2'>
+          <div className='flex justify-center items-center rounded-lg bg-secondary px-4 py-2 md:px-12 md:py-2 mx-2'>
+            <Link href='soluciones'>
+              <a className=' align-middle leading-none'>Soluciones</a>
             </Link>
           </div>
+          <Link href='https://vimeo.com/425231198'>
+            <a className='underline px-2 md:ml-8'>Vea Nuestro Demo Reel</a>
+          </Link>
         </div>
       </div>
     </section>

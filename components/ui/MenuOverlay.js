@@ -2,14 +2,15 @@ import LogoNav from "./LogoNav";
 import MENU_ITEMS from "../data/MenuItems";
 import Link from "next/link";
 
-function MenuOverlay({ istoggle }) {
+function MenuOverlay(props) {
   let year = new Date();
+
   return (
     <>
       <header className='flex justify-between'>
         <LogoNav></LogoNav>
         <nav>
-          <button onClick={istoggle} className='bg-none text-white uppercase tracking-widest'>
+          <button onClick={props.istoggle} className='bg-none text-white uppercase tracking-widest'>
             CLOSE
           </button>
         </nav>
@@ -17,8 +18,9 @@ function MenuOverlay({ istoggle }) {
       <div className='mt-16 flex flex-wrap gap-8 '>
         {MENU_ITEMS.map((item, idx) => {
           return (
+            /* TODO: #3 close Menu on clik link and why to component mount  */
             <Link href={item.slug} key={idx + item.name}>
-              <a className='opacity-75 pb-1 text-white uppercase w-full' style={{ boxShadow: "rgb(229 225 230 / 25%) 0px 1px 0px" }}>
+              <a onClick={props.istoggle} className='opacity-75 pb-1 text-white uppercase w-full' style={{ boxShadow: "rgb(229 225 230 / 25%) 0px 1px 0px" }}>
                 {item.name}
               </a>
             </Link>

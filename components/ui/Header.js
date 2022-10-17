@@ -9,14 +9,13 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      window.scrollY > 68 ? setBackground(true) : setBackground(false);
+      window.scrollY > 40 ? setBackground(true) : setBackground(false);
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
   const handleMenu = () => {
     setToggleOn((prev) => !prev);
   };
@@ -31,7 +30,7 @@ function Header() {
         }
         aria-selected={toogleON}
       >
-        <MenuOverlay istoggle={handleMenu}></MenuOverlay>
+        <MenuOverlay istoggle={handleMenu} handleMenu={handleMenu}></MenuOverlay>
       </div>
       <div className='mdc-ui-container'>
         <header className={`py-4 ${toogleON ? "hidden" : ""} `}>

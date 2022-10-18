@@ -2,12 +2,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "../../styles/NavLinks.module.css";
 
-/**
- * @param {Object} props - link properties
- * @param {string} [props.linkText] - texto del Link
- * @param {string} [props.slug] - Link
- * @returns
- */
 function NavLink({ linkText = "addtext", slug = "addtext" }) {
   const router = useRouter();
   return (

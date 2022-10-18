@@ -21,11 +21,12 @@ function Clients() {
 
   // create an event listener
   useEffect(() => {
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("scroll", handleResize);
     };
-  });
+  }, []);
   return (
     <section className='py-4 lg:py-8 xl:py-12'>
       <div className='flex flex-col lg:flex-row justify-center mdc-ui-container xl:justify-between items-center'>
@@ -35,78 +36,76 @@ function Clients() {
         </div>
         {/* logos */}
 
-        {isMobile ? (
-          <div className={styles.slider}>
-            <div className={styles.slideTrack2}>
-              <div className='w-24 mr-12'>
-                <Image src={IberostarLogo} alt='Iberostar Logo'></Image>
-              </div>
-              <div className='w-24 mr-12'>
-                <Image src={MedixLogo} alt='Medix Logo'></Image>
-              </div>
-              <div className='w-32 mr-12'>
-                <Image src={CemexLogo} alt='Cemex Logo'></Image>
-              </div>
-              <div className='w-24 mr-12'>
-                <Image src={IbmLogo} alt='IBM Logo'></Image>
-              </div>
-              <div className='w-32 mr-12'>
-                <Image src={LiverpoolLogo} alt='IBM Logo'></Image>
-              </div>
+        <div className='hidden lg:flex flex-row items-center flex-shrink-0 lg:min-w-[80%] justify-between'>
+          <div className='w-24 mr-12'>
+            <Image src={IberostarLogo} alt='Iberostar Logo'></Image>
+          </div>
+          <div className='w-24 mr-12'>
+            <Image src={MedixLogo} alt='Medix Logo'></Image>
+          </div>
+          <div className='w-32 mr-12'>
+            <Image src={CemexLogo} alt='Cemex Logo'></Image>
+          </div>
+          <div className='w-24 mr-12'>
+            <Image src={IbmLogo} alt='IBM Logo'></Image>
+          </div>
+          <div className='w-32'>
+            <Image src={LiverpoolLogo} alt='IBM Logo'></Image>
+          </div>
+        </div>
+      </div>
 
-              {/* <!-- same 5 slides doubled (duplicate)--> */}
-              <div className='w-24 mr-12'>
-                <Image src={IberostarLogo} alt='Iberostar Logo'></Image>
-              </div>
-              <div className='w-24 mr-12'>
-                <Image src={MedixLogo} alt='Medix Logo'></Image>
-              </div>
-              <div className='w-32 mr-12'>
-                <Image src={CemexLogo} alt='Cemex Logo'></Image>
-              </div>
-              <div className='w-24 mr-12'>
-                <Image src={IbmLogo} alt='IBM Logo'></Image>
-              </div>
-              <div className='w-32 mr-12'>
-                <Image src={LiverpoolLogo} alt='IBM Logo'></Image>
-              </div>
-              {/* <!-- same 5 slides tripled (duplicate 2)--> */}
-              <div className='w-24 mr-12'>
-                <Image src={IberostarLogo} alt='Iberostar Logo'></Image>
-              </div>
-              <div className='w-24 mr-12'>
-                <Image src={MedixLogo} alt='Medix Logo'></Image>
-              </div>
-              <div className='w-32 mr-12'>
-                <Image src={CemexLogo} alt='Cemex Logo'></Image>
-              </div>
-              <div className='w-24 mr-12'>
-                <Image src={IbmLogo} alt='IBM Logo'></Image>
-              </div>
-              <div className='w-32 mr-12'>
-                <Image src={LiverpoolLogo} alt='IBM Logo'></Image>
-              </div>
-            </div>
+      <div className={`${styles.slider} lg:hidden `}>
+        <div className={`  ${isMobile ? styles.slideTrack2 : "hidden"}`}>
+          <div className='w-24 mr-12'>
+            <Image src={IberostarLogo} alt='Iberostar Logo'></Image>
           </div>
-        ) : (
-          <div className=' flex flex-row items-center flex-shrink-0'>
-            <div className='w-24 mr-12'>
-              <Image src={IberostarLogo} alt='Iberostar Logo'></Image>
-            </div>
-            <div className='w-24 mr-12'>
-              <Image src={MedixLogo} alt='Medix Logo'></Image>
-            </div>
-            <div className='w-32 mr-12'>
-              <Image src={CemexLogo} alt='Cemex Logo'></Image>
-            </div>
-            <div className='w-24 mr-12'>
-              <Image src={IbmLogo} alt='IBM Logo'></Image>
-            </div>
-            <div className='w-32'>
-              <Image src={LiverpoolLogo} alt='IBM Logo'></Image>
-            </div>
+          <div className='w-24 mr-12'>
+            <Image src={MedixLogo} alt='Medix Logo'></Image>
           </div>
-        )}
+          <div className='w-32 mr-12'>
+            <Image src={CemexLogo} alt='Cemex Logo'></Image>
+          </div>
+          <div className='w-24 mr-12'>
+            <Image src={IbmLogo} alt='IBM Logo'></Image>
+          </div>
+          <div className='w-32 mr-12'>
+            <Image src={LiverpoolLogo} alt='IBM Logo'></Image>
+          </div>
+
+          {/* <!-- same 5 slides doubled (duplicate)--> */}
+          <div className='w-24 mr-12'>
+            <Image src={IberostarLogo} alt='Iberostar Logo'></Image>
+          </div>
+          <div className='w-24 mr-12'>
+            <Image src={MedixLogo} alt='Medix Logo'></Image>
+          </div>
+          <div className='w-32 mr-12'>
+            <Image src={CemexLogo} alt='Cemex Logo'></Image>
+          </div>
+          <div className='w-24 mr-12'>
+            <Image src={IbmLogo} alt='IBM Logo'></Image>
+          </div>
+          <div className='w-32 mr-12'>
+            <Image src={LiverpoolLogo} alt='IBM Logo'></Image>
+          </div>
+          {/* <!-- same 5 slides tripled (duplicate 2)--> */}
+          <div className='w-24 mr-12'>
+            <Image src={IberostarLogo} alt='Iberostar Logo'></Image>
+          </div>
+          <div className='w-24 mr-12'>
+            <Image src={MedixLogo} alt='Medix Logo'></Image>
+          </div>
+          <div className='w-32 mr-12'>
+            <Image src={CemexLogo} alt='Cemex Logo'></Image>
+          </div>
+          <div className='w-24 mr-12'>
+            <Image src={IbmLogo} alt='IBM Logo'></Image>
+          </div>
+          <div className='w-32 mr-12'>
+            <Image src={LiverpoolLogo} alt='IBM Logo'></Image>
+          </div>
+        </div>
       </div>
     </section>
   );

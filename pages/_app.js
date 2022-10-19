@@ -1,11 +1,14 @@
 import "../styles/globals.css";
 import Layout from "../components/ui/Layout";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ParallaxProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ParallaxProvider>
   );
 }
 

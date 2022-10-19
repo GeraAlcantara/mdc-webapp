@@ -9,7 +9,9 @@ import ImgTimeline4 from "../public/timeline4.jpg";
 import ImgLaptop from "../public/laptop.jpg";
 import ImgTrofeo from "../public/trofeo.png";
 import Clients from "../components/ui/Clients";
-import { BsCheckLg } from "react-icons/bs";
+import { Parallax } from "react-scroll-parallax";
+import Timeline from "../components/ui/Timeline";
+import TimelineCheckmark from "../components/ui/TimelineCheckmark";
 
 export default function Home() {
   return (
@@ -41,23 +43,28 @@ export default function Home() {
       <section className='relative '>
         {/* timeline  */}
         <div className='flex justify-center'>
-          <div className='w-[2px] bg-gradient-to-b from-secondary to-accent bg-[#4cafb8] h-[75%] top-[12%] absolute hidden lg:block'></div>
+          <Timeline></Timeline>
         </div>
 
         {/* Cursos Multipremiados */}
+
         <article className='bg-white text-gray-900  py-4 md:py-8'>
           <div className='mdc-ui-container flex flex-col gap-4 md:gap-8 md:flex-row'>
-            <div className=' md:w-1/2 relative'>
+            <Parallax translateX={["-800px", "0px"]} startScroll={1000} endScroll={1500} className=' md:w-1/2 relative'>
               <Image src={ImgLaptop} alt='text alt '></Image>
-              <div className='absolute top-[7%] left-[15%] w-[25%]'>
+              <Parallax translateY={["100px", "0px"]} className='absolute top-[7%] left-[15%] w-[25%]'>
                 <Image src={ImgTrofeo} alt='text alt '></Image>
-              </div>
-            </div>
-            <div className=' justify-center items-center hidden lg:flex '>
-              <BsCheckLg className='relative p-2 text-lg box-content bg-secondary text-white rounded-full' />
-            </div>
+              </Parallax>
+            </Parallax>
+            <TimelineCheckmark bgColor='bg-secondary' />
 
-            <div className='md:w-1/2 flex flex-col md:items-start md:justify-center'>
+            <Parallax
+              opacity={[0, 1]}
+              translateY={["500px", "0px"]}
+              startScroll={900}
+              endScroll={1200}
+              className='md:w-1/2 flex flex-col md:items-start md:justify-center'
+            >
               <h2 className='font-bold text-4xl mb-8 text-secondary '>Cursos Multipremiados</h2>
               <p className='max-w-prose md:text-left mb-8'>
                 Nuestros productos han tenido reconocimiento internacional ganando más de 40 premios como MarCom Awards, Davey Awards, W³ Awards, Golden Bridge
@@ -68,13 +75,19 @@ export default function Home() {
                   <span>Casos de exito</span>
                 </a>
               </Link>
-            </div>
+            </Parallax>
           </div>
         </article>
         {/* Interactividad */}
         <article className='py-4 md:py-8'>
           <div className='mdc-ui-container flex flex-col-reverse gap-4 md:gap-8 md:flex-row '>
-            <div className='md:w-1/2 flex flex-col md:items-end md:justify-center py-4 '>
+            <Parallax
+              opacity={[0, 1]}
+              translateY={["500px", "0px"]}
+              startScroll={1500}
+              endScroll={2000}
+              className='md:w-1/2 flex flex-col md:items-end md:justify-center py-4 '
+            >
               <h2 className='font-bold text-4xl mb-8 text-[#00bec6]'>Interactividad</h2>
               <p className='max-w-prose md:text-right mb-8'>
                 En México DC lo visual es tan importante como el contenido, diseñamos cursos con video y animaciones personalizadas para impulsar el
@@ -85,10 +98,8 @@ export default function Home() {
                   <span>Ver demos</span>
                 </a>
               </Link>
-            </div>
-            <div className=' justify-center items-center hidden lg:flex '>
-              <BsCheckLg className='relative p-2 text-lg box-content bg-[#00bec6] text-white rounded-full' />
-            </div>
+            </Parallax>
+            <TimelineCheckmark bgColor='bg-[#00bec6]' />
             <div className='md:w-1/2'>
               <Image src={ImgTimeline2} alt='text alt '></Image>
             </div>
@@ -100,9 +111,7 @@ export default function Home() {
             <div className='md:w-1/2'>
               <Image src={ImgTimeline3} alt='text alt '></Image>
             </div>
-            <div className=' justify-center items-center hidden lg:flex '>
-              <BsCheckLg className='relative p-2 text-lg box-content bg-[#4cff91] text-white rounded-full' />
-            </div>
+            <TimelineCheckmark bgColor='bg-[#4cff91]' />
             <div className='md:w-1/2 flex flex-col md:place-self-auto md:justify-center py-4 '>
               <h2 className='font-bold text-4xl mb-8 text-[#4cff91] '>Mobile Ready</h2>
               <p className='max-w-prose md:text-left mb-8'>
@@ -134,9 +143,7 @@ export default function Home() {
                 </a>
               </Link>
             </div>
-            <div className=' justify-center items-center hidden lg:flex '>
-              <BsCheckLg className='relative p-2 text-lg box-content bg-[#02e239] text-white rounded-full' />
-            </div>
+            <TimelineCheckmark bgColor='bg-[#02e239]' />
             <div className='md:w-1/2'>
               <Image src={ImgTimeline4} alt='text alt '></Image>
             </div>

@@ -135,7 +135,7 @@ export default function Home() {
               </Link>
             </div>
             <div className=' justify-center items-center hidden lg:flex '>
-              <BsCheckLg className='relative p-2 text-lg box-content bg-[#00bec6] text-white rounded-full' />
+              <BsCheckLg className='relative p-2 text-lg box-content bg-[#02e239] text-white rounded-full' />
             </div>
             <div className='md:w-1/2'>
               <Image src={ImgTimeline4} alt='text alt '></Image>

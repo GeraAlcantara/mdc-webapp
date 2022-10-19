@@ -11,7 +11,6 @@
 }
 
 .navbar__item a:hover {
-  color: #00fb15;
   opacity: 0.95;
 }
 
@@ -22,6 +21,7 @@
 }
 
 .navbar__item a.active {
+  color: #00fb15;
   opacity: 1;
 }
 
@@ -50,7 +50,7 @@
 .active:after {
   background: #00fb15;
   /* background-image: linear-gradient(to right top, #008793, #00bf72, #00fb15); */
-  width: 100% !important;
+  /* width: 100% !important; */
   left: 0;
 }
 .active:before {

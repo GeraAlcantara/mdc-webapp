@@ -16,11 +16,20 @@ module.exports = {
       },
       animation: {
         "section-hr": "slidehrright 5s ease infinite both",
+        carousel: "scroll 30s linear infinite",
       },
       keyframes: {
         slidehrright: {
           "0%": { width: "0" },
           "100%": { width: "45%" },
+        },
+        scroll: {
+          "0%": {
+            transform: "translateX(0px)",
+          },
+          "100%": {
+            transform: "translateX(calc(-150px * 5))",
+          },
         },
       },
     },

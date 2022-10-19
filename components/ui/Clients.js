@@ -4,7 +4,7 @@ import MedixLogo from "../../public/clientes/medixLogo.png";
 import CemexLogo from "../../public/clientes/cemexLogo.png";
 import IbmLogo from "../../public/clientes/ibmLogo.png";
 import LiverpoolLogo from "../../public/clientes/liverpoolLogo.png";
-import styles from "../../styles/Clients.module.css";
+
 import { useEffect, useState } from "react";
 
 function Clients() {
@@ -54,9 +54,9 @@ function Clients() {
           </div>
         </div>
       </div>
-
-      <div className={`${styles.slider} lg:hidden `}>
-        <div className={`  ${isMobile ? styles.slideTrack2 : "hidden"}`}>
+      {/* Caroussel logos */}
+      <div className='w-full grid place-items-center overflow-hidden lg:hidden'>
+        <div className={`  ${isMobile ? "w-[calc(120px*15)] flex justify-between items-center animate-carousel" : "hidden"}`}>
           <div className='w-24 mr-12'>
             <Image src={IberostarLogo} alt='Iberostar Logo'></Image>
           </div>

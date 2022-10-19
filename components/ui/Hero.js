@@ -53,7 +53,9 @@ function Hero() {
           <br></br>Seguridad{" "}
         </h1>
         <div className='my-4 pb-4 w-full sm:landscape:w-1/2 md:w-2/4'>
-          <p>Sus empleados podrían ser el punto más debil en la infrestructura de seguridad en su empresa. !Hágalos más fuertes!</p>
+          <p className='xl:text-xl max-w-prose'>
+            Sus empleados podrían ser el punto más debil en la infrestructura de seguridad en su empresa. !Hágalos más fuertes!
+          </p>
         </div>
         <div className='flex justify-around md:justify-start sm:landscape:w-1/2'>
           <div className='flex justify-center items-center rounded-lg bg-secondary px-4 py-2 md:px-12 md:py-2 mx-2'>

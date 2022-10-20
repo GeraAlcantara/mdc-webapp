@@ -3,7 +3,7 @@ import { Fragment, useState } from "react";
 import { RiPlayCircleLine, RiCloseCircleLine } from "react-icons/ri";
 
 export default function ModalVideo() {
-  let [isOpen, setIsOpen] = useState(true);
+  let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
     setIsOpen(false);
@@ -20,9 +20,9 @@ export default function ModalVideo() {
           type='button'
           name='Open dialog'
           onClick={openModal}
-          className='rounded-full bg-black bg-opacity-20  p-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'
+          className='rounded-full bg-black bg-opacity-60 p-4 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'
         >
-          <RiPlayCircleLine className='text-5xl' />
+          <RiPlayCircleLine className='text-7xl' />
           <span className='sr-only'>Open dialog</span>
         </button>
       </div>

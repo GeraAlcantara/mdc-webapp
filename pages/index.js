@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Hero from "../components/ui/Hero";
+import ModalVideo from "../components/ui/ModalVideo";
 import Capacite from "../public/icons/capacite.svg";
 import ImgTimeline2 from "../public/timeline2.jpg";
 import ImgTimeline3 from "../public/timeline3.jpg";
@@ -9,11 +10,10 @@ import ImgTimeline4 from "../public/timeline4.jpg";
 import ImgLaptop from "../public/laptop.jpg";
 import ImgTrofeo from "../public/trofeo.png";
 import Clients from "../components/ui/Clients";
-import { Parallax } from "react-scroll-parallax";
 import Timeline from "../components/ui/Timeline";
 import TimelineCheckmark from "../components/ui/TimelineCheckmark";
 import BannerParallax from "../components/ui/BannerParallax";
-import ModalVideo from "../components/ui/ModalVideo";
+import ImgBannerVideo from "../public/bannerReel.jpg";
 
 export default function Home() {
   return (
@@ -141,7 +141,21 @@ export default function Home() {
         </article>
       </section>
       <section className='relative'>
-        <ModalVideo />
+        <div className='w-full aspect-video'>
+          <Image src={ImgBannerVideo} layout='responsive' alt='Laptom with graphic on the screen ' />
+        </div>
+        <div className='absolute w-full h-full top-0 z-50 p-10'>
+          <div className='text-gray-900 py-6 m-4 flex flex-col items-center'>
+            <h1 className='text-3xl font-extrabold xl:text-5xl'>DEMO REEL</h1>
+            <p className='m-4 max-w-prose xl:text-lg'>
+              Esto es una pequeña muestra de lo que hemos hecho, haga click en la pantalla para ver el video. Para conocer a detalle algunos proyectos visite
+              nuestros Casos de Estudio.
+            </p>
+          </div>
+          <div className='flex justify-center items-center h-[70%]'>
+            <ModalVideo />
+          </div>
+        </div>
       </section>
       <section>
         <BannerParallax />

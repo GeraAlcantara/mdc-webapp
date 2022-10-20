@@ -51,21 +51,15 @@ export default function Home() {
 
         <article className='bg-white text-gray-900  py-4 md:py-8'>
           <div className='mdc-ui-container flex flex-col gap-4 md:gap-8 md:flex-row'>
-            <Parallax translateX={["-800px", "0px"]} startScroll={1000} endScroll={1500} className=' md:w-1/2 relative'>
+            <div className=' md:w-1/2 relative'>
               <Image src={ImgLaptop} alt='text alt '></Image>
-              <Parallax translateY={["100px", "0px"]} className='absolute top-[7%] left-[15%] w-[25%]'>
+              <div className='absolute top-[7%] left-[15%] w-[25%]'>
                 <Image src={ImgTrofeo} alt='text alt '></Image>
-              </Parallax>
-            </Parallax>
+              </div>
+            </div>
             <TimelineCheckmark bgColor='bg-secondary' />
 
-            <Parallax
-              opacity={[0, 1]}
-              translateY={["500px", "0px"]}
-              startScroll={900}
-              endScroll={1200}
-              className='md:w-1/2 flex flex-col md:items-start md:justify-center'
-            >
+            <div className='md:w-1/2 flex flex-col md:items-start md:justify-center'>
               <h2 className='font-bold text-4xl mb-8 text-secondary '>Cursos Multipremiados</h2>
               <p className='max-w-prose md:text-left mb-8'>
                 Nuestros productos han tenido reconocimiento internacional ganando más de 40 premios como MarCom Awards, Davey Awards, W³ Awards, Golden Bridge
@@ -76,19 +70,13 @@ export default function Home() {
                   <span>Casos de exito</span>
                 </a>
               </Link>
-            </Parallax>
+            </div>
           </div>
         </article>
         {/* Interactividad */}
         <article className='py-4 md:py-8'>
           <div className='mdc-ui-container flex flex-col-reverse gap-4 md:gap-8 md:flex-row '>
-            <Parallax
-              opacity={[0, 1]}
-              translateY={["500px", "0px"]}
-              startScroll={1500}
-              endScroll={2000}
-              className='md:w-1/2 flex flex-col md:items-end md:justify-center py-4 '
-            >
+            <div className='md:w-1/2 flex flex-col md:items-end md:justify-center py-4 '>
               <h2 className='font-bold text-4xl mb-8 text-[#00bec6]'>Interactividad</h2>
               <p className='max-w-prose md:text-right mb-8'>
                 En México DC lo visual es tan importante como el contenido, diseñamos cursos con video y animaciones personalizadas para impulsar el
@@ -99,7 +87,7 @@ export default function Home() {
                   <span>Ver demos</span>
                 </a>
               </Link>
-            </Parallax>
+            </div>
             <TimelineCheckmark bgColor='bg-[#00bec6]' />
             <div className='md:w-1/2'>
               <Image src={ImgTimeline2} alt='text alt '></Image>

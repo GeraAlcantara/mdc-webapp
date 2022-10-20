@@ -5,20 +5,25 @@ import Link from "next/link";
 
 function BannerParallax() {
   return (
-    <ParallaxBanner className='h-[800px] w-full relative aspect-video'>
-      <ParallaxBannerLayer image='/banner.jpg' speed={-20}></ParallaxBannerLayer>
+    <ParallaxBanner className='relative w-full xl:h-[800px] aspect-square lg:aspect-video'>
+      <ParallaxBannerLayer speed={-20}>
+        <Image src={ImgBanner} objectFit='cover' layout='fill' alt='employee'></Image>
+        <div className='relative '></div>
+      </ParallaxBannerLayer>
       <ParallaxBannerLayer>
-        <div className='absolute flex justify-end w-full'>
-          <div className='flex w-1/3 p-10 '>
+        <div className='absolute flex justify-end h-full w-full xl:m-auto 2xl:w-[90%]'>
+          <div className='flex justify-end relative top-0 items-center xl:items-start xl:top-32 w-3/4 md:w-1/2 xl:w-1/3 p-5 lg:p-10 '>
             <div className='text-right'>
-              <h1 className='text-4xl'>Cursos a partir de</h1>
-              <h2 className='font-extrabold text-7xl text-accent '>$60 pesos</h2>
-              <p className='font-extrabold text-5xl '>por usuario</p>
-              <span className='font-light text-lg '>-POR CADA CURSO-</span>
-              <Link href={"#"}>
-                <a className='flex justify-center items-center rounded-lg bg-secondary px-4 py-2 md:px-12 md:py-2 mx-2 align-middle leading-none'>
-                  Planes y precios
-                </a>
+              <h1 className='text-xl md:text-4xl'>Cursos a partir de</h1>
+              <h2 className='font-extrabold text-4xl md:text-7xl text-accent '>$60 pesos</h2>
+              <p className='font-extrabold text-3xl md:text-5xl '>por usuario</p>
+              <span className='font-light md:text-lg '>- POR CADA CURSO -</span>
+              <Link href={"#"} className='flex'>
+                <div className='flex justify-end rounded-lg pt-6'>
+                  <a className='flex rounded-lg bg-secondary px-4 py-2 md:px-12 md:py-2 mx-2 align-middle leading-none'>
+                    <span>Planes y precios</span>
+                  </a>
+                </div>
               </Link>
             </div>
           </div>

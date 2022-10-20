@@ -144,7 +144,7 @@ export default function Home() {
         <div className='w-full aspect-video'>
           <Image src={ImgBannerVideo} layout='responsive' alt='Laptom with graphic on the screen ' />
         </div>
-        <div className='absolute w-full h-full top-0 z-50 p-10'>
+        <div className='absolute w-full h-full top-0 p-10'>
           <div className='text-gray-900 py-6 m-4 flex flex-col items-center'>
             <h1 className='text-3xl font-extrabold xl:text-5xl'>DEMO REEL</h1>
             <p className='m-4 max-w-prose xl:text-lg'>

@@ -58,9 +58,9 @@ function Hero() {
           </p>
         </div>
         <div className='flex justify-around md:justify-start sm:landscape:w-1/2'>
-          <div className='flex justify-center items-center rounded-lg bg-secondary px-4 py-2 md:px-12 md:py-2 mx-2'>
+          <div className=''>
             <Link href='soluciones'>
-              <a className=' align-middle leading-none'>Soluciones</a>
+              <a className=' flex justify-center items-center rounded-lg bg-secondary px-4 py-2 md:px-12 md:py-2 mx-2 align-middle leading-none'>Soluciones</a>
             </Link>
           </div>
           <Link href='https://vimeo.com/425231198'>

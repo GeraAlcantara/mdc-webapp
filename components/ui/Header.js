@@ -7,6 +7,9 @@ function Header() {
   const [toogleON, setToggleOn] = useState(false);
   const [background, setBackground] = useState(false);
 
+  const handleMenu = () => {
+    setToggleOn((prev) => !prev);
+  };
   useEffect(() => {
     const handleScroll = () => {
       window.scrollY > 40 ? setBackground(true) : setBackground(false);
@@ -16,9 +19,6 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const handleMenu = () => {
-    setToggleOn((prev) => !prev);
-  };
 
   return (
     <div className={`fixed top-0 w-full z-50 transition-all duration-300 ${background ? "bg-black" : "bg-none"} `}>

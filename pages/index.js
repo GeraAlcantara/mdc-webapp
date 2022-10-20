@@ -13,6 +13,7 @@ import { Parallax } from "react-scroll-parallax";
 import Timeline from "../components/ui/Timeline";
 import TimelineCheckmark from "../components/ui/TimelineCheckmark";
 import BannerParallax from "../components/ui/BannerParallax";
+import ModalVideo from "../components/ui/ModalVideo";
 
 export default function Home() {
   return (
@@ -138,6 +139,9 @@ export default function Home() {
             </div>
           </div>
         </article>
+      </section>
+      <section className='relative'>
+        <ModalVideo />
       </section>
       <section>
         <BannerParallax />

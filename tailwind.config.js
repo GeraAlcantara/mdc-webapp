@@ -15,8 +15,10 @@ module.exports = {
         sans: ["Lato", ...defaultTheme.fontFamily.sans],
       },
       animation: {
-        "section-hr": "slidehrright 5s ease infinite both",
+        sectionhr: "slidehrright 5s ease infinite both",
         carousel: "scroll 30s linear infinite",
+        FadeInSlidein: "fadeInSlidein 1s forwards",
+        FadeOutSlideout: "fadeOutSlideout 1s forwards",
       },
       keyframes: {
         slidehrright: {
@@ -29,6 +31,26 @@ module.exports = {
           },
           "100%": {
             transform: "translateX(calc(-150px * 5))",
+          },
+        },
+        fadeInSlidein: {
+          from: {
+            transform: "translate3d(0, 45px, 0)",
+            opacity: 0,
+          },
+          to: {
+            transform: "translate3d(0, 0, 0)",
+            opacity: 1,
+          },
+        },
+        fadeOutSlideout: {
+          from: {
+            transform: "translate3d(0, 0, 0)",
+            opacity: 1,
+          },
+          to: {
+            transform: "translate3d(0, 45px, 0)",
+            opacity: 0,
           },
         },
       },

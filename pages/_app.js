@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import Layout from "../components/ui/Layout";
 import { ParallaxProvider } from "react-scroll-parallax";
 

@@ -9,8 +9,7 @@ import { useEffect, useState } from "react";
 
 function Clients() {
   const [isMobile, setIsMobile] = useState(false);
-
-  //choose the screen size
+  //check the screen size
   const handleResize = () => {
     if (window.innerWidth < 1024) {
       setIsMobile(true);

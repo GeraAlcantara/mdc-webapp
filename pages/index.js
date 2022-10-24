@@ -14,6 +14,7 @@ import Timeline from "../components/ui/Timeline";
 import TimelineCheckmark from "../components/ui/TimelineCheckmark";
 import BannerParallax from "../components/ui/BannerParallax";
 import ImgBannerVideo from "../public/bannerReel.jpg";
+import { useMemo, useState, useEffect } from "react";
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
             panorama de amenazas en constante cambio: están capacitados para proteger a su organización de ellos.
           </p>
         </div>
-        <hr className='border border-[#4cafb8] animate-section-hr m-auto ' />
+        <hr className='border border-[#4cafb8] animate-sectionhr m-auto ' />
       </div>
       {/* Section Timeline */}
       <section className='relative '>

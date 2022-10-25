@@ -2,33 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+.animDelay {
+  animation-delay: 100ms;
+}
+
 .mdc-ui-container {
   width: calc(100% - 40px);
   max-width: 1366px;
   margin-left: auto;
   margin-right: auto;
 }
+
 @media (min-width: 768px) {
   .mdc-ui-container {
     width: calc(100% - 64px);
   }
 }
+
 @media (min-width: 1024px) {
   .mdc-ui-container {
     width: calc(100% - 184px);
   }
 }
+
 @media (min-width: 1366px) {
   .mdc-ui-container {
     width: calc(100% - 288px);
   }
 }
+
 .xs\:mdc-ui-container {
   width: calc(100% - 40px);
   max-width: 1366px;
   margin-left: auto;
   margin-right: auto;
 }
+
 @media (min-width: 768px) {
   .sm\:mdc-ui-container {
     width: calc(100% - 64px);
@@ -37,6 +46,7 @@
     margin-right: auto;
   }
 }
+
 @media (min-width: 1024px) {
   .md\:mdc-ui-container {
     width: calc(100% - 184px);
@@ -45,6 +55,7 @@
     margin-right: auto;
   }
 }
+
 @media (min-width: 1366px) {
   .lg\:mdc-ui-container {
     width: calc(100% - 288px);

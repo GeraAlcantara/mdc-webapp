@@ -14,9 +14,32 @@ import Timeline from "../components/ui/Timeline";
 import TimelineCheckmark from "../components/ui/TimelineCheckmark";
 import BannerParallax from "../components/ui/BannerParallax";
 import ImgBannerVideo from "../public/bannerReel.jpg";
-import { useMemo, useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import SectionTimeline from "../components/ui/SectionTimeline";
+import { SectionsData } from "../components/data/SectionTimeLineData";
 
 export default function Home() {
+  const [isInViewport, setisInViewport] = useState(false);
+  const articleRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const articleCurr = articleRef.current;
+      const rect = articleCurr.getBoundingClientRect();
+      const rectY = articleCurr.getBoundingClientRect().y;
+      const condition =
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+
+      setisInViewport(condition || rectY <= 800);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       <Head>
@@ -49,36 +72,36 @@ export default function Home() {
           <Timeline></Timeline>
         </div>
 
-        {/* Cursos Multipremiados */}
+        {/* <SectionTimeline
+            ColorSchemaDark={section.ColorSchemaDark}
+            layoutLeft={section.layoutLeft}
+            colorSufix={section.colorSufix}
+            sideImage={section.sideImage}
+            MainImage={section.MainImage}
+            link={section.link}
+            excerpt={section.excerpt}
+            title={section.title}
+          />*/}
+        {SectionsData.map((section, i) => (
+          <SectionTimeline
+            key={i}
+            ColorSchemaDark={section.ColorSchemaDark}
+            layoutLeft={section.layoutLeft}
+            colorSufix={section.colorSufix}
+            sideImage={section.sideImage}
+            MainImage={section.MainImage}
+            link={section.link}
+            excerpt={section.excerpt}
+            title={section.title}
+          />
+        ))}
 
-        <article className='bg-white text-gray-900  py-4 md:py-8'>
-          <div className='mdc-ui-container flex flex-col gap-4 md:gap-8 md:flex-row'>
-            <div className=' md:w-1/2 relative'>
-              <Image src={ImgLaptop} alt='text alt '></Image>
-              <div className='absolute top-[7%] left-[15%] w-[25%]'>
-                <Image src={ImgTrofeo} alt='text alt '></Image>
-              </div>
-            </div>
-            <TimelineCheckmark bgColor='bg-secondary' />
-
-            <div className='md:w-1/2 flex flex-col md:items-start md:justify-center'>
-              <h2 className='font-bold text-4xl mb-8 text-secondary '>Cursos Multipremiados</h2>
-              <p className='max-w-prose md:text-left mb-8'>
-                Nuestros productos han tenido reconocimiento internacional ganando más de 40 premios como MarCom Awards, Davey Awards, W³ Awards, Golden Bridge
-                Awards, Summit Creative Awards, Network Products Guide IT World Awards, Omni Awards, Interactive Media Awards.
-              </p>
-              <Link href='#'>
-                <a className='place-self-start py-2 px-10 bg-secondary rounded-full text-white uppercase hover:from-cyan-500 hover:to-blue-600 transition-all '>
-                  <span>Casos de exito</span>
-                </a>
-              </Link>
-            </div>
-          </div>
-        </article>
         {/* Interactividad */}
         <article className='py-4 md:py-8'>
-          <div className='mdc-ui-container flex flex-col-reverse gap-4 md:gap-8 md:flex-row '>
-            <div className='md:w-1/2 flex flex-col md:items-end md:justify-center py-4 '>
+          <div ref={articleRef} className='mdc-ui-container flex flex-col-reverse gap-4 md:gap-8 md:flex-row '>
+            <div
+              className={`md:w-1/2 flex flex-col md:items-end md:justify-center py-4 ${isInViewport ? "animate-FadeInSlidein" : "animate-FadeOutSlideout"}   `}
+            >
               <h2 className='font-bold text-4xl mb-8 text-[#00bec6]'>Interactividad</h2>
               <p className='max-w-prose md:text-right mb-8'>
                 En México DC lo visual es tan importante como el contenido, diseñamos cursos con video y animaciones personalizadas para impulsar el
@@ -91,7 +114,7 @@ export default function Home() {
               </Link>
             </div>
             <TimelineCheckmark bgColor='bg-[#00bec6]' />
-            <div className='md:w-1/2'>
+            <div className={`md:w-1/2 opacity-0 ${isInViewport ? "animDelay animate-FadeInSlidein " : " animate-FadeOutSlideout "}`}>
               <Image src={ImgTimeline2} alt='text alt '></Image>
             </div>
           </div>

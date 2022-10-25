@@ -45,7 +45,6 @@ function SectionTimeline({
 }) {
   const [isInViewport, setisInViewport] = useState(false);
   const articleRef = useRef(null);
-  console.log(sideImage.src === "");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,7 +79,7 @@ function SectionTimeline({
             </a>
           </Link>
         </div>
-        <TimelineCheckmark bgColor='bg-[#00bec6]' />
+        <TimelineCheckmark bgColor={`bg-${colorSufix} `} />
         <div className={`md:w-1/2 opacity-0 ${isInViewport ? "animDelay animate-FadeInSlidein " : " animate-FadeOutSlideout "}`}>
           <Image src={MainImage.src} alt={MainImage.alt}></Image>
         </div>

@@ -1,6 +1,8 @@
 import ImgLaptop from "../../public/laptop.jpg";
 import ImgTrofeo from "../../public/trofeo.png";
 import ImgTimeline2 from "../../public/timeline2.jpg";
+import ImgTimeline3 from "../../public/timeline3.jpg";
+import ImgTimeline4 from "../../public/timeline4.jpg";
 
 export const SectionsData = [
   {
@@ -35,11 +37,39 @@ export const SectionsData = [
       src: ImgTimeline2,
       alt: "chica frente a la pantalla de una laptop",
     },
-    sideImage: {
-      src: "",
-      alt: "",
-    },
     colorSufix: "[#00bec6]",
+    layoutLeft: true,
+    ColorSchemaDark: true,
+  },
+  {
+    title: "Mobile Ready",
+    excerpt:
+      "Creamos cursos fácilmente accesibles en tabletas o dispositivos móviles. Estos materiales no solo son aptos para dispositivos móviles. Cada aspecto de la capacitación se diseñó cuidadosamente, desde el contenido hasta la pantalla, para proporcionar los materiales más efectivos y de fácil acceso.",
+    link: {
+      slug: "catalogos-de-cursos",
+      text: "Catalogos de cursos",
+    },
+    MainImage: {
+      src: ImgTimeline3,
+      alt: "mano tocando una pantalla con el indice",
+    },
+    colorSufix: "[#4cff91]",
+    layoutLeft: false,
+    ColorSchemaDark: true,
+  },
+  {
+    title: "Plataforma LMS Intuitiva",
+    excerpt:
+      "Nuestros productos han tenido reconocimiento internacional ganando más de 40 premios como MarCom Awards, Davey Awards, W³ Awards, Golden Bridge Awards, Summit Creative Awards, Network Products Guide IT World Awards, Omni Awards, Interactive Media Awards.",
+    link: {
+      slug: "planes-y-precios",
+      text: "Planes y precios",
+    },
+    MainImage: {
+      src: ImgTimeline4,
+      alt: "Hombre pensativo viendo graficas de datos en la pantalla de su computadora",
+    },
+    colorSufix: "[#02e239]",
     layoutLeft: true,
     ColorSchemaDark: true,
   },

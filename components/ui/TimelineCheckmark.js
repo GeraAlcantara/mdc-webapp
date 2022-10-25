@@ -1,7 +1,7 @@
 import { BsCheckLg } from "react-icons/bs";
 import { useParallax } from "react-scroll-parallax";
 
-function TimelineCheckmark({ bgColor = "bg-secondary" }) {
+function TimelineCheckmark({ bgColor }) {
   const check = useParallax({
     scale: [0, 1, "easeInOutExpo"],
   });

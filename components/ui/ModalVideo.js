@@ -56,7 +56,7 @@ export default function ModalVideo() {
                 leaveFrom='opacity-100 scale-100'
                 leaveTo='opacity-0 scale-95'
               >
-                <Dialog.Panel className='w-11/12 lg:w-3/4 xl:w-1/2 transform overflow-hidden rounded-2xl text-left align-middle shadow-xl transition-all '>
+                <Dialog.Panel className='w-full md:w-3/4 xl:w-7/12 2xl:8/12 transform overflow-hidden rounded-2xl text-left align-middle shadow-xl transition-all '>
                   <div className='flex justify-end'>
                     <button
                       type='button'

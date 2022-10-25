@@ -27,7 +27,7 @@ const articlesData = [
       src: "",
       alt: "",
     },
-    colorSufix: "[#00bec6]",
+    colorClass: "[#00bec6]",
     layoutLeft: false,
     ColorSchemaDark: false,
   },
@@ -36,7 +36,7 @@ const articlesData = [
 function SectionTimeline({
   ColorSchemaDark = false,
   layoutLeft = false,
-  colorSufix = "secondary",
+  colorClass = "secondary",
   MainImage = { src: ImgLaptop, alt: "text alt" },
   link = { slug: "#", text: "Dommy route" },
   excerpt = "Lorem ipsum dolor sit amet",
@@ -69,17 +69,17 @@ function SectionTimeline({
     <section className={`py-4 md:py-8 ${ColorSchemaDark ? "" : "bg-white text-gray-900"}`}>
       <div ref={articleRef} className='mdc-ui-container flex flex-col-reverse gap-4 md:gap-8 md:flex-row '>
         <div className={`md:w-1/2 flex flex-col md:items-end md:justify-center py-4 ${isInViewport ? "animate-FadeInSlidein" : "animate-FadeOutSlideout"}   `}>
-          <h2 className={`font-bold text-4xl mb-8 capitalize text-${colorSufix}`}>{title}</h2>
+          <h2 className={`font-bold text-4xl mb-8 capitalize text-${colorClass}`}>{title}</h2>
           <p className='max-w-prose md:text-right mb-8'>{excerpt}</p>
           <Link href={link.slug}>
             <a
-              className={`place-self-start md:place-self-auto py-2 px-10 bg-${colorSufix} rounded-full text-bg_primary uppercase hover:bg-${colorSufix} hover:scale-[.98] hover:contrast-150 transition-all`}
+              className={`place-self-start md:place-self-auto py-2 px-10 bg-${colorClass} rounded-full text-bg_primary uppercase hover:bg-${colorClass} hover:scale-[.98] hover:contrast-150 transition-all`}
             >
               <span className={` ${ColorSchemaDark ? "text-gray-900" : "text-white"}  `}>{link.text}</span>
             </a>
           </Link>
         </div>
-        <TimelineCheckmark bgColor={`bg-${colorSufix} `} />
+        <TimelineCheckmark bgColor={`bg-${colorClass}`} />
         <div className={`md:w-1/2 opacity-0 ${isInViewport ? "animDelay animate-FadeInSlidein " : " animate-FadeOutSlideout "}`}>
           <Image src={MainImage.src} alt={MainImage.alt}></Image>
         </div>
@@ -99,13 +99,13 @@ function SectionTimeline({
             </div>
           ) : null}
         </div>
-        <TimelineCheckmark bgColor={`bg-${colorSufix} `} />
+        <TimelineCheckmark bgColor={"bg-" + colorClass} />
         <div className='md:w-1/2 flex flex-col md:items-start md:justify-center'>
-          <h2 className={`font-bold text-4xl mb-8 capitalize text-${colorSufix} `}>{title}</h2>
+          <h2 className={`font-bold text-4xl mb-8 capitalize text-${colorClass} `}>{title}</h2>
           <p className='max-w-prose md:text-left mb-8'>{excerpt}</p>
           <Link href={link.slug}>
             <a
-              className={`place-self-start py-2 px-10 bg-${colorSufix}  rounded-full text-white uppercase hover:bg-${colorSufix} hover:scale-[.98] hover:contrast-150 transition-all`}
+              className={`place-self-start py-2 px-10 bg-${colorClass}  rounded-full text-white uppercase hover:bg-${colorClass} hover:scale-[.98] hover:contrast-150 transition-all`}
             >
               <span className={` ${ColorSchemaDark ? "text-gray-900" : "text-white"}  `}>{link.text}</span>
             </a>

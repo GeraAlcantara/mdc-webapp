@@ -53,7 +53,7 @@ export default function Home() {
             key={i}
             ColorSchemaDark={section.ColorSchemaDark}
             layoutLeft={section.layoutLeft}
-            colorSufix={section.colorSufix}
+            colorClass={section.colorClass}
             sideImage={section.sideImage}
             MainImage={section.MainImage}
             link={section.link}

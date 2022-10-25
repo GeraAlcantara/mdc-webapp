@@ -1,7 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { RiPlayCircleLine, RiCloseCircleLine } from "react-icons/ri";
-
+import Image from "next/image";
+import ReelImg from "../../public/videoreel.jpg";
 export default function ModalVideo() {
   let [isOpen, setIsOpen] = useState(false);
 
@@ -15,16 +16,19 @@ export default function ModalVideo() {
 
   return (
     <>
-      <div className='inset-0 flex items-center justify-center'>
-        <button
-          type='button'
-          name='Open dialog'
-          onClick={openModal}
-          className='rounded-full bg-black bg-opacity-60 p-4 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'
-        >
-          <RiPlayCircleLine className='text-7xl' />
-          <span className='sr-only'>Open dialog</span>
-        </button>
+      <div className='inset-0 flex items-center justify-center relative '>
+        <Image src={ReelImg} alt='ilustraciones de un curso'></Image>
+        <div className='flex justify-center items-center top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 absolute'>
+          <button
+            type='button'
+            name='Open dialog'
+            className='rounded-full bg-black bg-opacity-60 p-4 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'
+          >
+            <RiPlayCircleLine className='text-7xl' />
+            <span className='sr-only'>Open dialog</span>
+          </button>
+        </div>
+        <button onClick={openModal} className='inset-0 absolute w-full h-full bg-transparent hover:bg-black/30 cursor-pointer transition-all'></button>
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>
@@ -52,7 +56,7 @@ export default function ModalVideo() {
                 leaveFrom='opacity-100 scale-100'
                 leaveTo='opacity-0 scale-95'
               >
-                <Dialog.Panel className=' transform overflow-hidden rounded-2xl  p-6 text-left align-middle shadow-xl transition-all'>
+                <Dialog.Panel className=' w-1/2 transform overflow-hidden rounded-2xl text-left align-middle shadow-xl transition-all '>
                   <div className='flex justify-end'>
                     <button
                       type='button'
@@ -62,13 +66,21 @@ export default function ModalVideo() {
                       <RiCloseCircleLine className='text-2xl' />
                     </button>
                   </div>
+                  <div className='aspect-video relative '>
+                    <iframe
+                      src='https://player.vimeo.com/video/425231198?h=1f08b35af5'
+                      width='100%'
+                      height='100%'
+                      allow='autoplay; fullscreen; picture-in-picture'
+                    ></iframe>
+                  </div>
 
-                  <iframe
+                  {/* <iframe
                     src='https://player.vimeo.com/video/425231198?h=1f08b35af5'
                     width='640'
                     height='360'
                     allow='autoplay; fullscreen; picture-in-picture'
-                  ></iframe>
+                  ></iframe> */}
                 </Dialog.Panel>
               </Transition.Child>
             </div>

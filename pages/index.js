@@ -2,18 +2,15 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Hero from "../components/ui/Hero";
+import { SectionsData } from "../components/data/SectionTimeLineData";
 import ModalVideo from "../components/ui/ModalVideo";
 import Capacite from "../public/icons/capacite.svg";
-
-import ImgTimeline3 from "../public/timeline3.jpg";
-import ImgTimeline4 from "../public/timeline4.jpg";
 import Clients from "../components/ui/Clients";
 import Timeline from "../components/ui/Timeline";
-import TimelineCheckmark from "../components/ui/TimelineCheckmark";
 import BannerParallax from "../components/ui/BannerParallax";
 import ImgBannerVideo from "../public/bannerReel.jpg";
 import SectionTimeline from "../components/ui/SectionTimeline";
-import { SectionsData } from "../components/data/SectionTimeLineData";
+import ReelImg from "../public/videoreel.jpg";
 
 export default function Home() {
   return (
@@ -62,23 +59,27 @@ export default function Home() {
           />
         ))}
       </section>
-      <section className='relative'>
-        <div className='w-full aspect-video'>
-          <Image src={ImgBannerVideo} layout='responsive' alt='Laptom with graphic on the screen ' />
-        </div>
-        <div className='absolute w-full h-full top-0 p-10'>
-          <div className='text-gray-900 py-6 m-4 flex flex-col items-center'>
-            <h1 className='text-3xl font-extrabold xl:text-5xl'>DEMO REEL</h1>
-            <p className='m-4 max-w-prose xl:text-lg'>
-              Esto es una pequeña muestra de lo que hemos hecho, haga click en la pantalla para ver el video. Para conocer a detalle algunos proyectos visite
-              nuestros Casos de Estudio.
-            </p>
-          </div>
-          <div className='flex justify-center items-center h-[70%]'>
-            <ModalVideo />
+      {/* video reel Section */}
+      <section className=' min-h-screen flex items-center'>
+        <div className='mdc-ui-container'>
+          <div className='flex flex-wrap flex-col lg:flex-row justify-between '>
+            <div className='p-4 w-full lg:w-1/2 text-center lg:text-left'>
+              <h2 className='uppercase text-4xl mb-10 font-extrabold '>Demo Reel</h2>
+              <p className='mb-10 text-lg xl:pr-14 '>
+                Esto es una pequeña muestra de lo que hemos hecho, haga click en la pantalla para ver el video. Para conocer a detalle algunos proyectos visite
+                nuestros Casos de Estudio.
+              </p>
+              <Link href={"#"}>
+                <a className='border-2 border-white border-solid rounded-md h-[48px] inline-flex items-center justify-center leading-4 px-10'>Conocer más</a>
+              </Link>
+            </div>
+            <div className='p-4 w-full lg:w-1/2 flex items-center justify-center relative'>
+              <ModalVideo />
+            </div>
           </div>
         </div>
       </section>
+
       <section>
         <BannerParallax />
       </section>

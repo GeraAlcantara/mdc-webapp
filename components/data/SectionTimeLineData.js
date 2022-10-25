@@ -72,7 +72,7 @@ export const SectionsData = [
     excerpt:
       "Nuestros productos han tenido reconocimiento internacional ganando más de 40 premios como MarCom Awards, Davey Awards, W³ Awards, Golden Bridge Awards, Summit Creative Awards, Network Products Guide IT World Awards, Omni Awards, Interactive Media Awards.",
     link: {
-      slug: "planes-y-precios",
+      slug: "planes-precios",
       text: "Planes y precios",
     },
     MainImage: {

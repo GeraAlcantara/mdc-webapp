@@ -35,7 +35,7 @@ module.exports = {
         },
         fadeInSlidein: {
           from: {
-            transform: "translate3d(0, 45px, 0)",
+            transform: "translate3d(0, 60px, 0)",
             opacity: 0,
           },
           to: {
@@ -49,7 +49,7 @@ module.exports = {
             opacity: 1,
           },
           to: {
-            transform: "translate3d(0, 45px, 0)",
+            transform: "translate3d(0, 60px, 0)",
             opacity: 0,
           },
         },

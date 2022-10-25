@@ -67,10 +67,12 @@ export default function Home() {
               <h2 className='uppercase text-4xl mb-10 font-extrabold '>Demo Reel</h2>
               <p className='mb-10 text-lg xl:pr-14 '>
                 Esto es una pequeña muestra de lo que hemos hecho, haga click en la pantalla para ver el video. Para conocer a detalle algunos proyectos visite
-                nuestros Casos de Estudio.
+                nuestros Casos de Éxito.
               </p>
-              <Link href={"#"}>
-                <a className='border-2 border-white border-solid rounded-md h-[48px] inline-flex items-center justify-center leading-4 px-10'>Conocer más</a>
+              <Link href='/casos-de-exito'>
+                <a className='border-[1px] border-white border-solid rounded-md h-[48px] hover:border-secondary hover:text-secondary hover:scale-[.98] will-change-transform inline-flex items-center justify-center leading-4 px-10'>
+                  Conocer más
+                </a>
               </Link>
             </div>
             <div className='p-4 w-full lg:w-1/2 flex items-center justify-center relative'>

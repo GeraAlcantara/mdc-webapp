@@ -20,7 +20,7 @@ export const SectionsData = [
     excerpt:
       "En México DC lo visual es tan importante como el contenido, diseñamos cursos con video y animaciones personalizadas para impulsar el aprendizaje. Este tipo de factores generan entusiasmo y aumenta el interes en sus empleados a la hora de tomar un curso.",
     link: {
-      slug: "Casos-de-exito",
+      slug: "casos-de-exito",
       text: "Casos de exito",
     },
     MainImage: {

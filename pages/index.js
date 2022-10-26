@@ -8,9 +8,7 @@ import Capacite from "../public/icons/capacite.svg";
 import Clients from "../components/ui/Clients";
 import Timeline from "../components/ui/Timeline";
 import BannerParallax from "../components/ui/BannerParallax";
-import ImgBannerVideo from "../public/bannerReel.jpg";
 import SectionTimeline from "../components/ui/SectionTimeline";
-import ReelImg from "../public/videoreel.jpg";
 
 export default function Home() {
   return (

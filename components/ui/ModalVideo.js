@@ -25,10 +25,11 @@ export default function ModalVideo() {
             className='rounded-full bg-black bg-opacity-60 p-4 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'
           >
             <RiPlayCircleLine className='text-7xl' />
-            <span className='sr-only'>Open dialog</span>
           </button>
         </div>
-        <button onClick={openModal} className='inset-0 absolute w-full h-full bg-transparent hover:bg-black/30 cursor-pointer transition-all'></button>
+        <button onClick={openModal} className='inset-0 absolute w-full h-full bg-transparent hover:bg-black/30 cursor-pointer transition-all'>
+          <span className='sr-only'>Open dialog</span>
+        </button>
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>

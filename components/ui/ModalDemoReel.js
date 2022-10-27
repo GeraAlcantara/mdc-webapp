@@ -1,9 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-import { RiPlayCircleLine, RiCloseCircleLine } from "react-icons/ri";
-import Image from "next/image";
-import ReelImg from "../../public/videoreel.jpg";
-export default function ModalVideo() {
+import { RiCloseCircleLine } from "react-icons/ri";
+
+export default function ModalDemoReel() {
   let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -13,25 +12,16 @@ export default function ModalVideo() {
   function openModal() {
     setIsOpen(true);
   }
-
   return (
     <>
-      <div className='inset-0 flex items-center justify-center relative '>
-        <Image src={ReelImg} alt='ilustraciones de un curso'></Image>
-        <div className='flex justify-center items-center top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 absolute'>
-          <button
-            type='button'
-            name='Open dialog'
-            className='rounded-full bg-black bg-opacity-60 p-4 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'
-          >
-            <RiPlayCircleLine className='text-7xl' />
-          </button>
-        </div>
-        <button onClick={openModal} className='inset-0 absolute w-full h-full bg-transparent hover:bg-black/30 cursor-pointer transition-all'>
-          <span className='sr-only'>Open dialog</span>
-        </button>
-      </div>
-
+      <button
+        type='button'
+        name='Open dialog'
+        className='uppercase rounded-full bg-gray-900 py-2 px-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'
+        onClick={openModal}
+      >
+        Ver demo reel
+      </button>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as='div' className='relative z-10' onClose={closeModal}>
           <Transition.Child
@@ -45,7 +35,6 @@ export default function ModalVideo() {
           >
             <div className='fixed inset-0 bg-black bg-opacity-80' />
           </Transition.Child>
-
           <div className='fixed inset-0 bg-black/40 overflow-y-auto'>
             <div className='flex min-h-full items-center justify-center p-4 text-center'>
               <Transition.Child
@@ -84,5 +73,3 @@ export default function ModalVideo() {
     </>
   );
 }
-
-/* ModalVideo */

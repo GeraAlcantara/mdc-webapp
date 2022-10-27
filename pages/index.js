@@ -9,6 +9,8 @@ import Clients from "../components/ui/Clients";
 import Timeline from "../components/ui/Timeline";
 import BannerParallax from "../components/ui/BannerParallax";
 import SectionTimeline from "../components/ui/SectionTimeline";
+import ModalDemoReel from "../components/ui/ModalDemoReel";
+import MonitorVideoReel from "../public/videoreel.png";
 
 export default function Home() {
   return (
@@ -60,21 +62,26 @@ export default function Home() {
       {/* video reel Section */}
       <section className=' min-h-screen flex items-center'>
         <div className='mdc-ui-container'>
-          <div className='flex flex-wrap flex-col lg:flex-row justify-between '>
-            <div className='p-4 w-full lg:w-1/2 text-center lg:text-left'>
-              <h2 className='uppercase text-4xl mb-10 font-extrabold '>Demo Reel</h2>
-              <p className='mb-10 text-lg xl:pr-14 '>
-                Esto es una pequeña muestra de lo que hemos hecho, haga click en la pantalla para ver el video. Para conocer a detalle algunos proyectos visite
-                nuestros Casos de Éxito.
-              </p>
-              <Link href='/casos-de-exito'>
-                <a className='border-[1px] border-white border-solid rounded-md h-[48px] hover:border-secondary hover:text-secondary hover:scale-[.98] will-change-transform inline-flex items-center justify-center leading-4 px-10'>
-                  Conocer más
-                </a>
-              </Link>
+          <div className='flex justify-between bg-gradient-to-br from-[#386fdd] via-[#439dc0] to-[#67dd80] rounded-3xl relative'>
+            <div className='px-10 py-6 xl:px-20 w-full lg:w-1/2 lg:text-left'>
+              <h2 className='uppercase mb-4'>Demo Reel</h2>
+              <div className='pb-8'>
+                <h3 className='md:text-6xl lg:text-8xl font-extrabold'>
+                  <small className='text-4xl xl:text-[2.75rem] text-gray-900'>Una Muestra de</small> <br />
+                  Nuestro <br /> Trabajo
+                </h3>
+                <p className='mb-10 text-xl font-semibold text-gray-900 mt-4 w-[34ch]'>
+                  Esta es una pequeña muestra de lo que hemos realizado en nuestros casos de éxito.
+                </p>
+                <div className='pb-20'>
+                  <ModalDemoReel />
+                </div>
+              </div>
             </div>
-            <div className='p-4 w-full lg:w-1/2 flex items-center justify-center relative'>
-              <ModalVideo />
+            <div className='w-1/3 lg:w-[48%] flex items-center justify-center absolute top-0 right-0 h-full overflow-hidden my-4 '>
+              <div className=' absolute w-full h-[90%]'>
+                <Image src={MonitorVideoReel} layout='fill' objectPosition='left' objectFit='cover' alt='Monitor computadora de escritorio'></Image>
+              </div>
             </div>
           </div>
         </div>

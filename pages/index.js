@@ -60,7 +60,7 @@ export default function Home() {
         ))}
       </section>
       {/* video reel Section */}
-      <section className='flex items-center py-14'>
+      <section className='flex items-center pb-8 md:py-28'>
         <div className='mdc-ui-container'>
           <div className='flex flex-col md:flex-row justify-between bg-gradient-to-br from-[#386fdd] via-[#439dc0] to-[#67dd80] rounded-3xl relative'>
             <div className='px-10 py-6 xl:px-20 w-full lg:w-1/2 lg:text-left'>

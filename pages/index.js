@@ -60,27 +60,32 @@ export default function Home() {
         ))}
       </section>
       {/* video reel Section */}
-      <section className=' min-h-screen flex items-center'>
+      <section className='flex items-center py-14'>
         <div className='mdc-ui-container'>
-          <div className='flex justify-between bg-gradient-to-br from-[#386fdd] via-[#439dc0] to-[#67dd80] rounded-3xl relative'>
+          <div className='flex flex-col md:flex-row justify-between bg-gradient-to-br from-[#386fdd] via-[#439dc0] to-[#67dd80] rounded-3xl relative'>
             <div className='px-10 py-6 xl:px-20 w-full lg:w-1/2 lg:text-left'>
               <h2 className='uppercase mb-4'>Demo Reel</h2>
               <div className='pb-8'>
-                <h3 className='md:text-6xl lg:text-8xl font-extrabold'>
-                  <small className='text-4xl xl:text-[2.75rem] text-gray-900'>Una Muestra de</small> <br />
+                <h3 className='text-6xl md:text-6xl lg:text-8xl font-extrabold'>
+                  <small className='text-2xl md:text-4xl xl:text-[2.75rem] text-gray-900'>Una Muestra de</small> <br />
                   Nuestro <br /> Trabajo
                 </h3>
-                <p className='mb-10 text-xl font-semibold text-gray-900 mt-4 w-[34ch]'>
+                <p className='mb-10 tetx-lg md:text-xl font-semibold text-gray-900 mt-4 md:w-[34ch]'>
                   Esta es una pequeña muestra de lo que hemos realizado en nuestros casos de éxito.
                 </p>
-                <div className='pb-20'>
+                <div className='md:pb-20'>
                   <ModalDemoReel />
                 </div>
               </div>
             </div>
-            <div className='w-1/3 lg:w-[48%] flex items-center justify-center absolute top-0 right-0 h-full overflow-hidden my-4 '>
+            <div className='hidden w-1/3 lg:w-[48%] md:flex items-center justify-center absolute top-0 right-0 h-full overflow-hidden my-4 '>
               <div className=' absolute w-full h-[90%]'>
                 <Image src={MonitorVideoReel} layout='fill' objectPosition='left' objectFit='cover' alt='Monitor computadora de escritorio'></Image>
+              </div>
+            </div>
+            <div className='md:hidden flex justify-center p-4'>
+              <div className='relative md:absolute w-[90%] h-[90%] '>
+                <Image src={MonitorVideoReel} layout='responsive' objectFit='contain' alt='Monitor computadora de escritorio'></Image>
               </div>
             </div>
           </div>

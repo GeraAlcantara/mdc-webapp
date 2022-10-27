@@ -69,7 +69,7 @@
 .borderAnimated {
   --border-radius: 12px;
   --border-size: 1px;
-  --padding: 2px;
+  --padding: 0px;
   --border-bg: conic-gradient(from 180deg at 50% 50%, #00bec6 0deg, #4cff91 112.5deg, #02e239 228.75deg, rgba(42, 138, 246, 0) 360deg);
   position: relative;
   overflow: hidden;
@@ -106,8 +106,8 @@
       display: block;
       background: var(--border-bg);
       box-shadow: 0 0 40px 20px --var(--border-bg);
-      width: calc(100% * 1.45021356237);
-      padding-bottom: calc(100% * 1.45021356237);
+      width: calc(100% * 2);
+      padding-bottom: calc(100% * 2);
       position: absolute;
       left: 50%;
       top: 50%;

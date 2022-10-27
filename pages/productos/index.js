@@ -24,7 +24,7 @@ function Productos() {
         </div>
         {/* Card */}
         <div className=' mb-10 '>
-          <a href='' className='borderAnimated  '>
+          <div className='borderAnimated  '>
             <i className='opacity-0 transition-all'></i>
             <div className='p-6 border-cyan-800/20 rounded-xl border-[1px] flex flex-col gap-4 relative'>
               <header>
@@ -48,7 +48,7 @@ function Productos() {
                 <p>Regala este plan</p>
               </div>
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </>

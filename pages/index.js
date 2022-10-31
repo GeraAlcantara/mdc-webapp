@@ -1,9 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import Hero from "../components/ui/Hero";
 import { SectionsData } from "../components/data/SectionTimeLineData";
-import ModalVideo from "../components/ui/ModalVideo";
 import Capacite from "../public/icons/capacite.svg";
 import Clients from "../components/ui/Clients";
 import Timeline from "../components/ui/Timeline";

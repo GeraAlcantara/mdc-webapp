@@ -29,7 +29,7 @@ function Productos() {
               Conoce nuestro catálogo de cursos con &quot;llave en mano&quot;, exportados en formato SCORM y listos para integrarse en cualquier plataforma LMS.
             </p>
             <div>
-              <ModalDemoReel btnTheme='btnDark' />
+              <ModalDemoReel btnTheme='btnRingGreen' />
             </div>
           </div>
           <div className='m-auto'>

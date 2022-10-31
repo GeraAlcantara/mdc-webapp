@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Employee from "../../public/employeetablet.png";
 import { RiUserFill } from "react-icons/ri";
+import ModalDemoReel from "../../components/ui/ModalDemoReel";
 
 function Productos() {
   return (
@@ -16,8 +17,20 @@ function Productos() {
         <title>Mexico Development Center | Productos</title>
       </Head>
       <div className='pt-[68px] mdc-ui-container'>
-        <div className='py-10 flex flex-col lg:flex-row gap-8'>
-          <h1 className='text-2xl text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa sem, fermentum</h1>
+        <div className='p-10 flex flex-col lg:flex-row gap-8 bg-gradient-to-b from-[#1c3d5c] via-[#1c3d5c]/30 to-bg_primary rounded-t-3xl'>
+          <div>
+            <h1 className='text-7xl text-secondary font-extrabold'>
+              <small className='text-white text-4xl font-normal'>Librería de</small>
+              <br />
+              Cursos
+            </h1>
+            <p className='my-8 text-lg max-w-[40ch]'>
+              Conoce nuestro catálogo de cursos con &quot;llave en mano&quot;, exportados en formato SCORM y listos para integrarse en cualquier plataforma LMS.
+            </p>
+            <div>
+              <ModalDemoReel btnTheme='btnRingGreen' />
+            </div>
+          </div>
           <div className='m-auto'>
             <Image className='pb-4' src={Employee} alt='empleado de construcion viendo su tableta ' />
           </div>

@@ -1,23 +1,34 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { RiCloseCircleLine } from "react-icons/ri";
+import clsx from "clsx";
 
-export default function ModalDemoReel() {
+/**
+ * @author Gerardo Alcántara <https://github.com/GeraAlcantara>
+ * @example
+ * <ModalDemoReel btnTheme='btnRingGreen' />
+ * <ModalDemoReel btnTheme='btnRingBlue' />
+ * @typedef {'btnRingGreen' |'btnDark'} Theme
+ * @param {object} props
+ * @param {Theme} props.btnTheme
+ * @returns {JSX.Element}
+ */
+export default function ModalDemoReel({ btnTheme, ...props }) {
   let [isOpen, setIsOpen] = useState(false);
+  const closeModal = () => setIsOpen(false);
+  const openModal = () => setIsOpen(true);
 
-  function closeModal() {
-    setIsOpen(false);
-  }
-
-  function openModal() {
-    setIsOpen(true);
-  }
   return (
     <>
+      {/* button that recive classNames props */}
+
       <button
         type='button'
         name='Open dialog'
-        className='uppercase rounded-full bg-gray-900 py-2 px-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'
+        className={clsx("uppercase rounded-full", {
+          "bg-gray-900 py-2 px-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75": btnTheme === "btnDark",
+          "border-2 border-accent text-accent py-2 px-8": btnTheme === "btnRingGreen",
+        })}
         onClick={openModal}
       >
         Ver demo reel

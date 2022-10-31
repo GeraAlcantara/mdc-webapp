@@ -74,7 +74,7 @@ export default function Home() {
                   Esta es una pequeña muestra de lo que hemos realizado en nuestros casos de éxito.
                 </p>
                 <div className='md:pb-20'>
-                  <ModalDemoReel />
+                  <ModalDemoReel btnTheme='btnDark' />
                 </div>
               </div>
             </div>

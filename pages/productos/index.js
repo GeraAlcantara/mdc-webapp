@@ -3,6 +3,7 @@ import Image from "next/image";
 import Employee from "../../public/employeetablet.png";
 import { RiUserFill } from "react-icons/ri";
 import ModalDemoReel from "../../components/ui/ModalDemoReel";
+import TabsCarousel from "../../components/ui/TabsCarousel";
 
 function Productos() {
   return (
@@ -28,13 +29,25 @@ function Productos() {
               Conoce nuestro catálogo de cursos con &quot;llave en mano&quot;, exportados en formato SCORM y listos para integrarse en cualquier plataforma LMS.
             </p>
             <div>
-              <ModalDemoReel btnTheme='btnRingGreen' />
+              <ModalDemoReel btnTheme='btnDark' />
             </div>
           </div>
           <div className='m-auto'>
             <Image className='pb-4' src={Employee} alt='empleado de construcion viendo su tableta ' />
           </div>
         </div>
+        {/* Section Libreria  */}
+        <section className='m-10'>
+          <header>
+            <hgroup className='text-center'>
+              <p className='text-xl'>Conoce toda nuestra</p>
+              <h2 className='text-4xl font-bold'>Librería lista para usarse.</h2>
+            </hgroup>
+          </header>
+          {/* tabs filter carrousel */}
+          <TabsCarousel />
+          <div className='flex flex-col lg:flex-row gap-8'></div>
+        </section>
         {/* Card */}
         <div className=' mb-10 '>
           <div className='borderAnimated  '>

@@ -12,6 +12,12 @@ module.exports = {
         lineGradient_1: "#00bec6",
         lineGradient_2: "#4cff91",
         lineGradient_3: "#02e239",
+        brandBlue: {
+          50: "#59e0fa",
+          100: "#60b7c8",
+          500: "#12283f",
+          700: "#263749",
+        },
       },
       fontFamily: {
         RobotoCondense: ["Lato", ...defaultTheme.fontFamily.sans],

@@ -7,7 +7,7 @@ import clsx from "clsx";
  * @author Gerardo Alcántara <https://github.com/GeraAlcantara>
  * @example
  * <ModalDemoReel btnTheme='btnRingGreen' />
- * <ModalDemoReel btnTheme='btnRingBlue' />
+ * <ModalDemoReel btnTheme='btnDark' />
  * @typedef {'btnRingGreen' |'btnDark'} Theme
  * @param {object} props
  * @param {Theme} props.btnTheme
@@ -29,6 +29,7 @@ export default function ModalDemoReel({ btnTheme, ...props }) {
           "bg-gray-900 py-2 px-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75": btnTheme === "btnDark",
           "border-2 border-accent text-accent py-2 px-8": btnTheme === "btnRingGreen",
         })}
+        {...props}
         onClick={openModal}
       >
         Ver demo reel

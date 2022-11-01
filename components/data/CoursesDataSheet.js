@@ -30,7 +30,7 @@ export const DataSheet = {
     { id: 1, name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
     { id: 2, name: "Autoevaluación", qt: 1, ICON: Iconautoeval },
     { id: 3, name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-    { id: 3, name: "Interactividades", qt: 2, ICON: Iconinteract },
+    { id: 4, name: "Interactividades", qt: 2, ICON: Iconinteract },
   ],
   lessons: [
     { title: "Introducción", duration: "0:30" },

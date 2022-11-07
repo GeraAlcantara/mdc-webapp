@@ -1453,12 +1453,12 @@ export const DataCourseLibrarie = [
     slug: "ventas",
     subcategories: [
       {
-        name: "Capacitación en el Proceso de Ventas",
-        slug: "capacitacion-en-el-proceso-de-ventas",
+        name: "Capacitación Ventas",
+        slug: "capacitacion-ventas",
         courses: [
           {
             library: { name: "Ventas", skuPrefix: "V" },
-            subcategory: { name: "Capacitación en el Proceso de Ventas", skuPrefix: "PV" },
+            subcategory: { name: "Capacitación de Ventas", skuPrefix: "PV" },
             title: "Proceso de Ventas",
             slug: "proceso-de-ventas",
             thumbnail: {

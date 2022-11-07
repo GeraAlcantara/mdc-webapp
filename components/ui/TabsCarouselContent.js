@@ -2,6 +2,7 @@ import React from "react";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import CardsCarousel from "./CardCourse";
 import ImageHolder from "../../public/videoreel.jpg";
+import { data, getCategoriesNames, getCategoriesSlugs, getCategoryByName } from "../helpers/library";
 function TabsCarouselContent() {
   return (
     <>

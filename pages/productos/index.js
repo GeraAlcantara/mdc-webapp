@@ -3,7 +3,7 @@ import Image from "next/image";
 import Employee from "../../public/employeetablet.png";
 import { RiUserFill } from "react-icons/ri";
 import ModalDemoReel from "../../components/ui/ModalDemoReel";
-import TabsCarousel from "../../components/ui/TabsCarousel";
+import TabsCarousel from "../../components/ui/TabsCourses";
 
 function Productos() {
   return (

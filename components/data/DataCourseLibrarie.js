@@ -23,7 +23,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Habilidades Blandas", skuPrefix: "HB" },
               title: "Escucha Activa",
               slug: "escucha-activa",
-              thumbnail: ThumbnailHD01,
+              thumbnail: {
+                src: ThumbnailHD01,
+                alt: "Escucha Activa",
+              },
               identifier: { prefix: "HB", courseNumber: "EA" },
               duration: 20,
               description: [
@@ -114,7 +117,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Habilidades Blandas", skuPrefix: "HB" },
               title: "Manejo del estrés laboral",
               slug: "manejo-del-estres-laboral",
-              thumbnail: ThumbnailHD01,
+              thumbnail: {
+                src: ThumbnailHD01,
+                alt: "Escucha Activa",
+              },
               identifier: { prefix: "HB", courseNumber: "ME" },
               duration: 30,
               description: [
@@ -233,7 +239,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Habilidades directivas", skuPrefix: "HD" },
               title: "Liderazgo Efectivo",
               slug: "liderazgo-efectivo",
-              thumbnail: ThumbnailHD01,
+              thumbnail: {
+                src: ThumbnailHD01,
+                alt: "liderazgo efectivo",
+              },
               identifier: { prefix: "R-HD-", courseNumber: "01" },
               duration: 12,
               description: [
@@ -299,7 +308,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Habilidades directivas", skuPrefix: "HD" },
               title: "Equipos de alto rendimiento",
               slug: "equipos-alto-rendimiento",
-              thumbnail: ThumbnailHD02,
+              thumbnail: {
+                src: ThumbnailHD02,
+                alt: "Equipos de alto rendimiento",
+              },
               identifier: { prefix: "R-HD-", courseNumber: "02" },
               duration: 10,
               description: [
@@ -355,7 +367,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Habilidades directivas", skuPrefix: "HD" },
               title: "Comunicación Efectiva",
               slug: "comunicacion-efectiva",
-              thumbnail: ThumbnailHD03,
+              thumbnail: {
+                src: ThumbnailHD03,
+                alt: "Comunicación Efectiva",
+              },
               identifier: { prefix: "R-HD-", courseNumber: "03" },
               duration: 12,
               description: [
@@ -413,7 +428,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Habilidades directivas", skuPrefix: "HD" },
               title: "Inteligencia emocional para la gestión de conflictos",
               slug: "inteligencia-emocional-gestion-de-conflictos",
-              thumbnail: ThumbnailHD04,
+              thumbnail: {
+                src: ThumbnailHD04,
+                alt: "inteligencia emocional para la gestión de conflictos",
+              },
               identifier: { prefix: "R-HD-", courseNumber: "04" },
               duration: 15,
               description: [
@@ -488,7 +506,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Habilidades directivas", skuPrefix: "HD" },
               title: "Gestión del Tiempo",
               slug: "gestion-del-tiempo",
-              thumbnail: ThumbnailHD04,
+              thumbnail: {
+                src: ThumbnailHD04,
+                alt: "gestión del tiempo",
+              },
               identifier: { prefix: "R-HD-", courseNumber: "05" },
               duration: 12,
               description: [
@@ -552,7 +573,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Habilidades directivas", skuPrefix: "HD" },
               title: "Evaluación del Desempeño",
               slug: "evaluacion-del-desempeño",
-              thumbnail: ThumbnailHD04,
+              thumbnail: {
+                src: ThumbnailHD04,
+                alt: "evaluación del desempeño",
+              },
               identifier: { prefix: "R-HD-", courseNumber: "06" },
               duration: 20,
               description: [
@@ -641,7 +665,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Habilidades directivas", skuPrefix: "HD" },
               title: "¿Cómo dar retroalimentación?",
               slug: "como-dar-retroalimentacion",
-              thumbnail: ThumbnailHD04,
+              thumbnail: {
+                src: ThumbnailHD04,
+                alt: "como dar retroalimentacion",
+              },
               identifier: { prefix: "R-HD-", courseNumber: "07" },
               duration: 15,
               description: [
@@ -725,7 +752,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Habilidades Tecnológicas", skuPrefix: "HT" },
               title: "Mejores prácticas para el teletrabajo",
               slug: "mejores-practicas-para-el-teletrabajo",
-              thumbnail: ThumbnailHD01,
+              thumbnail: {
+                src: ThumbnailHD01,
+                alt: "mejoress practicas para el teletrabajo",
+              },
               identifier: { prefix: "HT-TT", courseNumber: "101" },
               duration: 12,
               description: [
@@ -780,7 +810,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Habilidades Tecnológicas", skuPrefix: "HT" },
               title: "Fundamentos del Teletrabajo para supervisores",
               slug: "fundamentos-del-teletrabajo-para-supervisores",
-              thumbnail: ThumbnailHD01,
+              thumbnail: {
+                src: ThumbnailHD01,
+                alt: "fundamentos del teletrabajo para supervisores",
+              },
               identifier: { prefix: "HT-TT", courseNumber: "201" },
               duration: 20,
               description: [
@@ -871,7 +904,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Jurídico", skuPrefix: "J" },
               title: "Fundamentos de la NOM-035",
               slug: "fundamentos-de-la-nom-035",
-              thumbnail: ThumbnailHD01,
+              thumbnail: {
+                src: ThumbnailHD01,
+                alt: "fundamentos de la nom 035",
+              },
               identifier: { prefix: "J-N35", courseNumber: "201" },
               duration: 35,
               description: [
@@ -962,7 +998,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Jurídico", skuPrefix: "J" },
               title: "Prevención de violencia laboral y acoso sexual",
               slug: "prevencion-de-violencia-laboral-y-acoso-sexual",
-              thumbnail: ThumbnailHD01,
+              thumbnail: {
+                src: ThumbnailHD01,
+                alt: "prevencion de violencia laboral y acoso sexual",
+              },
               identifier: { prefix: "J-VL", courseNumber: "101" },
               duration: 25,
               description: [
@@ -1041,7 +1080,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Jurídico", skuPrefix: "J" },
               title: "Prevención, atención y erradicación de la violencia laboral para supervisores",
               slug: "prevencion-atencion-y-erradicacion-de-la-violencia-laboral",
-              thumbnail: ThumbnailHD01,
+              thumbnail: {
+                src: ThumbnailHD01,
+                alt: "prevencion, atencion y erradicacion de la violencia laboral",
+              },
               identifier: { prefix: "J-VL", courseNumber: "201" },
               duration: 20,
               description: [
@@ -1133,7 +1175,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Esenciales", skuPrefix: "E" },
               title: "Prácticas Esenciales",
               slug: "practicas-esenciales",
-              thumbnail: ThumbnailHD01,
+              thumbnail: {
+                src: ThumbnailHD01,
+                alt: "practicas esenciales",
+              },
               identifier: { prefix: "E", courseNumber: "101" },
               duration: 30,
               description: [
@@ -1219,7 +1264,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Micro Módulos", skuPrefix: "MM" },
               title: "Contraseñas Seguras",
               slug: "contrasenas-seguras",
-              thumbnail: ThumbnailHD01,
+              thumbnail: {
+                src: ThumbnailHD01,
+                alt: "contrasenas seguras",
+              },
               identifier: { prefix: "C", courseNumber: "01" },
               duration: 10,
               description: [
@@ -1274,7 +1322,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Micro Módulos", skuPrefix: "MM" },
               title: "Malware",
               slug: "malware",
-              thumbnail: ThumbnailHD01,
+              thumbnail: {
+                src: ThumbnailHD01,
+                alt: "fundamentos de la nom 035",
+              },
               identifier: { prefix: "M", courseNumber: "01" },
               duration: 10,
               description: [
@@ -1326,7 +1377,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Micro Módulos", skuPrefix: "MM" },
               title: "Phishing",
               slug: "phishing",
-              thumbnail: ThumbnailHD01,
+              thumbnail: {
+                src: ThumbnailHD01,
+                alt: "phishing",
+              },
               identifier: { prefix: "P", courseNumber: "01" },
               duration: 10,
               description: [
@@ -1394,7 +1448,10 @@ export const DataCourseLibrarie = {
               subcategory: { name: "Capacitación en el Proceso de Ventas", skuPrefix: "PV" },
               title: "Proceso de Ventas",
               slug: "proceso-de-ventas",
-              thumbnail: ThumbnailHD01,
+              thumbnail: {
+                src: ThumbnailHD01,
+                alt: "proceso de ventas",
+              },
               identifier: { prefix: "V-PV-", courseNumber: "101" },
               duration: 30,
               description: [

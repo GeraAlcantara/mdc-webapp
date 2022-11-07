@@ -1,16 +1,16 @@
 import React from "react";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
-import CardsCarousel from "./CardsCarousel";
-
+import CardsCarousel from "./CardCourse";
+import ImageHolder from "../../public/videoreel.jpg";
 function TabsCarouselContent() {
   return (
     <>
       <div className='w-full flex flex-shrink-0 gap-8 justify-center '>
         {/* card Carusell tabs  */}
-        <CardsCarousel />
-        <CardsCarousel />
-        <CardsCarousel />
-        <CardsCarousel />
+        <CardsCarousel coursename='string' duration={5} numlessons={12} numtopics={6} thumbnail={ImageHolder} thumbnailAlt='string' />
+        <CardsCarousel coursename='lorem' numlessons={5} numtopics={5} thumbnail={ImageHolder} thumbnailAlt='string' duration={20} />
+        <CardsCarousel coursename='lorem' numlessons={5} numtopics={5} thumbnail={ImageHolder} thumbnailAlt='string' duration={20} />
+        <CardsCarousel coursename='lorem' numlessons={5} numtopics={5} thumbnail={ImageHolder} thumbnailAlt='string' duration={20} />
       </div>
       {/* Pagination */}
       <div className='p-8 text-center'>

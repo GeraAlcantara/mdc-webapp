@@ -10,9 +10,9 @@ import ImageHolder from "../../public/videoreel.jpg";
  */
 function CardsCarousel({ coursename, numtopics, thumbnail, thumbnailAlt, numlessons, duration }) {
   return (
-    <div className='flex flex-col w-[250px] md:w-[290px] h-[450px] rounded-2xl bg-brandBlue-500 overflow-hidden justify-between'>
+    <div className='flex flex-col w-[250px] md:w-[300px] lg:w-[250px] m-auto xl:w-[300px] h-[450px] rounded-2xl bg-brandBlue-500 overflow-hidden justify-between '>
       <div className='min-h-[230px] w-full relative'>
-        <Image src={thumbnail} layout='fill' objectFit='cover' alt={thumbnailAlt} />
+        <Image src={thumbnail} layout='fill' objectFit='cover' placeholder='blur' loading='lazy' alt={thumbnailAlt} />
       </div>
       <div className='pt-6 px-6 '>
         <h3 className='text-xl text-gray-100'>{coursename}</h3>

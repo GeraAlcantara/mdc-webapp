@@ -36,12 +36,12 @@ function TabsCarousel() {
           </Tab>
         ))}
       </Tab.List>
-      <Tab.Panels>
+      <Tab.Panels className='lg:mdc-ui-container'>
         {/* Tab.Panels in array and CardCourse in element in the array  */}
         {allCoursesBySubcategory.map((courses, index) => (
-          <Tab.Panel key={index + "courses"}>
+          <Tab.Panel key={index + "courses"} className=''>
             {
-              <div className='w-full flex flex-shrink-0 gap-8 justify-center px-2 py-4 xl:p-16'>
+              <div className='w-full'>
                 <Swiper
                   slidesPerView={1}
                   spaceBetween={10}
@@ -61,15 +61,15 @@ function TabsCarousel() {
                       spaceBetween: 10,
                     },
                     1280: {
-                      slidesPerView: 4,
-                      spaceBetween: 10,
+                      slidesPerView: 3,
+                      spaceBetween: 0,
                     },
                   }}
                   className='swiper'
                 >
                   {courses.map((course, index) => (
                     <SwiperSlide key={index + course.identifier.courseNumber + course.identifier.prefix} className='swiper-slide'>
-                      <div className=''>
+                      <div>
                         <CardsCourse
                           key={index + course.subcategory.skuPrefix}
                           coursename={course.title}
@@ -88,18 +88,6 @@ function TabsCarousel() {
             }
           </Tab.Panel>
         ))}
-        <Tab.Panel>
-          <p>content1</p>
-        </Tab.Panel>
-        <Tab.Panel>
-          <p>content2</p>
-        </Tab.Panel>
-        <Tab.Panel>
-          <p>content3</p>
-        </Tab.Panel>
-        <Tab.Panel>
-          <p>content4</p>
-        </Tab.Panel>
       </Tab.Panels>
     </Tab.Group>
   );

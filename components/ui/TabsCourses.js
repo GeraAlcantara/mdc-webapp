@@ -1,15 +1,16 @@
 import { Fragment } from "react";
 import { Tab } from "@headlessui/react";
 import TabsCarouselContent from "./TabsCarouselContent";
-import { data, getCategoriesNames, getCategoriesSlugs, getCategoryByName, getSubcategoriesNames } from "../helpers/library";
+import { data, getSubcategoryByName, getSubcategoriesNames } from "../helpers/library";
 
 function TabsCarousel() {
-  const categoriesSlugs = getCategoriesSlugs(data);
-  const category = getCategoryByName("Recursos Humanos", data);
   const subcategoriesnames = getSubcategoriesNames(data);
-  // subcategories slugs
-  // subcategories courses
-  console.log(subcategoriesnames);
+  const allSubcategories = subcategoriesnames.map((subcategoryname) => getSubcategoryByName(subcategoryname, data));
+  // all courses by subcategory
+  const allCoursesBySubcategory = allSubcategories.map((subcategory) => subcategory.courses);
+
+  // courses HB
+  const coursesHB = getSubcategoryByName("Habilidades Blandas", data).courses;
   return (
     <Tab.Group>
       <Tab.List className='mdc-ui-container flex flex-wrap gap-4 justify-center items-center my-12'>

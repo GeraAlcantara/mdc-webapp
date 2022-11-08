@@ -70,3 +70,12 @@ export const getSubcategoryByName = (name, categories) => {
   }
   throw new Error(`Subcategory with name ${name} not found`);
 };
+
+// courses
+export const coursesHB = getSubcategoryByName("Habilidades Blandas", data).courses;
+export const coursesHD = getSubcategoryByName("Habilidades Directivas", data).courses;
+export const coursesTT = getSubcategoryByName("Habilidades Tecnológicas", data).courses;
+export const coursesRJ = getSubcategoryByName("Jurídico", data).courses;
+export const coursesSE = getSubcategoryByName("Esenciales", data).courses;
+export const coursesMM = getSubcategoryByName("Micro Módulos", data).courses;
+export const coursesPV = getSubcategoryByName("Micro Módulos", data).courses;

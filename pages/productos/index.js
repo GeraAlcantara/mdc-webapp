@@ -17,8 +17,8 @@ function Productos() {
         />
         <title>Mexico Development Center | Productos</title>
       </Head>
-      <div className='pt-[68px] mdc-ui-container'>
-        <div className='p-10 mb-20 flex flex-col lg:flex-row gap-8 bg-gradient-to-b from-[#1c3d5c] via-[#1c3d5c]/30 to-bg_primary rounded-t-3xl'>
+      <div className='pt-[68px] mdc-ui-container '>
+        <div className='p-10 mb-20 flex flex-col lg:flex-row gap-8 bg-gradient-to-b from-[#1c3d5c] via-[#1c3d5c]/30 to-bg_primary rounded-t-3xl mdc-ui-container'>
           <div>
             <h1 className='text-7xl text-secondary font-extrabold'>
               <small className='text-white text-4xl font-normal'>Librería de</small>
@@ -37,7 +37,7 @@ function Productos() {
           </div>
         </div>
         {/* Section Libreria  */}
-        <section className='m-10'>
+        <section className='lg:m-10'>
           <header>
             <hgroup className='text-center'>
               <p className='text-xl'>Conoce toda nuestra</p>

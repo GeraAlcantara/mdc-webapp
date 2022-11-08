@@ -41,7 +41,7 @@ function TabsCarousel() {
         {allCoursesBySubcategory.map((courses, index) => (
           <Tab.Panel key={index + "courses"}>
             {
-              <div className='w-full flex flex-shrink-0 gap-8 justify-center p-16'>
+              <div className='w-full flex flex-shrink-0 gap-8 justify-center px-2 py-4 xl:p-16'>
                 <Swiper
                   slidesPerView={1}
                   spaceBetween={10}
@@ -52,10 +52,6 @@ function TabsCarousel() {
                   modules={[Pagination, Navigation]}
                   centerInsufficientSlides={true}
                   breakpoints={{
-                    640: {
-                      slidesPerView: 2,
-                      spaceBetween: 10,
-                    },
                     768: {
                       slidesPerView: 2,
                       spaceBetween: 10,
@@ -63,7 +59,6 @@ function TabsCarousel() {
                     1024: {
                       slidesPerView: 3,
                       spaceBetween: 10,
-                      navigation: true,
                     },
                     1280: {
                       slidesPerView: 4,
@@ -74,16 +69,18 @@ function TabsCarousel() {
                 >
                   {courses.map((course, index) => (
                     <SwiperSlide key={index + course.identifier.courseNumber + course.identifier.prefix} className='swiper-slide'>
-                      <CardsCourse
-                        key={index + course.subcategory.skuPrefix}
-                        coursename={course.title}
-                        duration={course.duration}
-                        //get the amount of lessons in the al the modules
-                        numlessons={course.modules.reduce((acc, module) => acc + module.lessons.length, 0)}
-                        numtopics={course.topics.length}
-                        thumbnail={course.thumbnail.src}
-                        thumbnailAlt={course.thumbnail.alt}
-                      />
+                      <div className=''>
+                        <CardsCourse
+                          key={index + course.subcategory.skuPrefix}
+                          coursename={course.title}
+                          duration={course.duration}
+                          //get the amount of lessons in the al the modules
+                          numlessons={course.modules.reduce((acc, module) => acc + module.lessons.length, 0)}
+                          numtopics={course.topics.length}
+                          thumbnail={course.thumbnail.src}
+                          thumbnailAlt={course.thumbnail.alt}
+                        />
+                      </div>
                     </SwiperSlide>
                   ))}
                 </Swiper>

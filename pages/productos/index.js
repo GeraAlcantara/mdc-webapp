@@ -17,7 +17,7 @@ function Productos() {
         />
         <title>Mexico Development Center | Productos</title>
       </Head>
-      <div className='pt-[68px] mdc-ui-container '>
+      <div className='pt-[68px]  '>
         <div className='p-10 mb-20 flex flex-col lg:flex-row gap-8 bg-gradient-to-b from-[#1c3d5c] via-[#1c3d5c]/30 to-bg_primary rounded-t-3xl mdc-ui-container'>
           <div>
             <h1 className='text-7xl text-secondary font-extrabold'>

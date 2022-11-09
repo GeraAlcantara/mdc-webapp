@@ -8,7 +8,8 @@ import clsx from "clsx";
  * @example
  * <ModalDemoReel btnTheme='btnRingGreen' />
  * <ModalDemoReel btnTheme='btnDark' />
- * @typedef {'btnRingGreen' |'btnDark'} Theme
+ * <ModalDemoReel btnTheme='btnBlue' />
+ * @typedef {'btnRingGreen' |'btnDark' | 'btnBlue'} Theme
  * @param {object} props
  * @param {Theme} props.btnTheme
  * @returns {JSX.Element}
@@ -20,14 +21,14 @@ export default function ModalDemoReel({ btnTheme, ...props }) {
 
   return (
     <>
-      {/* button that recive classNames props */}
-
       <button
         type='button'
         name='Open dialog'
         className={clsx("uppercase rounded-full", {
           "bg-gray-900 py-2 px-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75": btnTheme === "btnDark",
           "border-2 border-accent text-accent py-2 px-8": btnTheme === "btnRingGreen",
+          "bg-secondary text-white py-2 px-8 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75":
+            btnTheme === "btnBlue",
         })}
         {...props}
         onClick={openModal}

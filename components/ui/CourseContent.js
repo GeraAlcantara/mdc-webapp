@@ -1,17 +1,33 @@
 import Link from "next/link";
 import { RiReactjsFill } from "react-icons/ri";
 import { DataSheet } from "../data/CoursesDataSheet";
-function CourseContent() {
+
+/**
+ *
+ * @typedef {{duration:number, numLessons:number, lessons:Array<Lesson>}} CourseContent
+ * @typedef {{title:string, duration:string,}} Lesson
+ * @param {CourseContent} props
+ */
+function CourseContent({
+  duration = 30,
+  numLessons = 8,
+  lessons = [
+    { title: "Introducción a la autoevaluación", duration: "0:17" },
+    { title: "Autoevaluación de Escucha Activa", duration: "0:32" },
+  ],
+}) {
   return (
     <section className='mt-8'>
       <div className='flex flex-col mb-2 space-y-4'>
         <h2 className='text-3xl font-bold'>Course Content</h2>
         <div className='text-sm font-normal text-gray-400'>
-          <p>30m • 8 lessons</p>
+          <p>
+            {duration}m • {numLessons} lessons
+          </p>
         </div>
       </div>
       <ul>
-        {DataSheet.lessons.map((lesson, idx) => (
+        {lessons.map((lesson, idx) => (
           <li key={idx + lesson.title}>
             <div className='flex py-2 font-semibold leading-tight '>
               <div className='flex items-center mr-2 space-x-2'>

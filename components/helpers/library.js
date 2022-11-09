@@ -79,3 +79,15 @@ export const coursesRJ = getSubcategoryByName("Jurídico", data).courses;
 export const coursesSE = getSubcategoryByName("Esenciales", data).courses;
 export const coursesMM = getSubcategoryByName("Micro Módulos", data).courses;
 export const coursesPV = getSubcategoryByName("Micro Módulos", data).courses;
+
+// get all courses course and find course by slug and return course
+/**
+ * get all courses course and find course by slug and return course
+ * @typedef {import('../data/DataCourseLibrarie').Course} Course
+ * @param {string} slug
+ * @param {Array<Course>} courses
+ * @returns {Course}
+ */
+export const getCourseBySlug = (slug, courses) => {
+  return courses.find((course) => course.slug === slug);
+};

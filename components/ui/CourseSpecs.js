@@ -8,23 +8,31 @@ import { RiArrowRightSFill, RiReactjsFill } from "react-icons/ri";
 import ilustration from "../../public/ilustracion.png";
 import CourseContent from "./CourseContent";
 
-function CourseSpecs() {
+function CourseSpecs({
+  slug,
+  title,
+  libraryName,
+  subcategoryName,
+  duration,
+  description = [],
+  topics = [],
+  features = [],
+  lessons = [{ title: "Introducción a la autoevaluación", duration: "0:17" }],
+}) {
   return (
     <div className=' mdc-ui-container'>
       <div className='grid w-full grid-cols-1 gap-5 mt-10 mb-4 md:grid-cols-5 md:gap-16'>
         <div className='flex flex-col w-full h-full mx-auto md:col-span-3 md:row-start-auto max-w-screen-2xl'>
           <header>
             <div className='flex items-center justify-center md:hidden my-4'>
-              <Link href={DataSheet.slug}>
+              <Link href={slug}>
                 <a>
                   <Image src={ilustration} alt='remotework'></Image>
                 </a>
               </Link>
             </div>
             <div className='bg-secondary w-24 text-center py-1 rounded-full uppercase font-bold my-2 text-sm mx-auto md:m-0 md:mb-2'>Library</div>
-            <h1 className='mt-4 font-bold text-2xl leading-tight text-center sm:text-3xl md:text-4xl md:leading-none md:text-left md:mt-0'>
-              {DataSheet.title}
-            </h1>
+            <h1 className='mt-4 font-bold text-2xl leading-tight text-center sm:text-3xl md:text-4xl md:leading-none md:text-left md:mt-0'>{title}</h1>
           </header>
           <div className='flex flex-col items-center my-6 space-y-2 md:items-start'>
             <div className='flex flex-shrink-0 '>
@@ -32,15 +40,15 @@ function CourseSpecs() {
                 <LogoSolid></LogoSolid>
               </div>
               <div className='sm:pl-2 pl-1 flex flex-col justify-center'>
-                <h2 className='text-sm text-gray-400 leading-none '> {DataSheet.library.name} </h2>
-                <h3 className='font-bold'>{DataSheet.subcategory.name} </h3>
+                <h2 className='text-sm text-gray-400 leading-none '> {libraryName} </h2>
+                <h3 className='font-bold'>{subcategoryName} </h3>
               </div>
             </div>
             <div className='flex flex-row items-center'>
               <div className='text-sm text-gray-400 mr-1 '>
                 <TimeIcon />
               </div>
-              <span className='text-white text-sm '>{DataSheet.duration}m </span>
+              <span className='text-white text-sm '>{duration}m </span>
               <div className='text-sm text-gray-400 ml-1 '>
                 <CCIcon />
               </div>
@@ -49,7 +57,7 @@ function CourseSpecs() {
 
           <div className='p-5 mt-8 border border-gray-100 rounded-md dark:border-gray-700'>
             <h4 className='text-3xl font-bold mb-3'>Descripción</h4>
-            {DataSheet.description.map((paragrah, index) => (
+            {description.map((paragrah, index) => (
               <p className='text-white md:prose-lg dark:text-gray-100 mb-2 md:mb-0 ' key={index}>
                 {paragrah}
               </p>
@@ -59,9 +67,9 @@ function CourseSpecs() {
           <div className='p-5 mt-8 border border-gray-100 rounded-md dark:border-gray-700'>
             <h4 className='text-3xl font-bold mb-3'>Contenidos</h4>
             <ul className='list-disc list-inside '>
-              {DataSheet.topics.map((topics, index) => (
-                <li className='text-white md:prose-lg dark:text-gray-100 mb-2 md:mb-0 ' key={index + topics.substring(0, 5)}>
-                  {topics}
+              {topics.map((topic, index) => (
+                <li className='text-white md:prose-lg dark:text-gray-100 mb-2 md:mb-0 ' key={index + topic.substring(0, 5)}>
+                  {topic}
                 </li>
               ))}
             </ul>
@@ -70,25 +78,31 @@ function CourseSpecs() {
           <div className='p-5 mt-8 border border-gray-100 rounded-md dark:border-gray-700'>
             <h4 className='text-3xl font-bold mb-3'>Características</h4>
             <div className='flex flex-wrap flex-col md:flex-row justify-around'>
-              {DataSheet.features.map(({ id, ICON, name, qt }, index) => (
-                <div className=' flex flex-col justify-center items-center my-4 ' key={id + name.substring(0, 3)}>
-                  <ICON className='text-7xl mb-2'></ICON>
-                  {qt > 1 ? (
-                    <h5 className='text-center'>
-                      <span>{qt}</span> {name}
-                    </h5>
-                  ) : (
-                    <h5 className='text-center'>{name}</h5>
-                  )}
-                </div>
-              ))}
+              {features.map(
+                ({ id, iconSrc, name, qt }, index) =>
+                  //check if qt is not 0
+                  qt !== 0 && (
+                    <div className=' flex flex-col justify-center items-center my-4 ' key={id + name.substring(0, 3)}>
+                      <div className='w-10 h-10 relative'>
+                        <Image layout='fill' src={iconSrc} alt='icon'></Image>
+                      </div>
+                      {qt > 1 ? (
+                        <h5 className='text-center'>
+                          <span>{qt}</span> {name}
+                        </h5>
+                      ) : (
+                        <h5 className='text-center'>{name}</h5>
+                      )}
+                    </div>
+                  )
+              )}
             </div>
           </div>
         </div>
         {/* right side */}
         <div className='flex flex-col items-center justify-start mb-4 md:col-span-2 md:mb-0'>
           <div className='hidden md:block'>
-            <Link href={DataSheet.slug}>
+            <Link href={slug}>
               <a>
                 <Image src={ilustration} alt='remotework'></Image>
               </a>
@@ -105,7 +119,7 @@ function CourseSpecs() {
             </div>
           </div>
           {/* course Content */}
-          <CourseContent />
+          <CourseContent duration={duration} numLessons={lessons.length} lessons={lessons} />
         </div>
       </div>
     </div>

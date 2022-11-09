@@ -16,7 +16,7 @@ import ThumbnailHD04 from "../../public/thumbnail/thumbnail_4.jpg";
  * @typedef {{ name: string, skuPrefix: string }} LibrarySubcategory
  * @typedef {{src: string, alt: string }} Thumbnail
  * @typedef {{prefix: string, courseNumber: string }} Identifier
- * @typedef {{ name: string, qt: number, ICON: React.FunctionComponent<React.SVGProps<SVGSVGElement>> }} Feature
+ * @typedef {{ name: string, qt: number, iconSrc: string }} Feature
  * @typedef {{ name: string, lessons: Array<lesson> }} Module
  * @typedef {{ title: string, duration: string }} lesson
  * @typedef {Array<Category>} Categories
@@ -56,12 +56,12 @@ export const DataCourseLibrarie = [
               "¿Cómo escuchar a alguien en catarsis?",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 1, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 0, ICON: Iconvideo },
-              { name: "Interactividades", qt: 0, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 4, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 0, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 0, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 4, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 0, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -156,12 +156,12 @@ export const DataCourseLibrarie = [
               "Estrategias para la organización",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 0, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-              { name: "Interactividades", qt: 0, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 4, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 1, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 4, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -274,12 +274,12 @@ export const DataCourseLibrarie = [
               "La motivación",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 1, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-              { name: "Interactividades", qt: 2, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 0, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 1, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 2, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 0, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -334,12 +334,12 @@ export const DataCourseLibrarie = [
             ],
             topics: ["Fundamentos del trabajo en equipo", "Definición de propósitos", "¿Cómo generar confianza y compromiso?", "Resolución de conflictos"],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 0, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-              { name: "Interactividades", qt: 2, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 1, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 1, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 2, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 1, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -391,12 +391,12 @@ export const DataCourseLibrarie = [
             ],
             topics: ["Estilos de comunicación", "Las 7 C’s de la comunicación efectiva ", "¿Cómo comunicar malas noticias?"],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 0, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-              { name: "Interactividades", qt: 2, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 1, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 1, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 2, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 1, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -462,12 +462,12 @@ export const DataCourseLibrarie = [
               "Acuerdos justos y sostenibles",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 1, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 0, ICON: Iconvideo },
-              { name: "Interactividades", qt: 0, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 3, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 1, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 0, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 3, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -538,12 +538,12 @@ export const DataCourseLibrarie = [
               "Equilibrio en la vida profesional y familiar",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 1, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-              { name: "Interactividades", qt: 2, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 1, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 1, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 2, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 1, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -599,12 +599,12 @@ export const DataCourseLibrarie = [
             ],
             topics: ["Evaluación del desempeño", "¿Quiénes son los responsables?", "Modelos de evaluación del desempeño", "Metodología de implementación "],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 0, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-              { name: "Interactividades", qt: 1, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 3, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 1, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 1, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 3, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -699,12 +699,12 @@ export const DataCourseLibrarie = [
               "Procedimiento para dar retroalimentación",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 0, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-              { name: "Interactividades", qt: 0, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 4, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 1, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 4, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -777,12 +777,12 @@ export const DataCourseLibrarie = [
             ],
             topics: ["Buenos hábitos de trabajo", "Creación de un ambiente óptimo", "Seguridad de la información", "Seguridad de dispositivos digitales"],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 0, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-              { name: "Interactividades", qt: 1, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 3, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 1, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 1, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 3, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -842,12 +842,12 @@ export const DataCourseLibrarie = [
               "Actitudes y habilidades de liderazgo",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 0, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-              { name: "Interactividades", qt: 3, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 1, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 1, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 3, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 1, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -938,12 +938,12 @@ export const DataCourseLibrarie = [
               "Multas por incumplimiento",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 0, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-              { name: "Interactividades", qt: 2, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 4, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 1, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 2, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 4, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -1033,12 +1033,12 @@ export const DataCourseLibrarie = [
               "Medidas de protección",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 0, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-              { name: "Interactividades", qt: 1, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 3, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 1, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 1, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 3, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -1114,12 +1114,12 @@ export const DataCourseLibrarie = [
               "Sanciones",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 0, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-              { name: "Interactividades", qt: 0, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 3, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 1, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 3, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -1210,12 +1210,12 @@ export const DataCourseLibrarie = [
               "Mejores prácticas en dispositivos digitales e internet",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 0, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-              { name: "Interactividades", qt: 4, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 3, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 1, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 4, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 3, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -1297,12 +1297,12 @@ export const DataCourseLibrarie = [
               "¿Qué hacer si mi contraseña ha sido robada?",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 0, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-              { name: "Interactividades", qt: 0, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 2, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 0, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 2, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 0, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -1348,12 +1348,12 @@ export const DataCourseLibrarie = [
             ],
             topics: ["¿Qué es el malware?", "Principales amenazas", "¿Cuáles son las señales de infección?", "¿Cómo protegernos del malware?"],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 0, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-              { name: "Interactividades", qt: 3, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 0, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 0, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 3, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 0, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 0, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -1376,7 +1376,6 @@ export const DataCourseLibrarie = [
                   { title: "Introducción de interactividad 3", duration: "0:14" },
                   { title: "Pregunta 1", duration: "1:00" },
                   { title: "Pregunta 2", duration: "1:00" },
-                  ,
                 ],
               },
               {
@@ -1409,12 +1408,12 @@ export const DataCourseLibrarie = [
               "Uso seguro de redes sociales",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 0, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-              { name: "Interactividades", qt: 1, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 0, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 0, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 1, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 0, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 0, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {
@@ -1482,12 +1481,12 @@ export const DataCourseLibrarie = [
               "Implementación del PV",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
-              { name: "Autoevaluación", qt: 0, ICON: Iconautoeval },
-              { name: "Video de Introducción", qt: 1, ICON: Iconvideo },
-              { name: "Interactividades", qt: 6, ICON: Iconinteract },
-              { name: "Cuestionario", qt: 0, ICON: Iconcuestionario },
-              { name: "Examen Final", qt: 1, ICON: Iconautoeval },
+              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
+              { name: "Interactividades", qt: 6, iconSrc: "/svgs/interact.svg" },
+              { name: "Cuestionario", qt: 0, iconSrc: "/svgs/cuestionario.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
             ],
             modules: [
               {

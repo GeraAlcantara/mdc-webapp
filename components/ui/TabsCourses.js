@@ -79,6 +79,7 @@ function TabsCarousel() {
                           numtopics={course.topics.length}
                           thumbnail={course.thumbnail.src}
                           thumbnailAlt={course.thumbnail.alt}
+                          slug={`cursos/${course.library.skuPrefix.toLocaleLowerCase()}/${course.subcategory.skuPrefix.toLocaleLowerCase()}/${course.slug}`}
                         />
                       </div>
                     </SwiperSlide>

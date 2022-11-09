@@ -3,10 +3,25 @@ import Iconvideo from "../svgs/video.svg";
 import IcontxtLocucion from "../svgs/txtLocucion.svg";
 import Iconautoeval from "../svgs/autoeval.svg";
 import Iconcuestionario from "../svgs/cuestionario.svg";
-import ThumbnailHD01 from "../../public/thumbnail/thumbnail_1.jpg";
-import ThumbnailHD02 from "../../public/thumbnail/thumbnail_2.jpg";
-import ThumbnailHD03 from "../../public/thumbnail/thumbnail_3.jpg";
-import ThumbnailHD04 from "../../public/thumbnail/thumbnail_4.jpg";
+import ThumbnailHBEA from "../../public/thumbnail/thumbnail_R_HB_EA.jpg";
+import ThumbnailHBME from "../../public/thumbnail/thumbnail_R_HB_ME.jpg";
+import ThumbnailHD01 from "../../public/thumbnail/thumbnail_R_HD_01.jpg";
+import ThumbnailHD02 from "../../public/thumbnail/thumbnail_R_HD_02.jpg";
+import ThumbnailHD03 from "../../public/thumbnail/thumbnail_R_HD_03.jpg";
+import ThumbnailHD04 from "../../public/thumbnail/thumbnail_R_HD_04.jpg";
+import ThumbnailHD05 from "../../public/thumbnail/thumbnail_R_HD_05.jpg";
+import ThumbnailHD06 from "../../public/thumbnail/thumbnail_R_HD_06.jpg";
+import ThumbnailHD07 from "../../public/thumbnail/thumbnail_R_HD_07.jpg";
+import ThumbnailHTTT101 from "../../public/thumbnail/thumbnail_R_HT_TT_101.jpg";
+import ThumbnailHTTT201 from "../../public/thumbnail/thumbnail_R_HT_TT_201.jpg";
+import ThumbnailRJN35 from "../../public/thumbnail/thumbnail_R_J_N35_201.jpg";
+import ThumbnailRJV101 from "../../public/thumbnail/thumbnail_R_J_VL_101.jpg";
+import ThumbnailRJV201 from "../../public/thumbnail/thumbnail_R_J_VL_201.jpg";
+import ThumbnailSC01 from "../../public/thumbnail/thumbnail_S_C_01.jpg";
+import ThumbnailSE101 from "../../public/thumbnail/thumbnail_S_E_101.jpg";
+import ThumbnailSM01 from "../../public/thumbnail/thumbnail_S_M_01.jpg";
+import ThumbnailSP01 from "../../public/thumbnail/thumbnail_S_P_01.jpg";
+import ThumbnailVPV101 from "../../public/thumbnail/thumbnail_V_PV_101.jpg";
 
 /**
  * @typedef {{name:string, slug:string, subcategories:Array<Subcategory>}} Category
@@ -37,8 +52,8 @@ export const DataCourseLibrarie = [
             title: "Escucha Activa",
             slug: "escucha-activa",
             thumbnail: {
-              src: ThumbnailHD01,
-              alt: "Escucha Activa",
+              src: ThumbnailHBEA,
+              alt: "dos compañeros de trabajo entablando una conversación ",
             },
             identifier: { prefix: "HB", courseNumber: "EA" },
             duration: 20,
@@ -131,8 +146,8 @@ export const DataCourseLibrarie = [
             title: "Manejo del estrés laboral",
             slug: "manejo-del-estres-laboral",
             thumbnail: {
-              src: ThumbnailHD01,
-              alt: "Escucha Activa",
+              src: ThumbnailHBME,
+              alt: "hombre con lentres frente a la computadora pensativo",
             },
             identifier: { prefix: "HB", courseNumber: "ME" },
             duration: 30,
@@ -254,7 +269,7 @@ export const DataCourseLibrarie = [
             slug: "liderazgo-efectivo",
             thumbnail: {
               src: ThumbnailHD01,
-              alt: "liderazgo efectivo",
+              alt: "Supervisor teniendo una reunion con colaboradores",
             },
             identifier: { prefix: "R-HD-", courseNumber: "01" },
             duration: 12,
@@ -323,7 +338,7 @@ export const DataCourseLibrarie = [
             slug: "equipos-alto-rendimiento",
             thumbnail: {
               src: ThumbnailHD02,
-              alt: "Equipos de alto rendimiento",
+              alt: "ejecutiva liderando una reunion con su equipo",
             },
             identifier: { prefix: "R-HD-", courseNumber: "02" },
             duration: 10,
@@ -382,7 +397,7 @@ export const DataCourseLibrarie = [
             slug: "comunicacion-efectiva",
             thumbnail: {
               src: ThumbnailHD03,
-              alt: "Comunicación Efectiva",
+              alt: "sala de junta con ejecutivos, mujer mayor dirigiendo la reunion",
             },
             identifier: { prefix: "R-HD-", courseNumber: "03" },
             duration: 12,
@@ -443,7 +458,7 @@ export const DataCourseLibrarie = [
             slug: "inteligencia-emocional-gestion-de-conflictos",
             thumbnail: {
               src: ThumbnailHD04,
-              alt: "inteligencia emocional para la gestión de conflictos",
+              alt: "bodega con cajas de mercancia, mujer mayor dirigiendo el trabajo",
             },
             identifier: { prefix: "R-HD-", courseNumber: "04" },
             duration: 15,
@@ -520,8 +535,8 @@ export const DataCourseLibrarie = [
             title: "Gestión del Tiempo",
             slug: "gestion-del-tiempo",
             thumbnail: {
-              src: ThumbnailHD04,
-              alt: "gestión del tiempo",
+              src: ThumbnailHD05,
+              alt: "ejecutiva joven en sala de juntas revisa la hora en su reloj",
             },
             identifier: { prefix: "R-HD-", courseNumber: "05" },
             duration: 12,
@@ -587,8 +602,8 @@ export const DataCourseLibrarie = [
             title: "Evaluación del Desempeño",
             slug: "evaluacion-del-desempeño",
             thumbnail: {
-              src: ThumbnailHD04,
-              alt: "evaluación del desempeño",
+              src: ThumbnailHD06,
+              alt: "supervisor de bodega revisando un informe ",
             },
             identifier: { prefix: "R-HD-", courseNumber: "06" },
             duration: 20,
@@ -679,8 +694,8 @@ export const DataCourseLibrarie = [
             title: "¿Cómo dar retroalimentación?",
             slug: "como-dar-retroalimentacion",
             thumbnail: {
-              src: ThumbnailHD04,
-              alt: "como dar retroalimentacion",
+              src: ThumbnailHD07,
+              alt: "dos obreros revisan juntos un manual de instrucciones",
             },
             identifier: { prefix: "R-HD-", courseNumber: "07" },
             duration: 15,
@@ -766,8 +781,8 @@ export const DataCourseLibrarie = [
             title: "Mejores prácticas para el teletrabajo",
             slug: "mejores-practicas-para-el-teletrabajo",
             thumbnail: {
-              src: ThumbnailHD01,
-              alt: "mejoress practicas para el teletrabajo",
+              src: ThumbnailHTTT101,
+              alt: "Hombre mayor realiza trabajo de forma remota en su laptop",
             },
             identifier: { prefix: "HT-TT", courseNumber: "101" },
             duration: 12,
@@ -824,8 +839,8 @@ export const DataCourseLibrarie = [
             title: "Fundamentos del Teletrabajo para supervisores",
             slug: "fundamentos-del-teletrabajo-para-supervisores",
             thumbnail: {
-              src: ThumbnailHD01,
-              alt: "fundamentos del teletrabajo para supervisores",
+              src: ThumbnailHTTT201,
+              alt: "mujer realiza trabajo remoto desde la sala de su casa con su laptop",
             },
             identifier: { prefix: "HT-TT", courseNumber: "201" },
             duration: 20,
@@ -918,8 +933,8 @@ export const DataCourseLibrarie = [
             title: "Fundamentos de la NOM-035",
             slug: "fundamentos-de-la-nom-035",
             thumbnail: {
-              src: ThumbnailHD01,
-              alt: "fundamentos de la nom 035",
+              src: ThumbnailRJN35,
+              alt: "colaboradores teniendo una conversacion intensa",
             },
             identifier: { prefix: "J-N35", courseNumber: "201" },
             duration: 35,
@@ -1012,8 +1027,8 @@ export const DataCourseLibrarie = [
             title: "Prevención de violencia laboral y acoso sexual",
             slug: "prevencion-de-violencia-laboral-y-acoso-sexual",
             thumbnail: {
-              src: ThumbnailHD01,
-              alt: "prevencion de violencia laboral y acoso sexual",
+              src: ThumbnailRJV101,
+              alt: "ejecutivo le llama la atencion verbalmente a empleada en la oficina",
             },
             identifier: { prefix: "J-VL", courseNumber: "101" },
             duration: 25,
@@ -1094,8 +1109,8 @@ export const DataCourseLibrarie = [
             title: "Prevención, atención y erradicación de la violencia laboral para supervisores",
             slug: "prevencion-atencion-y-erradicacion-de-la-violencia-laboral",
             thumbnail: {
-              src: ThumbnailHD01,
-              alt: "prevencion, atencion y erradicacion de la violencia laboral",
+              src: ThumbnailRJV201,
+              alt: "En una sala de juntas un supervisor agita papeles mientras habla con un empleado que se ve intimidado",
             },
             identifier: { prefix: "J-VL", courseNumber: "201" },
             duration: 20,
@@ -1189,8 +1204,8 @@ export const DataCourseLibrarie = [
             title: "Prácticas Esenciales",
             slug: "practicas-esenciales",
             thumbnail: {
-              src: ThumbnailHD01,
-              alt: "practicas esenciales",
+              src: ThumbnailSE101,
+              alt: "hombre con lentes mirando a la computadora",
             },
             identifier: { prefix: "E", courseNumber: "101" },
             duration: 30,
@@ -1278,8 +1293,8 @@ export const DataCourseLibrarie = [
             title: "Contraseñas Seguras",
             slug: "contrasenas-seguras",
             thumbnail: {
-              src: ThumbnailHD01,
-              alt: "contrasenas seguras",
+              src: ThumbnailSC01,
+              alt: "hombre inicia secion con 2 factores de autenticacion atravez de su mobile.",
             },
             identifier: { prefix: "C", courseNumber: "01" },
             duration: 10,
@@ -1336,8 +1351,8 @@ export const DataCourseLibrarie = [
             title: "Malware",
             slug: "malware",
             thumbnail: {
-              src: ThumbnailHD01,
-              alt: "fundamentos de la nom 035",
+              src: ThumbnailSM01,
+              alt: "empleada de oficina con un virus en su computadora.",
             },
             identifier: { prefix: "M", courseNumber: "01" },
             duration: 10,
@@ -1390,8 +1405,8 @@ export const DataCourseLibrarie = [
             title: "Phishing",
             slug: "phishing",
             thumbnail: {
-              src: ThumbnailHD01,
-              alt: "phishing",
+              src: ThumbnailSP01,
+              alt: "persona con un teléfono celular en la mano, recibe una llamada de un número desconocido.",
             },
             identifier: { prefix: "P", courseNumber: "01" },
             duration: 10,
@@ -1461,8 +1476,8 @@ export const DataCourseLibrarie = [
             title: "Proceso de Ventas",
             slug: "proceso-de-ventas",
             thumbnail: {
-              src: ThumbnailHD01,
-              alt: "proceso de ventas",
+              src: ThumbnailVPV101,
+              alt: "ejecutiva de ventas finaliza un trato con cliente.",
             },
             identifier: { prefix: "V-PV-", courseNumber: "101" },
             duration: 30,

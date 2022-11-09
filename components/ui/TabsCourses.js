@@ -20,7 +20,7 @@ function TabsCarousel() {
 
   return (
     <Tab.Group>
-      <Tab.List className='mdc-ui-container flex flex-wrap gap-4 justify-center items-center my-12'>
+      <Tab.List className='mdc-ui-container flex flex-wrap gap-4 xl:gap-x-8 justify-center items-center my-12 '>
         {subcategoriesnames.map((categoryName, index) => (
           <Tab as={Fragment} key={index}>
             {({ selected }) => (

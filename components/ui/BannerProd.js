@@ -6,7 +6,7 @@ import Link from "next/link";
 function BannerProd() {
   return (
     <ParallaxBanner className='relative w-full xl:h-[800px] aspect-square lg:aspect-video'>
-      <ParallaxBannerLayer speed={-20}>
+      <ParallaxBannerLayer speed={-25}>
         <Image src={ImgBannerProd} objectFit='cover' layout='fill' alt='grupo de personas conversando frente a un ordenador'></Image>
       </ParallaxBannerLayer>
       <ParallaxBannerLayer>

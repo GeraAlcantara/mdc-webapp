@@ -40,6 +40,9 @@ function Cursos({ params, course }) {
   if (!lessons) {
     return <div>loading...</div>;
   }
+  const category = getSubcategoryByName(course.subcategory.name, data);
+
+  const colorid = category.colorid;
 
   return (
     <div className='pt-[68px]'>
@@ -53,6 +56,8 @@ function Cursos({ params, course }) {
         features={course.features}
         topics={course.topics}
         lessons={lessons}
+        cover={course.cover}
+        color={colorid}
       />
     </div>
   );

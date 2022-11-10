@@ -25,8 +25,8 @@ import ThumbnailVPV101 from "../../public/thumbnail/thumbnail_V_PV_101.jpg";
 
 /**
  * @typedef {{name:string, slug:string, subcategories:Array<Subcategory>}} Category
- * @typedef {{name:string, slug:string, courses:Array<Course>}} Subcategory
- * @typedef {{library:Library, subcategory: LibrarySubcategory, title: string, slug: string, thumbnail: Thumbnail, identifier: Identifier, duration: number, description: Array<string>, topics: Array<string>, features:Array<Feature>, modules: Array<Module> }} Course
+ * @typedef {{name:string, slug:string, colorid:string, courses:Array<Course>}} Subcategory
+ * @typedef {{library:Library, subcategory: LibrarySubcategory, title: string, slug: string, thumbnail: Thumbnail, cover:string, identifier: Identifier, duration: number, description: Array<string>, topics: Array<string>, features:Array<Feature>, modules: Array<Module> }} Course
  * @typedef {{name:string, skuPrefix:string}} Library
  * @typedef {{ name: string, skuPrefix: string }} LibrarySubcategory
  * @typedef {{src: string, alt: string }} Thumbnail
@@ -45,6 +45,7 @@ export const DataCourseLibrarie = [
       {
         name: "Habilidades Blandas",
         slug: "habilidades-blandas",
+        colorid: "#db913e",
         courses: [
           {
             library: { name: "Recursos Humanos ", skuPrefix: "R" },
@@ -55,6 +56,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailHBEA,
               alt: "dos compañeros de trabajo entablando una conversación ",
             },
+            cover: "/covers/cover_R_HB_EA.svg",
             identifier: { prefix: "HB", courseNumber: "EA" },
             duration: 20,
             description: [
@@ -149,6 +151,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailHBME,
               alt: "hombre con lentres frente a la computadora pensativo",
             },
+            cover: "/covers/cover_R_HB_ME.svg",
             identifier: { prefix: "HB", courseNumber: "ME" },
             duration: 30,
             description: [
@@ -261,6 +264,7 @@ export const DataCourseLibrarie = [
       {
         name: "Habilidades Directivas",
         slug: "habilidades-directivas",
+        colorid: "#db913e",
         courses: [
           {
             library: { name: "Recursos Humanos", skuPrefix: "R" },
@@ -271,6 +275,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailHD01,
               alt: "Supervisor teniendo una reunion con colaboradores",
             },
+            cover: "/covers/cover_R_HD_01.svg",
             identifier: { prefix: "R-HD-", courseNumber: "01" },
             duration: 12,
             description: [
@@ -340,6 +345,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailHD02,
               alt: "ejecutiva liderando una reunion con su equipo",
             },
+            cover: "/covers/cover_R_HD_02.svg",
             identifier: { prefix: "R-HD-", courseNumber: "02" },
             duration: 10,
             description: [
@@ -399,6 +405,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailHD03,
               alt: "sala de junta con ejecutivos, mujer mayor dirigiendo la reunion",
             },
+            cover: "/covers/cover_R_HD_03.svg",
             identifier: { prefix: "R-HD-", courseNumber: "03" },
             duration: 12,
             description: [
@@ -460,6 +467,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailHD04,
               alt: "bodega con cajas de mercancia, mujer mayor dirigiendo el trabajo",
             },
+            cover: "/covers/cover_R_HD_04.svg",
             identifier: { prefix: "R-HD-", courseNumber: "04" },
             duration: 15,
             description: [
@@ -538,6 +546,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailHD05,
               alt: "ejecutiva joven en sala de juntas revisa la hora en su reloj",
             },
+            cover: "/covers/cover_R_HD_05.svg",
             identifier: { prefix: "R-HD-", courseNumber: "05" },
             duration: 12,
             description: [
@@ -605,6 +614,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailHD06,
               alt: "supervisor de bodega revisando un informe ",
             },
+            cover: "/covers/cover_R_HD_06.svg",
             identifier: { prefix: "R-HD-", courseNumber: "06" },
             duration: 20,
             description: [
@@ -697,6 +707,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailHD07,
               alt: "dos obreros revisan juntos un manual de instrucciones",
             },
+            cover: "/covers/cover_R_HD_07.svg",
             identifier: { prefix: "R-HD-", courseNumber: "07" },
             duration: 15,
             description: [
@@ -774,6 +785,7 @@ export const DataCourseLibrarie = [
       {
         name: "Habilidades Tecnológicas",
         slug: "habilidades-tecnologicas",
+        colorid: "#71629f",
         courses: [
           {
             library: { name: "Recursos Humanos ", skuPrefix: "R" },
@@ -784,6 +796,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailHTTT101,
               alt: "Hombre mayor realiza trabajo de forma remota en su laptop",
             },
+            cover: "/covers/cover_R_HT_TT_101.png",
             identifier: { prefix: "HT-TT", courseNumber: "101" },
             duration: 12,
             description: [
@@ -842,6 +855,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailHTTT201,
               alt: "mujer realiza trabajo remoto desde la sala de su casa con su laptop",
             },
+            cover: "/covers/cover_R_HT_TT_201.png",
             identifier: { prefix: "HT-TT", courseNumber: "201" },
             duration: 20,
             description: [
@@ -926,6 +940,7 @@ export const DataCourseLibrarie = [
       {
         name: "Jurídico",
         slug: "juridico",
+        colorid: "#0ca079",
         courses: [
           {
             library: { name: "Recursos Humanos ", skuPrefix: "R" },
@@ -936,6 +951,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailRJN35,
               alt: "colaboradores teniendo una conversacion intensa",
             },
+            cover: "/covers/cover_R_J_N35_201.png",
             identifier: { prefix: "J-N35", courseNumber: "201" },
             duration: 35,
             description: [
@@ -1030,6 +1046,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailRJV101,
               alt: "ejecutivo le llama la atencion verbalmente a empleada en la oficina",
             },
+            cover: "/covers/cover_R_J_VL_101.svg",
             identifier: { prefix: "J-VL", courseNumber: "101" },
             duration: 25,
             description: [
@@ -1112,6 +1129,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailRJV201,
               alt: "En una sala de juntas un supervisor agita papeles mientras habla con un empleado que se ve intimidado",
             },
+            cover: "/covers/cover_R_J_VL_201.svg",
             identifier: { prefix: "J-VL", courseNumber: "201" },
             duration: 20,
             description: [
@@ -1197,6 +1215,7 @@ export const DataCourseLibrarie = [
       {
         name: "Esenciales",
         slug: "esenciales",
+        colorid: "#4a6eb5",
         courses: [
           {
             library: { name: "Seguridad de la información", skuPrefix: "S" },
@@ -1207,6 +1226,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailSE101,
               alt: "hombre con lentes mirando a la computadora",
             },
+            cover: "/covers/cover_S_E_101.png",
             identifier: { prefix: "E", courseNumber: "101" },
             duration: 30,
             description: [
@@ -1286,6 +1306,7 @@ export const DataCourseLibrarie = [
       {
         name: "Micro Módulos",
         slug: "micro-modulos",
+        colorid: "#4a6eb5",
         courses: [
           {
             library: { name: "Seguridad de la información", skuPrefix: "S" },
@@ -1296,6 +1317,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailSC01,
               alt: "hombre inicia secion con 2 factores de autenticacion atravez de su mobile.",
             },
+            cover: "/covers/cover_S_C_01.svg",
             identifier: { prefix: "C", courseNumber: "01" },
             duration: 10,
             description: [
@@ -1354,6 +1376,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailSM01,
               alt: "empleada de oficina con un virus en su computadora.",
             },
+            cover: "/covers/cover_S_M_01.svg",
             identifier: { prefix: "M", courseNumber: "01" },
             duration: 10,
             description: [
@@ -1408,6 +1431,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailSP01,
               alt: "persona con un teléfono celular en la mano, recibe una llamada de un número desconocido.",
             },
+            cover: "/covers/cover_S_P_01.svg",
             identifier: { prefix: "P", courseNumber: "01" },
             duration: 10,
             description: [
@@ -1469,6 +1493,7 @@ export const DataCourseLibrarie = [
       {
         name: "Capacitación Ventas",
         slug: "capacitacion-ventas",
+        colorid: "#ff9903",
         courses: [
           {
             library: { name: "Ventas", skuPrefix: "V" },
@@ -1479,6 +1504,7 @@ export const DataCourseLibrarie = [
               src: ThumbnailVPV101,
               alt: "ejecutiva de ventas finaliza un trato con cliente.",
             },
+            cover: "/covers/cover_V_PV_101.svg",
             identifier: { prefix: "V-PV-", courseNumber: "101" },
             duration: 30,
             description: [

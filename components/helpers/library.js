@@ -63,7 +63,7 @@ export const getSubcategoriesSlugs = (categories) => {
 export const getSubcategoryByName = (name, categories) => {
   // iterate over categories and find the subcategory by the name
   for (let category of categories) {
-    const subcategory = category.subcategories.find((subcategory) => subcategory.name === name);
+    const subcategory = category.subcategories.find((subcategory) => subcategory.name.toLowerCase().trim() === name.toLowerCase().trim());
     if (subcategory) {
       return subcategory;
     }

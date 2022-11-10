@@ -1498,7 +1498,7 @@ export const DataCourseLibrarie = [
         courses: [
           {
             library: { name: "Ventas", skuPrefix: "V" },
-            subcategory: { name: "Capacitación de Ventas", skuPrefix: "PV" },
+            subcategory: { name: "Capacitación Ventas", skuPrefix: "PV" },
             title: "Proceso de Ventas",
             slug: "proceso-de-ventas",
             thumbnail: {

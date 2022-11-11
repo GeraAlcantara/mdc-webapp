@@ -191,14 +191,15 @@ function Productos() {
                     <label htmlFor='phone' className='sr-only'>
                       Ingresa tu número de teléfono
                     </label>
-                    <input
-                      lang='es'
-                      type='tel'
-                      name='phone'
-                      id='phone'
-                      className='bg-transparent border border-secondary text-gray-200 text-xl focus:outline-none focus:border-brandBlue-400 rounded-lg p-2 pl-8'
-                    />
-                    <button className='bg-brandBlue-400 text-white text-xl font-bold px-4 py-2 rounded-lg '>Llámame ahora</button>
+                    <div className='bg-transparent border border-secondary text-gray-200 text-xl focus:outline-none focus:border-brandBlue-400 rounded-lg'>
+                      <select name='phone' id='phone' className='bg-bg_primary text-white rounded-md p-2'>
+                        <option value='+52'>+52</option>
+                        <option value='+1'>+1</option>
+                        <option value='+2'>+2</option>
+                      </select>
+                      <input lang='es' type='tel' name='phone' id='phone' className='bg-transparent focus:outline-none pl-2' />
+                    </div>
+                    <button className='bg-brandBlue-400 text-white font-bold px-8 py-2  rounded-lg '>Llámame ahora</button>
                   </div>
                 </form>
               </div>

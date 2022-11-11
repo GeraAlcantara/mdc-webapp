@@ -15,7 +15,7 @@ function PricesCard({ title, price, description, selected = false, ...props }) {
   return (
     <div
       className={clsx("", {
-        "bg-secondary pt-8 rounded-xl ": selected === true,
+        "bg-secondary pt-8 rounded-xl order-first md:order-last": selected === true,
         "pt-8 rounded-xl": selected === false,
       })}
     >

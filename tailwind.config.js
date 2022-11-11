@@ -9,6 +9,7 @@ module.exports = {
         secondary: "#1070e5",
         accent: "#00fb15",
         bg_primary: "#001322",
+        bg_secondary: "#002640",
         lineGradient_1: "#00bec6",
         lineGradient_2: "#4cff91",
         lineGradient_3: "#02e239",
@@ -17,8 +18,8 @@ module.exports = {
           100: "#60b7c8",
           400: "#386fdd",
           500: "#12283f",
-          700: "#263749",
           600: "#071b2f",
+          700: "#263749",
         },
       },
       fontFamily: {

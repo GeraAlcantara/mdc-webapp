@@ -5,9 +5,8 @@ import Facebook from "../components/svgs/facebook.svg";
 export default function Servicios() {
   return (
     <section>
-      <div className='h-screen mdc-ui-container'>
+      <div className='h-screen mdc-ui-container pt-[68px]'>
         <p>Servicios</p>
-        <Facebook className='text-5xl text-secondary'></Facebook>
       </div>
 
       <footer>
@@ -16,7 +15,7 @@ export default function Servicios() {
           target='_blank'
           rel='noopener noreferrer'
         >
-          Powered by{" "}
+          Powered by
           <span>
             <Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
           </span>

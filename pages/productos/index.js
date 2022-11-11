@@ -102,6 +102,65 @@ function Productos() {
             <PricesCard title='Curso + LMS' price={70} description='Natus itaque iste rem sapiente maxime ullam alias?' selected={true} />
           </div>
         </div>
+        {/* Detalles */}
+        {/* table Html titulos de columnas Detalles, Cursos, LMS, Cursos + LMS
+        Detalles | Cursos | LMS | Cursos + LMS
+        Lorem ipsum dolor sit amet| ✔️ | - | ✔️
+        Consectetur adipiscing elit | Mattis lorem | Pretium | Lorem sit
+        Praesent massa sem | Máx. 1 | Máx. 1 | Ilimatadas
+        Fermentum ac ullamcorper non | - | - | ✔️
+        Blandit quis risus | ✔️ | ✔️ | ✔️
+        */}
+        <div className='mdc-ui-container my-10 '>
+          <div className='m-auto'>
+            <table className='w-full  '>
+              <thead>
+                <tr className='text-white font-bold text-lg h-10 text-left'>
+                  <th className='text-secondary text-2xl font-bold text-left'>Detalles</th>
+                  <th>Cursos</th>
+                  <th>LMS</th>
+                  <th>Cursos + LMS</th>
+                </tr>
+              </thead>
+              <tbody className='h-40'>
+                <tr className='text-gray-300 odd:bg-bg_secondary even:bg-none'>
+                  <td>Lorem ipsum dolor sit amet</td>
+                  <td>✔️</td>
+                  <td>-</td>
+                  <td>✔️</td>
+                </tr>
+                <tr className='text-gray-300 odd:bg-bg_secondary even:bg-none'>
+                  <td>Consectetur adipiscing elit</td>
+                  <td>Mattis lorem</td>
+                  <td>Pretium</td>
+                  <td>Lorem sit</td>
+                </tr>
+                <tr className='text-gray-300 odd:bg-bg_secondary even:bg-none'>
+                  <td>Praesent massa sem</td>
+                  <td>Máx. 1</td>
+                  <td>Máx. 1</td>
+                  <td>Ilimatadas</td>
+                </tr>
+                <tr className='text-gray-300 odd:bg-bg_secondary even:bg-none'>
+                  <td>Fermentum ac ullamcorper non</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>✔️</td>
+                </tr>
+                <tr className='text-gray-300 odd:bg-bg_secondary even:bg-none'>
+                  <td>Blandit quis risus</td>
+                  <td>✔️</td>
+                  <td>✔️</td>
+                  <td>✔️</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* make html table */}
+
+        {/* TABS Detalles */}
       </div>
     </>
   );

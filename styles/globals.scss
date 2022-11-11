@@ -67,6 +67,8 @@
 
 
 .borderAnimated {
+  width: 100%;
+  height: 100%;
   --border-radius: 12px;
   --border-size: 1px;
   --padding: 0px;
@@ -81,6 +83,24 @@
   backface-visibility: hidden;
   perspective: 1000;
   transform: translateZ(0);
+
+  &__blue {
+    border: #1070e5 2px solid;
+    height: 100%;
+    width: 100%;
+
+    & i {
+      content: none;
+      display: none;
+
+      &::before {
+        content: none;
+        display: none;
+      }
+
+    }
+
+  }
 
   &:hover i {
     animation: fadein 800ms linear forwards;

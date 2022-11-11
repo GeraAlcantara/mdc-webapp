@@ -11,6 +11,7 @@ import TabsCarousel from "../../components/ui/TabsCourses";
 import BoxOpen from "../../public/icons/boxOpen.png";
 import ImgShopingCard from "../../public/icons/shoppingCard.png";
 import BannerProd from "../../components/ui/BannerProd";
+import PricesCard from "../../components/ui/PricesCard";
 
 function Productos() {
   return (
@@ -94,31 +95,11 @@ function Productos() {
         </div>
         {/* Divider END */}
         {/* Card */}
-        <div className=' mb-10 mdc-ui-container '>
-          <div className='borderAnimated  '>
-            <i className='opacity-0 transition-all'></i>
-            <div className='p-6 border-cyan-800/20 rounded-xl border-[1px] flex flex-col gap-4 relative'>
-              <header>
-                <h1 className='font-RobotoCondense font-bold text-3xl uppercase mb-2'>Cursos</h1>
-                <hr className='border-cyan-800' />
-                <div className='pt-4'>
-                  <p className='text-accent text-5xl font-bold mb-2'>
-                    $50 <small className='uppercase text-2xl'>mxn</small>
-                  </p>
-                  <p className='text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                </div>
-              </header>
-              <div className='text-gray-200 flex gap-2 items-end '>
-                <RiUserFill className='text-lg' />
-                <span className='text-sm leading-none text-gray-400 '>1 Usuario</span>
-              </div>
-              <div>
-                <button className='border-accent border-2 rounded-lg py-1 w-full'> Comprar plan</button>
-              </div>
-              <div className='text-gray-600 text-center'>
-                <p>Regala este plan</p>
-              </div>
-            </div>
+        <div className=' my-10 mdc-ui-container  '>
+          <div className='grid grid-cols-1 grid-rows-1 md:grid-cols-3 gap-2 lg:gap-0 justify-center '>
+            <PricesCard title='Cursos' price={50} description='Lorem ipsum dolor sit amet, consectetur elit. ' />
+            <PricesCard title='LMS' price={30} description='uisquam rerum aperiam id fugiat nemo tempora.' />
+            <PricesCard title='Curso + LMS' price={70} description='Natus itaque iste rem sapiente maxime ullam alias?' selected={true} />
           </div>
         </div>
       </div>

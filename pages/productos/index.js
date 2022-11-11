@@ -5,7 +5,8 @@ import CheckBackImg from "../../public/heroProductosCheckback.png";
 import CheckFrontImg from "../../public/heroProductosCheckbackFront.png";
 import ProdHeroIconImg from "../../public/heroProductosIcon.png";
 import ProdHeroGirlImg from "../../public/heroProductosGirl.png";
-import { RiUserFill } from "react-icons/ri";
+import { RiUserFill, RiPaypalFill, RiVisaLine, RiMastercardFill } from "react-icons/ri";
+import { SiAmericanexpress } from "react-icons/si";
 import ModalDemoReel from "../../components/ui/ModalDemoReel";
 import TabsCarousel from "../../components/ui/TabsCourses";
 import BoxOpen from "../../public/icons/boxOpen.png";
@@ -158,7 +159,52 @@ function Productos() {
           </div>
         </div>
 
-        {/* make html table */}
+        {/* Metodos de pagos  */}
+        <section className='mdc-ui-container my-20 text-gray-700'>
+          <div className='flex flex-col lg:flex-row justify-center items-center gap-0 lg:gap-10'>
+            <div>
+              <p className='text-gray-200 text-xl'>Precios en moneda local. Múltiples métodos de pago</p>
+            </div>
+            <div className='flex items-center gap-4'>
+              <div className='flex flex-col items-center'>
+                <RiVisaLine className='text-6xl ' />
+              </div>
+              <div className='flex flex-col items-center'>
+                <RiPaypalFill className='text-4xl ' />
+              </div>
+              <div className='flex flex-col items-center'>
+                <RiMastercardFill className='text-4xl ' />
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Dudas Agenda llamada */}
+
+        <section>
+          <div className='mdc-ui-container my-20'>
+            <div className='flex flex-col items-center gap-8'>
+              <p className='text-3xl font-bold '>¿Dudas? Te llamamos ahora</p>
+              <div className='flex flex-col md:flex-row justify-center items-center gap-0 lg:gap-10'>
+                {/* form with input phone number and must be a valid phone number country code México +52 and Llámame ahora button */}
+                <form action='' className='flex flex-col items-center'>
+                  <div className='flex items-center gap-4'>
+                    <label htmlFor='phone' className='sr-only'>
+                      Ingresa tu número de teléfono
+                    </label>
+                    <input
+                      lang='es'
+                      type='tel'
+                      name='phone'
+                      id='phone'
+                      className='bg-transparent border border-secondary text-gray-200 text-xl focus:outline-none focus:border-brandBlue-400 rounded-lg p-2 pl-8'
+                    />
+                    <button className='bg-brandBlue-400 text-white text-xl font-bold px-4 py-2 rounded-lg '>Llámame ahora</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* TABS Detalles */}
       </div>

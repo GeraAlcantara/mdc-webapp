@@ -187,7 +187,7 @@ function Productos() {
               <div className='flex flex-col md:flex-row justify-center items-center gap-0 lg:gap-10'>
                 {/* form with input phone number and must be a valid phone number country code México +52 and Llámame ahora button */}
                 <form action='' className='flex flex-col items-center'>
-                  <div className='flex items-center gap-4'>
+                  <div className='flex flex-col md:flex-row items-center gap-4'>
                     <label htmlFor='phone' className='sr-only'>
                       Ingresa tu número de teléfono
                     </label>

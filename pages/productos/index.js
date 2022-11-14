@@ -184,22 +184,34 @@ function Productos() {
           <div className='mdc-ui-container my-20'>
             <div className='flex flex-col items-center gap-8'>
               <p className='text-3xl font-bold '>¿Dudas? Te llamamos ahora</p>
-              <div className='flex flex-col md:flex-row justify-center items-center gap-0 lg:gap-10'>
+              <div className='w-full flex flex-col md:flex-row justify-center items-center gap-0 lg:gap-10'>
                 {/* form with input phone number and must be a valid phone number country code México +52 and Llámame ahora button */}
-                <form action='' className='flex flex-col items-center'>
-                  <div className='flex flex-col md:flex-row items-center gap-4'>
+                <form action='' className='w-3/4 md:w-3/5 xl:w-1/2 '>
+                  <div className='flex flex-col lg:flex-row items-center gap-4 px-10 w-full'>
                     <label htmlFor='phone' className='sr-only'>
                       Ingresa tu número de teléfono
                     </label>
-                    <div className='bg-transparent border border-secondary text-gray-200 text-xl focus:outline-none focus:border-brandBlue-400 rounded-lg'>
-                      <select name='phone' id='phone' className='bg-bg_primary text-white rounded-md p-2'>
-                        <option value='+52'>+52</option>
-                        <option value='+1'>+1</option>
-                        <option value='+2'>+2</option>
+                    <div className='relative '>
+                      <select name='phone' id='phone' className='absolute bg-transparent top-1 text-white rounded-md p-2 outline-none bg-brandBlue-400 '>
+                        <option className='bg-brandBlue-500' value='+52'>
+                          +52
+                        </option>
+                        <option className='bg-brandBlue-500' value='+1'>
+                          +1
+                        </option>
+                        <option className='bg-brandBlue-500' value='+2'>
+                          +2
+                        </option>
                       </select>
-                      <input lang='es' type='tel' name='phone' id='phone' className='bg-transparent focus:outline-none pl-2' />
+                      <input
+                        lang='es'
+                        type='tel'
+                        name='phone'
+                        id='phone'
+                        className='bg-transparent border border-secondary text-gray-200 text-xl focus:outline-none focus:border-brandBlue-400 rounded-lg pl-20 py-2 '
+                      />
                     </div>
-                    <button className='bg-brandBlue-400 text-white font-bold px-8 py-2  rounded-lg '>Llámame ahora</button>
+                    <button className='bg-brandBlue-400 text-white font-bold px-8 py-2 flex-shrink-0 rounded-lg '>Llámame ahora</button>
                   </div>
                 </form>
               </div>

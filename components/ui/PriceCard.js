@@ -9,14 +9,16 @@ import clsx from "clsx";
  * @param {number} props.price - price of the card
  * @param {string} props.description - description of the card
  * @param {boolean} [props.selected] - if the card is selected
+ * @param {any} props.handleisSelected - function to handle the selected state
  * @returns {JSX.Element}
  */
-function PricesCard({ title, price, description, selected = false, ...props }) {
+function PriceCard({ title, price, description, selected = false, handleisSelected, ...props }) {
   return (
     <div
+      onClick={handleisSelected}
       className={clsx("", {
-        "bg-secondary pt-8 rounded-xl order-first md:order-last": selected === true,
-        "pt-8 rounded-xl": selected === false,
+        "bg-secondary pt-8 rounded-xl ": selected === true,
+        "pt-8 rounded-xl bg-bg_primary": selected === false,
       })}
     >
       <div
@@ -70,4 +72,4 @@ function PricesCard({ title, price, description, selected = false, ...props }) {
   );
 }
 
-export default PricesCard;
+export default PriceCard;

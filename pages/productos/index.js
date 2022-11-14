@@ -12,7 +12,8 @@ import TabsCarousel from "../../components/ui/TabsCourses";
 import BoxOpen from "../../public/icons/boxOpen.png";
 import ImgShopingCard from "../../public/icons/shoppingCard.png";
 import BannerProd from "../../components/ui/BannerProd";
-import PricesCard from "../../components/ui/PricesCard";
+import PriceCard from "../../components/ui/PriceCard";
+import PricesSection from "../../components/ui/PricesSection";
 
 function Productos() {
   return (
@@ -95,69 +96,8 @@ function Productos() {
           <div className='bg-brandBlue-400 h-[1px] flex-1'></div>
         </div>
         {/* Divider END */}
-        {/* Card */}
-        <div className=' my-10 mdc-ui-container  '>
-          <div className='grid grid-cols-1 grid-rows-1 md:grid-cols-3 gap-2 lg:gap-0 justify-center '>
-            <PricesCard title='Cursos' price={50} description='Lorem ipsum dolor sit amet, consectetur elit. ' />
-            <PricesCard title='LMS' price={30} description='uisquam rerum aperiam id fugiat nemo tempora.' />
-            <PricesCard title='Curso + LMS' price={70} description='Natus itaque iste rem sapiente maxime ullam alias?' selected={true} />
-          </div>
-        </div>
-        {/* Detalles */}
-        {/* table Html titulos de columnas Detalles, Cursos, LMS, Cursos + LMS
-        Detalles | Cursos | LMS | Cursos + LMS
-        Lorem ipsum dolor sit amet| ✔️ | - | ✔️
-        Consectetur adipiscing elit | Mattis lorem | Pretium | Lorem sit
-        Praesent massa sem | Máx. 1 | Máx. 1 | Ilimatadas
-        Fermentum ac ullamcorper non | - | - | ✔️
-        Blandit quis risus | ✔️ | ✔️ | ✔️
-        */}
-        <div className='mdc-ui-container my-10 '>
-          <div className='m-auto'>
-            <table className='w-full  '>
-              <thead>
-                <tr className='text-white font-bold text-lg h-10 text-left'>
-                  <th className='text-secondary text-2xl font-bold text-left'>Detalles</th>
-                  <th>Cursos</th>
-                  <th>LMS</th>
-                  <th>Cursos + LMS</th>
-                </tr>
-              </thead>
-              <tbody className='h-40'>
-                <tr className='text-gray-300 odd:bg-bg_secondary even:bg-none'>
-                  <td>Lorem ipsum dolor sit amet</td>
-                  <td>✔️</td>
-                  <td>-</td>
-                  <td>✔️</td>
-                </tr>
-                <tr className='text-gray-300 odd:bg-bg_secondary even:bg-none'>
-                  <td>Consectetur adipiscing elit</td>
-                  <td>Mattis lorem</td>
-                  <td>Pretium</td>
-                  <td>Lorem sit</td>
-                </tr>
-                <tr className='text-gray-300 odd:bg-bg_secondary even:bg-none'>
-                  <td>Praesent massa sem</td>
-                  <td>Máx. 1</td>
-                  <td>Máx. 1</td>
-                  <td>Ilimatadas</td>
-                </tr>
-                <tr className='text-gray-300 odd:bg-bg_secondary even:bg-none'>
-                  <td>Fermentum ac ullamcorper non</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>✔️</td>
-                </tr>
-                <tr className='text-gray-300 odd:bg-bg_secondary even:bg-none'>
-                  <td>Blandit quis risus</td>
-                  <td>✔️</td>
-                  <td>✔️</td>
-                  <td>✔️</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+        {/* Cards Prices */}
+        <PricesSection />
 
         {/* Metodos de pagos  */}
         <section className='mdc-ui-container my-20 text-gray-700'>
@@ -218,8 +158,6 @@ function Productos() {
             </div>
           </div>
         </section>
-
-        {/* TABS Detalles */}
       </div>
     </>
   );

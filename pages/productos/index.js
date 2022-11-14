@@ -103,7 +103,7 @@ function Productos() {
         <section className='mdc-ui-container my-20 text-gray-700'>
           <div className='flex flex-col lg:flex-row justify-center items-center gap-0 lg:gap-10'>
             <div>
-              <p className='text-gray-200 text-xl'>Precios en moneda local. Múltiples métodos de pago</p>
+              <p className='text-gray-200 text-xl text-center md:text-left'>Precios en moneda local. Múltiples métodos de pago</p>
             </div>
             <div className='flex items-center gap-4'>
               <div className='flex flex-col items-center'>
@@ -123,10 +123,10 @@ function Productos() {
         <section>
           <div className='mdc-ui-container my-20'>
             <div className='flex flex-col items-center gap-8'>
-              <p className='text-3xl font-bold '>¿Dudas? Te llamamos ahora</p>
+              <p className='text-3xl font-bold text-center md:text-left'>¿Dudas? Te llamamos ahora</p>
               <div className='w-full flex flex-col md:flex-row justify-center items-center gap-0 lg:gap-10'>
                 {/* form with input phone number and must be a valid phone number country code México +52 and Llámame ahora button */}
-                <form action='' className='w-3/4 md:w-3/5 xl:w-1/2 '>
+                <form action='' className='w-full md:w-3/5 xl:w-1/2 '>
                   <div className='flex flex-col lg:flex-row items-center gap-4 px-10 w-full'>
                     <label htmlFor='phone' className='sr-only'>
                       Ingresa tu número de teléfono
@@ -151,7 +151,10 @@ function Productos() {
                         className='bg-transparent border border-secondary text-gray-200 text-xl focus:outline-none focus:border-brandBlue-400 rounded-lg pl-20 py-2 '
                       />
                     </div>
-                    <button className='bg-brandBlue-400 text-white font-bold px-8 py-2 flex-shrink-0 rounded-lg '>Llámame ahora</button>
+                    {/* submit button */}
+                    <button type='submit' className='bg-brandBlue-400 text-white font-bold px-8 py-2 md:flex-shrink-0 rounded-lg '>
+                      Llámame ahora
+                    </button>
                   </div>
                 </form>
               </div>

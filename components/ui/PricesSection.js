@@ -73,7 +73,7 @@ function PricesSection() {
           />
         ))}
       </div>
-      {/* Detalles en TABS si es mobile else detlles expandido */}
+      {/* Detalles en TABS si es mobile else detalles expandido */}
       {isMobile ? (
         <div>
           <Tab.Group selectedIndex={selectedCard} onChange={setSelectedCard}>

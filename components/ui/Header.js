@@ -21,7 +21,7 @@ function Header() {
   }, []);
 
   return (
-    <div className={`fixed top-0 w-full z-50 transition-all duration-300 ${background ? "bg-black" : "bg-none"} `}>
+    <div className={`fixed top-0 w-full z-50 transition-all duration-300 ${background ? "bg-brandBlue-600" : "bg-none"} `}>
       <div
         className={
           toogleON

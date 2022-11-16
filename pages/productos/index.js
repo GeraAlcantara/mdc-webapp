@@ -1,19 +1,20 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import CheckMiddleImg from "../../public/heroProductosCheckbackMiddle.png";
 import CheckBackImg from "../../public/heroProductosCheckback.png";
 import CheckFrontImg from "../../public/heroProductosCheckbackFront.png";
 import ProdHeroIconImg from "../../public/heroProductosIcon.png";
 import ProdHeroGirlImg from "../../public/heroProductosGirl.png";
-import { RiUserFill, RiPaypalFill, RiVisaLine, RiMastercardFill } from "react-icons/ri";
-import { SiAmericanexpress } from "react-icons/si";
+import { RiPaypalFill, RiVisaLine, RiMastercardFill } from "react-icons/ri";
 import ModalDemoReel from "../../components/ui/ModalDemoReel";
 import TabsCarousel from "../../components/ui/TabsCourses";
 import BoxOpen from "../../public/icons/boxOpen.png";
 import ImgShopingCard from "../../public/icons/shoppingCard.png";
 import BannerProd from "../../components/ui/BannerProd";
-import PriceCard from "../../components/ui/PriceCard";
 import PricesSection from "../../components/ui/PricesSection";
+import TabletImg from "../../public/tablet_card.png";
+import WomanMobileImg from "../../public/woman_mobile.jpg";
 
 function Productos() {
   return (
@@ -98,7 +99,6 @@ function Productos() {
         {/* Divider END */}
         {/* Cards Prices */}
         <PricesSection />
-
         {/* Metodos de pagos  */}
         <section className='mdc-ui-container my-20 text-gray-700'>
           <div className='flex flex-col lg:flex-row justify-center items-center gap-0 lg:gap-10'>
@@ -119,7 +119,6 @@ function Productos() {
           </div>
         </section>
         {/* Dudas Agenda llamada */}
-
         <section>
           <div className='mdc-ui-container my-20'>
             <div className='flex flex-col items-center gap-8'>
@@ -158,6 +157,35 @@ function Productos() {
                   </div>
                 </form>
               </div>
+            </div>
+          </div>
+        </section>
+        {/* Big Cards  */}
+        <section className='mdc-ui-container py-10'>
+          {/* Big Card with Text */}
+          <div className='flex flex-col md:flex-row gap-4 lg:gap-10 h-full lg:min-h-[350px] xl:min-h-[600px] transition-all duration-300'>
+            <div className='flex flex-col md:flex-row xl:gap-10 w-full md:w-4/6 '>
+              <div className='bg-gradient-to-br from-[#386fdd] via-[#439dc0] to-[#67dd80] rounded-3xl flex flex-col-reverse md:grid md:grid-cols-3 px-4 md:px-8 pt-4 '>
+                <div className='relative md:row-start-1 md:col-start-1 md:col-span-2 h-[350px] md:h-auto w-full mt-4 md:mt-0'>
+                  <Image src={TabletImg} layout='fill' loading='eager' objectFit='contain' draggable='false' placeholder='blur' alt='Tablet con estadisticas' />
+                </div>
+                <div className='md:col-start-2 col-span-2 md:row-start-1 text-center md:text-right flex flex-col gap-2 md:gap-6 md:justify-center'>
+                  <p className='text-white  xl:text-2xl lg:pl-8 xl:pl-16'>Cursos exportados en formato SCORM y listos para integrarse en cualquier</p>
+
+                  <h3 className='text-4xl xl:text-6xl 2xl:text-7xl font-extrabold text-bg_primary'>
+                    Plataforma <br />
+                    <span className='text-6xl xl:text-8xl 2xl:text-9xl '>LMS</span>
+                  </h3>
+                  <div className='flex justify-center md:justify-end'>
+                    <Link href='/contacto'>
+                      <a className='text-gray-900 uppercase py-2 px-4 bg-white rounded-full inline-flex'>Contactanos</a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='relative w-full md:w-2/6 rounded-3xl overflow-hidden shrink-0 min-h-[350px] '>
+              <Image src={WomanMobileImg} objectFit='cover' objectPosition='right' layout='fill' alt='woman' />
             </div>
           </div>
         </section>

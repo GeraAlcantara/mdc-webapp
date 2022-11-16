@@ -1,5 +1,7 @@
 import "../styles/globals.scss";
 import Layout from "../components/ui/Layout";
+import { Analytics } from "@vercel/analytics/react";
+
 import { ParallaxProvider } from "react-scroll-parallax";
 
 function MyApp({ Component, pageProps }) {
@@ -7,6 +9,7 @@ function MyApp({ Component, pageProps }) {
     <ParallaxProvider>
       <Layout>
         <Component {...pageProps} />
+        <Analytics />
       </Layout>
     </ParallaxProvider>
   );

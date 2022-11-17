@@ -80,7 +80,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 2, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 0, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -141,7 +141,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 2, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 1, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -199,7 +199,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 2, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 1, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -271,7 +271,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 0, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 3, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -348,7 +348,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 2, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 1, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -410,7 +410,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 1, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 3, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -511,7 +511,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 4, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -599,7 +599,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 0, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 4, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 0, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -701,7 +701,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 4, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -811,7 +811,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 1, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 3, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -877,7 +877,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 3, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 1, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -975,7 +975,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 2, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 4, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -1071,7 +1071,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 1, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 3, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -1153,7 +1153,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 3, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -1251,7 +1251,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 4, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 3, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -1340,7 +1340,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 2, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 0, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -1392,7 +1392,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 3, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 0, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 0, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -1453,7 +1453,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 1, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 0, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 0, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 0, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {
@@ -1528,7 +1528,7 @@ export const DataCourseLibrarie = [
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 6, iconSrc: "/svgs/interact.svg" },
               { name: "Cuestionario", qt: 0, iconSrc: "/svgs/cuestionario.svg" },
-              { name: "Examen Final", qt: 1, iconSrc: "/svgs/autoeval.svg" },
+              { name: "Examen Final", qt: 1, iconSrc: "/svgs/examen.svg" },
             ],
             modules: [
               {

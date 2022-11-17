@@ -4,6 +4,7 @@ import IcontxtLocucion from "../svgs/txtLocucion.svg";
 import Iconautoeval from "../svgs/autoeval.svg";
 import Iconcuestionario from "../svgs/cuestionario.svg";
 
+
 export const DataSheet = {
   library: { name: "Recursos Humanos", skuPrefix: "R" },
   subcategory: { name: "Habilidades directivas", skuPrefix: "HD" },

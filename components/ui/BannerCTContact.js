@@ -1,13 +1,18 @@
 import Image from "next/image";
-import ImgBannerProd from "../../public/bannerProds.jpg";
+
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 import Link from "next/link";
 
-function BannerProd() {
+/**
+ *
+ * @param {{imgBanner:string}} param0
+ * @returns
+ */
+function BannerCTContact({ imgBanner }) {
   return (
     <ParallaxBanner className='relative w-full xl:h-[800px] aspect-square lg:aspect-video'>
       <ParallaxBannerLayer speed={-25}>
-        <Image src={ImgBannerProd} objectFit='cover' layout='fill' alt='grupo de personas conversando frente a un ordenador'></Image>
+        <Image src={imgBanner} objectFit='cover' layout='fill' alt='grupo de personas conversando frente a un ordenador'></Image>
       </ParallaxBannerLayer>
       <ParallaxBannerLayer>
         <div className='absolute flex justify-end h-full w-full xl:m-auto 2xl:w-[90%]'>
@@ -30,4 +35,4 @@ function BannerProd() {
   );
 }
 
-export default BannerProd;
+export default BannerCTContact;

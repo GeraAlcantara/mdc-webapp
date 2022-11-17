@@ -11,8 +11,8 @@ import ModalDemoReel from "../../components/ui/ModalDemoReel";
 import TabsCarousel from "../../components/ui/TabsCourses";
 import IconServices from "../../public/icons/servicios.svg";
 import IconShopingCard from "../../public/icons/planePrecios.svg";
-import Iconlibrary from "../../public/icons/libreria.svg";
-import BannerProd from "../../components/ui/BannerProd";
+import BannerCTContact from "../../components/ui/BannerCTContact";
+import ImgBannerProd from "../../public/bannerProds.jpg";
 import PricesSection from "../../components/ui/PricesSection";
 import TabletImg from "../../public/tablet_card.png";
 import WomanMobileImg from "../../public/woman_mobile.jpg";
@@ -24,7 +24,7 @@ function Productos() {
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <meta
           name='description'
-          /* TODO: Describcion meta */
+          /* TODO: Descripcion meta */
           content='Descripcion para pagina productos'
         />
         <title>Mexico Development Center | Productos</title>
@@ -87,7 +87,7 @@ function Productos() {
         </section>
         {/* parallaxBaner */}
         <div className='py-16 xl:py-24'>
-          <BannerProd />
+          <BannerCTContact imgBanner={ImgBannerProd} />
         </div>
         {/* Divider */}
         <div className='flex mdc-ui-container justify-center items-end m-auto xl:my-16 '>

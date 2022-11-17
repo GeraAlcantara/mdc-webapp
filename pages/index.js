@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Hero from "../components/ui/Hero";
 import { SectionsData } from "../components/data/SectionTimeLineData";
-import Capacite from "../public/icons/capacite.svg";
+import Capacite from "../public/icons/capacitePersonal.svg";
 import Clients from "../components/ui/Clients";
 import Timeline from "../components/ui/Timeline";
 import BannerParallax from "../components/ui/BannerParallax";

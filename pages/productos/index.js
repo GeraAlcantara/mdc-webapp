@@ -9,8 +9,9 @@ import ProdHeroGirlImg from "../../public/heroProductosGirl.png";
 import { RiPaypalFill, RiVisaLine, RiMastercardFill } from "react-icons/ri";
 import ModalDemoReel from "../../components/ui/ModalDemoReel";
 import TabsCarousel from "../../components/ui/TabsCourses";
-import BoxOpen from "../../public/icons/boxOpen.png";
-import ImgShopingCard from "../../public/icons/shoppingCard.png";
+import IconServices from "../../public/icons/servicios.svg";
+import IconShopingCard from "../../public/icons/planePrecios.svg";
+import Iconlibrary from "../../public/icons/libreria.svg";
 import BannerProd from "../../components/ui/BannerProd";
 import PricesSection from "../../components/ui/PricesSection";
 import TabletImg from "../../public/tablet_card.png";
@@ -66,8 +67,8 @@ function Productos() {
         {/* Divider */}
         <div className='flex mdc-ui-container justify-center items-end m-auto my-16 '>
           <div className='bg-brandBlue-400 h-[1px] w-1/2 flex-1'></div>
-          <div className='mx-4 relative w-20 h-20'>
-            <Image src={BoxOpen} width={171} layout='responsive' height={180} alt='icono de caja abierta' />
+          <div className='mx-4 relative '>
+            <IconServices className='w-20 h-auto' />
           </div>
           <div className='bg-brandBlue-400 h-[1px] flex-1'></div>
         </div>
@@ -91,8 +92,8 @@ function Productos() {
         {/* Divider */}
         <div className='flex mdc-ui-container justify-center items-end m-auto xl:my-16 '>
           <div className='bg-brandBlue-400 h-[1px] w-1/2 flex-1'></div>
-          <div className='mx-4 relative w-20 h-20'>
-            <Image src={ImgShopingCard} width={171} layout='responsive' height={180} alt='icono de caja abierta' />
+          <div className='mx-4 relative'>
+            <IconShopingCard className='w-20 h-auto' />
           </div>
           <div className='bg-brandBlue-400 h-[1px] flex-1'></div>
         </div>

@@ -59,7 +59,16 @@ export default function Servicios() {
                 <Image loading='eager' src={ChatImg} alt='icono de marca de verificacion ' />
               </div>
               <div className='col-start-1 row-start-1 row-end-4 col-end-7  '>
-                <Image loading='eager' objectFit='cover' objectPosition='top center' src={ServHeroMenImg} alt='empleada de construcion viendo su tableta ' />
+                <Image
+                  loading='eager'
+                  objectFit='cover'
+                  objectPosition='top center'
+                  src={ServHeroMenImg}
+                  width={985}
+                  height={997}
+                  layout='responsive'
+                  alt='empleado con laptop'
+                />
               </div>
               <div className='row-start-2 col-start-2 col-span-2 opacity-70 pl-3 pt-3'>
                 <Image loading='eager' src={PlayImg} alt='icono de marca de verificacion ' />
@@ -83,24 +92,19 @@ export default function Servicios() {
               <h2 className='text-4xl font-bold'>Para cualquier reto...</h2>
             </hgroup>
           </header>
-          {/* banner CT Contactanos */}
-          <div className='py-16 xl:py-24'>
-            <BannerCTContact imgBanner={ImgBannerServices} />
-          </div>
-        </section>
-        <section className='py-4 md:py-8'>
+
           {/* blocke Produccion */}
           <div className='mdc-ui-container flex flex-col-reverse gap-4 md:gap-8 xl:gap-28 md:flex-row my-8'>
             {/* grid layout images */}
             <div className='grid grid-cols-5 grid-rows-6 md:w-1/2 md:h-3/4 lg:h-full shrink '>
               <div className='col-start-1 row-start-2 col-span-2 row-span-3'>
-                <Image src={ProducionImgSet} alt='set de produccion' />
+                <Image src={ProducionImgSet} loading='lazy' height={491} width={601} alt='set de produccion' />
               </div>
               <div className='flex justify-end col-start-3 col-span-3 row-start-1 row-end-6'>
-                <Image src={ProducionImgPerson} alt='persona de produccion' />
+                <Image src={ProducionImgPerson} height={896} width={709} alt='persona de produccion' />
               </div>
               <div className='flex justify-center col-start-2 col-span-2 row-start-5 row-span-2'>
-                <Image src={ProducionImgGraph} alt='graficos de produccion' />
+                <Image src={ProducionImgGraph} height={377} width={496} alt='graficos de produccion' />
               </div>
             </div>
             {/* grid layout images END */}
@@ -176,6 +180,12 @@ export default function Servicios() {
             </div>
           </div>
           {/* blocke Socios END */}
+        </section>
+        <section className='py-4 md:py-8'>
+          {/* banner CT Contactanos */}
+          <div className='py-16 xl:py-24'>
+            <BannerCTContact imgBanner={ImgBannerServices} />
+          </div>
         </section>
       </div>
     </>

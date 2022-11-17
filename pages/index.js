@@ -91,7 +91,9 @@ export default function Home() {
       </section>
 
       <section>
-        <BannerParallax />
+        <div className='py-16 xl:py-24'>
+          <BannerParallax />
+        </div>
       </section>
     </>
   );

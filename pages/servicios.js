@@ -89,7 +89,8 @@ export default function Servicios() {
           </div>
         </section>
         <section className='py-4 md:py-8'>
-          <div className='mdc-ui-container flex flex-col-reverse gap-4 md:gap-8 xl:gap-28 md:flex-row '>
+          {/* blocke Produccion */}
+          <div className='mdc-ui-container flex flex-col-reverse gap-4 md:gap-8 xl:gap-28 md:flex-row my-8'>
             {/* grid layout images */}
             <div className='grid grid-cols-5 grid-rows-6 md:w-1/2 md:h-3/4 lg:h-full shrink '>
               <div className='col-start-1 row-start-2 col-span-2 row-span-3'>
@@ -115,7 +116,9 @@ export default function Servicios() {
               </p>
             </div>
           </div>
-          <div className='mdc-ui-container flex flex-col-reverse gap-4 md:gap-8 xl:gap-28 md:flex-row '>
+          {/* blocke Produccion END */}
+          {/* blocke Traduccion */}
+          <div className='mdc-ui-container flex flex-col gap-4 md:gap-8 xl:gap-28 md:flex-row my-8'>
             {/* text  */}
             <div className='md:w-1/2 flex flex-col md:items-end md:justify-center text-gray-400 text-lg'>
               <h2 className={`font-bold md:text-right text-4xl mb-6 text-lineGradient_1 w-[12ch] `}>Traducción ó Localización.</h2>
@@ -143,6 +146,36 @@ export default function Servicios() {
             </div>
             {/* grid layout images END */}
           </div>
+          {/* blocke Traduccion END */}
+          {/* blocke Socios */}
+          <div className='mdc-ui-container flex flex-col-reverse gap-4 md:gap-8 xl:gap-28 md:flex-row my-8'>
+            {/* grid layout images */}
+            <div className='grid grid-cols-5 grid-rows-2 md:w-1/2 md:h-3/4 lg:h-full shrink '>
+              <div className='flex justify-end col-start-1 col-span-5 row-start-1 row-span-2'>
+                <div className='w-11/12'>
+                  <Image src={SociosImgPersons} alt='Socios de negocios revisando un plan en la mesa de trabajo' />
+                </div>
+              </div>
+              <div className='flex justify-end col-start-3 col-span-3 row-start-2 '>
+                <div className='w-9/12'>
+                  <Image src={SociosImgHandData} alt='graficos de produccion' />
+                </div>
+              </div>
+            </div>
+            {/* grid layout images END */}
+            {/* text  */}
+            <div className='md:w-1/2 flex flex-col md:items-start md:justify-center text-gray-400 text-lg'>
+              <h2 className={`font-bold text-4xl mb-6 capitalize text-secondary w-[12ch] `}>Socios Estratégicos.</h2>
+              <p className='max-w-prose md:text-left mb-4'>
+                Podemos proporcionar la flexibilidad que tu empesa necesita para extender sus capacidades de producción internas.
+              </p>
+              <p className='max-w-prose md:text-left mb-4'>Intégranos a tu equipo de trabajo para optimizar las operaciones y reducir los gastos.</p>
+              <p className='max-w-prose md:text-left mb-4'>
+                Estamos listos para cualquier reto, desde actualizaciones simples hasta planes de capacitación completos en elearning.
+              </p>
+            </div>
+          </div>
+          {/* blocke Socios END */}
         </section>
       </div>
     </>

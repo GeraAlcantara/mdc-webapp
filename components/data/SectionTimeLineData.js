@@ -4,6 +4,16 @@ import ImgTimeline2 from "../../public/timeline2.jpg";
 import ImgTimeline3 from "../../public/timeline3.jpg";
 import ImgTimeline4 from "../../public/timeline4.jpg";
 
+export const claseNames = () => {
+  return (
+    <>
+      <div className='bg-[#00bec6]  text-[#00bec6]'></div>
+      <div className='bg-[#4cff91]  text-[#4cff91]'></div>
+      <div className='bg-[#02e239]  text-[#02e239]'></div>
+    </>
+  );
+};
+
 export const SectionsData = [
   {
     title: "Cursos Multipremiados",

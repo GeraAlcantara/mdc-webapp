@@ -87,7 +87,7 @@ function Productos() {
         </section>
         {/* parallaxBaner */}
         <div className='py-16 xl:py-24'>
-          <BannerCTContact imgBanner={ImgBannerProd} />
+          <BannerCTContact imgBanner={ImgBannerProd} txtalt='grupo de colaboradores reunidos en su area de trabajo' />
         </div>
         {/* Divider */}
         <div className='flex mdc-ui-container justify-center items-end m-auto xl:my-16 '>

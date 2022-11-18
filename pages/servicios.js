@@ -184,7 +184,7 @@ export default function Servicios() {
         <section className='py-4 md:py-8'>
           {/* banner CT Contactanos */}
           <div className='py-16 xl:py-24'>
-            <BannerCTContact imgBanner={ImgBannerServices} />
+            <BannerCTContact imgBanner={ImgBannerServices} txtalt='ejecutivos teniendo una reunion de negocios con un cliente' />
           </div>
         </section>
       </div>

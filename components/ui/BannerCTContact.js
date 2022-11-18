@@ -5,14 +5,14 @@ import Link from "next/link";
 
 /**
  *
- * @param {{imgBanner:string}} param0
+ * @param {{imgBanner:string, txtalt:string}} param0
  * @returns
  */
-function BannerCTContact({ imgBanner }) {
+function BannerCTContact({ imgBanner, txtalt }) {
   return (
     <ParallaxBanner className='relative w-full xl:h-[800px] aspect-square lg:aspect-video'>
       <ParallaxBannerLayer speed={-25}>
-        <Image src={imgBanner} objectFit='cover' layout='fill' alt='grupo de personas conversando frente a un ordenador'></Image>
+        <Image src={imgBanner} objectFit='cover' draggable='false' layout='fill' alt={txtalt}></Image>
       </ParallaxBannerLayer>
       <ParallaxBannerLayer>
         <div className='absolute flex justify-end h-full w-full xl:m-auto 2xl:w-[90%]'>

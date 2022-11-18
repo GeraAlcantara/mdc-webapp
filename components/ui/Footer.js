@@ -9,7 +9,7 @@ function Footer() {
       <div className='mdc-ui-container flex flex-row flex-wrap justify-between mx-auto border-t-[1px] border-t-[#192641] sm:py-10 py-3'>
         {FooterLinks.map((footerlink, idx) => (
           <div key={footerlink.title + idx} className='flex flex-col my-4 min-w-[240px] md:min-w-[140px] '>
-            <h4 className='font-bold text-lg mb-3'> {footerlink.title} </h4>
+            <h1 className='font-bold text-lg mb-3'> {footerlink.title} </h1>
             <ul>
               {footerlink.links.map((link, index) => (
                 <li

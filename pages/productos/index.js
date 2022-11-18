@@ -16,6 +16,8 @@ import ImgBannerProd from "../../public/bannerProds.jpg";
 import PricesSection from "../../components/ui/PricesSection";
 import TabletImg from "../../public/tablet_card.png";
 import WomanMobileImg from "../../public/woman_mobile.jpg";
+import Address from "../../components/ui/Address";
+import ContactForm from "../../components/ui/ContactForm";
 
 function Productos() {
   return (
@@ -187,6 +189,32 @@ function Productos() {
             </div>
             <div className='relative w-full md:w-2/6 rounded-3xl overflow-hidden shrink-0 min-h-[350px] '>
               <Image src={WomanMobileImg} objectFit='cover' objectPosition='right' layout='fill' alt='woman' />
+            </div>
+          </div>
+        </section>
+        {/* Divider */}
+        <div className='flex mdc-ui-container justify-center items-end m-auto xl:my-16 '>
+          <div className='bg-brandBlue-400 h-[1px] w-1/2 flex-1'></div>
+          <div className='mx-4 relative'>
+            <IconShopingCard className='w-20 h-auto' />
+          </div>
+          <div className='bg-brandBlue-400 h-[1px] flex-1'></div>
+        </div>
+        {/* Divider END */}
+        {/* contacto */}
+        <section className='mdc-ui-container '>
+          <header className='mb-10'>
+            <hgroup className='text-center'>
+              <h1 className='text-xl'>Ponte en contacto</h1>
+              <h2 className='text-4xl font-bold'>¿Cómo podemos ayudarte?</h2>
+            </hgroup>
+          </header>
+          <div className='flex flex-col lg:flex-row gap-8 py-10'>
+            <div className=' lg:w-1/2'>
+              <Address />
+            </div>
+            <div className='lg:w-1/2 '>
+              <ContactForm />
             </div>
           </div>
         </section>

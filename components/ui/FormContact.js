@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import FormInput from "./FormInput";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 function FormContact() {
-  /* usestate to define one object with diferent inputs */
+  const router = useRouter();
+
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -16,9 +18,9 @@ function FormContact() {
       name: "name",
       placeholder: "Escribe tu nombre",
       type: "text",
-      errorMessage: "El Nombre debe tener entre 3 y 20 caracteres y no contener números o símbolos",
+      errorMessage: "El Nombre debe tener entre 3 y 40 caracteres y no contener números o símbolos",
       label: "Nombre",
-      pattern: "^[a-zA-ZÀ-ÿ\\s]{3,20}$",
+      pattern: "^[a-zA-ZÀ-ÿ\\s]{3,40}$",
       required: true,
     },
     {
@@ -72,7 +74,7 @@ function FormContact() {
     try {
       const response = await axios(config);
       if (response.status === 200) {
-        console.log("Sucess");
+        router.replace("/gracias");
       }
     } catch (error) {
       console.log(error);
@@ -83,8 +85,8 @@ function FormContact() {
     let errors = {};
     if (!data.name) {
       errors.name = "El nombre es obligatorio";
-    } else if (!/^[a-zA-ZÀ-ÿ\s]{3,20}$/.test(data.name)) {
-      errors.name = "El Nombre debe tener entre 3 y 20 caracteres y no contener números o símbolos";
+    } else if (!/^[a-zA-ZÀ-ÿ\s]{10,40}$/.test(data.name)) {
+      errors.name = "El Nombre debe tener entre 10 y 40 caracteres y no contener números o símbolos";
     }
     if (!data.email) {
       errors.email = "El correo es obligatorio";

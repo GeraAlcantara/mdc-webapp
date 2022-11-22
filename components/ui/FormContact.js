@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import FormInput from "./FormInput";
 import axios from "axios";
 import { useRouter } from "next/router";
@@ -59,7 +59,6 @@ function FormContact() {
       message: data.get("message").toString(),
     });
     validation(values);
-    console.log(values);
   };
 
   const sendEmail = async (values) => {
@@ -78,6 +77,7 @@ function FormContact() {
       }
     } catch (error) {
       console.log(error);
+      throw new Error(error);
     }
   };
 
@@ -95,7 +95,6 @@ function FormContact() {
     }
     if (!data.message) {
       errors.message = "El mensaje es obligatorio";
-      /* min 10 max 150 */
     } else if (data.message.length < 10 || data.message.length > 150) {
       errors.message = "El mensaje debe tener entre 10 y 200 caracteres";
     }
@@ -104,18 +103,12 @@ function FormContact() {
     }
     /* setErrors */
     setErrors(errors);
-    console.log(errors);
   };
-
-  useEffect(() => {
-    console.log("errors", errors);
-  }, [errors, values]);
 
   return (
     <form onSubmit={handleSubmit} action='POST' className='group'>
       {inputs.map((input) => (
         <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} errors={errors[input.name]} />
-        /* if errors  */
       ))}
       <div className='flex justify-end'>
         <div className='inline-flex'>

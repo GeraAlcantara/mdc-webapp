@@ -181,3 +181,25 @@
   height: 100%;
   object-fit: cover;
 }
+
+.contactInput {
+  input {
+    &:invalid[focused='true']~p {
+      display: block;
+    }
+  }
+
+  textarea {
+    &:invalid[data-focused='true']~p {
+      display: block;
+    }
+
+    &:invalid[focused='true']~p {
+      display: block;
+    }
+  }
+
+  p {
+    display: none;
+  }
+}

@@ -1,7 +1,5 @@
 import fs from "fs";
-/* import iron-session */
 import { withIronSessionApiRoute } from "iron-session/next";
-/* import path */
 import path from "path";
 
 /**
@@ -11,7 +9,6 @@ import path from "path";
 export function newCaptchaImages() {
   const correctProbability = 0.5;
   return new Array(9).fill(null).map((value, index) => {
-    /* define the type of images example dog and muffin */
     const imageTypeCorrect = "smartphone";
     const imageTypeIncorrect = "laptop";
     const isCorrect = Math.random() < correctProbability;

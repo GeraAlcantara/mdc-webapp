@@ -2,6 +2,7 @@ import Head from "next/head";
 import { withIronSessionSsr } from "iron-session/next";
 import { newCaptchaImages } from "./api/captcha-image";
 import Address from "../components/ui/Address";
+// @ts-ignore
 import CaptchaForm from "../components/ui/CaptchaForm";
 import FormContact from "../components/ui/FormContact";
 import IconShopingCard from "../public/icons/planePrecios.svg";
@@ -56,28 +57,32 @@ export default function contactanos({ defaultCaptchaKey }) {
     </>
   );
 }
-/* no typeScript check below */
 
 export const getServerSideProps = withIronSessionSsr(
-  async ({ req }) => {
-    {
-      req;
-      if (!req.session.captchaImages) {
-        req.session.captchaImages = newCaptchaImages();
-        await req.session.save();
-      }
-      return {
-        props: {
-          defaultCaptchaKey: new Date().getTime(),
-        },
-      };
+  async function getServerSideProps({ req }) {
+    // @ts-ignore
+    if (!req.session.captchaImages) {
+      // @ts-ignore
+      req.session.captchaImages = newCaptchaImages();
+      await req.session.save();
     }
+    return {
+      props: {
+        defaultCaptchaKey: new Date().getTime(),
+      },
+    };
   },
   {
     cookieName: "MDC_SESSION",
     password: process.env.SESSION_SECRET,
   }
 );
+
+/* {
+    cookieName: "MDC_SESSION",
+    password: process.env.SESSION_SECRET,
+  }
+   */
 
 /* return {
     props: {

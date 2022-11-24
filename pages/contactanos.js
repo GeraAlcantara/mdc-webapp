@@ -58,7 +58,7 @@ export default function contactanos({ defaultCaptchaKey }) {
 export const getServerSideProps = withIronSessionSsr(
   async function getServerSideProps(req, res, session) {
     /* using iron session check if captchaImages are in session */
-    console.log(req.session);
+
     if (!req.session.captchaImages) {
       req.session.captchaImages = newCaptchaImages();
       await req.session.save();

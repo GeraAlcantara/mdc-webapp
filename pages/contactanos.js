@@ -7,11 +7,8 @@ import CaptchaForm from "../components/ui/CaptchaForm";
 import FormContact from "../components/ui/FormContact";
 import IconShopingCard from "../public/icons/planePrecios.svg";
 
-/**
- * @param {{defaultCaptchaKey:Date }} param0
- * @returns
- */
 export default function contactanos({ defaultCaptchaKey }) {
+  console.log("defaultCaptchaKey", defaultCaptchaKey);
   return (
     <>
       <Head>
@@ -59,10 +56,10 @@ export default function contactanos({ defaultCaptchaKey }) {
 }
 
 export const getServerSideProps = withIronSessionSsr(
-  async function getServerSideProps({ req }) {
-    // @ts-ignore
+  async function getServerSideProps(req, res, session) {
+    /* using iron session check if captchaImages are in session */
+    console.log(req.session);
     if (!req.session.captchaImages) {
-      // @ts-ignore
       req.session.captchaImages = newCaptchaImages();
       await req.session.save();
     }
@@ -77,15 +74,3 @@ export const getServerSideProps = withIronSessionSsr(
     password: process.env.SESSION_SECRET,
   }
 );
-
-/* {
-    cookieName: "MDC_SESSION",
-    password: process.env.SESSION_SECRET,
-  }
-   */
-
-/* return {
-    props: {
-      defaultCaptchaKey: new Date().getTime(),
-    },
-  }; */

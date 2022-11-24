@@ -17,7 +17,7 @@ export function newCaptchaImages() {
     const isCorrect = Math.random() < correctProbability;
     const number = Math.floor(Math.random() * (isCorrect ? 11 : 12)) + 1;
     const filename = (isCorrect ? imageTypeCorrect : imageTypeIncorrect) + number + ".jpg";
-    const imagesDirectory = path.join(process.cwd(), "public/smartcatch");
+    const imagesDirectory = path.join(process.cwd(), "/public/smartcatch");
     return `${imagesDirectory}/${filename}`;
   });
 }

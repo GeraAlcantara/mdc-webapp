@@ -56,12 +56,15 @@ export default function contactanos({ defaultCaptchaKey }) {
 }
 
 export const getServerSideProps = withIronSessionSsr(
-  async function getServerSideProps(req, res, session) {
+  async function getServerSideProps({ req }) {
     /* using iron session check if captchaImages are in session */
-
-    if (!req.session.captchaImages) {
-      req.session.captchaImages = newCaptchaImages();
-      await req.session.save();
+    try {
+      if (!req.session.captchaImages) {
+        req.session.captchaImages = newCaptchaImages();
+        await req.session.save();
+      }
+    } catch (error) {
+      console.log("error", error);
     }
     return {
       props: {

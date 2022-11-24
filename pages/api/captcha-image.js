@@ -1,6 +1,8 @@
 import fs from "fs";
 /* import iron-session */
 import { withIronSessionApiRoute } from "iron-session/next";
+/* import path */
+import path from "path";
 
 /**
  * Create an array of paths to images
@@ -15,7 +17,8 @@ export function newCaptchaImages() {
     const isCorrect = Math.random() < correctProbability;
     const number = Math.floor(Math.random() * (isCorrect ? 11 : 12)) + 1;
     const filename = (isCorrect ? imageTypeCorrect : imageTypeIncorrect) + number + ".jpg";
-    return `./public/smartcatch/${filename}`;
+    const imagesDirectory = path.join(process.cwd(), "public/smartcatch");
+    return `${imagesDirectory}/${filename}`;
   });
 }
 

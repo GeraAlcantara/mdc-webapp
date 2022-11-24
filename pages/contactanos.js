@@ -1,4 +1,3 @@
-// @ts-nocheck
 import Head from "next/head";
 import { withIronSessionSsr } from "iron-session/next";
 import { newCaptchaImages } from "./api/captcha-image";
@@ -62,6 +61,7 @@ export default function contactanos({ defaultCaptchaKey }) {
 export const getServerSideProps = withIronSessionSsr(
   async ({ req }) => {
     {
+      req;
       if (!req.session.captchaImages) {
         req.session.captchaImages = newCaptchaImages();
         await req.session.save();

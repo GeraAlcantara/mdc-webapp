@@ -68,7 +68,7 @@ export const getSubcategoryByName = (name, categories) => {
       return subcategory;
     }
   }
-  throw new Error(`Subcategory with name ${name} not found`);
+  console.log(`Subcategory with name ${name} not found`);
 };
 
 // courses

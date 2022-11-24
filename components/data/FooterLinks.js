@@ -131,7 +131,7 @@ export const FooterLinks = [
         link: "librerias",
       },
       {
-        name: "Contactanos",
+        name: "Contáctanos",
         link: "contactanos",
       },
       {

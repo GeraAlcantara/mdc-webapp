@@ -70,7 +70,7 @@ export async function getStaticProps({ params }) {
   const course = getCourseBySlug(slug, allCoursesBySubcategory.flat());
   // if not found trow an error
   if (!course) {
-    throw new Error("No course found" + slug);
+    console.log("No course found" + slug);
   }
   // Pass post data to the page via props
   return { props: { params, course } };

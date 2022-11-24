@@ -184,6 +184,12 @@
 
 .contactInput {
   input {
+
+
+    &:invalid:focus-visible {
+      outline-color: #ef4444;
+    }
+
     &:invalid[focused='true']~p {
       display: block;
     }

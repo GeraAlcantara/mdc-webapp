@@ -2,16 +2,21 @@ import { useState } from "react";
 import FormInput from "./FormInput";
 import axios from "axios";
 import { useRouter } from "next/router";
+import Captcha from "./Captcha";
 
-function FormContact() {
+function FormContact({ defaultCaptchaKey, ...props }) {
   const router = useRouter();
-
+  const [selectedIndexes, setSelectedIndexes] = useState([]);
+  const [captchaKey, setCaptchaKey] = useState(defaultCaptchaKey);
+  const [captchaSolved, setCaptchaSolved] = useState(false);
   const [values, setValues] = useState({
     name: "",
     email: "",
     message: "",
   });
   const [errors, setErrors] = useState({});
+  const [captchaError, setCaptchaError] = useState(false);
+
   const inputs = [
     {
       id: "input1",
@@ -68,16 +73,38 @@ function FormContact() {
       headers: {
         "Content-Type": "application/json",
       },
-      data: values,
+      data: { ...values, selectedIndexes },
     };
     try {
       const response = await axios(config);
       if (response.status === 200) {
+        console.log(response.data);
+        const { captchaIsOK, send } = response.data;
+        if (!captchaIsOK) {
+          setCaptchaKey(new Date().getTime());
+          setCaptchaError(true);
+          console.log("The captcha is not correct");
+        }
+        if (send) {
+          console.log("Message sent");
+          /* clear message */
+          setValues({
+            name: "",
+            email: "",
+            message: "",
+          });
+          /* clear errors */
+          setErrors({});
+        }
+        if (captchaIsOK) {
+          setCaptchaError(false);
+          setCaptchaSolved(true);
+        }
+
         router.replace("/gracias");
       }
     } catch (error) {
       console.log(error);
-      throw new Error(error);
     }
   };
 
@@ -85,7 +112,7 @@ function FormContact() {
     let errors = {};
     if (!data.name) {
       errors.name = "El nombre es obligatorio";
-    } else if (!/^[a-zA-ZÀ-ÿ\s]{10,40}$/.test(data.name)) {
+    } else if (!/^[a-zA-ZÀ-ÿ\s]{3,40}$/.test(data.name)) {
       errors.name = "El Nombre debe tener entre 10 y 40 caracteres y no contener números o símbolos";
     }
     if (!data.email) {
@@ -96,7 +123,7 @@ function FormContact() {
     if (!data.message) {
       errors.message = "El mensaje es obligatorio";
     } else if (data.message.length < 10 || data.message.length > 150) {
-      errors.message = "El mensaje debe tener entre 10 y 200 caracteres";
+      errors.message = "El mensaje debe tener entre 10 y 150 caracteres";
     }
     if (Object.keys(errors).length === 0) {
       sendEmail(data);
@@ -106,21 +133,38 @@ function FormContact() {
   };
 
   return (
-    <form onSubmit={handleSubmit} action='POST' className='group'>
-      {inputs.map((input) => (
-        <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} errors={errors[input.name]} />
-      ))}
-      <div className='flex justify-end'>
-        <div className='inline-flex'>
-          <button
-            className='bg-secondary py-2 px-8 text-white rounded-lg w-full mt-4 hover:bg-brandBlue-400 hover:scale-105 will-change-transform'
-            type='submit'
-          >
-            Enviar
-          </button>
+    <div className='py-5 px-7 xl:py-10 xl:px-14 bg-slate-200 rounded-3xl h-full'>
+      <form onSubmit={handleSubmit} action='POST' className='group'>
+        <div className='flex flex-col md:flex-row md:gap-6 justify-between'>
+          <div className='md:w-1/2'>
+            <div className='flex flex-col gap-4 pt-4'>
+              <h1 className='text-secondary text-3xl lg:text-5xl font-bold '>Escríbenos</h1>
+              <p className='text-gray-600 font-light w-5/6'>
+                Envíanos tu nombre, apellido, correo de contacto y dentro del mensaje puedes escribir tu pregunta o comentario.
+              </p>
+            </div>
+            {inputs.map((input) => (
+              <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} errors={errors[input.name]} />
+            ))}
+          </div>
+          <Captcha captchaKey={captchaKey} onChange={setSelectedIndexes} />
         </div>
-      </div>
-    </form>
+        <div className='flex justify-end h-4'>
+          {captchaError ? <p className='text-red-600 pb-4'>The captcha is not correct, Please try Again </p> : <p className='text-red-600 pb-6'></p>}
+        </div>
+
+        <div className='flex justify-end'>
+          <div className='inline-flex'>
+            <button
+              className='bg-secondary py-2 px-8 text-white rounded-lg w-full mt-4 hover:bg-brandBlue-400 hover:scale-105 will-change-transform'
+              type='submit'
+            >
+              Enviar
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
   );
 }
 

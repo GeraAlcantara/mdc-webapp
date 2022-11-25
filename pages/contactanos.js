@@ -1,8 +1,11 @@
 import Head from "next/head";
+import { withIronSessionSsr } from "iron-session/next";
+import { sessionOptions } from "../lib/session";
 import Address from "../components/ui/Address";
 import CaptchaForm from "../components/ui/CaptchaForm";
 import FormContact from "../components/ui/FormContact";
 import IconShopingCard from "../public/icons/planePrecios.svg";
+import { newCaptchaImages } from "./api/captcha-image";
 
 export default function contactanos() {
   const defaultCaptchaKey = new Date().getTime();
@@ -53,10 +56,24 @@ export default function contactanos() {
   );
 }
 
-export function getServerSideProps() {
+export const getServerSideProps = withIronSessionSsr(async ({ req, res }) => {
+  // @ts-ignore
+  if (!req.session.captchaImages) {
+    // @ts-ignore
+    req.session.captchaImages = newCaptchaImages();
+    await req.session.save();
+    // @ts-ignore
+    console.log("req.session.captchaImages", req.session.captchaImages);
+  }
   return {
     props: {
       defaultCaptchaKey: new Date().getTime(),
     },
   };
-}
+}, sessionOptions);
+
+/* return {
+  props: {
+    defaultCaptchaKey: new Date().getTime(),
+  },
+}; */

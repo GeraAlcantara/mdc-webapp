@@ -60,10 +60,12 @@ export default withIronSessionApiRoute(
     };
     try {
       /* Real email send */
-      await transporter.sendMail(mailOptions);
-      transporter.close();
       const send = captchaIsOK;
-      res.status(200).json({ message: "Email sent successfully", captchaIsOK, send });
+      if (captchaIsOK) {
+        await transporter.sendMail(mailOptions);
+        return res.status(200).json({ message: "Email sent successfully", captchaIsOK, send });
+      }
+      return res.status(200).json({ message: "Email not sent", captchaIsOK, send });
     } catch (error) {
       res.status(500).json({ message: "Error sending email", error: error });
     }

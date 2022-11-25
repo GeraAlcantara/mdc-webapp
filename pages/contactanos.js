@@ -6,6 +6,7 @@ import CaptchaForm from "../components/ui/CaptchaForm";
 import FormContact from "../components/ui/FormContact";
 import IconShopingCard from "../public/icons/planePrecios.svg";
 import { newCaptchaImages } from "./api/captcha-image";
+import { getIronSession } from "iron-session";
 
 export default function contactanos() {
   const defaultCaptchaKey = new Date().getTime();
@@ -59,6 +60,7 @@ export default function contactanos() {
 export const getServerSideProps = withIronSessionSsr(async ({ req, res }) => {
   try {
     // @ts-ignore
+    const session = await getIronSession;
     if (!req.session.captchaImages) {
       // @ts-ignore
       req.session.captchaImages = newCaptchaImages();

@@ -1,14 +1,12 @@
 import Head from "next/head";
-import { withIronSessionSsr } from "iron-session/next";
-import { newCaptchaImages } from "./api/captcha-image";
 import Address from "../components/ui/Address";
-// @ts-ignore
 import CaptchaForm from "../components/ui/CaptchaForm";
 import FormContact from "../components/ui/FormContact";
 import IconShopingCard from "../public/icons/planePrecios.svg";
 
-export default function contactanos({ defaultCaptchaKey }) {
-  console.log("defaultCaptchaKey", defaultCaptchaKey);
+export default function contactanos() {
+  const defaultCaptchaKey = new Date().getTime();
+
   return (
     <>
       <Head>
@@ -55,10 +53,10 @@ export default function contactanos({ defaultCaptchaKey }) {
   );
 }
 
-export const getServerSideProps = (context) => {
+export function getServerSideProps() {
   return {
     props: {
       defaultCaptchaKey: new Date().getTime(),
     },
   };
-};
+}

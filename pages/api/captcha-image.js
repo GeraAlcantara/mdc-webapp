@@ -1,4 +1,4 @@
-import * as fs from "fs";
+import fs from "fs";
 import { withIronSessionApiRoute } from "iron-session/next";
 import * as path from "path";
 

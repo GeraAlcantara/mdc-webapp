@@ -18,11 +18,11 @@ export function newCaptchaImages() {
 export default withIronSessionApiRoute(
   async function handler(req, res) {
     const index = req.query.index;
-    if (!req.session) {
+    if (!req.session.captchaImages) {
       req.session.captchaImages = newCaptchaImages();
       await req.session.save();
     }
-    res.setHeader("Content-Type", "image/jpg");
+    res.setHeader("Content-Type", "image/jpeg");
     const imageBuffer = fs.readFileSync(req.session.captchaImages[index]);
     res.send(imageBuffer);
   },

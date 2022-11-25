@@ -2,10 +2,6 @@ import fs from "fs";
 import { withIronSessionApiRoute } from "iron-session/next";
 import * as path from "path";
 
-/**
- * Create an array of paths to images
- * @returns {string[]} [paths to images]
- */
 export function newCaptchaImages() {
   const correctProbability = 0.5;
   return new Array(9).fill(null).map((value, index) => {
@@ -26,7 +22,7 @@ export default withIronSessionApiRoute(
       req.session.captchaImages = newCaptchaImages();
       await req.session.save();
     }
-    res.setHeader("Content-Type", "image/png");
+    res.setHeader("Content-Type", "image/jpg");
     const imageBuffer = fs.readFileSync(req.session.captchaImages[index]);
     res.send(imageBuffer);
   },

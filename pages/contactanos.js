@@ -55,16 +55,10 @@ export default function contactanos({ defaultCaptchaKey }) {
   );
 }
 
-export const getServerSideProps = withIronSessionSsr(
-  async function getServerSideProps({ req }) {
-    return {
-      props: {
-        defaultCaptchaKey: new Date().getTime(),
-      },
-    };
-  },
-  {
-    cookieName: "MDC_SESSION",
-    password: process.env.SESSION_SECRET,
-  }
-);
+export const getServerSideProps = (context) => {
+  return {
+    props: {
+      defaultCaptchaKey: new Date().getTime(),
+    },
+  };
+};

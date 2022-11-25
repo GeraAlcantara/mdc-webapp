@@ -33,5 +33,8 @@ export default withIronSessionApiRoute(
   {
     cookieName: "MDC_SESSION",
     password: process.env.SESSION_SECRET,
+    cookieOptions: {
+      secure: true,
+    },
   }
 );

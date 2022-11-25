@@ -57,13 +57,15 @@ export default function contactanos() {
 }
 
 export const getServerSideProps = withIronSessionSsr(async ({ req, res }) => {
-  // @ts-ignore
-  if (!req.session.captchaImages) {
+  try {
     // @ts-ignore
-    req.session.captchaImages = newCaptchaImages();
-    await req.session.save();
-    // @ts-ignore
-    console.log("req.session.captchaImages", req.session.captchaImages);
+    if (!req.session.captchaImages) {
+      // @ts-ignore
+      req.session.captchaImages = newCaptchaImages();
+      await req.session.save();
+    }
+  } catch (error) {
+    console.log(error);
   }
   return {
     props: {
@@ -71,9 +73,3 @@ export const getServerSideProps = withIronSessionSsr(async ({ req, res }) => {
     },
   };
 }, sessionOptions);
-
-/* return {
-  props: {
-    defaultCaptchaKey: new Date().getTime(),
-  },
-}; */

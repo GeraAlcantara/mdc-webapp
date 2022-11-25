@@ -52,7 +52,7 @@ export default withIronSessionApiRoute(
     });
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "gerardo.alcantara@mexicodc.com",
+      to: "gerardo_alcantara_rmz@hotmail.com",
       subject: `Forma de Contacto enviada por ${name}`,
       html: `<h1>Nombre: ${name}</h1>
           <h2>Email: ${email}</h2>

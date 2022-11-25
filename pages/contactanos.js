@@ -57,21 +57,16 @@ export default function contactanos() {
   );
 }
 
-export const getServerSideProps = withIronSessionSsr(async ({ req, res }) => {
-  try {
-    // @ts-ignore
-    const { captchaImages } = await req.session;
-    if (!captchaImages) {
-      // @ts-ignore
+export const getServerSideProps = withIronSessionSsr(async ({ req }) => {
+  {
+    if (!req.session.captchaImages) {
       req.session.captchaImages = newCaptchaImages();
       await req.session.save();
     }
-  } catch (error) {
-    console.log(error);
+    return {
+      props: {
+        defaultCaptchaKey: new Date().getTime(),
+      },
+    };
   }
-  return {
-    props: {
-      defaultCaptchaKey: new Date().getTime(),
-    },
-  };
 }, sessionOptions);

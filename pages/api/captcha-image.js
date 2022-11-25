@@ -20,10 +20,9 @@ export function newCaptchaImages() {
 }
 
 export default withIronSessionApiRoute(
-  async function handler(req, res, session) {
+  async function handler(req, res) {
     const index = req.query.index;
-    const { captchaImages } = await req.session;
-    if (!captchaImages) {
+    if (!req.session.captchaImages) {
       req.session.captchaImages = newCaptchaImages();
       await req.session.save();
     }

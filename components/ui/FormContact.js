@@ -99,9 +99,8 @@ function FormContact({ defaultCaptchaKey, ...props }) {
         if (captchaIsOK) {
           setCaptchaError(false);
           setCaptchaSolved(true);
+          router.replace("/gracias");
         }
-
-        router.replace("/gracias");
       }
     } catch (error) {
       console.log(error);

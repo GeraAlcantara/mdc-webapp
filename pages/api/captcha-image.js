@@ -31,8 +31,8 @@ export default withIronSessionApiRoute(
     res.send(imageBuffer);
   },
   {
-    password: process.env.SESSION_SECRET,
     cookieName: "MDC_SESSION",
+    password: process.env.SESSION_SECRET,
     cookieOptions: {
       secure: process.env.NODE_ENV === "production",
     },

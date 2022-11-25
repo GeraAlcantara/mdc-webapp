@@ -60,8 +60,8 @@ export default function contactanos() {
 export const getServerSideProps = withIronSessionSsr(async ({ req, res }) => {
   try {
     // @ts-ignore
-    const session = await getIronSession;
-    if (!req.session.captchaImages) {
+    const { captchaImages } = await req.session;
+    if (!captchaImages) {
       // @ts-ignore
       req.session.captchaImages = newCaptchaImages();
       await req.session.save();

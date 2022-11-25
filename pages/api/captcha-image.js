@@ -16,6 +16,11 @@ export function newCaptchaImages() {
 }
 
 export default withIronSessionApiRoute(
+  /**
+   *
+   * @param {*} req
+   * @param {*} res
+   */
   async function handler(req, res) {
     const index = req.query.index;
     if (!req.session.captchaImages) {

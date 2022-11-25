@@ -99,6 +99,7 @@ function FormContact({ defaultCaptchaKey, ...props }) {
         if (captchaIsOK) {
           setCaptchaError(false);
           setCaptchaSolved(true);
+          setCaptchaKey(new Date().getTime());
           router.replace("/gracias");
         }
       }

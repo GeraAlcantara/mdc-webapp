@@ -1,12 +1,10 @@
 import Head from "next/head";
 import { withIronSessionSsr } from "iron-session/next";
-import { sessionOptions } from "../lib/session";
 import Address from "../components/ui/Address";
 import CaptchaForm from "../components/ui/CaptchaForm";
 import FormContact from "../components/ui/FormContact";
 import IconShopingCard from "../public/icons/planePrecios.svg";
 import { newCaptchaImages } from "./api/captcha-image";
-import { getIronSession } from "iron-session";
 
 export default function contactanos() {
   const defaultCaptchaKey = new Date().getTime();
@@ -58,6 +56,10 @@ export default function contactanos() {
 }
 
 export const getServerSideProps = withIronSessionSsr(
+  /**
+   * @param {{req: object}} req
+   * @returns Promise<{props: {defaultCaptchaKey: number}}>}
+   */
   async function getIronSession({ req }) {
     {
       if (!req.session.captchaImages) {

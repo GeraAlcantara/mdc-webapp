@@ -57,16 +57,22 @@ export default function contactanos() {
   );
 }
 
-export const getServerSideProps = withIronSessionSsr(async ({ req }) => {
-  {
-    if (!req.session.captchaImages) {
-      req.session.captchaImages = newCaptchaImages();
-      await req.session.save();
+export const getServerSideProps = withIronSessionSsr(
+  async ({ req }) => {
+    {
+      if (!req.session.captchaImages) {
+        req.session.captchaImages = newCaptchaImages();
+        await req.session.save();
+      }
+      return {
+        props: {
+          defaultCaptchaKey: new Date().getTime(),
+        },
+      };
     }
-    return {
-      props: {
-        defaultCaptchaKey: new Date().getTime(),
-      },
-    };
+  },
+  {
+    cookieName: "MDC_SESSION",
+    password: process.env.SESSION_SECRET,
   }
-}, sessionOptions);
+);

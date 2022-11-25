@@ -73,7 +73,7 @@ export const getServerSideProps = withIronSessionSsr(
     cookieName: "MDC_SESSION",
     password: process.env.SESSION_SECRET,
     cookieOptions: {
-      secure: process.env.NEXT_ENV === "production",
+      secure: process.env.NODE_ENV === "production",
     },
   }
 );

@@ -44,7 +44,7 @@ function Captcha({ onChange, captchaKey, ...props }) {
             onClick={() => toggleIndex(idx)}
           >
             <picture>
-              <source srcSet={imageUrl} type='image/png' />
+              <source srcSet={imageUrl} type='image/jpg' />
               <img src={imageUrl} draggable='false' alt='captcha image' className='w-full' />
             </picture>
           </div>

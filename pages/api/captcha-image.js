@@ -18,7 +18,7 @@ export function newCaptchaImages() {
 export default withIronSessionApiRoute(
   /**
    *
-   * @param {*} req
+   * @param {{query, session}} req
    * @param {*} res
    */
   async function handler(req, res) {

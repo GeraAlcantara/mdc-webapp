@@ -57,8 +57,7 @@ export default function contactanos() {
 
 export const getServerSideProps = withIronSessionSsr(
   /**
-   * @param {{req: object}} req
-   * @returns Promise<{props: {defaultCaptchaKey: number}}>}
+   * @param { * } req
    */
   async function getIronSession({ req }) {
     {

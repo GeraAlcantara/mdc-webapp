@@ -72,7 +72,7 @@
   --border-radius: 12px;
   --border-size: 1px;
   --padding: 0px;
-  --border-bg: conic-gradient(from 180deg at 50% 50%, #00bec6 0deg, #4cff91 112.5deg, #02e239 228.75deg, rgba(42, 138, 246, 0) 360deg);
+  --border-bg: conic-gradient(from 180deg at 50% 50%, #1070e5 0deg, #4cff91 112.5deg, #02e239 228.75deg, rgba(42, 138, 246, 0) 360deg);
   position: relative;
   overflow: hidden;
   padding: calc(var(--padding) + var(--border-size));
@@ -207,5 +207,91 @@
 
   p {
     display: none;
+  }
+}
+
+/* nprogress styles */
+/* Make clicks pass-through */
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #1070e5;
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #1070e5, 0 0 5px #1070e5;
+  opacity: 1.0;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031;
+  top: 15px;
+  right: 15px;
+}
+
+#nprogress .spinner-icon {
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+
+  border: solid 2px transparent;
+  border-top-color: #1070e5;
+  border-left-color: #1070e5;
+  border-radius: 50%;
+
+  -webkit-animation: nprogress-spinner 400ms linear infinite;
+  animation: nprogress-spinner 400ms linear infinite;
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes nprogress-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }

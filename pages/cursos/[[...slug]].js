@@ -36,7 +36,7 @@ export async function getStaticPaths() {
 function Cursos({ params, course }) {
   //get all lessos from the course modules
   const lessons = course.modules.map((module) => module.lessons).flat();
-  console.log(lessons);
+
   if (!lessons) {
     return <div>loading...</div>;
   }

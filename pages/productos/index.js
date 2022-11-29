@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { DataHeadDefault, DataHeadProd } from "../../components/data/DataHeader";
 import Image from "next/image";
 import Link from "next/link";
 import CheckMiddleImg from "../../public/heroProductosCheckbackMiddle.png";
@@ -21,12 +22,21 @@ function Productos() {
   return (
     <>
       <Head>
-        <meta
-          name='description'
-          /* TODO: Descripcion meta */
-          content='Descripcion para pagina productos'
-        />
-        <title>MDC | Productos</title>
+        <title>{DataHeadProd.pageTitle}</title>
+        <meta name='description' content={DataHeadProd.pageDescription} />
+        {/* Twitter */}
+        <meta name='twitter:card' content='summary' key='twcard' />
+        <meta name='twitter:creator' content={DataHeadDefault.twitterHandle} key='twhandle' />
+        <meta name='twitter:title' content={DataHeadProd.pageTitle} />
+        <meta name='twitter:description' content={DataHeadProd.pageDescription} />
+
+        {/* Open Graph */}
+        <meta property='og:url' content={DataHeadDefault.currentURL} key='ogurl' />
+        <meta property='og:image' content={DataHeadProd.previewImage} key='ogimage' />
+        <meta property='og:site_name' content={DataHeadDefault.siteName} key='ogsitename' />
+        <meta property='og:title' content={DataHeadProd.pageTitle} key='ogtitle' />
+        <meta property='og:description' content={DataHeadProd.pageDescription} key='ogdesc' />
+        <meta property='og:image:alt' content={DataHeadProd.previewImageAlt}></meta>
       </Head>
       <div className='pt-[68px]  '>
         <div className='p-4 md:p-6 lg:p-10 container mb-20 flex flex-col-reverse lg:flex-row lg:gap-8 bg-gradient-to-b from-[#1c3d5c] via-[#1c3d5c]/30 to-bg_primary rounded-t-3xl mdc-ui-container min-h-[calc(100vh-70px)] lg:min-h-0 justify-around lg:items-center '>

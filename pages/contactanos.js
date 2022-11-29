@@ -1,4 +1,4 @@
-import HelperHead from "../components/helpers/helperHead";
+import HelperHead from "../components/helpers/HelperHead";
 import { DataHeadContact } from "../components/data/DataHeader";
 import { withIronSessionSsr } from "iron-session/next";
 import Address from "../components/ui/Address";

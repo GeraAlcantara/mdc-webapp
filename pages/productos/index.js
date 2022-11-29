@@ -1,4 +1,4 @@
-import HelperHead from "../../components/helpers/helperHead";
+import HelperHead from "../../components/helpers/HelperHead";
 import { DataHeadProd } from "../../components/data/DataHeader";
 import Image from "next/image";
 import Link from "next/link";

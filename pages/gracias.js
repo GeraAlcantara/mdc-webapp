@@ -17,13 +17,12 @@ function Gracias() {
   return (
     <>
       <Head>
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <meta
-          name='servicios'
+          name='description'
           /* TODO: Descripcion meta */
           content='Descripcion para pagina gracias por contactarnos'
         />
-        <title>Recibimos su Mensaje gracias!</title>
+        <title>MDC | Recibimos su Mensaje gracias!</title>
       </Head>
       <div className='pt-[68px] '>
         <div className='mdc-ui-container py-10  flex justify-center items-center min-h-screen '>

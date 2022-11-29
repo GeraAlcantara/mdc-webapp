@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { DataHeadDefault, DataHeadHome } from "../components/data/DataHeader";
 import Image from "next/image";
 import Hero from "../components/ui/Hero";
 import { SectionsData } from "../components/data/SectionTimeLineData";
@@ -14,12 +15,21 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-        <meta
-          name='description'
-          content='Mexico Development Center es una compañía conformada por un equipo multidisciplinario en la elaboración de productos digitales. Durante la última década, nos hemos dedicado a la producción de cursos en línea (elearning) enfocados al entrenamiento y/o capacitación del personal en ambientes corporativos y empresariales que van desde la escala local, a la escala global.'
-        />
-        <title>Mexico Development Center | Elearning</title>
+        <title>{DataHeadHome.pageTitle}</title>
+        <meta name='description' content={DataHeadHome.pageDescription} />
+        {/* Twitter */}
+        <meta name='twitter:card' content='summary' key='twcard' />
+        <meta name='twitter:creator' content={DataHeadDefault.twitterHandle} key='twhandle' />
+        <meta name='twitter:title' content={DataHeadHome.pageTitle} />
+        <meta name='twitter:description' content={DataHeadHome.pageDescription} />
+
+        {/* Open Graph */}
+        <meta property='og:url' content={DataHeadDefault.currentURL} key='ogurl' />
+        <meta property='og:image' content={DataHeadHome.previewImage} key='ogimage' />
+        <meta property='og:site_name' content={DataHeadDefault.siteName} key='ogsitename' />
+        <meta property='og:title' content={DataHeadHome.pageTitle} key='ogtitle' />
+        <meta property='og:description' content={DataHeadHome.pageDescription} key='ogdesc' />
+        <meta property='og:image:alt' content={DataHeadHome.previewImageAlt}></meta>
       </Head>
       <Hero />
       <Clients />

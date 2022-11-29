@@ -22,13 +22,12 @@ export default function Servicios() {
   return (
     <>
       <Head>
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <meta
-          name='servicios'
+          name='description'
           /* TODO: Descripcion meta */
           content='Descripcion para pagina servicios'
         />
-        <title>Mexico Development Center | Servicios</title>
+        <title>MDC | Servicios</title>
       </Head>
       <div className='pt-[68px]'>
         <div className='p-4 md:p-6 lg:p-10 container mb-20 flex flex-col-reverse lg:flex-row lg:gap-8 bg-gradient-to-b from-[#1c3d5c] via-[#1c3d5c]/30 to-bg_primary rounded-t-3xl mdc-ui-container min-h-[calc(100vh-70px)] lg:min-h-0 justify-around lg:items-center '>

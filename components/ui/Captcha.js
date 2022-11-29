@@ -7,7 +7,6 @@ function Captcha({ onChange, captchaKey, ...props }) {
   });
   /* when selectedIndexes change run onChanges that will pass to parent */
   useEffect(() => {
-    console.log(selectedIndexes);
     onChange(selectedIndexes);
   }, [selectedIndexes, onChange]);
   // if captchaKey change clear selectedIndexes

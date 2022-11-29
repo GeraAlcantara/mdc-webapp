@@ -9,7 +9,7 @@ import ProdHeroGirlImg from "../../public/heroProductosGirl.png";
 import { RiPaypalFill, RiVisaLine, RiMastercardFill } from "react-icons/ri";
 import ModalDemoReel from "../../components/ui/ModalDemoReel";
 import TabsCarousel from "../../components/ui/TabsCourses";
-import IconServices from "../../public/icons/servicios.svg";
+import IconLibreria from "../../public/icons/libreria.svg";
 import IconShopingCard from "../../public/icons/planePrecios.svg";
 import BannerCTContact from "../../components/ui/BannerCTContact";
 import ImgBannerProd from "../../public/bannerProds.jpg";
@@ -21,13 +21,12 @@ function Productos() {
   return (
     <>
       <Head>
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <meta
           name='description'
           /* TODO: Descripcion meta */
           content='Descripcion para pagina productos'
         />
-        <title>Mexico Development Center | Productos</title>
+        <title>MDC | Productos</title>
       </Head>
       <div className='pt-[68px]  '>
         <div className='p-4 md:p-6 lg:p-10 container mb-20 flex flex-col-reverse lg:flex-row lg:gap-8 bg-gradient-to-b from-[#1c3d5c] via-[#1c3d5c]/30 to-bg_primary rounded-t-3xl mdc-ui-container min-h-[calc(100vh-70px)] lg:min-h-0 justify-around lg:items-center '>
@@ -68,7 +67,7 @@ function Productos() {
         <div className='flex mdc-ui-container justify-center items-end m-auto my-16 '>
           <div className='bg-brandBlue-400 h-[1px] w-1/2 flex-1'></div>
           <div className='mx-4 relative '>
-            <IconServices className='w-20 h-auto' />
+            <IconLibreria className='w-20 h-auto' />
           </div>
           <div className='bg-brandBlue-400 h-[1px] flex-1'></div>
         </div>

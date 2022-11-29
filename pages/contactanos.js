@@ -12,13 +12,12 @@ export default function contactanos() {
   return (
     <>
       <Head>
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <meta
-          name='servicios'
+          name='description'
           /* TODO: Descripcion meta */
           content='Descripcion para pagina contactanos'
         />
-        <title>Mexico Development Center | Gracias</title>
+        <title>MDC | Contactanos</title>
       </Head>
       <div className='pt-[68px]'>
         {/* Divider */}

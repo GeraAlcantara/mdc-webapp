@@ -4,7 +4,7 @@ export const DataHeadDefault = {
   currentURL: "https://mdc-webapp.vercel.app",
 };
 export const DataHeadHome = {
-  previewImage: "/socialCards/homeSocialCard.jpg",
+  previewImage: "/socialCards/iniciosocialcard.jpg",
   previewImageAlt: "Mexico development center",
   pageTitle: "Mexico Development Center | Elearning",
   pageDescription:
@@ -33,4 +33,10 @@ export const DataHeadGracias = {
   previewImageAlt: "Mexico development center",
   pageTitle: "MDC | Gracias por contáctanos",
   pageDescription: "Descripcion Gracias por contáctanos",
+};
+export const DataHeadBlog = {
+  previewImage: "/socialCards/homeSocialCard.jpg",
+  previewImageAlt: "Mexico development center",
+  pageTitle: "MDC | Noticias y Artículos",
+  pageDescription: "Descripcion del Blog",
 };

@@ -12,7 +12,7 @@ function TimelineCheckmark({ bgColor = "bg-secondary" }) {
       ref={check.ref}
       className=' justify-center items-center hidden lg:flex '
     >
-      <BsCheckLg className={`relative p-2 text-lg box-content  text-white rounded-full ${bgColor}`} />
+      <BsCheckLg className={`relative p-2 text-lg box-content  text-brandWhite rounded-full ${bgColor}`} />
     </div>
   );
 }

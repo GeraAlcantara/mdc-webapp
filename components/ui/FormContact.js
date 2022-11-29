@@ -156,7 +156,7 @@ function FormContact({ defaultCaptchaKey, ...props }) {
         <div className='flex justify-end'>
           <div className='inline-flex'>
             <button
-              className='bg-secondary py-2 px-8 text-white rounded-full w-full mt-4 hover:bg-brandBlue-400 hover:scale-105 transition-all duration-150 will-change-transform disabled:bg-gray-400 disabled:text-gray-600'
+              className='bg-secondary py-2 px-8 text-brandWhite rounded-full w-full mt-4 hover:bg-brandBlue-400 hover:scale-105 transition-all duration-150 will-change-transform disabled:bg-gray-400 disabled:text-gray-600'
               type='submit'
               disabled={selectedIndexes.length > 0 ? false : true}
             >

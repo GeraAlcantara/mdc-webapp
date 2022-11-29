@@ -37,7 +37,7 @@ function Header() {
           <div className=' flex justify-between sm:justify-between md:justify-between mx-auto'>
             <LogoNav />
             <Nav />
-            <button onClick={handleMenu} className='md:hidden bg-none text-white uppercase tracking-widest'>
+            <button onClick={handleMenu} className='md:hidden bg-none text-brandWhite uppercase tracking-widest'>
               Menu
             </button>
           </div>

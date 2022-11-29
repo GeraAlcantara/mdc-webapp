@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         secondary: "#1070e5",
         accent: "#00fb15",
+        brandWhite: "#f2f2f2",
         bg_primary: "#001322",
         bg_secondary: "#002640",
         lineGradient_1: "#00bec6",

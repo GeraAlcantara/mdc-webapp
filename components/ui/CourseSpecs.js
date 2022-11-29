@@ -32,7 +32,7 @@ function CourseSpecs({
               <div className=' space-y-6 md:hidden '>
                 <div className='flex justify-center mt-10 mb-4 '>
                   <Link href='#'>
-                    <button className='inline-flex items-center justify-center px-6 py-4 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 '>
+                    <button className='inline-flex items-center justify-center px-6 py-4 font-semibold text-brandWhite transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 '>
                       <RiArrowRightSFill className='text-3xl mr-2 ' />
                       <span>Comienza</span>
                     </button>
@@ -60,7 +60,7 @@ function CourseSpecs({
               <div className='text-sm text-gray-400 mr-1 '>
                 <TimeIcon />
               </div>
-              <span className='text-white text-sm '>{duration}m </span>
+              <span className='text-brandWhite text-sm '>{duration}m </span>
               <div className='text-sm text-gray-400 ml-1 '>
                 <CCIcon />
               </div>
@@ -70,7 +70,7 @@ function CourseSpecs({
           <div className='p-5 mt-8 border border-gray-100 rounded-md dark:border-gray-700'>
             <h4 className='text-3xl font-bold mb-3'>Descripción</h4>
             {description.map((paragrah, index) => (
-              <p className='text-white md:prose-lg dark:text-gray-100 mb-2 md:mb-0 ' key={index}>
+              <p className='text-brandWhite md:prose-lg dark:text-gray-100 mb-2 md:mb-0 ' key={index}>
                 {paragrah}
               </p>
             ))}
@@ -80,7 +80,7 @@ function CourseSpecs({
             <h4 className='text-3xl font-bold mb-3'>Contenidos</h4>
             <ul className='list-disc list-inside '>
               {topics.map((topic, index) => (
-                <li className='text-white md:prose-lg dark:text-gray-100 mb-2 md:mb-0 ' key={index + topic.substring(0, 5)}>
+                <li className='text-brandWhite md:prose-lg dark:text-gray-100 mb-2 md:mb-0 ' key={index + topic.substring(0, 5)}>
                   {topic}
                 </li>
               ))}
@@ -121,7 +121,7 @@ function CourseSpecs({
           <div className='hidden space-y-6 md:block '>
             <div className='flex justify-center mt-10 mb-4 '>
               <Link href='#'>
-                <button className='inline-flex items-center justify-center px-6 py-4 font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 '>
+                <button className='inline-flex items-center justify-center px-6 py-4 font-semibold text-brandWhite transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 '>
                   <RiArrowRightSFill className='text-3xl mr-2 ' />
                   <span>Comienza</span>
                 </button>

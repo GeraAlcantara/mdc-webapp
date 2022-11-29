@@ -49,7 +49,7 @@ function Hero() {
       {/* cover text */}
       <div className='md:col-span-2 md:col-start-1 md:row-start-1 landscape:col-span-2 landscape:col-start-1 landscape:row-start-1 mdc-ui-container -mt-5 md:mt-0 md:self-center landscape:mt-[68px] md:landscape:mt-0 '>
         <h1 className=' portrait:text-center md:portrait:text-left md:text-left text-6xl md:text-7xl xl:text-9xl leading-[60px] text-accent font-extrabold md:pb-8'>
-          <small className='text-white text-2xl md:text-4xl xl:text-6xl leading-normal flex-1'>Concientización de</small>
+          <small className='text-brandWhite text-2xl md:text-4xl xl:text-6xl leading-normal flex-1'>Concientización de</small>
           <br></br>Seguridad{" "}
         </h1>
         <div className='my-4 pb-4 w-full sm:landscape:w-1/2 md:w-2/4'>

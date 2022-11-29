@@ -19,7 +19,7 @@ function BannerCTContact({ imgBanner, txtalt }) {
           <div className='flex justify-end relative top-0 items-center xl:items-start xl:top-32 w-3/4 md:w-1/2 xl:w-1/3 p-5 lg:p-10 '>
             <div className='text-right'>
               <h2 className='text-xl md:text-4xl'>Agenda una</h2>
-              <h2 className='font-extrabold text-4xl md:text-7xl text-white '>Reunión</h2>
+              <h2 className='font-extrabold text-4xl md:text-7xl text-brandWhite '>Reunión</h2>
               <Link href='#'>
                 <div className='flex justify-end rounded-lg pt-6 hover:cursor-pointer'>
                   <a className='flex rounded-full bg-accent text-gray-900 px-4 py-2 md:px-12 md:py-4 align-middle leading-none uppercase font-bold '>

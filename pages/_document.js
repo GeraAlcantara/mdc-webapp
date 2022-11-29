@@ -15,7 +15,7 @@ class MyDocument extends Document {
           <link rel='icon' href='/favicon.ico' />
         </Head>
         {/* TODO: poner clase de colores en base a un dark y light mode */}
-        <body className='bg-bg_primary text-white antialiased'>
+        <body className='bg-bg_primary text-brandWhite antialiased'>
           <Main />
           <NextScript />
         </body>

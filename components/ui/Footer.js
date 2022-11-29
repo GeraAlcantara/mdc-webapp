@@ -14,7 +14,9 @@ function Footer() {
               {footerlink.links.map((link, index) => (
                 <li
                   key={link.name + index}
-                  className={`font-normal text-base text-white hover:text-secondary cursor-pointer ${index === footerlink.links.length - 1 ? "mb-0" : "mb-2"} `}
+                  className={`font-normal text-base text-brandWhite hover:text-secondary cursor-pointer ${
+                    index === footerlink.links.length - 1 ? "mb-0" : "mb-2"
+                  } `}
                 >
                   <Link href={link.link}>{link.name}</Link>
                 </li>

@@ -26,7 +26,7 @@ function Productos() {
         <div className='p-4 md:p-6 lg:p-10 container mb-20 flex flex-col-reverse lg:flex-row lg:gap-8 bg-gradient-to-b from-[#1c3d5c] via-[#1c3d5c]/30 to-bg_primary rounded-t-3xl mdc-ui-container min-h-[calc(100vh-70px)] lg:min-h-0 justify-around lg:items-center '>
           <div className='lg:w-1/2'>
             <h1 className='text-5xl lg:text-8xl text-accent font-extrabold'>
-              <small className='text-white text-2xl lg:text-6xl font-bold'>Librería de</small>
+              <small className='text-brandWhite text-2xl lg:text-6xl font-bold'>Librería de</small>
               <br />
               Cursos
             </h1>
@@ -125,7 +125,7 @@ function Productos() {
                       Ingresa tu número de teléfono
                     </label>
                     <div className='relative '>
-                      <select name='phone' id='phone' className='absolute bg-transparent top-1 text-white rounded-md p-2 outline-none bg-brandBlue-400 '>
+                      <select name='phone' id='phone' className='absolute bg-transparent top-1 text-brandWhite rounded-md p-2 outline-none bg-brandBlue-400 '>
                         <option className='bg-brandBlue-500' value='+52'>
                           +52
                         </option>
@@ -145,7 +145,7 @@ function Productos() {
                       />
                     </div>
                     {/* submit button */}
-                    <button type='submit' className='bg-brandBlue-400 text-white font-bold px-8 py-2 md:flex-shrink-0 rounded-lg '>
+                    <button type='submit' className='bg-brandBlue-400 text-brandWhite font-bold px-8 py-2 md:flex-shrink-0 rounded-lg '>
                       Llámame ahora
                     </button>
                   </div>
@@ -164,7 +164,7 @@ function Productos() {
                   <Image src={TabletImg} layout='fill' loading='eager' objectFit='contain' draggable='false' placeholder='blur' alt='Tablet con estadisticas' />
                 </div>
                 <div className='md:col-start-2 col-span-2 md:row-start-1 text-center md:text-right flex flex-col gap-2 md:gap-6 md:justify-center'>
-                  <p className='text-white  xl:text-2xl lg:pl-8 xl:pl-16'>Cursos exportados en formato SCORM y listos para integrarse en cualquier</p>
+                  <p className='text-brandWhite  xl:text-2xl lg:pl-8 xl:pl-16'>Cursos exportados en formato SCORM y listos para integrarse en cualquier</p>
 
                   <h3 className='text-4xl xl:text-6xl 2xl:text-7xl font-extrabold text-bg_primary'>
                     Plataforma <br />

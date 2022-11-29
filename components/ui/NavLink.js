@@ -8,7 +8,7 @@ function NavLink({ linkText = "addtext", slug = "addtext" }) {
     <li className={`${styles.navbar__item} mx-4`}>
       <Link href={slug.toLowerCase()}>
         <a
-          className={` font-normal text-white tracking-widest capitalize text-base ${
+          className={` font-normal text-brandWhite tracking-widest capitalize text-base ${
             router.pathname === "/" + slug || router.pathname === slug ? styles.active : ""
           }`}
         >

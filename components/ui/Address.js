@@ -16,7 +16,7 @@ function Address() {
       {/* address semantic html */}
       <div className='flex flex-row flex-wrap lg:flex-col lg:flex-nowrap gap-4 lg:ml-5'>
         <address>
-          <h2 className='font-bold text-white'>Palmeiras Business Center</h2>
+          <h2 className='font-bold text-brandWhite'>Palmeiras Business Center</h2>
           <p>Oficina 4, Calle 11 Sur,</p>
           <p>Playa del Carmen</p>
           <div className='text-accent flex items-center gap-2'>
@@ -24,19 +24,19 @@ function Address() {
           </div>
         </address>
         <div>
-          <h2 className='font-bold text-white'>Ventas</h2>
+          <h2 className='font-bold text-brandWhite'>Ventas</h2>
           <div className=' flex items-center gap-2'>
             <RiPhoneFill className='text-accent' /> <a href='tel:+525575839925'>+52 55 7583 9925 </a>
           </div>
         </div>
         <div>
-          <h2 className='font-bold text-white'>Oficinas</h2>
+          <h2 className='font-bold text-brandWhite'>Oficinas</h2>
           <div className=' flex items-center gap-2'>
             <RiPhoneFill className='text-accent' /> <a href='tel:+529848033746'>+52 984 803 3746 </a>
           </div>
         </div>
         <div className='pb-8'>
-          <h2 className='font-bold text-white'>Nuestro correo</h2>
+          <h2 className='font-bold text-brandWhite'>Nuestro correo</h2>
           <div className=' flex items-center gap-2'>
             <MdMail className='text-accent' /> <a href='mailto:info@mexicodc.com'>info@mexicodc.com</a>
           </div>

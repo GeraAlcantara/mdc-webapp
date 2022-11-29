@@ -27,7 +27,7 @@ export default function ModalDemoReel({ btnTheme, ...props }) {
         className={clsx("uppercase rounded-full", {
           "bg-gray-900 py-2 px-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75": btnTheme === "btnDark",
           "border-2 border-accent text-accent py-2 px-8": btnTheme === "btnRingGreen",
-          "bg-secondary text-white py-2 px-8 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75":
+          "bg-secondary text-brandWhite py-2 px-8 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75":
             btnTheme === "btnBlue",
         })}
         {...props}
@@ -63,7 +63,7 @@ export default function ModalDemoReel({ btnTheme, ...props }) {
                   <div className='flex justify-end'>
                     <button
                       type='button'
-                      className='inline-flex relative justify-center rounded-t-md border border-transparent bg-black/80 px-4 py-2 text-sm font-medium text-white hover:bg-gray-900/80 focus:outline-none border-none '
+                      className='inline-flex relative justify-center rounded-t-md border border-transparent bg-black/80 px-4 py-2 text-sm font-medium text-brandWhite hover:bg-gray-900/80 focus:outline-none border-none '
                       onClick={closeModal}
                     >
                       <RiCloseCircleLine className='text-2xl' />

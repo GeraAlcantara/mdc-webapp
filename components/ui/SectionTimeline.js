@@ -75,7 +75,7 @@ function SectionTimeline({
             <a
               className={`place-self-start md:place-self-auto py-2 px-10 bg-${colorClass} rounded-full text-bg_primary uppercase hover:bg-${colorClass} hover:scale-[.98] hover:contrast-150 transition-all`}
             >
-              <span className={` ${ColorSchemaDark ? "text-gray-900" : "text-white"}  `}>{link.text}</span>
+              <span className={` ${ColorSchemaDark ? "text-gray-900" : "text-brandWhite"}  `}>{link.text}</span>
             </a>
           </Link>
         </div>
@@ -105,9 +105,9 @@ function SectionTimeline({
           <p className='max-w-prose md:text-left mb-8'>{excerpt}</p>
           <Link href={link.slug}>
             <a
-              className={`place-self-start py-2 px-10 bg-${colorClass}  rounded-full text-white uppercase hover:bg-${colorClass} hover:scale-[.98] hover:contrast-150 transition-all`}
+              className={`place-self-start py-2 px-10 bg-${colorClass}  rounded-full text-brandWhite uppercase hover:bg-${colorClass} hover:scale-[.98] hover:contrast-150 transition-all`}
             >
-              <span className={` ${ColorSchemaDark ? "text-gray-900" : "text-white"}  `}>{link.text}</span>
+              <span className={` ${ColorSchemaDark ? "text-gray-900" : "text-brandWhite"}  `}>{link.text}</span>
             </a>
           </Link>
         </div>

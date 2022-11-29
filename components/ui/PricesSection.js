@@ -101,7 +101,7 @@ function PricesSection() {
               <Tab.Panel>
                 <table className='w-full  '>
                   <thead>
-                    <tr className='text-white font-bold text-lg h-4 text-left '>
+                    <tr className='text-brandWhite font-bold text-lg h-4 text-left '>
                       <th className='text-secondary text-2xl font-bold text-left sr-only'>Detalles</th>
                     </tr>
                   </thead>
@@ -132,7 +132,7 @@ function PricesSection() {
               <Tab.Panel>
                 <table className='w-full  '>
                   <thead>
-                    <tr className='text-white font-bold text-lg h-4 text-left '>
+                    <tr className='text-brandWhite font-bold text-lg h-4 text-left '>
                       <th className='text-secondary text-2xl font-bold text-left sr-only'>Detalles</th>
                       <th className='sr-only'>LMS</th>
                     </tr>
@@ -164,7 +164,7 @@ function PricesSection() {
               <Tab.Panel>
                 <table className='w-full  '>
                   <thead>
-                    <tr className='text-white font-bold text-lg h-4 text-left'>
+                    <tr className='text-brandWhite font-bold text-lg h-4 text-left'>
                       <th className='text-secondary text-2xl font-bold text-left sr-only'>Detalles</th>
                       <th className='sr-only'>Cursos + LMS</th>
                     </tr>
@@ -210,7 +210,7 @@ function PricesSection() {
           <div className='m-auto'>
             <table className='w-full  '>
               <thead>
-                <tr className='text-white font-bold text-lg h-10 text-left'>
+                <tr className='text-brandWhite font-bold text-lg h-10 text-left'>
                   <th className='text-secondary text-2xl font-bold text-left'>Detalles</th>
                   <th>Cursos</th>
                   <th>LMS</th>

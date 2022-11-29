@@ -16,3 +16,21 @@ export const DataHeadProd = {
   pageTitle: "MDC | Productos",
   pageDescription: "Descripcion Pagina Productos",
 };
+export const DataHeadServicios = {
+  previewImage: "/socialCards/homeSocialCard.jpg",
+  previewImageAlt: "Mexico development center",
+  pageTitle: "MDC | Servicios",
+  pageDescription: "Descripcion Pagina Servicios",
+};
+export const DataHeadContact = {
+  previewImage: "/socialCards/homeSocialCard.jpg",
+  previewImageAlt: "Mexico development center",
+  pageTitle: "MDC | Contáctanos",
+  pageDescription: "Descripcion Pagina Contáctanos",
+};
+export const DataHeadGracias = {
+  previewImage: "/socialCards/homeSocialCard.jpg",
+  previewImageAlt: "Mexico development center",
+  pageTitle: "MDC | Gracias por contáctanos",
+  pageDescription: "Descripcion Gracias por contáctanos",
+};

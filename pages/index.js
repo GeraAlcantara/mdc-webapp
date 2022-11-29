@@ -1,5 +1,5 @@
-import Head from "next/head";
-import { DataHeadDefault, DataHeadHome } from "../components/data/DataHeader";
+import HelperHead from "../components/helpers/helperHead";
+import { DataHeadHome } from "../components/data/DataHeader";
 import Image from "next/image";
 import Hero from "../components/ui/Hero";
 import { SectionsData } from "../components/data/SectionTimeLineData";
@@ -14,23 +14,7 @@ import MonitorVideoReel from "../public/videoreel.png";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>{DataHeadHome.pageTitle}</title>
-        <meta name='description' content={DataHeadHome.pageDescription} />
-        {/* Twitter */}
-        <meta name='twitter:card' content='summary' key='twcard' />
-        <meta name='twitter:creator' content={DataHeadDefault.twitterHandle} key='twhandle' />
-        <meta name='twitter:title' content={DataHeadHome.pageTitle} />
-        <meta name='twitter:description' content={DataHeadHome.pageDescription} />
-
-        {/* Open Graph */}
-        <meta property='og:url' content={DataHeadDefault.currentURL} key='ogurl' />
-        <meta property='og:image' content={DataHeadHome.previewImage} key='ogimage' />
-        <meta property='og:site_name' content={DataHeadDefault.siteName} key='ogsitename' />
-        <meta property='og:title' content={DataHeadHome.pageTitle} key='ogtitle' />
-        <meta property='og:description' content={DataHeadHome.pageDescription} key='ogdesc' />
-        <meta property='og:image:alt' content={DataHeadHome.previewImageAlt}></meta>
-      </Head>
+      <HelperHead DataHead={DataHeadHome} />
       <Hero />
       <Clients />
       <div className=' md:text-center bg-white text-gray-900 py-4 lg:py-8 xl:py-12'>

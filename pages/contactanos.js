@@ -1,4 +1,5 @@
-import Head from "next/head";
+import HelperHead from "../components/helpers/helperHead";
+import { DataHeadContact } from "../components/data/DataHeader";
 import { withIronSessionSsr } from "iron-session/next";
 import Address from "../components/ui/Address";
 import CaptchaForm from "../components/ui/CaptchaForm";
@@ -11,14 +12,7 @@ export default function contactanos() {
 
   return (
     <>
-      <Head>
-        <meta
-          name='description'
-          /* TODO: Descripcion meta */
-          content='Descripcion para pagina contactanos'
-        />
-        <title>MDC | Contactanos</title>
-      </Head>
+      <HelperHead DataHead={DataHeadContact} />
       <div className='pt-[68px]'>
         {/* Divider */}
         <div className='flex mdc-ui-container justify-center items-end m-auto xl:my-16 my-8 '>

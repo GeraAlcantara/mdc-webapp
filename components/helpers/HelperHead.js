@@ -19,7 +19,8 @@ function HelperHead({ DataHead }) {
         <meta property='og:site_name' content={DataHeadDefault.siteName} key='ogsitename' />
         <meta property='og:title' content={DataHead.pageTitle} key='ogtitle' />
         <meta property='og:description' content={DataHead.pageDescription} key='ogdesc' />
-        <meta property='og:image:alt' content={DataHead.previewImageAlt}></meta>
+        <meta property='og:image:alt' content={DataHead.previewImageAlt} />
+        <meta property='og:type' content='website' />
       </Head>
     </>
   );

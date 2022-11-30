@@ -24,7 +24,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        RobotoCondense: ["Lato", ...defaultTheme.fontFamily.sans],
+        Lato: ["Lato", '"Helvetica Neue"', "Arial", "sans-serif"],
         sans: ["Lato", ...defaultTheme.fontFamily.sans],
       },
       animation: {

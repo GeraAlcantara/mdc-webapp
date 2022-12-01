@@ -1,13 +1,15 @@
-import Image from "next/image";
-import Link from "next/link";
 import { DataHeadBlog } from "../../components/data/DataHeader";
 import HelperHead from "../../components/helpers/HelperHead";
-import BlogImage from "../../public/blog/blogimage.jpg";
-import { Posts } from "../../components/data/DataPosts";
-
+/* import { Posts } from "../../components/data/DataPosts"; */
 import ArticleCard from "../../components/ui/ArticleCard";
+import { getAllPosts } from "../api/blogApi";
 
-function Blog() {
+// props posts will be PostMeta[]
+/**
+ * @param {{posts:import('../api/blogApi').PostMeta[]}} props
+ * @returns
+ */
+export default function Blog({ posts }) {
   return (
     <>
       <HelperHead DataHead={DataHeadBlog} />
@@ -25,7 +27,41 @@ function Blog() {
           </div>
           <div className='relative w-full xl:w-1/2'></div>
         </div>
-        <section className='mdc-ui-container'>
+      </div>
+      <section className='mdc-ui-container'>
+        {posts.map((post) => (
+          <ArticleCard
+            key={post.title}
+            slug={post.slug}
+            coverImageSrc={post.coverImageSrc}
+            articleType={post.articleType}
+            tags={post.tags} // TODO: manage more than one tag
+            readTime={5} // TODO: calculate readTime
+            title={post.title}
+            excerpt={post.excerpt}
+            authorAvatar={post.authorAvatar}
+            authorName={post.authorName}
+            date={post.date}
+          />
+        ))}
+      </section>
+    </>
+  );
+}
+
+export async function getStaticProps() {
+  // get the latest 9 posts from the api only the meta data
+  const postsMDXMeta = getAllPosts()
+    .slice(0, 9)
+    .map((post) => post.meta);
+  return {
+    props: {
+      posts: postsMDXMeta,
+    },
+  };
+}
+
+/* <section className='mdc-ui-container'>
           {Posts.posts.map((post) => (
             <ArticleCard
               key={post.id + post.tag}
@@ -41,14 +77,9 @@ function Blog() {
               date={post.date}
             />
           ))}
-        </section>
-        {/* banner divider */}
-        {/* <section className='mdc-ui-container'>
-          <Image src={BlogImage} layout='responsive' objectFit='cover' alt='Imagen de un blog'></Image>
-        </section> */}
-      </div>
-    </>
-  );
-}
+        </section> */
 
-export default Blog;
+/* banner divider */
+/* <section className='mdc-ui-container'>
+  <Image src={BlogImage} layout='responsive' objectFit='cover' alt='Imagen de un blog'></Image>
+</section> */

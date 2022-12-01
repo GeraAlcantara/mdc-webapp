@@ -5,6 +5,19 @@ module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            color: "#f2f2f2",
+            a: {
+              color: "#00bec6",
+              "&:hover": {
+                color: "#1070e5",
+              },
+            },
+          },
+        },
+      },
       colors: {
         secondary: "#1070e5",
         accent: "#00fb15",
@@ -69,5 +82,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

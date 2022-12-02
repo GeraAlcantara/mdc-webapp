@@ -18,7 +18,7 @@ import PricesSection from "../../components/ui/PricesSection";
 import TabletImg from "../../public/tablet_card.png";
 import WomanMobileImg from "../../public/woman_mobile.jpg";
 
-function Productos() {
+function Libreria() {
   return (
     <>
       <HelperHead {...DataHeadProd} />
@@ -187,4 +187,4 @@ function Productos() {
     </>
   );
 }
-export default Productos;
+export default Libreria;

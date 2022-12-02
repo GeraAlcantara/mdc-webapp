@@ -11,19 +11,19 @@ export const DataHeadHome = {
     "Mexico Development Center es una compañía conformada por un equipo multidisciplinario en la elaboración de productos digitales. Durante la última década, nos hemos dedicado a la producción de cursos en línea (elearning) enfocados al entrenamiento y/o capacitación del personal en ambientes corporativos y empresariales que van desde la escala local, a la escala global.",
 };
 export const DataHeadProd = {
-  previewImage: "/socialCards/homeSocialCard.jpg",
+  previewImage: "/socialCards/libreria.jpg",
   previewImageAlt: "Mexico development center",
-  pageTitle: "MDC | Productos",
-  pageDescription: "Descripcion Pagina Productos",
+  pageTitle: "MDC | Libreria de cursos",
+  pageDescription: "Descripcion Libreria de cursos",
 };
 export const DataHeadServicios = {
-  previewImage: "/socialCards/homeSocialCard.jpg",
+  previewImage: "/socialCards/servicios.jpg",
   previewImageAlt: "Mexico development center",
   pageTitle: "MDC | Servicios",
   pageDescription: "Descripcion Pagina Servicios",
 };
 export const DataHeadContact = {
-  previewImage: "/socialCards/homeSocialCard.jpg",
+  previewImage: "/socialCards/contacto.jpg",
   previewImageAlt: "Mexico development center",
   pageTitle: "MDC | Contáctanos",
   pageDescription: "Descripcion Pagina Contáctanos",
@@ -35,8 +35,8 @@ export const DataHeadGracias = {
   pageDescription: "Descripcion Gracias por contáctanos",
 };
 export const DataHeadBlog = {
+  pageDescription: "Descripcion del Blog",
+  pageTitle: "MDC | Noticias y Artículos",
   previewImage: "/socialCards/homeSocialCard.jpg",
   previewImageAlt: "Mexico development center",
-  pageTitle: "MDC | Noticias y Artículos",
-  pageDescription: "Descripcion del Blog",
 };

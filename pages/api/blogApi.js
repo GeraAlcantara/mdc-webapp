@@ -35,6 +35,7 @@ export const getSlugs = () => {
  * @property {string} coverImageAlt
  * @property {string} authorAvatar
  * @property {string} authorName
+ * @property {number} readTime
  * @property {'noticias' | 'articulo'} articleType
  * @param {string} slug
  * @returns {Post}
@@ -59,6 +60,7 @@ export const getPostBySlug = (slug) => {
       authorAvatar: data.authorAvatar ?? "avatarProfile.jpg",
       authorName: data.authorName ?? "Anonimo",
       articleType: (data.articleType === "articulo" ? "articulo" : "noticias") ?? "articulo",
+      readTime: data.readTime ?? 5,
     },
   };
 };

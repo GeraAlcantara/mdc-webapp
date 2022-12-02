@@ -7,7 +7,7 @@ import { DataHeadGracias } from "../components/data/DataHeader";
 function Gracias() {
   return (
     <>
-      <HelperHead DataHead={DataHeadGracias} />
+      <HelperHead {...DataHeadGracias} />
       <div className='pt-[68px] '>
         <div className='mdc-ui-container py-10  flex justify-center items-center min-h-screen '>
           <section className='grid grid-cols-2 md:grid-cols-2  md:grid-rows-2 w-screen md:max-w-[800px] gap-x-10 animate-FadeInSlidein '>

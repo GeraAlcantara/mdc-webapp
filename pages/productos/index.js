@@ -21,7 +21,7 @@ import WomanMobileImg from "../../public/woman_mobile.jpg";
 function Productos() {
   return (
     <>
-      <HelperHead DataHead={DataHeadProd} />
+      <HelperHead {...DataHeadProd} />
       <div className='pt-[68px]  '>
         <div className='p-4 md:p-6 lg:p-10 container mb-20 flex flex-col-reverse lg:flex-row lg:gap-8 bg-gradient-to-b from-[#1c3d5c] via-[#1c3d5c]/30 to-bg_primary rounded-t-3xl mdc-ui-container min-h-[calc(100vh-70px)] lg:min-h-0 justify-around lg:items-center '>
           <div className='lg:w-1/2'>

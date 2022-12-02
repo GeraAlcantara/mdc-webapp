@@ -1,3 +1,4 @@
+import HelperHead from "../../components/helpers/HelperHead";
 import { data, getSubcategoryByName, getSubcategoriesNames, getCourseBySlug } from "../../components/helpers/library";
 import CourseSpecs from "../../components/ui/CourseSpecs";
 
@@ -45,21 +46,29 @@ function Cursos({ params, course }) {
   const colorid = category.colorid;
 
   return (
-    <div className='pt-[68px]'>
-      <CourseSpecs
-        duration={course.duration}
-        libraryName={course.library.name}
-        slug={course.slug}
-        subcategoryName={course.subcategory.name}
-        title={course.title}
-        description={course.description}
-        features={course.features}
-        topics={course.topics}
-        lessons={lessons}
-        cover={course.cover}
-        color={colorid}
+    <>
+      <HelperHead
+        pageDescription={course.description.slice(0, 1).toString()}
+        pageTitle={course.title}
+        previewImage={"/socialCards/fichasTecnicas.jpg"}
+        previewImageAlt='imagen social'
       />
-    </div>
+      <div className='pt-[68px]'>
+        <CourseSpecs
+          duration={course.duration}
+          libraryName={course.library.name}
+          slug={course.slug}
+          subcategoryName={course.subcategory.name}
+          title={course.title}
+          description={course.description}
+          features={course.features}
+          topics={course.topics}
+          lessons={lessons}
+          cover={course.cover}
+          color={colorid}
+        />
+      </div>
+    </>
   );
 }
 

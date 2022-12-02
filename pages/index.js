@@ -14,7 +14,7 @@ import MonitorVideoReel from "../public/videoreel.png";
 export default function Home() {
   return (
     <>
-      <HelperHead DataHead={DataHeadHome} />
+      <HelperHead {...DataHeadHome} />
       <Hero />
       <Clients />
       <div className=' md:text-center bg-white text-gray-900 py-4 lg:py-8 xl:py-12'>

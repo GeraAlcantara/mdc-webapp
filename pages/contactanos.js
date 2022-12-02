@@ -12,7 +12,7 @@ export default function contactanos() {
 
   return (
     <>
-      <HelperHead DataHead={DataHeadContact} />
+      <HelperHead {...DataHeadContact} />
       <div className='pt-[68px]'>
         {/* Divider */}
         <div className='flex mdc-ui-container justify-center items-end m-auto xl:my-16 my-8 '>

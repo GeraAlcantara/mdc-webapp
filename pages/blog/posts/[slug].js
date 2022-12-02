@@ -9,8 +9,10 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/atom-one-dark.css";
-import { claseNames } from "../../../components/data/SectionTimeLineData";
-// import highlight from "highlight.js"; // this is for the code highlight
+import AuthorPostInfo from "../../../components/ui/AuthorPostInfo";
+import Link from "next/link";
+import { RiArrowLeftLine } from "react-icons/ri";
+
 
 /**
  *@typedef {import('../../api/blogApi').PostMeta} PostMeta
@@ -31,10 +33,19 @@ export default function PostPage({ post }) {
         <div>
           <Image src={`/blog/images/${post.meta.coverImageSrc}`} alt={post.meta.coverImageAlt} width={1920} height={576} />
         </div>
-        <div className='mdc-ui-container py-10 text-accent font-bold '>
-          <h1 className='text-6xl'>{post.meta.title}</h1>
+        <div className='mdc-ui-container py-5 md:py-10 flex flex-col gap-4 '>
+          <nav>
+            <Link href={`/blog`}>
+              <div className='inline-flex gap-x-2 items-center hover:cursor-pointer group '>
+                <RiArrowLeftLine className='text-2xl text-brandWhite  group-hover:animate-heartbeat group-hover:text-brandBlue-50 will-change-transform ' />
+                <span className='group-hover:text-brandBlue-100 text-xl transition-all duration-150'>Blog</span>
+              </div>
+            </Link>
+          </nav>
+          <AuthorPostInfo authorAvatar={post.meta.authorAvatar} authorName={post.meta.authorName} date={post.meta.date} />
+          <h1 className='text-4xl md:text-6xl text-accent font-bold '>{post.meta.title}</h1>
         </div>
-        <div className='mdc-ui-container prose prose-headings:text-brandBlue-50 prose-lime prose-code:text-brandBlue-50 py-10 prose-headings:text-5xl prose-lg'>
+        <div className='mdc-ui-container prose prose-headings:text-brandBlue-50 prose-lime prose-code:text-brandBlue-50 md:py-10 md:prose-headings:text-5xl prose-lg'>
           <MDXRemote {...post.source} components={{ YouTube, Image }} />
         </div>
       </div>

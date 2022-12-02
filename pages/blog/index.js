@@ -35,7 +35,7 @@ export default function Blog({ posts }) {
             slug={post.slug}
             coverImageSrc={post.coverImageSrc}
             articleType={post.articleType}
-            tags={post.tags} // TODO: manage more than one tag
+            tags={post.tags}
             readTime={5} // TODO: calculate readTime
             title={post.title}
             excerpt={post.excerpt}

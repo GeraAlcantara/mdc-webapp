@@ -49,13 +49,14 @@ export const getPostBySlug = (slug) => {
       slug,
       title: data.title ?? "No title provided",
       tags: (data.tags ?? ['"No tags provided"']).sort(),
+      // to local date string format yyyy-mm-dd
       date: (data.date ?? new Date()).toString(),
       excerpt: data.excerpt ?? "No excerpt provided",
       descriptionSEO: data.descriptionSEO ?? "No descriptionSEO provided",
       imageSEO: data.imageSEO ?? "socialCards/homeSocialCard", // if not src the default image
       coverImageSrc: data.coverImageSrc ?? "blogimage.jpg", // if not src the default Coverimage
       coverImageAlt: data.coverImageAlt ?? "imagen de un blog",
-      authorAvatar: data.authorAvatar ?? "blogimage.jpg",
+      authorAvatar: data.authorAvatar ?? "avatarProfile.jpg",
       authorName: data.authorName ?? "Anonimo",
       articleType: (data.articleType === "articulo" ? "articulo" : "noticias") ?? "articulo",
     },

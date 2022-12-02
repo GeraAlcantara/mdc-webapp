@@ -3,6 +3,7 @@ import { RiNewspaperLine } from "react-icons/ri";
 import { HiOutlineEye } from "react-icons/hi";
 import React from "react";
 import Link from "next/link";
+import AuthorPostInfo from "./AuthorPostInfo";
 
 /*  
 1- imagen de un articulo 
@@ -61,15 +62,7 @@ function ArticleCard({ slug, coverImageSrc, tags, articleType, readTime, title, 
             <h2 className='text-4xl font-bold group-hover:text-accent '>{title}</h2>
             <p className=' text-lg max-w-prose'>{excerpt}</p>
             {/* avatar */}
-            <div className='flex gap-4 items-center'>
-              <div className='relative w-12 h-12'>
-                <Image src={`/blog/images/${authorAvatar}`} layout='fill' objectFit='cover' alt='imagen de un articulo' className='rounded-full' />
-              </div>
-              <div className='flex flex-col gap-1'>
-                <p className='text-sm capitalize'>{authorName}</p>
-                <p className='text-sm'>{date}</p>
-              </div>
-            </div>
+            <AuthorPostInfo authorAvatar={authorAvatar} authorName={authorName} date={date} />
           </div>
         </article>
       </Link>

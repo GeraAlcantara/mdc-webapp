@@ -5,6 +5,19 @@ module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            color: "#f2f2f2",
+            a: {
+              color: "#00bec6",
+              "&:hover": {
+                color: "#1070e5",
+              },
+            },
+          },
+        },
+      },
       colors: {
         secondary: "#1070e5",
         accent: "#00fb15",
@@ -32,8 +45,32 @@ module.exports = {
         carousel: "scroll 30s linear infinite",
         FadeInSlidein: "fadeInSlidein 1s forwards",
         FadeOutSlideout: "fadeOutSlideout 1s forwards",
+        heartbeat: "heartbeat 1.5s ease-in-out infinite both",
       },
       keyframes: {
+        heartbeat: {
+          from: {
+            transform: "scale(1)",
+            transformOrigin: "center center",
+            animationTimingFunction: "ease-out",
+          },
+          "10%": {
+            transform: "scale(0.91)",
+            animationTimingFunction: "ease-in",
+          },
+          "17%": {
+            transform: "scale(0.98)",
+            animationTimingFunction: "ease-out",
+          },
+          "33%": {
+            transform: "scale(0.87)",
+            animationTimingFunction: "ease-in",
+          },
+          "45%": {
+            transform: "scale(1)",
+            animationTimingFunction: "ease-out",
+          },
+        },
         slidehrright: {
           "0%": { width: "0" },
           "100%": { width: "45%" },
@@ -69,5 +106,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

@@ -15,11 +15,11 @@ function HelperHead(props) {
         <meta name='twitter:creator' content={DataHeadDefault.twitterHandle} key='twhandle' />
         <meta name='twitter:title' content={props.pageTitle} />
         <meta name='twitter:description' content={props.pageDescription} />
-        <meta name='twitter:image' content={props.previewImage} />
+        <meta name='twitter:image' content={`${DataHeadDefault.currentURL}${props.previewImage}`} />
 
         {/* Open Graph */}
         <meta property='og:url' content={DataHeadDefault.currentURL} key='ogurl' />
-        <meta property='og:image' content={props.previewImage} key='ogimage' />
+        <meta property='og:image' content={`${DataHeadDefault.currentURL}${props.previewImage}`} key='ogimage' />
         <meta property='og:site_name' content={DataHeadDefault.siteName} key='ogsitename' />
         <meta property='og:title' content={props.pageTitle} key='ogtitle' />
         <meta property='og:description' content={props.pageDescription} key='ogdesc' />

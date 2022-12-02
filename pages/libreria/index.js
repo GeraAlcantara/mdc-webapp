@@ -58,7 +58,7 @@ function Libreria() {
           </div>
         </div>
         {/* Divider */}
-        <div className='flex mdc-ui-container justify-center items-end m-auto my-16 '>
+        <div id='catalogoCursos' className='flex mdc-ui-container justify-center items-end m-auto my-16 '>
           <div className='bg-brandBlue-400 h-[1px] w-1/2 flex-1'></div>
           <div className='mx-4 relative '>
             <IconLibreria className='w-20 h-auto' />
@@ -83,16 +83,18 @@ function Libreria() {
           <BannerCTContact imgBanner={ImgBannerProd} txtalt='grupo de colaboradores reunidos en su area de trabajo' />
         </div>
         {/* Divider */}
-        <div className='flex mdc-ui-container justify-center items-end m-auto xl:my-16 '>
-          <div className='bg-brandBlue-400 h-[1px] w-1/2 flex-1'></div>
-          <div className='mx-4 relative'>
-            <IconShopingCard className='w-20 h-auto' />
+        <section id='precios' className='xl:py-16'>
+          <div className='flex mdc-ui-container justify-center items-end m-auto  '>
+            <div className='bg-brandBlue-400 h-[1px] w-1/2 flex-1'></div>
+            <div className='mx-4 relative'>
+              <IconShopingCard className='w-20 h-auto' />
+            </div>
+            <div className='bg-brandBlue-400 h-[1px] flex-1'></div>
           </div>
-          <div className='bg-brandBlue-400 h-[1px] flex-1'></div>
-        </div>
-        {/* Divider END */}
-        {/* Cards Prices */}
-        <PricesSection />
+          {/* Divider END */}
+          {/* Cards Prices */}
+          <PricesSection />
+        </section>
         {/* Metodos de pagos  */}
         <section className='mdc-ui-container my-20 text-gray-700'>
           <div className='flex flex-col lg:flex-row justify-center items-center gap-0 lg:gap-10'>
@@ -120,10 +122,7 @@ function Libreria() {
               <div className='w-full flex flex-col md:flex-row justify-center items-center gap-0 lg:gap-10'>
                 {/* form with input phone number and must be a valid phone number country code México +52 and Llámame ahora button */}
                 <form action='' className='w-full md:w-3/5 xl:w-1/2 '>
-                  <div className='flex flex-col lg:flex-row items-center gap-4 px-10 w-full'>
-                    <label htmlFor='phone' className='sr-only'>
-                      Ingresa tu número de teléfono
-                    </label>
+                  <div className='flex flex-col lg:flex-row items-center gap-4 lg:justify-center px-10 w-full'>
                     <div className='relative '>
                       <select name='phone' id='phone' className='absolute bg-transparent top-1 text-brandWhite rounded-md p-2 outline-none bg-brandBlue-400 '>
                         <option className='bg-brandBlue-500' value='+52'>
@@ -136,6 +135,9 @@ function Libreria() {
                           +2
                         </option>
                       </select>
+                      <label htmlFor='phone' className='sr-only'>
+                        Ingresa tu número de teléfono
+                      </label>
                       <input
                         lang='es'
                         type='tel'
@@ -171,8 +173,10 @@ function Libreria() {
                     <span className='text-6xl xl:text-8xl 2xl:text-9xl '>LMS</span>
                   </h3>
                   <div className='flex justify-center md:justify-end'>
-                    <Link href='/contacto'>
-                      <a className='text-gray-900 uppercase py-2 px-4 bg-white rounded-full inline-flex'>Contactanos</a>
+                    <Link href='/contactanos'>
+                      <span className='text-gray-900 uppercase py-2 px-4 cursor-pointer bg-white rounded-full inline-flex hover:bg-slate-50 transition-all will-change-transform hover:scale-105 duration-150 ease-in'>
+                        Contactanos
+                      </span>
                     </Link>
                   </div>
                 </div>

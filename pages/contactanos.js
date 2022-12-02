@@ -31,12 +31,12 @@ export default function contactanos() {
               <h2 className='text-4xl font-bold'>¿Cómo podemos ayudarte?</h2>
             </hgroup>
           </header>
-          <div className='py-10'>
+          <div className=''>
             <div className=''>
-              <Address />
+              <FormContact defaultCaptchaKey={defaultCaptchaKey} />
             </div>
             <div className='py-10 '>
-              <FormContact defaultCaptchaKey={defaultCaptchaKey} />
+              <Address />
             </div>
           </div>
         </section>

@@ -20,8 +20,8 @@ function BannerCTContact({ imgBanner, txtalt }) {
             <div className='text-right'>
               <h2 className='text-xl md:text-4xl'>Agenda una</h2>
               <h2 className='font-extrabold text-4xl md:text-7xl text-brandWhite '>Reunión</h2>
-              <Link href='#'>
-                <div className='flex justify-end rounded-lg pt-6 hover:cursor-pointer'>
+              <Link href='contactanos'>
+                <div className='flex justify-end rounded-lg pt-6 hover:cursor-pointer hover:scale-[.98]  transition-all'>
                   <a className='flex rounded-full bg-accent text-gray-900 px-4 py-2 md:px-12 md:py-4 align-middle leading-none uppercase font-bold '>
                     <span className='select-none'>Contactanos</span>
                   </a>

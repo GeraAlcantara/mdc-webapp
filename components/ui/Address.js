@@ -19,9 +19,9 @@ function Address() {
           <h2 className='font-bold text-brandWhite'>Palmeiras Business Center</h2>
           <p>Oficina 4, Calle 11 Sur,</p>
           <p>Playa del Carmen</p>
-          <div className='text-accent flex items-center gap-2'>
+          {/* <div className='text-accent flex items-center gap-2'>
             <MdLocationOn /> <span>Ubicación en Mapa</span>
-          </div>
+          </div> */}
         </address>
         <div>
           <h2 className='font-bold text-brandWhite'>Ventas</h2>

@@ -13,7 +13,6 @@ import AuthorPostInfo from "../../../components/ui/AuthorPostInfo";
 import Link from "next/link";
 import { RiArrowLeftLine } from "react-icons/ri";
 
-
 /**
  *@typedef {import('../../api/blogApi').PostMeta} PostMeta
  * @param {{post: {source:import('next-mdx-remote').MDXRemoteSerializeResult<Record<string, unknown>>, meta:PostMeta}}} post
@@ -28,7 +27,7 @@ export default function PostPage({ post }) {
   };
   return (
     <>
-      <HelperHead DataHead={postsHead} />
+      <HelperHead {...postsHead} />
       <div className='pt-[68px] '>
         <div>
           <Image src={`/blog/images/${post.meta.coverImageSrc}`} alt={post.meta.coverImageAlt} width={1920} height={576} />

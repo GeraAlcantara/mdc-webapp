@@ -118,7 +118,7 @@ export default function Servicios() {
           <div className='mdc-ui-container flex flex-col gap-4 md:gap-8 xl:gap-28 md:flex-row my-8'>
             {/* text  */}
             <div className='md:w-1/2 flex flex-col md:items-end md:justify-center text-gray-400 text-lg'>
-              <h2 className={`font-bold md:text-right text-4xl mb-6 text-lineGradient_1 w-[12ch] `}>Traducción ó Localización.</h2>
+              <h2 className={`font-bold md:text-right text-4xl mb-6 text-lineGradient_1 w-[12ch] `}>Traducción o Localización.</h2>
               <p className='max-w-prose md:text-right mb-4'>Contamos con la capacidad de traducir tu contenido a cualquier idioma.</p>
               <p className='max-w-prose md:text-right mb-4'>
                 Nos encargaremos de implementar el nuevo idioma en el curso, sincronizando animaciones, audios y videos, asegurándonos de que el material sea

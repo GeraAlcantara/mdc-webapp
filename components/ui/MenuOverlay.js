@@ -36,7 +36,7 @@ function MenuOverlay(props) {
         className='absolute bottom-0 landscape:bottom-auto left-0 px-10 py-8 text-brandWhite uppercase '
         style={{ textShadow: "rgb(91 175 87 / 74%) -1px -1px 6px, rgb(42 113 178 / 60%) 1px 1px 6px", overflowWrap: "break-word" }}
       >
-        Copyright © {year.getFullYear()} México Development Center. | All right reserved.{" "}
+        Copyright © {year.getFullYear()} México Development Center. | Todos los derechos reservados.
       </h6>
     </>
   );

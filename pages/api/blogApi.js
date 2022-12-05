@@ -31,6 +31,7 @@ export const getSlugs = () => {
  * @property {string} excerpt
  * @property {string} descriptionSEO
  * @property {string} imageSEO
+ * @property {string} imageAltSEO
  * @property {string} coverImageSrc
  * @property {string} coverImageAlt
  * @property {string} authorAvatar
@@ -55,6 +56,7 @@ export const getPostBySlug = (slug) => {
       excerpt: data.excerpt ?? "No excerpt provided",
       descriptionSEO: data.descriptionSEO ?? "No descriptionSEO provided",
       imageSEO: data.imageSEO ?? "socialCards/homeSocialCard", // if not src the default image
+      imageAltSEO: data.imageAltSEO ?? "No imageAltSEO provided", // if not src the default image
       coverImageSrc: data.coverImageSrc ?? "blogimage.jpg", // if not src the default Coverimage
       coverImageAlt: data.coverImageAlt ?? "imagen de un blog",
       authorAvatar: data.authorAvatar ?? "avatarProfile.jpg",

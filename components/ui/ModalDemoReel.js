@@ -25,9 +25,10 @@ export default function ModalDemoReel({ btnTheme, ...props }) {
         type='button'
         name='Open dialog'
         className={clsx("uppercase rounded-full", {
-          "bg-gray-900 py-2 px-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75": btnTheme === "btnDark",
+          "bg-gray-900 py-2 px-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 hover:scale-[.98] hover:contrast-150 transition-all":
+            btnTheme === "btnDark",
           "border-2 border-accent text-accent py-2 px-8": btnTheme === "btnRingGreen",
-          "bg-secondary text-brandWhite py-2 px-8 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75":
+          "bg-secondary text-brandWhite py-2 px-8 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 hover:scale-[.98] hover:contrast-150 transition-all":
             btnTheme === "btnBlue",
         })}
         {...props}

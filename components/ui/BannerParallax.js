@@ -18,8 +18,8 @@ function BannerParallax() {
               <p className='font-extrabold text-3xl md:text-5xl '>por usuario</p>
               <span className='font-light md:text-lg '>- POR CADA CURSO -</span>
               <Link href='libreria#precios'>
-                <div className='flex justify-end rounded-lg pt-6 hover:cursor-pointer hover:scale-[.98] hover:contrast-150 transition-all'>
-                  <div className='flex rounded-full bg-secondary px-4 py-2 md:px-12 md:py-4 align-middle leading-none'>
+                <div className='flex justify-end rounded-lg pt-6 hover:cursor-pointer hover:scale-[.98] hover:contrast-150 transition-all uppercase'>
+                  <div className='flex rounded-full bg-secondary px-4 py-2 md:px-6 md:py-4 align-middle leading-none'>
                     <span>Planes y precios</span>
                   </div>
                 </div>

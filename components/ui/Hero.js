@@ -6,31 +6,29 @@ import imgHero2 from "../../public/hero2.png";
 import imgHero3 from "../../public/hero3.png";
 import imgHero4 from "../../public/hero4.png";
 
-const initImagesData = [
-  {
-    id: "hero1",
-    alt: "mujer con semblante positivo esta sonriendo ",
-    src: imgHero1,
-  },
-  {
-    id: "hero2",
-    alt: "hombre concentrado trabajando en su laptop",
-    src: imgHero2,
-  },
-  {
-    id: "hero3",
-    alt: "empleada joven sonriendo ",
-    src: imgHero3,
-  },
-  {
-    id: "hero4",
-    alt: "mujer trigeña sonriendo en su area de trabajo",
-    src: imgHero4,
-  },
-];
-
 function Hero() {
-  /* obj logic */
+  const initImagesData = [
+    {
+      id: "hero1",
+      alt: "mujer con semblante positivo esta sonriendo ",
+      src: imgHero1,
+    },
+    {
+      id: "hero2",
+      alt: "hombre concentrado trabajando en su laptop",
+      src: imgHero2,
+    },
+    {
+      id: "hero3",
+      alt: "empleada joven sonriendo ",
+      src: imgHero3,
+    },
+    {
+      id: "hero4",
+      alt: "mujer trigeña sonriendo en su area de trabajo",
+      src: imgHero4,
+    },
+  ];
   const [imageData, setImageData] = useState(initImagesData);
   const [currImgData, setcurrImgData] = useState(imageData[0]);
 
@@ -38,6 +36,9 @@ function Hero() {
 
   useEffect(() => {
     setcurrImgData(updateImageData);
+    return () => {
+      setcurrImgData(updateImageData);
+    };
   }, [updateImageData]);
 
   return (
@@ -59,13 +60,12 @@ function Hero() {
         </div>
         <div className='flex justify-around md:justify-start sm:landscape:w-1/2'>
           <div className=''>
-            <Link href='soluciones'>
-              <a className=' flex justify-center items-center rounded-lg bg-secondary px-4 py-2 md:px-12 md:py-2 mx-2 align-middle leading-none'>Soluciones</a>
+            <Link href='/libreria'>
+              <a className=' flex justify-center items-center uppercase rounded-full bg-secondary px-8 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 hover:scale-[.98] hover:contrast-150 transition-all  '>
+                Soluciones
+              </a>
             </Link>
           </div>
-          <Link href='https://vimeo.com/425231198'>
-            <a className='underline px-2 md:ml-8'>Vea Nuestro Demo Reel</a>
-          </Link>
         </div>
       </div>
     </section>

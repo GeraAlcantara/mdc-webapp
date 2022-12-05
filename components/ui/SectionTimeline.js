@@ -10,29 +10,6 @@ const ColorSchema = Object.freeze({
   light: Symbol("light"),
 });
 
-const articlesData = [
-  {
-    title: "Cursos Multipremiados",
-    excerpt:
-      "Nuestros productos han tenido reconocimiento internacional ganando más de 40 premios como MarCom Awards, Davey Awards, W³ Awards, Golden Bridge Awards, Summit Creative Awards, Network Products Guide IT World Awards, Omni Awards, Interactive Media Awards.",
-    link: {
-      slug: "Casos-de-exito",
-      text: "Casos de exito",
-    },
-    MainImage: {
-      src: "",
-      alt: "",
-    },
-    sideImage: {
-      src: "",
-      alt: "",
-    },
-    colorClass: "[#00bec6]",
-    layoutLeft: false,
-    ColorSchemaDark: false,
-  },
-];
-
 function SectionTimeline({
   ColorSchemaDark = false,
   layoutLeft = false,

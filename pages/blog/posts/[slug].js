@@ -12,6 +12,8 @@ import "highlight.js/styles/atom-one-dark.css";
 import AuthorPostInfo from "../../../components/ui/AuthorPostInfo";
 import Link from "next/link";
 import { RiArrowLeftLine } from "react-icons/ri";
+import { ArticleJsonLd } from "next-seo";
+import { DataHeadDefault } from "../../../components/data/DataHeader";
 
 /**
  *@typedef {import('../../api/blogApi').PostMeta} PostMeta
@@ -20,15 +22,30 @@ import { RiArrowLeftLine } from "react-icons/ri";
  */
 export default function PostPage({ post }) {
   const postsHead = {
-    previewImage: "/socialCards/homeSocialCard.jpg",
-    previewImageAlt: "Mexico development center",
-    pageTitle: "MDC | Blog",
-    pageDescription: "Descripcion blog",
+    previewImage: post.meta.imageSEO,
+    previewImageAlt: post.meta.imageAltSEO,
+    pageTitle: `MDC | Post | ${post.meta.title}`,
+    pageDescription: post.meta.descriptionSEO,
     slug: `/${post.meta.slug}`,
   };
   return (
     <>
       <HelperHead {...postsHead} />
+      <ArticleJsonLd
+        url={`${DataHeadDefault.currentURL}${postsHead.slug}`}
+        title={post.meta.title}
+        images={[`${DataHeadDefault.currentURL}/socialCards/${postsHead.previewImage}, ${DataHeadDefault.currentURL}/blog/images/${post.meta.coverImageSrc}`]}
+        datePublished={new Date(post.meta.date).toISOString()}
+        authorName={[
+          {
+            name: post.meta.authorName,
+          },
+        ]}
+        publisherName='Mexico development center'
+        description={post.meta.descriptionSEO}
+        isAccessibleForFree={true}
+      />
+
       <div className='pt-[68px] '>
         <div>
           <Image src={`/blog/images/${post.meta.coverImageSrc}`} alt={post.meta.coverImageAlt} width={1920} height={576} />

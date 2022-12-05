@@ -52,6 +52,7 @@ function Cursos({ params, course }) {
         pageTitle={course.title}
         previewImage={"/socialCards/fichasTecnicas.jpg"}
         previewImageAlt='imagen social'
+        slug={`cursos/${course.library.skuPrefix.toLocaleLowerCase()}/${course.subcategory.skuPrefix.toLocaleLowerCase()}/${course.slug}`}
       />
       <div className='pt-[68px]'>
         <CourseSpecs

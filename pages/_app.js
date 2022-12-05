@@ -5,6 +5,8 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Nprogress from "nprogress";
 import { ParallaxProvider } from "react-scroll-parallax";
+import { DefaultSeo } from "next-seo";
+import SEO from "../next-seo.config";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -33,12 +35,15 @@ function MyApp({ Component, pageProps }) {
     };
   }, [router.events, router.asPath]);
   return (
-    <ParallaxProvider>
-      <Layout>
-        <Component {...pageProps} />
-        <Analytics />
-      </Layout>
-    </ParallaxProvider>
+    <>
+      <DefaultSeo {...SEO} />
+      <ParallaxProvider>
+        <Layout>
+          <Component {...pageProps} />
+          <Analytics />
+        </Layout>
+      </ParallaxProvider>
+    </>
   );
 }
 

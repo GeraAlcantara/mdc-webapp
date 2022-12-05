@@ -24,6 +24,7 @@ export default function PostPage({ post }) {
     previewImageAlt: "Mexico development center",
     pageTitle: "MDC | Blog",
     pageDescription: "Descripcion blog",
+    slug: `/${post.meta.slug}`,
   };
   return (
     <>

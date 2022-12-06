@@ -26,12 +26,6 @@ function HelperHead(props) {
           ],
           site_name: DataHeadDefault.siteName,
         }}
-        additionalMetaTags={[
-          {
-            property: "og:image:alt",
-            content: props.previewImageAlt,
-          },
-        ]}
       />
     </>
   );

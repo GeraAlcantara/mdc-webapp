@@ -23,7 +23,7 @@ import { DataHeadDefault } from "../../../components/data/DataHeader";
 export default function PostPage({ post }) {
   const postsHead = {
     previewImage: post.meta.imageSEO,
-    previewImageAlt: post.meta.imageAltSEO,
+    previewImageAlt: `${DataHeadDefault.currentURL}${post.meta.imageAltSEO}`,
     pageTitle: `MDC | Post | ${post.meta.title}`,
     pageDescription: post.meta.descriptionSEO,
     slug: `/${post.meta.slug}`,

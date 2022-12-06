@@ -4,6 +4,7 @@ import MedixLogo from "../../public/clientes/medixLogo.png";
 import CemexLogo from "../../public/clientes/cemexLogo.png";
 import IbmLogo from "../../public/clientes/ibmLogo.png";
 import LiverpoolLogo from "../../public/clientes/liverpoolLogo.png";
+import MeetmeLogo from "../../public/clientes/meetmeLogo.png";
 
 import { useEffect, useState } from "react";
 
@@ -48,8 +49,8 @@ function Clients() {
           <div className='w-24 mr-12'>
             <Image src={IbmLogo} alt='IBM Logo'></Image>
           </div>
-          <div className='w-32'>
-            <Image src={LiverpoolLogo} alt='IBM Logo'></Image>
+          <div className='w-24'>
+            <Image src={MeetmeLogo} alt='Meet me in the cloud Logo'></Image>
           </div>
         </div>
       </div>
@@ -68,8 +69,8 @@ function Clients() {
           <div className='w-24 mr-12'>
             <Image src={IbmLogo} alt='IBM Logo'></Image>
           </div>
-          <div className='w-32 mr-12'>
-            <Image src={LiverpoolLogo} alt='IBM Logo'></Image>
+          <div className='w-24 mr-12'>
+            <Image src={MeetmeLogo} alt='Meet me in the cloud'></Image>
           </div>
 
           {/* <!-- same 5 slides doubled (duplicate)--> */}
@@ -85,8 +86,8 @@ function Clients() {
           <div className='w-24 mr-12'>
             <Image src={IbmLogo} alt='IBM Logo'></Image>
           </div>
-          <div className='w-32 mr-12'>
-            <Image src={LiverpoolLogo} alt='IBM Logo'></Image>
+          <div className='w-24 mr-12'>
+            <Image src={MeetmeLogo} alt='Meet me in the cloud'></Image>
           </div>
           {/* <!-- same 5 slides tripled (duplicate 2)--> */}
           <div className='w-24 mr-12'>
@@ -101,8 +102,8 @@ function Clients() {
           <div className='w-24 mr-12'>
             <Image src={IbmLogo} alt='IBM Logo'></Image>
           </div>
-          <div className='w-32 mr-12'>
-            <Image src={LiverpoolLogo} alt='IBM Logo'></Image>
+          <div className='w-24 mr-12'>
+            <Image src={MeetmeLogo} alt='Meet me in the cloud'></Image>
           </div>
         </div>
       </div>

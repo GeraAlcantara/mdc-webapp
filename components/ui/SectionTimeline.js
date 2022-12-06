@@ -43,9 +43,13 @@ function SectionTimeline({
   }, []);
 
   const renderlayout = layoutLeft ? (
-    <section className={`py-4 md:py-8 ${ColorSchemaDark ? "" : "bg-white text-gray-900"}`}>
+    <section className={`py-4 md:py-8  ${ColorSchemaDark ? "" : "bg-white text-gray-900"}`}>
       <div ref={articleRef} className='mdc-ui-container flex flex-col-reverse gap-4 md:gap-8 md:flex-row '>
-        <div className={`md:w-1/2 flex flex-col md:items-end md:justify-center py-4 ${isInViewport ? "animate-FadeInSlidein" : "animate-FadeOutSlideout"}   `}>
+        <div
+          className={`md:w-1/2 flex flex-col md:items-end md:justify-center py-4 lg:text-lg  ${
+            isInViewport ? "animate-FadeInSlidein" : "animate-FadeOutSlideout"
+          }   `}
+        >
           <h2 className={`font-bold text-4xl mb-8 capitalize text-${colorClass}`}>{title}</h2>
           <p className='max-w-prose md:text-right mb-8'>{excerpt}</p>
           <Link href={link.slug}>
@@ -66,7 +70,9 @@ function SectionTimeline({
     <section className={`py-4 md:py-8 ${ColorSchemaDark ? "" : "bg-white text-gray-900"}`}>
       <div
         ref={articleRef}
-        className={`mdc-ui-container flex flex-col gap-4 md:gap-8 md:flex-row ${isInViewport ? "animate-FadeInSlidein" : "animate-FadeOutSlideout"} `}
+        className={`mdc-ui-container flex flex-col gap-4 md:gap-8 md:flex-row lg:text-lg ${
+          isInViewport ? "animate-FadeInSlidein" : "animate-FadeOutSlideout"
+        } `}
       >
         <div className=' md:w-1/2 relative'>
           <Image src={MainImage.src} alt={MainImage.alt}></Image>

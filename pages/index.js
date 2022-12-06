@@ -17,7 +17,7 @@ export default function Home() {
       <HelperHead {...DataHeadHome} />
       <Hero />
       <Clients />
-      <div className=' md:text-center bg-white text-gray-900 py-4 lg:py-8 xl:py-12'>
+      <div className='lg:text-lg md:text-center bg-white text-gray-900 py-4 lg:py-8 xl:py-12'>
         <div className=' p-10'>
           <Capacite className='text-8xl m-auto mb-4' />
           <h2 className='text-3xl font-extrabold  pb-8 text-center'>Capacite a su personal</h2>
@@ -28,7 +28,6 @@ export default function Home() {
             panorama de amenazas en constante cambio: están capacitados para proteger a su organización de ellos.
           </p>
         </div>
-        <hr className='border border-[#4cafb8] animate-sectionhr m-auto ' />
       </div>
       {/* Section Timeline */}
       <section className='relative '>

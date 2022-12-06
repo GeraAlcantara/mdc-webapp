@@ -32,7 +32,7 @@ export const DataHeadContact = {
   previewImageAlt: "Mexico development center",
   pageTitle: "MDC | Contáctanos",
   pageDescription:
-    "Bienvenido a nuestra página de contacto. Aquí puedes encontrar toda la información necesaria para ponerte en contacto con nosotros. Nuestro equipo de atención al cliente está disponible para responder a tus preguntas y proporcionarte una solución rápida y eficiente. Si tienes alguna pregunta, comentario o inquietud, no dudes en contactarnos. Estamos encantados de ayudarte a encontrar la mejor solución para tus necesidade",
+    "Bienvenido a nuestra página de contacto. Aquí puedes encontrar toda la información necesaria para ponerte en contacto con nosotros. Nuestro equipo de atención al cliente está disponible para responder a tus preguntas y proporcionarte una solución rápida y eficiente. Si tienes alguna pregunta, comentario o inquietud, no dudes en contactarnos. Estamos encantados de ayudarte a encontrar la mejor solución para tus necesidades.",
   slug: "/contacto",
 };
 export const DataHeadGracias = {

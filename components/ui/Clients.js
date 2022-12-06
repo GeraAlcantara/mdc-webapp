@@ -3,7 +3,6 @@ import IberostarLogo from "../../public/clientes/iberostarLogo.png";
 import MedixLogo from "../../public/clientes/medixLogo.png";
 import CemexLogo from "../../public/clientes/cemexLogo.png";
 import IbmLogo from "../../public/clientes/ibmLogo.png";
-import LiverpoolLogo from "../../public/clientes/liverpoolLogo.png";
 import MeetmeLogo from "../../public/clientes/meetmeLogo.png";
 
 import { useEffect, useState } from "react";

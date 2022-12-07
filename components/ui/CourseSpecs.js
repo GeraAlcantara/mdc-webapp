@@ -21,7 +21,7 @@ function CourseSpecs({
   color,
 }) {
   return (
-    <div className=' mdc-ui-container'>
+    <div className=' mdc-ui-container select-none'>
       <div className='grid w-full grid-cols-1 gap-5 mt-10 mb-4 md:grid-cols-5 md:gap-16'>
         <div className='flex flex-col w-full h-full mx-auto md:col-span-3 md:row-start-auto max-w-screen-2xl'>
           <header>
@@ -42,7 +42,7 @@ function CourseSpecs({
             </div>
             {/* get the colorid and aplly style in line backgroundColor = colorid */}
             <div className='w-24 text-center py-1 rounded-full uppercase font-bold my-2 text-sm mx-auto md:m-0 md:mb-2' style={{ backgroundColor: color }}>
-              Library
+              Librería
             </div>
             <h1 className='mt-4 font-bold text-2xl leading-tight text-center sm:text-3xl md:text-4xl md:leading-none md:text-left md:mt-0'>{title}</h1>
           </header>
@@ -121,8 +121,8 @@ function CourseSpecs({
           <div className='hidden space-y-6 md:block '>
             <div className='flex justify-center mt-10 mb-4 '>
               <Link href='#'>
-                <button className='inline-flex items-center justify-center px-6 py-4 font-semibold text-brandWhite transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 '>
-                  <RiArrowRightSFill className='text-3xl mr-2 ' />
+                <button className='inline-flex items-center justify-center px-8 py-2 font-semibold text-brandWhite transition-all duration-200 bg-blue-600 rounded-full hover:bg-blue-700 '>
+                  <RiArrowRightSFill className='text-3xl mr-1 ' />
                   <span>Comienza</span>
                 </button>
               </Link>

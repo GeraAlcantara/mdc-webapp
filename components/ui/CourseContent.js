@@ -1,6 +1,4 @@
-import Link from "next/link";
-import { RiReactjsFill } from "react-icons/ri";
-import { DataSheet } from "../data/CoursesDataSheet";
+import { MdPlayLesson } from "react-icons/md";
 
 /**
  *
@@ -17,7 +15,7 @@ function CourseContent({
   ],
 }) {
   return (
-    <section className='mt-8 h-full flex flex-col bg-brandBlue-500  rounded-xl '>
+    <section className='mt-8 h-full flex flex-col bg-brandBlue-500  rounded-xl select-none '>
       <div className='flex flex-col mb-2 space-y-2 p-4'>
         <h2 className='text-2xl lg:text-3xl font-bold'>Course Content</h2>
         <div className='text-sm font-normal text-gray-400'>
@@ -30,21 +28,20 @@ function CourseContent({
       <ul className='p-4 md:max-h-[700px] lg:max-h-[590px] md:pr-4 lg:pr-6 overflow-y-scroll '>
         {lessons.map((lesson, idx) => (
           <li key={idx + lesson.title}>
-            <div className='flex py-2 font-semibold leading-tight '>
+            <div className='flex py-2 font-semibold leading-tight select-none'>
               <div className='flex items-center mr-2 space-x-2'>
                 <div className='text-gray-400 font-normal w-4 text-sm '>
                   <span>{idx + 1}</span>
                 </div>
                 <div className='flex items-center flex-shrink-0 w-8 '>
-                  <RiReactjsFill className='text-sky-400 text-2xl' />
+                  <MdPlayLesson className='text-secondary text-2xl' />
                 </div>
               </div>
-              <div className='flex flex-col'>
-                <Link href='#'>
-                  <a className='text-lg font-semibold hover:underline hover:text-blue-600 text-gray-100'>
-                    <span>{lesson.title}</span>
-                  </a>
-                </Link>
+              <div className='flex flex-col '>
+                <p className='text-lg font-semibold  text-gray-100'>
+                  <span>{lesson.title}</span>
+                </p>
+
                 <div className='text-xs text-gray-500'>
                   <span>{`${lesson.duration}m`}</span>
                 </div>

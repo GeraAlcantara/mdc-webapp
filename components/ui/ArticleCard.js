@@ -45,7 +45,7 @@ function ArticleCard({ slug, coverImageSrc, tags, articleType, readTime, title, 
                 {tags.map((tag, index) => (
                   <div
                     key={tag + title + index}
-                    className='rounded-full bg-lineGradient_1 text-gray-900 font-bold capitalize px-2 py-[0.2rem] flex justify-center items-center '
+                    className='rounded-full bg-lineGradient_1 text-gray-900 font-bold capitalize px-3 py-[0.3rem] flex justify-center items-center '
                   >
                     <span className='text-sm leading-relaxed'>{tag}</span>
                   </div>

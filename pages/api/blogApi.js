@@ -52,7 +52,7 @@ export const getPostBySlug = (slug) => {
       title: data.title ?? "No title provided",
       tags: (data.tags ?? ['"No tags provided"']).sort(),
       // to local date string format yyyy-mm-dd
-      date: (data.date ?? new Date()).toString(),
+      date: (data.date ?? new Date()).toISOString(),
       excerpt: data.excerpt ?? "No excerpt provided",
       descriptionSEO: data.descriptionSEO ?? "No descriptionSEO provided",
       imageSEO: data.imageSEO ?? "socialCards/homeSocialCard", // if not src the default image

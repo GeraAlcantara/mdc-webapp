@@ -60,26 +60,3 @@ export async function getStaticProps() {
     },
   };
 }
-
-/* <section className='mdc-ui-container'>
-          {Posts.posts.map((post) => (
-            <ArticleCard
-              key={post.id + post.tag}
-              slug={post.slug}
-              articleImg={post.articleImg}
-              articleType={post.articleType}
-              tag={post.tag}
-              readTime={post.readTime}
-              title={post.title}
-              excerpt={post.excerpt}
-              authorAvatar={post.author.avatar}
-              authorName={post.author.name}
-              date={post.date}
-            />
-          ))}
-        </section> */
-
-/* banner divider */
-/* <section className='mdc-ui-container'>
-  <Image src={BlogImage} layout='responsive' objectFit='cover' alt='Imagen de un blog'></Image>
-</section> */

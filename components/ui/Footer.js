@@ -27,7 +27,7 @@ function Footer() {
       </div>
       <div>
         <div className='mdc-ui-container flex justify-between mx-auto items-center md:flex-row flex-col border-t-[1px] border-t-[#192641] sm:py-10 py-3 '>
-          <p className='font-normal text-center'>{`Copyright @ ${year} Mexico Development Center. | All right reserved.`}</p>
+          <p className='font-normal text-center'>{`Copyright @ ${year} Mexico Development Center. | Todos los derechos reservados.`}</p>
           <ul className='flex flex-row md:my-0 my-6' role='list'>
             {socialMedia.map(({ id, Icon, link, name }, idx) => {
               return (

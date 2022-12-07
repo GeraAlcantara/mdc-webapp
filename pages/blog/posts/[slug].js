@@ -47,9 +47,8 @@ export default function PostPage({ post }) {
       />
 
       <div className='pt-[68px] m-auto'>
-        <div>
-          <Image src={`/blog/images/${post.meta.coverImageSrc}`} alt={post.meta.coverImageAlt} width={1920} height={576} />
-        </div>
+        <Image src={`/blog/images/${post.meta.coverImageSrc}`} alt={post.meta.coverImageAlt} width={1920} height={576} layout='responsive' objectFit='cover' />
+
         <div className='prose lg:prose-xl xl:prose-2xl py-5 xl:py-10 flex flex-col gap-4 m-4 md:m-auto'>
           <nav>
             <Link href={`/blog`}>

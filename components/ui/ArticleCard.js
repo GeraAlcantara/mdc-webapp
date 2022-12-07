@@ -32,9 +32,8 @@ function ArticleCard({ slug, coverImageSrc, tags, articleType, readTime, title, 
             <Image
               src={`/blog/images/${coverImageSrc}`}
               layout='fill'
-              width={1920}
-              height={576}
               objectFit='cover'
+              objectPosition='center center'
               alt='imagen de un articulo'
               className='group-hover:scale-105 transition-all duration-150 ease-out  '
             />

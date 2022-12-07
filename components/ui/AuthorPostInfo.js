@@ -11,10 +11,8 @@ export default function AuthorPostInfo({ authorAvatar, authorName, date }) {
         <Image src={`/blog/images/${authorAvatar}`} layout='fill' objectFit='cover' alt='imagen de un articulo' className='rounded-full' />
       </div>
       <div className='flex flex-col gap-1'>
-        <p className='text-sm capitalize'>{authorName}</p>
-        {/* date is a string as Wed Dec 14 2022 19:00:00 GMT-0500 (Eastern Standard Time) need to convert to localIso toLocaleDateString */}
-
-        <p className='text-sm'>{new Date(date).toLocaleDateString("es-MX", { weekday: "long", year: "numeric", month: "long", day: "numeric" })}</p>
+        <span className='text-sm capitalize '>{authorName}</span>
+        <span className='text-sm'>{new Date(date).toLocaleDateString("es-MX", { weekday: "long", year: "numeric", month: "long", day: "numeric" })}</span>
       </div>
     </div>
   );

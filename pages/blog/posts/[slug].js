@@ -16,7 +16,7 @@ import { ArticleJsonLd } from "next-seo";
 import { DataHeadDefault } from "../../../components/data/DataHeader";
 
 /**
- *@typedef {import('../../api/blogApi').PostMeta} PostMeta
+ * @typedef {import('../../api/blogApi').PostMeta} PostMeta
  * @param {{post: {source:import('next-mdx-remote').MDXRemoteSerializeResult<Record<string, unknown>>, meta:PostMeta}}} post
  * @returns {JSX.Element}
  */
@@ -46,11 +46,11 @@ export default function PostPage({ post }) {
         isAccessibleForFree={true}
       />
 
-      <div className='pt-[68px] '>
+      <div className='pt-[68px] m-auto'>
         <div>
           <Image src={`/blog/images/${post.meta.coverImageSrc}`} alt={post.meta.coverImageAlt} width={1920} height={576} />
         </div>
-        <div className='mdc-ui-container py-5 md:py-10 flex flex-col gap-4 '>
+        <div className='prose lg:prose-xl xl:prose-2xl py-5 xl:py-10 flex flex-col gap-4 m-4 md:m-auto'>
           <nav>
             <Link href={`/blog`}>
               <div className='inline-flex gap-x-2 items-center hover:cursor-pointer group '>
@@ -60,9 +60,9 @@ export default function PostPage({ post }) {
             </Link>
           </nav>
           <AuthorPostInfo authorAvatar={post.meta.authorAvatar} authorName={post.meta.authorName} date={post.meta.date} />
-          <h1 className='text-4xl md:text-6xl text-accent font-bold '>{post.meta.title}</h1>
+          <h1 className='text-4xl xl:text-6xl text-accent font-bold '>{post.meta.title}</h1>
         </div>
-        <div className='mdc-ui-container prose prose-headings:text-brandBlue-50 prose-lime prose-code:text-brandBlue-50 md:py-10 md:prose-headings:text-5xl prose-lg'>
+        <div className='m-4 md:m-auto prose lg:prose-xl xl:prose-2xl prose-headings:text-brandBlue-50 prose-lime prose-code:text-brandBlue-50 md:py-10 md:prose-headings:text-5xl '>
           <MDXRemote {...post.source} components={{ YouTube, Image }} />
         </div>
       </div>

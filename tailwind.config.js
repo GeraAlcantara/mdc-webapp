@@ -15,6 +15,18 @@ module.exports = {
                 color: "#1070e5",
               },
             },
+            strong: {
+              color: "#00bec6",
+            },
+            ol: {
+              li: {
+                "&::marker": {
+                  color: "#00bec6",
+                  fontWeight: "900",
+                  fontSize: "1.5rem",
+                },
+              },
+            },
           },
         },
       },

@@ -27,11 +27,13 @@ function ArticleCard({ slug, coverImageSrc, tags, articleType, readTime, title, 
     <div className='pb-4'>
       <hr className='hidden md:block my-8 border-brandBlue-50/50' />
       <Link href={`blog/posts/${slug}`}>
-        <article className='flex flex-col md:flex-row w-full lg:w-full group hover:cursor-pointer gap-x-4'>
-          <div className='relative h-[200px] md:h-[300px] lg:h-[300px] w-full md:w-10/12 rounded-xl overflow-hidden  '>
+        <article className='flex flex-col xl:flex-row w-full lg:w-full group hover:cursor-pointer gap-x-4'>
+          <div className='relative h-[200px]  xl:h-auto w-full xl:w-10/12 rounded-xl overflow-hidden  '>
             <Image
               src={`/blog/images/${coverImageSrc}`}
               layout='fill'
+              width={1920}
+              height={576}
               objectFit='cover'
               alt='imagen de un articulo'
               className='group-hover:scale-105 transition-all duration-150 ease-out  '
@@ -59,7 +61,7 @@ function ArticleCard({ slug, coverImageSrc, tags, articleType, readTime, title, 
                 </div>
               </div>
             </div>
-            <h2 className='text-4xl font-bold group-hover:text-accent '>{title}</h2>
+            <h2 className='text-3xl xl:text-4xl font-bold group-hover:text-accent '>{title}</h2>
             <p className=' text-lg max-w-prose'>{excerpt}</p>
             {/* avatar */}
             <AuthorPostInfo authorAvatar={authorAvatar} authorName={authorName} date={date} />

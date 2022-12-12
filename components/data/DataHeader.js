@@ -51,3 +51,12 @@ export const DataHeadBlog = {
     "Bienvenidos al Blog de Mexico development center (MDC), el lugar perfecto para mantenerse al día con todas las novedades y tendencias en el mundo de la capacitación de colaboradores y los sistemas de gestión de aprendizaje. Aquí encontrarás artículos sobre los últimos avances en LMS, consejos y recomendaciones para mejorar la capacitación de tus colaboradores, información sobre los como crear los mejores cursos en línea y mucho más. Estamos comprometidos a proporcionar contenido de calidad para ayudarte a mejorar la formación de tus colaboradores y aprovechar al máximo los sistemas de gestión de aprendizaje. ¡Sigue con nosotros para mantenerte al día con todas las novedades en el mundo de la capacitación de colaboradores y los LMS!",
   slug: "/blog",
 };
+
+export const DataHeadQuienesSomos = {
+  previewImage: "/socialCards/iniciosocialcard.jpg",
+  previewImageAlt: "Mexico development center",
+  pageTitle: "Sobre MDC | Mexico Development Center",
+  pageDescription:
+    "Mexico Development Center es una compañía conformada por un equipo multidisciplinario en la elaboración de productos digitales. Durante la última década, nos hemos dedicado a la producción de cursos en línea (e-Learning) enfocados al entrenamiento y/o capacitación del personal en ambientes corporativos y empresariales que van desde la escala local, a la escala global.",
+  slug: "/quienes-somos",
+};

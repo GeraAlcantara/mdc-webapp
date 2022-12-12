@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { DataHeadHome } from "../components/data/DataHeader";
+import { DataHeadQuienesSomos } from "../components/data/DataHeader";
 import HelperHead from "../components/helpers/HelperHead";
 import Clients from "../components/ui/Clients";
 import Hero from "../components/ui/Hero";
@@ -8,7 +8,7 @@ import Hero from "../components/ui/Hero";
 function About() {
   return (
     <>
-      <HelperHead {...DataHeadHome} />
+      <HelperHead {...DataHeadQuienesSomos} />
       <Hero>
         <h1 className=' portrait:text-center md:portrait:text-left md:text-left text-6xl md:text-7xl xl:text-9xl leading-[60px] text-accent font-extrabold md:pb-8'>
           <small className='text-brandWhite text-2xl md:text-4xl xl:text-6xl leading-normal flex-1'>Nuestras soluciones de</small>

@@ -103,15 +103,7 @@ export const FooterLinks = [
     links: [
       {
         name: "Sobre MDC",
-        link: "about",
-      },
-      {
-        name: "¡Estamos Contratando!",
-        link: "trabaja-con-nosotros",
-      },
-      {
-        name: "Precios",
-        link: "precios",
+        link: "/quienes-somos",
       },
     ],
   },

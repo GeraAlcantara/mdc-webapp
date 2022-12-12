@@ -11,7 +11,7 @@ import Link from "next/link";
 function CardsCarousel({ coursename, numtopics, thumbnail, thumbnailAlt, numlessons, duration, slug }) {
   return (
     <Link href={slug}>
-      <div className='group flex flex-col w-[250px] md:w-[300px] lg:w-[250px] m-auto xl:w-[300px] h-[450px] rounded-2xl bg-brandBlue-600 hover:bg-brandBlue-500 overflow-hidden justify-between hover:cursor-pointer '>
+      <div className='group flex flex-col w-full md:w-[300px] lg:w-[250px] m-auto xl:w-[300px] h-[450px] rounded-2xl bg-brandBlue-600 hover:bg-brandBlue-500 overflow-hidden justify-between hover:cursor-pointer '>
         <div className='min-h-[230px] w-full relative  '>
           <Image
             className='group-hover:scale-110 transition-all duration-300 ease-out'

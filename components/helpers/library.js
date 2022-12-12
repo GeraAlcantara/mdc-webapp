@@ -91,3 +91,9 @@ export const coursesPV = getSubcategoryByName("Micro Módulos", data).courses;
 export const getCourseBySlug = (slug, courses) => {
   return courses.find((course) => course.slug === slug);
 };
+
+export const getAllCourses = (DataCourseLibrarie) => {
+  return DataCourseLibrarie.map((category) => category.subcategories.map((subcategory) => subcategory.courses))
+    .flat()
+    .flat();
+};

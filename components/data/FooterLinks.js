@@ -136,32 +136,32 @@ export const FooterLinks = [
     title: "Rutas de aprendizaje",
     links: [
       {
-        name: "Habilidades Blandas",
-        link: "habilidades-blandas",
+        name: "Habilidades Directivas",
+        link: "/rutas-de-aprendizaje/#habilidadesdirectivas",
       },
       {
-        name: "Habilidades Directivas",
-        link: "habilidades-directivas",
+        name: "Habilidades Blandas",
+        link: "/rutas-de-aprendizaje/#habilidadesblandas",
       },
       {
         name: "Habilidades Tecnológicas",
-        link: "habilidades-tecnologicas",
+        link: "/rutas-de-aprendizaje/#habilidadestecnologicas",
       },
       {
         name: "Jurídico",
-        link: "juridico",
+        link: "/rutas-de-aprendizaje/#juridico",
       },
       {
         name: "Prácticas Esenciales",
-        link: "practicas-esenciales",
+        link: "/rutas-de-aprendizaje/#esenciales",
       },
       {
         name: "Micro Módulos",
-        link: "micro-modulos",
+        link: "/rutas-de-aprendizaje/#micromodulos",
       },
       {
         name: "Proceso de Ventas",
-        link: "capacitacion-en-el-proceso-de-ventas",
+        link: "/rutas-de-aprendizaje/#capacitacionventas",
       },
     ],
   },

@@ -4,6 +4,7 @@ import MedixLogo from "../../public/clientes/medixLogo.png";
 import CemexLogo from "../../public/clientes/cemexLogo.png";
 import IbmLogo from "../../public/clientes/ibmLogo.png";
 import MeetmeLogo from "../../public/clientes/meetmeLogo.png";
+import IelLogo from "../../public/clientes/logo_iel-white.png";
 
 import { useEffect, useState } from "react";
 
@@ -43,7 +44,7 @@ function Clients() {
             <Image src={MedixLogo} alt='Medix Logo'></Image>
           </div>
           <div className='w-32 mr-12'>
-            <Image src={CemexLogo} alt='Cemex Logo'></Image>
+            <Image src={IelLogo} alt='Inspired e-Learning Logo'></Image>
           </div>
           <div className='w-24 mr-12'>
             <Image src={IbmLogo} alt='IBM Logo'></Image>
@@ -63,7 +64,7 @@ function Clients() {
             <Image src={MedixLogo} alt='Medix Logo'></Image>
           </div>
           <div className='w-32 mr-12'>
-            <Image src={CemexLogo} alt='Cemex Logo'></Image>
+            <Image src={IelLogo} alt='Inspired e-Learning Logo'></Image>
           </div>
           <div className='w-24 mr-12'>
             <Image src={IbmLogo} alt='IBM Logo'></Image>
@@ -80,7 +81,7 @@ function Clients() {
             <Image src={MedixLogo} alt='Medix Logo'></Image>
           </div>
           <div className='w-32 mr-12'>
-            <Image src={CemexLogo} alt='Cemex Logo'></Image>
+            <Image src={IelLogo} alt='Inspired e-Learning Logo'></Image>
           </div>
           <div className='w-24 mr-12'>
             <Image src={IbmLogo} alt='IBM Logo'></Image>
@@ -96,7 +97,7 @@ function Clients() {
             <Image src={MedixLogo} alt='Medix Logo'></Image>
           </div>
           <div className='w-32 mr-12'>
-            <Image src={CemexLogo} alt='Cemex Logo'></Image>
+            <Image src={IelLogo} alt='Inspired e-Learning Logo'></Image>
           </div>
           <div className='w-24 mr-12'>
             <Image src={IbmLogo} alt='IBM Logo'></Image>

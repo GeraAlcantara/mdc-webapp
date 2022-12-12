@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { socialMedia, FooterLinks } from "../data/FooterLinks";
+import LogoFooter from "../../public/logoMDCfooter.png";
 
 function Footer() {
   const getdate = new Date();
@@ -7,6 +9,10 @@ function Footer() {
   return (
     <section className='pb-6 lg:pb-0'>
       <div className='mdc-ui-container flex flex-row flex-wrap justify-between mx-auto border-t-[1px] border-t-[#192641] sm:py-10 py-3'>
+        <div className='my-4 lg:my-0 flex justify-center lg:block lg:mt-4  w-full lg:w-1/4 justify-self-center'>
+          <Image src={LogoFooter} alt='logo' />
+        </div>
+
         {FooterLinks.map((footerlink, idx) => (
           <div key={footerlink.title + idx} className='flex flex-col my-4 min-w-[240px] md:min-w-[140px] '>
             <h1 className='font-bold text-lg mb-3'> {footerlink.title} </h1>

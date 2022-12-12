@@ -120,7 +120,7 @@ export const FooterLinks = [
       },
       {
         name: "Librerías",
-        link: "librerias",
+        link: "libreria",
       },
       {
         name: "Contáctanos",
@@ -133,24 +133,7 @@ export const FooterLinks = [
     ],
   },
   {
-    title: "Categorías",
-    links: [
-      {
-        name: "Recursos Humanos",
-        link: "recursos-humanos",
-      },
-      {
-        name: "Seguridad de la información",
-        link: "seguridad-de-la-informacion",
-      },
-      {
-        name: "Ventas",
-        link: "ventas",
-      },
-    ],
-  },
-  {
-    title: "Subcategorías",
+    title: "Rutas de aprendizaje",
     links: [
       {
         name: "Habilidades Blandas",

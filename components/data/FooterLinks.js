@@ -193,5 +193,3 @@ export const socialMedia = [
     name: "linkedin",
   },
 ];
-
-/* export default FooterLinks; */

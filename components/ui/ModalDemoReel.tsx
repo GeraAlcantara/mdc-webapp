@@ -3,18 +3,17 @@ import { Fragment, useState } from "react";
 import { RiCloseCircleLine } from "react-icons/ri";
 import clsx from "clsx";
 
+interface BtnThemeProps {
+  btnTheme: "btnRingGreen" | "btnDark" | "btnBlue";
+}
 /**
- * @author Gerardo Alcántara <https://github.com/GeraAlcantara>
+ * ModalDemoReel
  * @example
  * <ModalDemoReel btnTheme='btnRingGreen' />
  * <ModalDemoReel btnTheme='btnDark' />
  * <ModalDemoReel btnTheme='btnBlue' />
- * @typedef {'btnRingGreen' |'btnDark' | 'btnBlue'} Theme
- * @param {object} props
- * @param {Theme} props.btnTheme
- * @returns {JSX.Element}
  */
-export default function ModalDemoReel({ btnTheme, ...props }) {
+export default function ModalDemoReel({ btnTheme, ...props }: BtnThemeProps) {
   let [isOpen, setIsOpen] = useState(false);
   const closeModal = () => setIsOpen(false);
   const openModal = () => setIsOpen(true);

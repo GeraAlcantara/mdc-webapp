@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import imgHero1 from "../../public/hero1.png";
 import imgHero2 from "../../public/hero2.png";
 import imgHero3 from "../../public/hero3.png";
 import imgHero4 from "../../public/hero4.png";
 
-function Hero({ children }) {
+function Hero({ children }: { children: React.ReactNode }): JSX.Element {
   const initImagesData = [
     {
       id: "hero1",

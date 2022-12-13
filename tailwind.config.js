@@ -47,6 +47,9 @@ module.exports = {
           600: "#071b2f",
           700: "#263749",
         },
+        tropicalBlue: "#00bec6",
+        mintGreen: "#4cff91",
+        brightGreen: "#02e239",
       },
       fontFamily: {
         Lato: ["Lato", '"Helvetica Neue"', "Arial", "sans-serif"],

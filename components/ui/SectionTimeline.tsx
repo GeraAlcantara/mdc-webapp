@@ -1,32 +1,46 @@
+import clsx from "clsx";
 import Image from "next/image";
 import TimelineCheckmark from "./TimelineCheckmark";
 import ImgLaptop from "../../public/laptop.jpg";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
+import { Colors, SectionData } from "../../lib/data/SectionTimeLineData";
 
 const ColorSchema = Object.freeze({
   dark: Symbol("dark"),
   light: Symbol("light"),
 });
+// define this color as ENUMS in typescript TropicalBlue | MintGreen | Bright Green | secondary
+
+interface SectionTimeLineProps {
+  ColorSchemaDark: boolean;
+  layoutLeft: boolean;
+  colorClass?: Colors; //TropicalBlue | MintGreen | Bright Green | secondary
+  MainImage: { src: string; alt: string };
+  link: { slug: string; text: string };
+  excerpt: string;
+  title: string;
+  sideImage: { src: string; alt: string };
+}
 
 function SectionTimeline({
   ColorSchemaDark = false,
   layoutLeft = false,
-  colorClass = "secondary",
+  colorClass = Colors.secondary,
   MainImage = { src: ImgLaptop, alt: "text alt" },
   link = { slug: "#", text: "Dommy route" },
   excerpt = "Lorem ipsum dolor sit amet",
   title = "title",
   sideImage = { src: "", alt: "" },
-}) {
+}: SectionData): JSX.Element {
   const [isInViewport, setisInViewport] = useState(false);
-  const articleRef = useRef(null);
+  const articleRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const articleCurr = articleRef.current;
-      const rect = articleCurr.getBoundingClientRect();
-      const rectY = articleCurr.getBoundingClientRect().y;
+      const rect = articleCurr!.getBoundingClientRect();
+      const rectY = articleCurr!.getBoundingClientRect().y;
       const condition =
         rect.top >= 0 &&
         rect.left >= 0 &&
@@ -49,11 +63,28 @@ function SectionTimeline({
             isInViewport ? "animate-FadeInSlidein" : "animate-FadeOutSlideout"
           }   `}
         >
-          <h2 className={`font-bold text-4xl mb-8 capitalize text-${colorClass}`}>{title}</h2>
+          <h2
+            className={clsx("font-bold text-4xl mb-8 capitalize", {
+              "text-secondary": colorClass === Colors.secondary,
+              "text-tropicalBlue": colorClass === Colors.TropicalBlue,
+              "text-mintGreen": colorClass === Colors.MintGreen,
+              "text-brightGreen": colorClass === Colors.BrightGreen,
+            })}
+          >
+            {title}
+          </h2>
           <p className='max-w-prose md:text-right mb-8'>{excerpt}</p>
           <Link href={link.slug}>
             <a
-              className={`place-self-start md:place-self-auto py-2 px-10 bg-${colorClass} rounded-full text-bg_primary uppercase hover:bg-${colorClass} hover:scale-[.98] hover:contrast-150 transition-all`}
+              className={clsx(
+                "place-self-start md:place-self-auto py-2 px-10 rounded-full text-bg_primary uppercase hover:scale-[.98] hover:contrast-150 transition-all",
+                {
+                  "hover:bg-secondary bg-secondary": colorClass === Colors.secondary,
+                  "hover:bg-tropicalBlue bg-tropicalBlue": colorClass === Colors.TropicalBlue,
+                  "hover:bg-mintGreen bg-mintGreen": colorClass === Colors.MintGreen,
+                  "hover:bg-brightGreen bg-brightGreen": colorClass === Colors.BrightGreen,
+                }
+              )}
             >
               <span className={` ${ColorSchemaDark ? "text-gray-900" : "text-brandWhite"}  `}>{link.text}</span>
             </a>
@@ -81,7 +112,14 @@ function SectionTimeline({
             </div>
           ) : null}
         </div>
-        <TimelineCheckmark bgColor={"bg-" + colorClass} />
+        <TimelineCheckmark
+          bgColor={clsx({
+            "bg-secondary": colorClass === Colors.secondary,
+            "bg-tropicalBlue": colorClass === Colors.TropicalBlue,
+            "bg-mintGreen": colorClass === Colors.MintGreen,
+            "bg-brightGreen": colorClass === Colors.BrightGreen,
+          })}
+        />
         <div className='md:w-1/2 flex flex-col md:items-start md:justify-center'>
           <h2 className={`font-bold text-4xl mb-8 capitalize text-${colorClass} `}>{title}</h2>
           <p className='max-w-prose md:text-left mb-8'>{excerpt}</p>

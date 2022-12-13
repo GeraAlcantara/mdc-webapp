@@ -1,4 +1,3 @@
-import { MdLocationOn } from "react-icons/md";
 import { RiPhoneFill } from "react-icons/ri";
 import { MdMail } from "react-icons/md";
 

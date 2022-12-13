@@ -1,4 +1,4 @@
-function Loading() {
+function Loading(): JSX.Element {
   /* loader spinner tailwinds */
   return (
     <div className='flex justify-center items-center h-screen'>

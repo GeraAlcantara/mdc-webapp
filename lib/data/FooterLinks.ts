@@ -2,6 +2,7 @@ import Facebook from "../../components/svgs/facebook.svg";
 import Twitter from "../../components/svgs/twitter.svg";
 import Instagram from "../../components/svgs/instagram.svg";
 import Linkedin from "../../components/svgs/linkedin.svg";
+import { Interface } from "readline";
 
 export const coursesLinks = [
   {
@@ -96,8 +97,15 @@ export const coursesLinks = [
   { name: "Casos de éxito", slug: "Casos-de-exito" },
   { name: "blog", slug: "blog" },
 ];
+export interface FooterLinksDef {
+  title: string;
+  links: {
+    name: string;
+    link: string;
+  }[];
+}
 
-export const FooterLinks = [
+export const FooterLinks: FooterLinksDef[] = [
   {
     title: "Compañía",
     links: [
@@ -167,7 +175,14 @@ export const FooterLinks = [
   },
 ];
 
-export const socialMedia = [
+export interface SocialMediaDef {
+  id: string;
+  Icon: React.FC<React.SVGProps<SVGSVGElement>>;
+  link: string;
+  name: string;
+}
+
+export const socialMedia: SocialMediaDef[] = [
   {
     id: "social-media-1",
     Icon: Instagram,

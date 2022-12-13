@@ -30,7 +30,7 @@ function Header() {
         }
         aria-selected={toogleON}
       >
-        <MenuOverlay istoggle={handleMenu} handleMenu={handleMenu}></MenuOverlay>
+        <MenuOverlay istoggle={handleMenu}></MenuOverlay>
       </div>
       <div className='mdc-ui-container'>
         <header className={`py-4 ${toogleON ? "hidden" : ""} `}>

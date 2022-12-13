@@ -2,7 +2,7 @@ import ImgMessagePhone from "../public/sendMessage.jpg";
 import Image from "next/image";
 import IconSend from "../public/icons/iconSent.svg";
 import HelperHead from "../lib/helpers/HelperHead";
-import { DataHeadGracias } from "../components/data/DataHeader";
+import { DataHeadGracias } from "../lib/data/DataHeader";
 
 function Gracias() {
   return (

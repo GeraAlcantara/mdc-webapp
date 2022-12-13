@@ -1,5 +1,5 @@
 import HelperHead from "../lib/helpers/HelperHead";
-import { DataHeadContact } from "../components/data/DataHeader";
+import { DataHeadContact } from "../lib/data/DataHeader";
 import { withIronSessionSsr } from "iron-session/next";
 import Address from "../components/ui/Address";
 import CaptchaForm from "../components/ui/CaptchaForm";

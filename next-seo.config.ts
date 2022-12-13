@@ -1,8 +1,7 @@
-import { DataHeadDefault } from "./components/data/DataHeader";
-/**
- * @type {import('next-seo').DefaultSeoProps}
- */
-const config = {
+import { DefaultSeoProps } from "next-seo";
+import { DataHeadDefault } from "./lib/data/DataHeader";
+
+const config: DefaultSeoProps = {
   openGraph: {
     type: "website",
     locale: "es_MX",

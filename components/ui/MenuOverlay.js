@@ -1,5 +1,5 @@
 import LogoNav from "./LogoNav";
-import MENU_ITEMS from "../data/MenuItems";
+import MENU_ITEMS from "../../lib/data/MenuItems";
 import Link from "next/link";
 
 function MenuOverlay(props) {

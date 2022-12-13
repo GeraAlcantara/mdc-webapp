@@ -1,5 +1,5 @@
 import NavLink from "./NavLink";
-import MENU_ITEMS from "../data/MenuItems";
+import MENU_ITEMS from "../../lib/data/MenuItems";
 
 function Nav() {
   return (

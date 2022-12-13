@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { socialMedia, FooterLinks } from "../data/FooterLinks";
+import { socialMedia, FooterLinks } from "../../lib/data/FooterLinks";
 import LogoFooter from "../../public/logoMDCfooter.png";
 
 function Footer() {

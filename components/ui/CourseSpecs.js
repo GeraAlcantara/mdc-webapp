@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { DataSheet } from "../data/CoursesDataSheet";
 import LogoSolid from "../svgs/logoSolid.svg";
 import TimeIcon from "../svgs/time.svg";
 import CCIcon from "../svgs/closecaption.svg";
-import { RiArrowRightSFill, RiReactjsFill } from "react-icons/ri";
+import { RiArrowRightSFill } from "react-icons/ri";
 import CourseContent from "./CourseContent";
 
 function CourseSpecs({

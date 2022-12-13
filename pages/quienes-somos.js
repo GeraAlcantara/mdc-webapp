@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { DataHeadQuienesSomos } from "../components/data/DataHeader";
-import HelperHead from "../components/helpers/HelperHead";
+import HelperHead from "../lib/helpers/HelperHead";
 import Clients from "../components/ui/Clients";
 import Hero from "../components/ui/Hero";
 

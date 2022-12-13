@@ -1,4 +1,3 @@
-import React from "react";
 import { RiUserFill } from "react-icons/ri";
 import clsx from "clsx";
 

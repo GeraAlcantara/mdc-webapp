@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState, useMemo } from "react";
 import imgHero1 from "../../public/hero1.png";
 import imgHero2 from "../../public/hero2.png";

@@ -1,4 +1,4 @@
-import { data, getSubcategoryByName, getSubcategoriesNames, getCourseBySlug, getAllCourses } from "../../components/helpers/library";
+import { data, getSubcategoryByName, getSubcategoriesNames, getCourseBySlug, getAllCourses } from "../../lib/helpers/library";
 import CardsCourse from "../../components/ui/CardCourse";
 
 function RutasAprendizaje({ data }) {

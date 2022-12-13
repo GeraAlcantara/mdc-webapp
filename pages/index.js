@@ -1,8 +1,8 @@
-import HelperHead from "../components/helpers/HelperHead";
-import { DataHeadHome } from "../components/data/DataHeader";
+import HelperHead from "../lib/helpers/HelperHead";
+import { DataHeadHome } from "../lib/data/DataHeader";
 import Image from "next/image";
 import Hero from "../components/ui/Hero";
-import { SectionsData } from "../components/data/SectionTimeLineData";
+import { SectionsData } from "../lib/data/SectionTimeLineData";
 import Capacite from "../public/icons/capacitePersonal.svg";
 import Clients from "../components/ui/Clients";
 import Timeline from "../components/ui/Timeline";

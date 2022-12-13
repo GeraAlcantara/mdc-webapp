@@ -1,5 +1,5 @@
 import React from "react";
-import HelperHead from "../../../components/helpers/HelperHead";
+import HelperHead from "../../../lib/helpers/HelperHead";
 import Image from "next/image";
 import YouTube from "../../../components/ui/YouTube";
 import { getSlugs, getPostBySlug } from "../../api/blogApi";
@@ -13,7 +13,7 @@ import AuthorPostInfo from "../../../components/ui/AuthorPostInfo";
 import Link from "next/link";
 import { RiArrowLeftLine } from "react-icons/ri";
 import { ArticleJsonLd } from "next-seo";
-import { DataHeadDefault } from "../../../components/data/DataHeader";
+import { DataHeadDefault } from "../../../lib/data/DataHeader";
 
 /**
  * @typedef {import('../../api/blogApi').PostMeta} PostMeta

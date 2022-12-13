@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Tab } from "@headlessui/react";
 import CardsCourse from "./CardCourse";
-import { data, getSubcategoryByName, getSubcategoriesNames } from "../helpers/library";
+import { data, getSubcategoryByName, getSubcategoriesNames } from "../../lib/helpers/library";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles

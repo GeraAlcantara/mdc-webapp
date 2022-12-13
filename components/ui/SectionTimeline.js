@@ -1,7 +1,6 @@
 import Image from "next/image";
 import TimelineCheckmark from "./TimelineCheckmark";
 import ImgLaptop from "../../public/laptop.jpg";
-import ImgTrofeo from "../../public/trofeo.png";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 

@@ -1,6 +1,5 @@
-import { DataHeadBlog } from "../../components/data/DataHeader";
-import HelperHead from "../../components/helpers/HelperHead";
-/* import { Posts } from "../../components/data/DataPosts"; */
+import { DataHeadBlog } from "../../lib/data/DataHeader";
+import HelperHead from "../../lib/helpers/HelperHead";
 import ArticleCard from "../../components/ui/ArticleCard";
 import { getAllPosts } from "../api/blogApi";
 

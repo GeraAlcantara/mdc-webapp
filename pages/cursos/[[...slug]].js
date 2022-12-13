@@ -1,5 +1,5 @@
-import HelperHead from "../../components/helpers/HelperHead";
-import { data, getSubcategoryByName, getSubcategoriesNames, getCourseBySlug } from "../../components/helpers/library";
+import HelperHead from "../../lib/helpers/HelperHead";
+import { data, getSubcategoryByName, getSubcategoriesNames, getCourseBySlug } from "../../lib/helpers/library";
 import CourseSpecs from "../../components/ui/CourseSpecs";
 
 const subcategoriesnames = getSubcategoriesNames(data);

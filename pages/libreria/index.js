@@ -1,5 +1,5 @@
-import HelperHead from "../../components/helpers/HelperHead";
-import { DataHeadProd } from "../../components/data/DataHeader";
+import HelperHead from "../../lib/helpers/HelperHead";
+import { DataHeadProd } from "../../lib/data/DataHeader";
 import Image from "next/image";
 import Link from "next/link";
 import CheckMiddleImg from "../../public/heroProductosCheckbackMiddle.png";

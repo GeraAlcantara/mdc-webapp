@@ -15,16 +15,22 @@ function PricesSection() {
   };
 
   // setstate for tabs title
-  const [tabsTitle, setTabsTitle] = useState([]);
+  const [tabsTitle, setTabsTitle] = useState<TabData[]>([]);
   // define one state to know wich card is selected and update the state when a card is clicked
-  const [selectedCard, setSelectedCard] = useState(2);
+  const [selectedCard, setSelectedCard] = useState<number>(2);
   // define a function to handle the selected state
-  const handleisSelected = (index) => {
-    console.log(index);
+  const handleisSelected = (index: number) => {
     setSelectedCard(index);
   };
 
-  const tabsdata = [
+  interface TabData {
+    id: number;
+    title: string;
+    price: number;
+    description: string;
+  }
+
+  const tabsdata: TabData[] = [
     {
       id: 1,
       title: "Cursos",

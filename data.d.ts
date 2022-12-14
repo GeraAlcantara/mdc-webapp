@@ -69,7 +69,7 @@ interface HeadData {
   pageDescription: string;
   slug: string;
 }
-
+// Path: components/Section.tsx
 // convert enum Colors to interface object freezed
 type Colors = "TropicalBlue" | "MintGreen" | "BrightGreen" | "secondary";
 

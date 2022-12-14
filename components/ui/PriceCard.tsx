@@ -1,17 +1,14 @@
 import { RiUserFill } from "react-icons/ri";
 import clsx from "clsx";
 
-/**
- * title:string, price:number, description:string, make param slected optional boolean
- * @param {object} props
- * @param {string} props.title - title of the card
- * @param {number} props.price - price of the card
- * @param {string} props.description - description of the card
- * @param {boolean} [props.selected] - if the card is selected
- * @param {any} props.handleisSelected - function to handle the selected state
- * @returns {JSX.Element}
- */
-function PriceCard({ title, price, description, selected = false, handleisSelected, ...props }) {
+interface PriceCardProps {
+  title: string;
+  price: number;
+  description: string;
+  selected?: boolean;
+  handleisSelected: () => void;
+}
+function PriceCard({ title, price, description, selected = false, handleisSelected, ...props }: PriceCardProps) {
   return (
     <div
       onClick={handleisSelected}

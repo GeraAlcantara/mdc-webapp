@@ -1,14 +1,8 @@
-import Image from "next/image";
-
+import Image, { StaticImageData } from "next/image";
 import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 import Link from "next/link";
 
-/**
- *
- * @param {{imgBanner:string, txtalt:string}} param0
- * @returns
- */
-function BannerCTContact({ imgBanner, txtalt }) {
+function BannerCTContact({ imgBanner, txtalt }: { imgBanner: StaticImageData; txtalt: string }) {
   return (
     <ParallaxBanner className='relative w-full xl:h-[800px] aspect-square lg:aspect-video'>
       <ParallaxBannerLayer speed={-25}>

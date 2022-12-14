@@ -3,7 +3,6 @@ import ImgTrofeo from "../../public/trofeo.png";
 import ImgTimeline2 from "../../public/timeline2.jpg";
 import ImgTimeline3 from "../../public/timeline3.jpg";
 import ImgTimeline4 from "../../public/timeline4.jpg";
-import { StaticImageData } from "next/image";
 
 export const SectionsData: SectionData[] = [
   {

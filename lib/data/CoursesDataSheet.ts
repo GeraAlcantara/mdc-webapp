@@ -3,7 +3,19 @@ import Iconvideo from "../svgs/video.svg";
 import IcontxtLocucion from "../svgs/txtLocucion.svg";
 import Iconautoeval from "../svgs/autoeval.svg";
 
-export const DataSheet = {
+export interface CourseFeatures {
+  library: { name: string; skuPrefix: string };
+  subcategory: { name: string; skuPrefix: string };
+  title: string;
+  slug: string;
+  identifier: { prefix: string; courseNumber: string };
+  duration: number;
+  description: string[];
+  topics: string[];
+  features: { id: number; name: string; qt: number; ICON: React.FunctionComponent<React.SVGProps<SVGSVGElement>> }[];
+  lessons: { title: string; duration: string }[];
+}
+export const DataSheet: CourseFeatures = {
   library: { name: "Recursos Humanos", skuPrefix: "R" },
   subcategory: { name: "Habilidades directivas", skuPrefix: "HD" },
   title: "Liderazgo Efectivo",

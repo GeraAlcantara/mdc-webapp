@@ -2,7 +2,6 @@ import HelperHead from "../lib/helpers/HelperHead";
 import { DataHeadContact } from "../lib/data/DataHeader";
 import { withIronSessionSsr } from "iron-session/next";
 import Address from "../components/ui/Address";
-import CaptchaForm from "../components/ui/CaptchaForm";
 import FormContact from "../components/ui/FormContact";
 import IconContacto from "../public/icons/contacto.svg";
 import { newCaptchaImages } from "./api/captcha-image";
@@ -40,9 +39,6 @@ export default function contactanos() {
             </div>
           </div>
         </section>
-        {/* <div className='mt-[68px] h-[calc(100vh-68px)]  '>
-          <CaptchaForm defaultCaptchaKey={defaultCaptchaKey} />
-        </div> */}
       </div>
     </>
   );

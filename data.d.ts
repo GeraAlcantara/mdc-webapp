@@ -128,3 +128,19 @@ interface Post {
   content: string;
   meta: PostMeta;
 }
+
+interface Values {
+  [key: string]: string;
+}
+
+interface InputProps {
+  id: number;
+  name: string;
+  label: string;
+  placeholder: string;
+  type: string;
+  errorMessage: string;
+  pattern?: string;
+  required: boolean;
+  errors?: string;
+}

@@ -1,9 +1,26 @@
 import { useState } from "react";
+// FormInputProps extend InputProps
 
-function FormInput(props) {
-  const [focus, setFocus] = useState(false);
+interface InputProps {
+  placeholder: string;
+  name: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => void;
+  label: string;
+  id: number;
+  value: string;
+  type: string;
+  errorMessage: string;
+  required?: boolean;
+  pattern?: string;
+  focused?: string;
+  errors?: string;
+}
+
+function FormInput(props: InputProps) {
+  const [focus, setFocus] = useState<Boolean>(false);
   const { label, errorMessage, errors, onChange, id, ...inputProps } = props;
-  const handleFocus = () => {
+
+  const HandleFocus = (e: React.FocusEvent<HTMLInputElement> | React.FocusEvent<HTMLTextAreaElement>) => {
     setFocus(true);
   };
 
@@ -14,18 +31,18 @@ function FormInput(props) {
       {props.type === "textarea" ? (
         <textarea
           className='p-2 w-full rounded-2xl resize-none min-h-[180px] border-slate-300 border'
-          {...inputProps}
           onChange={onChange}
-          onBlur={handleFocus}
-          focused={focus.toString()}
+          {...inputProps}
+          onBlur={HandleFocus}
+          data-focused={focus.toString()}
         />
       ) : (
         <input
           className='p-2 w-full rounded-2xl border-slate-300 border '
           {...inputProps}
           onChange={onChange}
-          onBlur={handleFocus}
-          focused={focus.toString()}
+          onBlur={HandleFocus}
+          data-focused={focus.toString()}
         />
       )}
       <p className=' text-red-500 text-sm mt-1 ml-2 '>{errorMessage}</p>

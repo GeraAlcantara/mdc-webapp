@@ -190,7 +190,7 @@
       outline-color: #ef4444;
     }
 
-    &:invalid[focused='true']~p {
+    &:invalid[data-focused='true']~p {
       display: block;
     }
   }
@@ -200,7 +200,7 @@
       display: block;
     }
 
-    &:invalid[focused='true']~p {
+    &:invalid[data-focused='true']~p {
       display: block;
     }
   }

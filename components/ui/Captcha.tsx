@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 
-function Captcha({ onChange, captchaKey, ...props }) {
-  const [selectedIndexes, setSelectedIndexes] = useState([]);
+interface CaptchaProps {
+  onChange: React.Dispatch<React.SetStateAction<number[]>>;
+  captchaKey: string;
+}
+function Captcha({ onChange, captchaKey }: CaptchaProps) {
+  const [selectedIndexes, setSelectedIndexes] = useState<number[]>([]);
   const imageLocation = new Array(9).fill(null).map((value, index) => {
     return `/api/captcha-image?index=${index}&key=${captchaKey}`;
   });
@@ -15,7 +19,7 @@ function Captcha({ onChange, captchaKey, ...props }) {
   }, [captchaKey]);
 
   /* toggle index en el array de selectedIndexes  */
-  function toggleIndex(index) {
+  function toggleIndex(index: number) {
     /* setiamos un nuevo estado tomando el estado anterior y lo filtramos para saber si el index que le pasamos ya esta en el array si es asi lo va ha excluir logrando que en cada click si no esta en la lista lo incluya y si ya estava lo excluya */
     setSelectedIndexes((prev) => {
       if (prev.includes(index)) {

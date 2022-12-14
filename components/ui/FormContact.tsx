@@ -4,22 +4,22 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import Captcha from "./Captcha";
 
-function FormContact({ defaultCaptchaKey, ...props }) {
+function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
   const router = useRouter();
-  const [selectedIndexes, setSelectedIndexes] = useState([]);
-  const [captchaKey, setCaptchaKey] = useState(defaultCaptchaKey);
-  const [captchaSolved, setCaptchaSolved] = useState(false);
-  const [values, setValues] = useState({
+  const [selectedIndexes, setSelectedIndexes] = useState<number[]>([]);
+  const [captchaKey, setCaptchaKey] = useState<string>(defaultCaptchaKey);
+  const [captchaSolved, setCaptchaSolved] = useState<boolean>(false);
+  const [values, setValues] = useState<Values>({
     name: "",
     email: "",
     message: "",
   });
-  const [errors, setErrors] = useState({});
-  const [captchaError, setCaptchaError] = useState(false);
+  const [errors, setErrors] = useState<Values>({});
+  const [captchaError, setCaptchaError] = useState<boolean>(false);
 
-  const inputs = [
+  const inputs: InputProps[] = [
     {
-      id: "input1",
+      id: 1,
       name: "name",
       placeholder: "Escribe tu nombre",
       type: "text",
@@ -29,7 +29,7 @@ function FormContact({ defaultCaptchaKey, ...props }) {
       required: true,
     },
     {
-      id: "input2",
+      id: 2,
       name: "email",
       placeholder: "tuemail@domino.com",
       type: "email",
@@ -39,7 +39,7 @@ function FormContact({ defaultCaptchaKey, ...props }) {
       required: true,
     },
     {
-      id: "input3",
+      id: 3,
       name: "message",
       placeholder: "Escribe tu mensaje",
       type: "textarea",
@@ -48,25 +48,22 @@ function FormContact({ defaultCaptchaKey, ...props }) {
       required: true,
     },
   ];
-  const onChange = (e) => {
-    setValues({
-      ...values,
-      [e.target.name]: e.target.value,
-    });
+  const onChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>): void => {
+    setValues({ ...values, [e.currentTarget.name]: e.currentTarget.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = new FormData(e.target);
+    const data = new FormData(e.currentTarget);
     setValues({
-      name: data.get("name").toString(),
-      email: data.get("email").toString(),
-      message: data.get("message").toString(),
+      name: data.get("name") as string,
+      email: data.get("email") as string,
+      message: data.get("message") as string,
     });
     validation(values);
   };
 
-  const sendEmail = async (values) => {
+  const sendEmail = async (values: Values) => {
     let config = {
       method: "post",
       url: `${process.env.NEXT_PUBLIC_API_URL}/contact`,
@@ -81,7 +78,7 @@ function FormContact({ defaultCaptchaKey, ...props }) {
         console.log(response.data);
         const { captchaIsOK, send } = response.data;
         if (!captchaIsOK) {
-          setCaptchaKey(new Date().getTime());
+          setCaptchaKey(new Date().getTime().toString());
           setCaptchaError(true);
           console.log("The captcha is not correct");
         }
@@ -108,8 +105,8 @@ function FormContact({ defaultCaptchaKey, ...props }) {
     }
   };
 
-  const validation = (data) => {
-    let errors = {};
+  const validation = (data: Values) => {
+    let errors: Values = {};
     if (!data.name) {
       errors.name = "El nombre es obligatorio";
     } else if (!/^[a-zA-ZÀ-ÿ\s]{3,40}$/.test(data.name)) {

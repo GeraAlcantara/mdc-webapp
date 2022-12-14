@@ -1,18 +1,7 @@
-import { NextSeo, NextSeoProps } from "next-seo";
-import { DataHeadDefault } from "../data/DataHeader";
-/**
- * @param {{ pageDescription:string, pageTitle:string, previewImage:string, previewImageAlt:string, slug:string }} props
- * @returns
- */
-interface HeadProps {
-  pageDescription: string;
-  pageTitle: string;
-  previewImage: string;
-  previewImageAlt: string;
-  slug: string;
-}
+import { NextSeo } from "next-seo";
+import { DataHeadDefault, HeadData } from "../data/DataHeader";
 
-function HelperHead(props: HeadProps) {
+function HelperHead(props: HeadData) {
   return (
     <>
       <NextSeo

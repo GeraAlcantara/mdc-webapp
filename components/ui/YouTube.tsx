@@ -1,4 +1,4 @@
-export default function YouTube({ id }) {
+export default function YouTube({ id }: { id: string }) {
   return (
     <div className='aspect-video w-full'>
       <iframe

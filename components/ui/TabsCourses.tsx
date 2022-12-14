@@ -16,7 +16,7 @@ function TabsCarousel() {
   const subcategoriesnames = getSubcategoriesNames(data);
   const allSubcategories = subcategoriesnames.map((subcategoryname) => getSubcategoryByName(subcategoryname, data));
   // all courses by subcategory
-  const allCoursesBySubcategory = allSubcategories.map((subcategory) => subcategory.courses);
+  const allCoursesBySubcategory = allSubcategories.map((subcategory) => subcategory!.courses);
 
   return (
     <Tab.Group>

@@ -76,7 +76,7 @@ type Colors = "TropicalBlue" | "MintGreen" | "BrightGreen" | "secondary";
 interface SectionData {
   ColorSchemaDark: boolean;
   layoutLeft: boolean;
-  colorClass?: Colors; //TropicalBlue | MintGreen | Bright Green | secondary
+  colorClass: Colors; //TropicalBlue | MintGreen | Bright Green | secondary
   MainImage: { src: StaticImageData; alt: string };
   link: { slug: string; text: string };
   excerpt: string;

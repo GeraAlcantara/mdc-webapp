@@ -83,3 +83,48 @@ interface SectionData {
   title: string;
   sideImage?: { src: StaticImageData; alt: string };
 }
+
+// Post Schema
+/**
+ * @typedef Post
+ * @property {string} content
+ * @property {PostMeta} meta
+ * @typedef PostMeta
+ * @property {string} slug
+ * @property {string} title
+ * @property {string[]} tags
+ * @property {string} date
+ * @property {string} excerpt
+ * @property {string} descriptionSEO
+ * @property {string} imageSEO
+ * @property {string} imageAltSEO
+ * @property {string} coverImageSrc
+ * @property {string} coverImageAlt
+ * @property {string} authorAvatar
+ * @property {string} authorName
+ * @property {number} readTime
+ * @property {'noticias' | 'articulo'} articleType
+ * @param {string} slug
+ * @returns {Post}
+ */
+
+interface PostMeta {
+  slug: string;
+  title: string;
+  tags: string[];
+  date: string;
+  excerpt: string;
+  descriptionSEO: string;
+  imageSEO: string;
+  imageAltSEO: string;
+  coverImageSrc: string;
+  coverImageAlt: string;
+  authorAvatar: string;
+  authorName: string;
+  readTime: number;
+  articleType: "noticias" | "articulo";
+}
+interface Post {
+  content: string;
+  meta: PostMeta;
+}

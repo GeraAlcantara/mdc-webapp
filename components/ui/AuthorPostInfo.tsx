@@ -1,10 +1,6 @@
 import Image from "next/image";
 
-/**
- * @param {{authorAvatar:string, authorName: string, date: string}} AutorPostInfo
- * @returns
- */
-export default function AuthorPostInfo({ authorAvatar, authorName, date }) {
+export default function AuthorPostInfo({ authorAvatar, authorName, date }: { authorAvatar: string; authorName: string; date: string }) {
   return (
     <div className='flex gap-4 items-center'>
       <div className='relative w-12 h-12'>

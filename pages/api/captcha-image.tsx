@@ -1,4 +1,6 @@
 import fs from "fs";
+import { NextApiResponse } from "next";
+import { NextApiRequest } from "next";
 import { withIronSessionApiRoute } from "iron-session/next";
 import * as path from "path";
 
@@ -16,13 +18,8 @@ export function newCaptchaImages() {
 }
 
 export default withIronSessionApiRoute(
-  /**
-   *
-   * @param {{query, session}} req
-   * @param {*} res
-   */
-  async function handler(req, res) {
-    const index = req.query.index;
+  async function handler(req: NextApiRequest, res: NextApiResponse) {
+    const index = Number(req.query.index);
     if (!req.session.captchaImages) {
       req.session.captchaImages = newCaptchaImages();
       await req.session.save();
@@ -33,6 +30,6 @@ export default withIronSessionApiRoute(
   },
   {
     cookieName: "MDC_SESSION",
-    password: process.env.SESSION_SECRET,
+    password: process.env.SESSION_SECRET as string,
   }
 );

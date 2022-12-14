@@ -5,10 +5,7 @@ import matter from "gray-matter";
 
 const POSTS_PATH = path.join(process.cwd(), "pages/posts");
 
-/**
- * @returns {string[]}
- */
-export const getSlugs = () => {
+export const getSlugs = (): string[] => {
   const paths = sync(`${POSTS_PATH}/*.mdx`);
 
   return paths.map((path) => {
@@ -19,29 +16,7 @@ export const getSlugs = () => {
   });
 };
 
-/**
- * @typedef Post
- * @property {string} content
- * @property {PostMeta} meta
- * @typedef PostMeta
- * @property {string} slug
- * @property {string} title
- * @property {string[]} tags
- * @property {string} date
- * @property {string} excerpt
- * @property {string} descriptionSEO
- * @property {string} imageSEO
- * @property {string} imageAltSEO
- * @property {string} coverImageSrc
- * @property {string} coverImageAlt
- * @property {string} authorAvatar
- * @property {string} authorName
- * @property {number} readTime
- * @property {'noticias' | 'articulo'} articleType
- * @param {string} slug
- * @returns {Post}
- */
-export const getPostBySlug = (slug) => {
+export const getPostBySlug = (slug: string): Post => {
   const fullPath = path.join(POSTS_PATH, `${slug}.mdx`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
@@ -52,7 +27,7 @@ export const getPostBySlug = (slug) => {
       title: data.title ?? "No title provided",
       tags: (data.tags ?? ['"No tags provided"']).sort(),
       // to local date string format yyyy-mm-dd
-      date: (data.date ?? new Date()).toISOString(),
+      date: data.date.toString() ?? new Date().toISOString(),
       excerpt: data.excerpt ?? "No excerpt provided",
       descriptionSEO: data.descriptionSEO ?? "No descriptionSEO provided",
       imageSEO: data.imageSEO ?? "socialCards/homeSocialCard", // if not src the default image
@@ -67,10 +42,7 @@ export const getPostBySlug = (slug) => {
   };
 };
 
-/**
- * @returns {Post[]}
- */
-export const getAllPosts = () => {
+export const getAllPosts = (): Post[] => {
   const posts = getSlugs()
     .map((slug) => getPostBySlug(slug))
     .sort((a, b) => {

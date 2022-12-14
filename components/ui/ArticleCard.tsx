@@ -5,24 +5,19 @@ import React from "react";
 import Link from "next/link";
 import AuthorPostInfo from "./AuthorPostInfo";
 
-/*  
-1- imagen de un articulo 
-2- etiqueta
-3- tipo de articulo (articulo, noticia, etc)
-4- tiempo de lectura
-5- titulo del articulo
-6- resumen del articulo
-7- avatar del autor
-8- nombre del autor
-9- fecha de publicacion
-*/
-// define props por recibir en JS docs
-/**
- *@typedef {{slug: string, coverImageSrc: string, tags: string[], articleType: string, readTime: number, title: string, excerpt: string, authorAvatar: string, authorName: string, date: string}} ArticleCardProps
- * @param {ArticleCardProps} props
- * @returns {JSX.Element}
- */
-function ArticleCard({ slug, coverImageSrc, tags, articleType, readTime, title, excerpt, authorAvatar, authorName, date }) {
+interface ArticleCardProps {
+  slug: string;
+  coverImageSrc: string;
+  tags: string[];
+  articleType: string;
+  readTime: number;
+  title: string;
+  excerpt: string;
+  authorAvatar: string;
+  authorName: string;
+  date: string;
+}
+function ArticleCard({ slug, coverImageSrc, tags, articleType, readTime, title, excerpt, authorAvatar, authorName, date }: ArticleCardProps) {
   return (
     <div className='pb-4'>
       <hr className='hidden md:block my-8 border-brandBlue-50/50' />
@@ -36,6 +31,7 @@ function ArticleCard({ slug, coverImageSrc, tags, articleType, readTime, title, 
               objectPosition='center center'
               alt='imagen de un articulo'
               className='group-hover:scale-105 transition-all duration-150 ease-out  '
+              priority={true}
             />
           </div>
           <div className='text-brandWhite py-4  md:p-4 flex flex-col gap-2 justify-between lg:gap-4 w-full '>

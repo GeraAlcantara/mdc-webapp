@@ -4,34 +4,16 @@ import TimelineCheckmark from "./TimelineCheckmark";
 import ImgLaptop from "../../public/laptop.jpg";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
-import { Colors, SectionData } from "../../lib/data/SectionTimeLineData";
-
-const ColorSchema = Object.freeze({
-  dark: Symbol("dark"),
-  light: Symbol("light"),
-});
-// define this color as ENUMS in typescript TropicalBlue | MintGreen | Bright Green | secondary
-
-interface SectionTimeLineProps {
-  ColorSchemaDark: boolean;
-  layoutLeft: boolean;
-  colorClass?: Colors; //TropicalBlue | MintGreen | Bright Green | secondary
-  MainImage: { src: string; alt: string };
-  link: { slug: string; text: string };
-  excerpt: string;
-  title: string;
-  sideImage: { src: string; alt: string };
-}
 
 function SectionTimeline({
   ColorSchemaDark = false,
   layoutLeft = false,
-  colorClass = Colors.secondary,
-  MainImage = { src: ImgLaptop, alt: "text alt" },
+  colorClass = "secondary",
   link = { slug: "#", text: "Dommy route" },
   excerpt = "Lorem ipsum dolor sit amet",
   title = "title",
   sideImage = { src: "", alt: "" },
+  MainImage = { src: ImgLaptop, alt: "laptop" },
 }: SectionData): JSX.Element {
   const [isInViewport, setisInViewport] = useState(false);
   const articleRef = useRef<HTMLDivElement>(null);
@@ -65,10 +47,10 @@ function SectionTimeline({
         >
           <h2
             className={clsx("font-bold text-4xl mb-8 capitalize", {
-              "text-secondary": colorClass === Colors.secondary,
-              "text-tropicalBlue": colorClass === Colors.TropicalBlue,
-              "text-mintGreen": colorClass === Colors.MintGreen,
-              "text-brightGreen": colorClass === Colors.BrightGreen,
+              "text-secondary": colorClass === "secondary",
+              "text-tropicalBlue": colorClass === "TropicalBlue",
+              "text-mintGreen": colorClass === "MintGreen",
+              "text-brightGreen": colorClass === "BrightGreen",
             })}
           >
             {title}
@@ -79,10 +61,10 @@ function SectionTimeline({
               className={clsx(
                 "place-self-start md:place-self-auto py-2 px-10 rounded-full text-bg_primary uppercase hover:scale-[.98] hover:contrast-150 transition-all",
                 {
-                  "hover:bg-secondary bg-secondary": colorClass === Colors.secondary,
-                  "hover:bg-tropicalBlue bg-tropicalBlue": colorClass === Colors.TropicalBlue,
-                  "hover:bg-mintGreen bg-mintGreen": colorClass === Colors.MintGreen,
-                  "hover:bg-brightGreen bg-brightGreen": colorClass === Colors.BrightGreen,
+                  "hover:bg-secondary bg-secondary": colorClass === "secondary",
+                  "hover:bg-tropicalBlue bg-tropicalBlue": colorClass === "TropicalBlue",
+                  "hover:bg-mintGreen bg-mintGreen": colorClass === "MintGreen",
+                  "hover:bg-brightGreen bg-brightGreen": colorClass === "BrightGreen",
                 }
               )}
             >
@@ -114,10 +96,10 @@ function SectionTimeline({
         </div>
         <TimelineCheckmark
           bgColor={clsx({
-            "bg-secondary": colorClass === Colors.secondary,
-            "bg-tropicalBlue": colorClass === Colors.TropicalBlue,
-            "bg-mintGreen": colorClass === Colors.MintGreen,
-            "bg-brightGreen": colorClass === Colors.BrightGreen,
+            "bg-secondary": colorClass === "secondary",
+            "bg-tropicalBlue": colorClass === "TropicalBlue",
+            "bg-mintGreen": colorClass === "MintGreen",
+            "bg-brightGreen": colorClass === "BrightGreen",
           })}
         />
         <div className='md:w-1/2 flex flex-col md:items-start md:justify-center'>

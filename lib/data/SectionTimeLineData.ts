@@ -3,24 +3,8 @@ import ImgTrofeo from "../../public/trofeo.png";
 import ImgTimeline2 from "../../public/timeline2.jpg";
 import ImgTimeline3 from "../../public/timeline3.jpg";
 import ImgTimeline4 from "../../public/timeline4.jpg";
+import { StaticImageData } from "next/image";
 
-export enum Colors {
-  TropicalBlue = "tropicalBlue",
-  MintGreen = "mintGreen",
-  BrightGreen = "brightGreen",
-  secondary = "secondary",
-}
-
-export interface SectionData {
-  ColorSchemaDark: boolean;
-  layoutLeft: boolean;
-  colorClass?: Colors; //TropicalBlue | MintGreen | Bright Green | secondary
-  MainImage: { src: string; alt: string };
-  link: { slug: string; text: string };
-  excerpt: string;
-  title: string;
-  sideImage?: { src: string; alt: string };
-}
 export const SectionsData: SectionData[] = [
   {
     title: "Cursos Multipremiados",
@@ -38,7 +22,7 @@ export const SectionsData: SectionData[] = [
       src: ImgTrofeo,
       alt: "trofeo",
     },
-    colorClass: Colors.secondary,
+    colorClass: "secondary",
     layoutLeft: false,
     ColorSchemaDark: false,
   },
@@ -54,7 +38,7 @@ export const SectionsData: SectionData[] = [
       src: ImgTimeline2,
       alt: "chica frente a la pantalla de una laptop",
     },
-    colorClass: Colors.TropicalBlue,
+    colorClass: "TropicalBlue",
     layoutLeft: true,
     ColorSchemaDark: true,
   },
@@ -70,7 +54,7 @@ export const SectionsData: SectionData[] = [
       src: ImgTimeline3,
       alt: "mano tocando una pantalla con el indice",
     },
-    colorClass: Colors.MintGreen,
+    colorClass: "MintGreen",
     layoutLeft: false,
     ColorSchemaDark: true,
   },
@@ -86,7 +70,7 @@ export const SectionsData: SectionData[] = [
       src: ImgTimeline4,
       alt: "Hombre pensativo viendo graficas de datos en la pantalla de su computadora",
     },
-    colorClass: Colors.BrightGreen,
+    colorClass: "BrightGreen",
     layoutLeft: true,
     ColorSchemaDark: true,
   },

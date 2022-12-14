@@ -1,4 +1,4 @@
-import { DataCourseLibrarie, Categories, Course, Subcategory } from "../data/DataCourseLibrarie";
+import { DataCourseLibrarie } from "../data/DataCourseLibrarie";
 
 export const data = DataCourseLibrarie;
 

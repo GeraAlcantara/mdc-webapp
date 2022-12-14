@@ -1,5 +1,5 @@
 import { NextSeo } from "next-seo";
-import { DataHeadDefault, HeadData } from "../data/DataHeader";
+import { DataHeadDefault } from "../data/DataHeader";
 
 function HelperHead(props: HeadData) {
   return (

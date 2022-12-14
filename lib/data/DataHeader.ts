@@ -1,21 +1,8 @@
-export interface DataHead {
-  twitterHandle: string;
-  siteName: string;
-  currentURL: string;
-}
 export const DataHeadDefault: DataHead = {
   twitterHandle: "@MexicoDC",
   siteName: "Mexico Development Center",
   currentURL: "https://mdc-webapp.vercel.app",
 };
-
-export interface HeadData {
-  previewImage: string;
-  previewImageAlt: string;
-  pageTitle: string;
-  pageDescription: string;
-  slug: string;
-}
 
 export const DataHeadHome: HeadData = {
   previewImage: "/socialCards/iniciosocialcard.jpg",

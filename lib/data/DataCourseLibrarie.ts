@@ -34,50 +34,7 @@ import ThumbnailVPV101 from "../../public/thumbnail/thumbnail_V_PV_101.jpg";
  * @type {Categories}
  */
 
-export interface Course {
-  library: { name: string; skuPrefix: string };
-  subcategory: { name: string; skuPrefix: string };
-  title: string;
-  slug: string;
-  thumbnail: { src: StaticImageData; alt: string };
-  cover: string;
-  identifier: { prefix: string; courseNumber: string };
-  duration: number;
-  description: string[];
-  topics: string[];
-  features: Feature[];
-  modules: Module[];
-}
 
-export interface Module {
-  name: string;
-  lessons: Lesson[];
-}
-
-export interface Feature {
-  name: string;
-  qt: number;
-  iconSrc: string;
-}
-
-export interface Lesson {
-  title: string;
-  duration: string;
-}
-export interface Category {
-  name: string;
-  slug: string;
-  subcategories: Subcategory[];
-}
-
-export interface Subcategory {
-  name: string;
-  slug: string;
-  colorid: string;
-  courses: Course[];
-}
-
-export interface Categories extends Array<Category> {}
 
 export const DataCourseLibrarie: Categories = [
   {

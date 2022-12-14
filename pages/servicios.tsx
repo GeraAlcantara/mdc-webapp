@@ -61,6 +61,7 @@ export default function Servicios() {
                   height={997}
                   layout='responsive'
                   alt='empleado con laptop'
+                  priority={true}
                 />
               </div>
               <div className='row-start-2 col-start-2 col-span-2 opacity-70 pl-3 pt-3'>

@@ -6,9 +6,7 @@ import FormContact from "../components/ui/FormContact";
 import IconContacto from "../public/icons/contacto.svg";
 import { newCaptchaImages } from "./api/captcha-image";
 
-export default function contactanos() {
-  const defaultCaptchaKey = new Date().getTime();
-
+export default function contactanos({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
   return (
     <>
       <HelperHead {...DataHeadContact} />
@@ -45,9 +43,6 @@ export default function contactanos() {
 }
 
 export const getServerSideProps = withIronSessionSsr(
-  /**
-   * @param { * } req
-   */
   async function getIronSession({ req }) {
     {
       if (!req.session.captchaImages) {
@@ -63,6 +58,6 @@ export const getServerSideProps = withIronSessionSsr(
   },
   {
     cookieName: "MDC_SESSION",
-    password: process.env.SESSION_SECRET,
+    password: process.env.SESSION_SECRET as string,
   }
 );

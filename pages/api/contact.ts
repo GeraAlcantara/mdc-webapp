@@ -1,10 +1,11 @@
+import { NextApiRequest, NextApiResponse } from "next";
 import { withIronSessionApiRoute } from "iron-session/next";
 import { newCaptchaImages } from "./captcha-image";
 import nodemailer from "nodemailer";
 import { z } from "zod";
 
 export default withIronSessionApiRoute(
-  async function handler(req, res, session) {
+  async function handler(req: NextApiRequest, res: NextApiResponse) {
     /* handle only post req */
     if (req.method !== "POST") {
       return res.status(200).json({ message: "Method not allowed" });
@@ -72,6 +73,6 @@ export default withIronSessionApiRoute(
   },
   {
     cookieName: "MDC_SESSION",
-    password: process.env.SESSION_SECRET,
+    password: process.env.SESSION_SECRET as string,
   }
 );

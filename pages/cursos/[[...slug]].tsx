@@ -1,10 +1,11 @@
 import HelperHead from "../../lib/helpers/HelperHead";
 import { data, getSubcategoryByName, getSubcategoriesNames, getCourseBySlug } from "../../lib/helpers/library";
 import CourseSpecs from "../../components/ui/CourseSpecs";
+import { GetStaticProps } from "next";
 
 const subcategoriesnames = getSubcategoriesNames(data);
 const allSubcategories = subcategoriesnames.map((subcategoryname) => getSubcategoryByName(subcategoryname, data));
-const allCoursesBySubcategory = allSubcategories.map((subcategory) => subcategory.courses);
+const allCoursesBySubcategory = allSubcategories.map((subcategory) => subcategory!.courses);
 // get all courses slug from all subcategories
 const allCoursesSlugs = allCoursesBySubcategory.map((courses) => courses.map((course) => course.slug)).flat();
 //get all courses subcategory.skuPrefix.tolowercase
@@ -29,12 +30,13 @@ export async function getStaticPaths() {
   };
 }
 
-//render the page
-/**
- * @param {{params:import('next').GetStaticPaths , course:import('../../components/helpers/library').Course}} course
- * @returns
- */
-function Cursos({ params, course }) {
+interface CourseProps {
+  params: {
+    slug: string[];
+  };
+  course: Course;
+}
+function Cursos({ params, course }: CourseProps) {
   //get all lessos from the course modules
   const lessons = course.modules.map((module) => module.lessons).flat();
 
@@ -43,7 +45,7 @@ function Cursos({ params, course }) {
   }
   const category = getSubcategoryByName(course.subcategory.name, data);
 
-  const colorid = category.colorid;
+  const colorid = category!.colorid;
 
   return (
     <>
@@ -73,9 +75,13 @@ function Cursos({ params, course }) {
   );
 }
 
-export async function getStaticProps({ params }) {
+export const getStaticProps: GetStaticProps = async (context) => {
+  if (!context.params) {
+    return { props: {} };
+  }
+  const { params } = context;
   //from param get las item in the array
-  const slug = params.slug[params.slug.length - 1];
+  const slug = params.slug![params.slug!.length - 1];
   //get the course by slug
   const course = getCourseBySlug(slug, allCoursesBySubcategory.flat());
   // if not found trow an error
@@ -84,6 +90,6 @@ export async function getStaticProps({ params }) {
   }
   // Pass post data to the page via props
   return { props: { params, course } };
-}
+};
 
 export default Cursos;

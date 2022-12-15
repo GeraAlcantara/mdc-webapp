@@ -2,13 +2,12 @@ import { DataHeadBlog } from "../../lib/data/DataHeader";
 import HelperHead from "../../lib/helpers/HelperHead";
 import ArticleCard from "../../components/ui/ArticleCard";
 import { getAllPosts } from "../api/blogApi";
+import { GetStaticProps } from "next";
 
-// props posts will be PostMeta[]
-/**
- * @param {{posts:import('../api/blogApi').PostMeta[]}} props
- * @returns
- */
-export default function Blog({ posts }) {
+interface BlogProps {
+  posts: PostMeta[];
+}
+export default function Blog({ posts }: BlogProps) {
   return (
     <>
       <HelperHead {...DataHeadBlog} />
@@ -29,26 +28,14 @@ export default function Blog({ posts }) {
       </div>
       <section className='mdc-ui-container'>
         {posts.map((post) => (
-          <ArticleCard
-            key={post.title}
-            slug={post.slug}
-            coverImageSrc={post.coverImageSrc}
-            articleType={post.articleType}
-            tags={post.tags}
-            readTime={post.readTime} // TODO: calculate readTime
-            title={post.title}
-            excerpt={post.excerpt}
-            authorAvatar={post.authorAvatar}
-            authorName={post.authorName}
-            date={post.date}
-          />
+          <ArticleCard key={post.slug} {...post} />
         ))}
       </section>
     </>
   );
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async (context) => {
   // get the latest 9 posts from the api only the meta data
   const postsMDXMeta = getAllPosts()
     .slice(0, 9)
@@ -58,4 +45,4 @@ export async function getStaticProps() {
       posts: postsMDXMeta,
     },
   };
-}
+};

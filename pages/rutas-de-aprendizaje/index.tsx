@@ -1,11 +1,14 @@
 import { data, getSubcategoryByName, getSubcategoriesNames, getCourseBySlug, getAllCourses } from "../../lib/helpers/library";
 import CardsCourse from "../../components/ui/CardCourse";
-
-function RutasAprendizaje({ data }) {
+import { GetStaticProps } from "next";
+interface RutasAprendizajeProps {
+  data: Categories;
+}
+function RutasAprendizaje({ data }: RutasAprendizajeProps) {
   const subcategoriesnames = getSubcategoriesNames(data);
   const allSubcategories = subcategoriesnames.map((subcategoryname) => getSubcategoryByName(subcategoryname, data));
   // all courses by subcategory
-  const allCoursesBySubcategory = allSubcategories.map((subcategory) => subcategory.courses);
+  const allCoursesBySubcategory = allSubcategories.map((subcategory) => subcategory!.courses);
   const courses = getAllCourses(data);
   return (
     <div className='pt-[68px]  '>
@@ -48,16 +51,16 @@ function RutasAprendizaje({ data }) {
 }
 
 // get static props from course
-export async function getStaticProps() {
-  //pass data as prop
+export const getStaticProps: GetStaticProps = async (context) => {
+  // get data from helper
+  const dataProp: Categories = data;
   const props = {
-    data: data,
+    data: dataProp,
   };
-
   // return props
   return {
     props: props,
   };
-}
+};
 
 export default RutasAprendizaje;

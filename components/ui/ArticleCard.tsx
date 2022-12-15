@@ -5,19 +5,7 @@ import React from "react";
 import Link from "next/link";
 import AuthorPostInfo from "./AuthorPostInfo";
 
-interface ArticleCardProps {
-  slug: string;
-  coverImageSrc: string;
-  tags: string[];
-  articleType: string;
-  readTime: number;
-  title: string;
-  excerpt: string;
-  authorAvatar: string;
-  authorName: string;
-  date: string;
-}
-function ArticleCard({ slug, coverImageSrc, tags, articleType, readTime, title, excerpt, authorAvatar, authorName, date }: ArticleCardProps) {
+function ArticleCard({ slug, coverImageSrc, tags, articleType, readTime, title, excerpt, authorAvatar, authorName, date }: PostMeta) {
   return (
     <div className='pb-4'>
       <hr className='hidden md:block my-8 border-brandBlue-50/50' />

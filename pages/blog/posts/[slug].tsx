@@ -4,6 +4,7 @@ import Image from "next/image";
 import YouTube from "../../../components/ui/YouTube";
 import { getSlugs, getPostBySlug } from "../../api/blogApi";
 import { MDXRemote } from "next-mdx-remote";
+import { MDXRemoteSerializeResult } from "next-mdx-remote/dist/types";
 import { serialize } from "next-mdx-remote/serialize";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -14,13 +15,20 @@ import Link from "next/link";
 import { RiArrowLeftLine } from "react-icons/ri";
 import { ArticleJsonLd } from "next-seo";
 import { DataHeadDefault } from "../../../lib/data/DataHeader";
+import { GetStaticProps, GetStaticPropsContext } from "next";
 
 /**
  * @typedef {import('../../api/blogApi').PostMeta} PostMeta
  * @param {{post: {source:import('next-mdx-remote').MDXRemoteSerializeResult<Record<string, unknown>>, meta:PostMeta}}} post
  * @returns {JSX.Element}
  */
-export default function PostPage({ post }) {
+interface PostPageProps {
+  post: {
+    source: MDXRemoteSerializeResult<Record<string, unknown>>;
+    meta: PostMeta;
+  };
+}
+export default function PostPage({ post }: PostPageProps) {
   const postsHead = {
     previewImage: post.meta.imageSEO,
     previewImageAlt: `${DataHeadDefault.currentURL}${post.meta.imageAltSEO}`,
@@ -76,13 +84,14 @@ export async function getStaticPaths() {
   };
 }
 
-/**
- * @param {{ params: { slug: string } }} params
- * @returns
- */
-export async function getStaticProps({ params }) {
-  const { slug } = params;
-  const { content, meta } = await getPostBySlug(slug);
+export const getStaticProps: GetStaticProps<PostPageProps> = async (context) => {
+  if (!context.params) {
+    return {
+      notFound: true,
+    };
+  }
+  const { slug } = context.params;
+  const { content, meta } = await getPostBySlug(slug as string);
   const mdxSource = await serialize(content, {
     mdxOptions: {
       rehypePlugins: [rehypeSlug, rehypeHighlight],
@@ -96,4 +105,4 @@ export async function getStaticProps({ params }) {
       },
     },
   };
-}
+};

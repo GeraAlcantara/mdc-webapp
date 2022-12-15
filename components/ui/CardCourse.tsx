@@ -1,14 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
+import { StaticImageData } from "next/image";
 
+interface CardCourseProps {
+  coursename: string;
+  numtopics: number;
+  thumbnail: StaticImageData;
+  thumbnailAlt: string;
+  numlessons: number;
+  duration: number;
+  slug: string;
+}
 /**
  *@author Gerardo Alcantara
- * @typedef {{coursename: string, numtopics: number, thumbnail: string, thumbnailAlt: string, numlessons: number, duration: number, slug: string }} CardCourseProps
- * @param {CardCourseProps} props
+ *@description Componente de tarjeta de curso
  * @example
  * <CardCourse coursename={data.title:string} numlessons={data.lessons.lenght:number} numtopics={data.topics.lenght:number} thumbnail={data.thumbnail.src:string} thumbnailAlt={data.thumbnail.alt:string} duration={data.duration:number} slug={data.slug} />
  */
-function CardsCarousel({ coursename, numtopics, thumbnail, thumbnailAlt, numlessons, duration, slug }) {
+function CardsCarousel({ coursename, numtopics, thumbnail, thumbnailAlt, numlessons, duration, slug }: CardCourseProps) {
   return (
     <Link href={slug}>
       <div className='group flex flex-col min-w-[250px] w-[80%] md:w-[300px] lg:w-[250px] m-auto xl:w-[300px] h-[450px] rounded-2xl bg-brandBlue-600 hover:bg-brandBlue-500 overflow-hidden justify-between hover:cursor-pointer '>

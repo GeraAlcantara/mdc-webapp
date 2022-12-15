@@ -6,6 +6,11 @@ import { MdPlayLesson } from "react-icons/md";
  * @typedef {{title:string, duration:string,}} Lesson
  * @param {CourseContent} props
  */
+interface CourseContentProps {
+  duration: number;
+  numLessons: number;
+  lessons: Array<Lesson>;
+}
 function CourseContent({
   duration = 30,
   numLessons = 8,
@@ -13,14 +18,14 @@ function CourseContent({
     { title: "Introducción a la autoevaluación", duration: "0:17" },
     { title: "Autoevaluación de Escucha Activa", duration: "0:32" },
   ],
-}) {
+}: CourseContentProps) {
   return (
     <section className='mt-8 h-full flex flex-col bg-brandBlue-500  rounded-xl select-none '>
       <div className='flex flex-col mb-2 space-y-2 p-4'>
-        <h2 className='text-2xl lg:text-3xl font-bold'>Course Content</h2>
+        <h2 className='text-2xl lg:text-3xl font-bold'>Contenido del Curso</h2>
         <div className='text-sm font-normal text-gray-400'>
           <p>
-            {duration} min • {numLessons} Lessons
+            {duration} min • {numLessons} Lecciones
           </p>
         </div>
       </div>

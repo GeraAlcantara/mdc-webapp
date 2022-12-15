@@ -5,7 +5,19 @@ import TimeIcon from "../svgs/time.svg";
 import CCIcon from "../svgs/closecaption.svg";
 import { RiArrowRightSFill } from "react-icons/ri";
 import CourseContent from "./CourseContent";
-
+interface CourseSpecsProps {
+  slug: string;
+  title: string;
+  libraryName: string;
+  subcategoryName: string;
+  duration: number;
+  description: string[];
+  topics: string[];
+  features: Feature[];
+  lessons: { title: string; duration: string }[];
+  cover: string;
+  color: string;
+}
 function CourseSpecs({
   slug,
   title,
@@ -18,7 +30,7 @@ function CourseSpecs({
   lessons = [{ title: "Introducción a la autoevaluación", duration: "0:17" }],
   cover,
   color,
-}) {
+}: CourseSpecsProps) {
   return (
     <div className=' mdc-ui-container select-none'>
       <div className='grid w-full grid-cols-1 gap-5 mt-10 mb-4 md:grid-cols-5 md:gap-16'>
@@ -90,10 +102,10 @@ function CourseSpecs({
             <h4 className='text-3xl font-bold mb-3'>Características</h4>
             <div className='flex flex-wrap flex-col md:flex-row justify-around'>
               {features.map(
-                ({ id, iconSrc, name, qt }, index) =>
+                ({ iconSrc, name, qt }, index) =>
                   //check if qt is not 0
                   qt !== 0 && (
-                    <div className=' flex flex-col justify-center items-center my-4 ' key={id + name.substring(0, 3)}>
+                    <div className=' flex flex-col justify-center items-center my-4 ' key={name.substring(0, 3)}>
                       <div className='w-10 h-10 relative'>
                         <Image layout='fill' src={iconSrc} alt='icon'></Image>
                       </div>

@@ -144,3 +144,13 @@ interface InputProps {
   required: boolean;
   errors?: string;
 }
+interface PreviewCardData {
+  title?: string;
+  titleog?: string;
+  description?: string;
+  image?: string;
+  imageAlt?: string;
+  url?: string;
+  canonical?: string;
+  siteName?: string;
+}

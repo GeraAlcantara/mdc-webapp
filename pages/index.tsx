@@ -11,8 +11,10 @@ import SectionTimeline from "../components/ui/SectionTimeline";
 import ModalDemoReel from "../components/ui/ModalDemoReel";
 import MonitorVideoReel from "../public/videoreel.png";
 import Link from "next/link";
+import { NextPage } from "next/types";
+import LinkWithPreview from "../components/ui/LinkWithPreview";
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <>
       <HelperHead {...DataHeadHome} />
@@ -110,4 +112,6 @@ export default function Home() {
       </section>
     </>
   );
-}
+};
+
+export default Home;

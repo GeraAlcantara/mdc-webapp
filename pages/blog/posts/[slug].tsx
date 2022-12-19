@@ -15,7 +15,8 @@ import Link from "next/link";
 import { RiArrowLeftLine } from "react-icons/ri";
 import { ArticleJsonLd } from "next-seo";
 import { DataHeadDefault } from "../../../lib/data/DataHeader";
-import { GetStaticProps, GetStaticPropsContext } from "next";
+import { GetStaticProps } from "next";
+import LinkWithPreview from "../../../components/ui/LinkWithPreview";
 
 /**
  * @typedef {import('../../api/blogApi').PostMeta} PostMeta
@@ -70,7 +71,7 @@ export default function PostPage({ post }: PostPageProps) {
           <h1 className='text-4xl xl:text-6xl text-accent font-bold '>{post.meta.title}</h1>
         </div>
         <div className='m-4 md:m-auto prose lg:prose-xl xl:prose-2xl prose-headings:text-brandBlue-50 prose-lime prose-code:text-brandBlue-50 md:py-10 md:prose-headings:text-5xl '>
-          <MDXRemote {...post.source} components={{ YouTube, Image }} />
+          <MDXRemote {...post.source} components={{ YouTube, Image, LinkWithPreview }} />
         </div>
       </div>
     </>

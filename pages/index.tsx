@@ -12,7 +12,6 @@ import ModalDemoReel from "../components/ui/ModalDemoReel";
 import MonitorVideoReel from "../public/videoreel.png";
 import Link from "next/link";
 import { NextPage } from "next/types";
-import LinkWithPreview from "../components/ui/LinkWithPreview";
 
 const Home: NextPage = () => {
   return (

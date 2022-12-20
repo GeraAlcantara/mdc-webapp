@@ -9,7 +9,10 @@ export default function LinkWithPreview({ link }: { link: string }) {
 
   useEffect(() => {
     const getPreview = async () => {
-      const res = await fetch("http://localhost:3000/api/getLinkPreview", {
+      // get url from env
+      console.log(process.env.NEXT_PUBLIC_API_URL);
+
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/getLinkPreview`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

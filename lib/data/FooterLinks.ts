@@ -2,7 +2,6 @@ import Facebook from "../../components/svgs/facebook.svg";
 import Twitter from "../../components/svgs/twitter.svg";
 import Instagram from "../../components/svgs/instagram.svg";
 import Linkedin from "../../components/svgs/linkedin.svg";
-import { Interface } from "readline";
 
 export const coursesLinks = [
   {
@@ -124,19 +123,19 @@ export const FooterLinks: FooterLinksDef[] = [
       },
       {
         name: "Servicios",
-        link: "servicios",
+        link: "/servicios",
       },
       {
         name: "Librerías",
-        link: "libreria",
+        link: "/libreria",
       },
       {
         name: "Contáctanos",
-        link: "contactanos",
+        link: "/contactanos",
       },
       {
         name: "Blog",
-        link: "blog",
+        link: "/blog",
       },
     ],
   },

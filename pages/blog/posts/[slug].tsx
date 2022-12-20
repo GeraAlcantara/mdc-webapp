@@ -32,7 +32,7 @@ interface PostPageProps {
 export default function PostPage({ post }: PostPageProps) {
   const postsHead = {
     previewImage: post.meta.imageSEO,
-    previewImageAlt: `${DataHeadDefault.currentURL}${post.meta.imageAltSEO}`,
+    previewImageAlt: post.meta.imageAltSEO,
     pageTitle: `MDC | Post | ${post.meta.title}`,
     pageDescription: post.meta.descriptionSEO,
     slug: `/${post.meta.slug}`,

@@ -21,11 +21,12 @@ export default function LinkWithPreview({ link }: { link: string }) {
       });
       const data: PreviewCardData = await res.json();
       setLinkPreview(data);
+      setLoading(false);
     };
     // get data from api asynchronously set loading to true
     setLoading(true);
     getPreview();
-    setLoading(false);
+
     return () => {
       // cleanup
       setLoading(false);

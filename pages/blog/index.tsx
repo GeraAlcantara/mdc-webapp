@@ -17,7 +17,7 @@ export default function Blog({ posts }: BlogProps) {
             <h1 className='text-5xl lg:text-8xl text-accent font-extrabold'>
               <small className='text-brandWhite text-2xl lg:text-6xl font-bold'>Noticias y</small>
               <br />
-              Articulos
+              Artículos
             </h1>
             <p className=' my-2 lg:my-8 text-lg lg:text-xl md:max-w-[40ch]'>
               Aquí encontrarás artículos que te serán de mucha ayuda para adentrarte en el mundo del elearning y el desarrollo organizacional.

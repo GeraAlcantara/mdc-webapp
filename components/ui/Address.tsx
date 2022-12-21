@@ -9,7 +9,7 @@ function Address() {
         <h1 className='text-secondary text-4xl font-bold mb-4'>Oficinas</h1>
         <p className='text-gray-400 font-light max-w-prose lg:mr-8'>
           Para más información acerca de nuestros <strong className='text-gray-50 font-bold'>Planes y Servicios</strong> póngase en contacto con nosotros a
-          travez de los siguientes canales de comunicacion:
+          través de los siguientes canales de comunicacion:
         </p>
       </div>
       {/* address semantic html */}

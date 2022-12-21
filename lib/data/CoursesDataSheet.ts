@@ -26,7 +26,7 @@ export const DataSheet: CourseFeatures = {
     "La motivación",
   ],
   features: [
-    { id: 1, name: "Texto + Locucion", qt: 1, ICON: IcontxtLocucion },
+    { id: 1, name: "Texto + Locución", qt: 1, ICON: IcontxtLocucion },
     { id: 2, name: "Autoevaluación", qt: 1, ICON: Iconautoeval },
     { id: 3, name: "Video de Introducción", qt: 1, ICON: Iconvideo },
     { id: 4, name: "Interactividades", qt: 2, ICON: Iconinteract },
@@ -48,6 +48,6 @@ export const DataSheet: CourseFeatures = {
     { title: "Resumen", duration: "0:58" },
     { title: "Introducción de autoevaluación", duration: "0:20" },
     { title: "Autoevaluación", duration: "1:55" },
-    { title: "Conclusion", duration: "0:34" },
+    { title: "Conclusión", duration: "0:34" },
   ],
 };

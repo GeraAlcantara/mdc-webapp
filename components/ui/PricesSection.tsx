@@ -186,7 +186,7 @@ function PricesSection() {
                     </tr>
                     <tr className='text-gray-300 odd:bg-bg_secondary even:bg-none'>
                       <td>Praesent massa sem</td>
-                      <td>Ilimatadas</td>
+                      <td>Ilimitadas</td>
                     </tr>
                     <tr className='text-gray-300 odd:bg-bg_secondary even:bg-none'>
                       <td>Fermentum ac ullamcorper non</td>
@@ -208,7 +208,7 @@ function PricesSection() {
         Detalles | Cursos | LMS | Cursos + LMS
         Lorem ipsum dolor sit amet| ✔️ | - | ✔️
         Consectetur adipiscing elit | Mattis lorem | Pretium | Lorem sit
-        Praesent massa sem | Máx. 1 | Máx. 1 | Ilimatadas
+        Praesent massa sem | Máx. 1 | Máx. 1 | Ilimitadas
         Fermentum ac ullamcorper non | - | - | ✔️
         Blandit quis risus | ✔️ | ✔️ | ✔️
         */
@@ -240,7 +240,7 @@ function PricesSection() {
                   <td>Praesent massa sem</td>
                   <td>Máx. 1</td>
                   <td>Máx. 1</td>
-                  <td>Ilimatadas</td>
+                  <td>Ilimitadas</td>
                 </tr>
                 <tr className='text-gray-300 odd:bg-bg_secondary even:bg-none'>
                   <td>Fermentum ac ullamcorper non</td>

@@ -34,8 +34,6 @@ import ThumbnailVPV101 from "../../public/thumbnail/thumbnail_V_PV_101.jpg";
  * @type {Categories}
  */
 
-
-
 export const DataCourseLibrarie: Categories = [
   {
     name: "Recursos Humanos",
@@ -74,7 +72,7 @@ export const DataCourseLibrarie: Categories = [
               "La motivación",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 1, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 2, iconSrc: "/svgs/interact.svg" },
@@ -112,7 +110,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -135,7 +133,7 @@ export const DataCourseLibrarie: Categories = [
             ],
             topics: ["Fundamentos del trabajo en equipo", "Definición de propósitos", "¿Cómo generar confianza y compromiso?", "Resolución de conflictos"],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 2, iconSrc: "/svgs/interact.svg" },
@@ -172,7 +170,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -193,7 +191,7 @@ export const DataCourseLibrarie: Categories = [
             ],
             topics: ["Estilos de comunicación", "Las 7 C’s de la comunicación efectiva ", "¿Cómo comunicar malas noticias?"],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 2, iconSrc: "/svgs/interact.svg" },
@@ -234,7 +232,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -265,7 +263,7 @@ export const DataCourseLibrarie: Categories = [
               "Acuerdos justos y sostenibles",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 1, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 0, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
@@ -313,7 +311,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -342,7 +340,7 @@ export const DataCourseLibrarie: Categories = [
               "Equilibrio en la vida profesional y familiar",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 1, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 2, iconSrc: "/svgs/interact.svg" },
@@ -381,7 +379,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -404,7 +402,7 @@ export const DataCourseLibrarie: Categories = [
             ],
             topics: ["Evaluación del desempeño", "¿Quiénes son los responsables?", "Modelos de evaluación del desempeño", "Metodología de implementación "],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 1, iconSrc: "/svgs/interact.svg" },
@@ -474,7 +472,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -505,7 +503,7 @@ export const DataCourseLibrarie: Categories = [
               "Procedimiento para dar retroalimentación",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
@@ -556,7 +554,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -593,7 +591,7 @@ export const DataCourseLibrarie: Categories = [
               "¿Cómo escuchar a alguien en catarsis?",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 1, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 0, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
@@ -659,7 +657,7 @@ export const DataCourseLibrarie: Categories = [
 
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -695,7 +693,7 @@ export const DataCourseLibrarie: Categories = [
               "Estrategias para la organización",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
@@ -776,7 +774,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -805,7 +803,7 @@ export const DataCourseLibrarie: Categories = [
             ],
             topics: ["Buenos hábitos de trabajo", "Creación de un ambiente óptimo", "Seguridad de la información", "Seguridad de dispositivos digitales"],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 1, iconSrc: "/svgs/interact.svg" },
@@ -842,7 +840,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -871,7 +869,7 @@ export const DataCourseLibrarie: Categories = [
               "Actitudes y habilidades de liderazgo",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 3, iconSrc: "/svgs/interact.svg" },
@@ -931,7 +929,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -969,7 +967,7 @@ export const DataCourseLibrarie: Categories = [
               "Multas por incumplimiento",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 2, iconSrc: "/svgs/interact.svg" },
@@ -1033,7 +1031,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -1065,7 +1063,7 @@ export const DataCourseLibrarie: Categories = [
               "Medidas de protección",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 1, iconSrc: "/svgs/interact.svg" },
@@ -1116,7 +1114,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -1147,7 +1145,7 @@ export const DataCourseLibrarie: Categories = [
               "Sanciones",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
@@ -1200,7 +1198,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -1245,7 +1243,7 @@ export const DataCourseLibrarie: Categories = [
               "Mejores prácticas en dispositivos digitales e internet",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 4, iconSrc: "/svgs/interact.svg" },
@@ -1297,7 +1295,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -1334,7 +1332,7 @@ export const DataCourseLibrarie: Categories = [
               "¿Qué hacer si mi contraseña ha sido robada?",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 0, iconSrc: "/svgs/interact.svg" },
@@ -1363,7 +1361,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -1386,7 +1384,7 @@ export const DataCourseLibrarie: Categories = [
             ],
             topics: ["¿Qué es el malware?", "Principales amenazas", "¿Cuáles son las señales de infección?", "¿Cómo protegernos del malware?"],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 3, iconSrc: "/svgs/interact.svg" },
@@ -1418,7 +1416,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -1447,7 +1445,7 @@ export const DataCourseLibrarie: Categories = [
               "Uso seguro de redes sociales",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 1, iconSrc: "/svgs/interact.svg" },
@@ -1478,7 +1476,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },
@@ -1522,7 +1520,7 @@ export const DataCourseLibrarie: Categories = [
               "Implementación del PV",
             ],
             features: [
-              { name: "Texto + Locucion", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
+              { name: "Texto + Locución", qt: 1, iconSrc: "/svgs/txtLocucion.svg" },
               { name: "Autoevaluación", qt: 0, iconSrc: "/svgs/autoeval.svg" },
               { name: "Video de Introducción", qt: 1, iconSrc: "/svgs/video.svg" },
               { name: "Interactividades", qt: 6, iconSrc: "/svgs/interact.svg" },
@@ -1613,7 +1611,7 @@ export const DataCourseLibrarie: Categories = [
               },
               {
                 name: "Conclusión",
-                lessons: [{ title: "Conclusion", duration: "0:17" }],
+                lessons: [{ title: "Conclusión", duration: "0:17" }],
               },
             ],
           },

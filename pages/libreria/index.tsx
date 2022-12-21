@@ -99,7 +99,7 @@ function Libreria() {
         <section className='mdc-ui-container my-20 text-gray-700'>
           <div className='flex flex-col lg:flex-row justify-center items-center gap-0 lg:gap-10'>
             <div>
-              <p className='text-gray-200 text-xl text-center md:text-left'>Precios en moneda local. Múltiples métodos de pago</p>
+              <p className='text-gray-200 text-xl text-center md:text-left'>Precios en moneda local. Múltiples métodos de pago.</p>
             </div>
             <div className='flex items-center gap-4'>
               <div className='flex flex-col items-center'>
@@ -175,7 +175,7 @@ function Libreria() {
                   <div className='flex justify-center md:justify-end'>
                     <Link href='/contactanos'>
                       <span className='text-gray-900 uppercase py-2 px-4 cursor-pointer bg-white rounded-full inline-flex hover:bg-slate-50 transition-all will-change-transform hover:scale-105 duration-150 ease-in'>
-                        Contactanos
+                        Contáctanos
                       </span>
                     </Link>
                   </div>

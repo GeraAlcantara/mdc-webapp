@@ -36,7 +36,7 @@ export default function Servicios() {
             </p>
             <div className='pt-2'>
               <Link href='/contactanos'>
-                <a className='py-2 px-8 bg-secondary rounded-full inline-flex justify-center items-center uppercase'>contactanos</a>
+                <a className='py-2 px-8 bg-secondary rounded-full inline-flex justify-center items-center uppercase'>contáctanos</a>
               </Link>
             </div>
           </div>

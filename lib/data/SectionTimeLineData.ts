@@ -11,7 +11,7 @@ export const SectionsData: SectionData[] = [
       "En México DC lo visual es tan importante como el contenido, diseñamos cursos con video y animaciones personalizadas para impulsar el aprendizaje. Este tipo de factores generan entusiasmo y aumenta el interes en sus empleados a la hora de tomar un curso.",
     link: {
       slug: "libreria",
-      text: "Casos de exito",
+      text: "Casos de éxito",
     },
     MainImage: {
       src: ImgLaptop,
@@ -47,7 +47,7 @@ export const SectionsData: SectionData[] = [
       "Creamos cursos fácilmente accesibles en tabletas o dispositivos móviles. Estos materiales no solo son aptos para dispositivos móviles. Cada aspecto de la capacitación se diseñó cuidadosamente, desde el contenido hasta la pantalla, para proporcionar los materiales más efectivos y de fácil acceso.",
     link: {
       slug: "libreria",
-      text: "Catalogos de cursos",
+      text: "Catálogos de cursos",
     },
     MainImage: {
       src: ImgTimeline3,

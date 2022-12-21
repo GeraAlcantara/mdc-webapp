@@ -17,7 +17,7 @@ function BannerCTContact({ imgBanner, txtalt }: { imgBanner: StaticImageData; tx
               <Link href='contactanos'>
                 <div className='flex justify-end rounded-lg pt-6 hover:cursor-pointer hover:scale-[.98]  transition-all'>
                   <a className='flex rounded-full bg-accent text-gray-900 px-4 py-2 md:px-12 md:py-4 align-middle leading-none uppercase font-bold '>
-                    <span className='select-none'>Contactanos</span>
+                    <span className='select-none'>Contáctanos</span>
                   </a>
                 </div>
               </Link>

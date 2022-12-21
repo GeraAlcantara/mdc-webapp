@@ -39,7 +39,7 @@ function CardsCarousel({ coursename, numtopics, thumbnail, thumbnailAlt, numless
           <p className='text-gray-300 text-sm mt-2'>
             <span>{numtopics}</span> Temas, <span>{numlessons}</span> Lecciones
           </p>
-          <p className='text-gray-300 text-sm'>{`Duracion: ${duration} minutos (Aprox.)`}</p>
+          <p className='text-gray-300 text-sm'>{`Duración: ${duration} minutos (Aprox.)`}</p>
         </div>
       </div>
     </Link>

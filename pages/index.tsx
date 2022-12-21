@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         </h1>
         <div className='my-4 pb-4 w-full sm:landscape:w-1/2 md:w-2/4'>
           <p className='text-center md:text-left xl:text-xl max-w-prose '>
-            Sus empleados podrían ser el punto más debil en la infrestructura de seguridad en su empresa. !Hágalos más fuertes!
+            Sus empleados podrían ser el punto más débil en la infraestructura de seguridad en su empresa. ¡Hágalos más fuertes!
           </p>
         </div>
         <div className='flex justify-around md:justify-start sm:landscape:w-1/2'>

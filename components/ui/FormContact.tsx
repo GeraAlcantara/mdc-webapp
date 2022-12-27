@@ -137,7 +137,7 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
             <div className='flex flex-col gap-4 pt-4'>
               <h1 className='text-secondary text-3xl lg:text-5xl font-bold '>Escríbenos</h1>
               <p className='text-gray-600 font-light w-5/6'>
-                Envíanos tu nombre, apellido, correo de contacto y dentro del mensaje puedes escribir tu pregunta o comentario.
+                Ingresa tus datos de contacto así como tus dudas o comentarios y en breve uno de nuestros representantes se comunicará contigo.
               </p>
             </div>
             {inputs.map((input) => (

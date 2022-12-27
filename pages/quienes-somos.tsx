@@ -39,7 +39,7 @@ function About() {
             corporativos y empresariales que van desde la escala local, a la escala global.
           </p>
           <p className='max-w-prose m-auto pb-8'>
-            Esto se ha logrado gracias a una efectiva fusión y ejecución de las diversas áreas profesionales, como los son el diseño, programación, fotografía,
+            Esto se ha logrado gracias a una efectiva fusión y ejecución de las diversas áreas profesionales, como lo son el diseño, programación, fotografía,
             audio y video que integran nuestros productos por medio de altos estándares de calidad y cumpliendo con los estándares básicos de la industria
             (SCORM, AICC, TINCAN, etc), que nos han permitido atender de manera satisfactoria a clientes de nivel internacional.
           </p>

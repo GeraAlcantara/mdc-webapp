@@ -44,10 +44,10 @@ export const SectionsData: SectionData[] = [
   {
     title: "Mobile Ready",
     excerpt:
-      "Creamos cursos fácilmente accesibles en tabletas o dispositivos móviles. Estos materiales no solo son aptos para dispositivos móviles. Cada aspecto de la capacitación se diseñó cuidadosamente, desde el contenido hasta la pantalla, para proporcionar los materiales más efectivos y de fácil acceso.",
+      "Creamos cursos fácilmente accesibles en tabletas, dispositivos móviles, así como en computadoras. Cada aspecto de la capacitación se diseña cuidadosamente, desde el contenido hasta la pantalla, para proporcionar a los usuarios materiales efectivos y disponibles desde cualquier dispositivo.",
     link: {
       slug: "libreria",
-      text: "Catálogos de cursos",
+      text: "Catálogo de cursos",
     },
     MainImage: {
       src: ImgTimeline3,

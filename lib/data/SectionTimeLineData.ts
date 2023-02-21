@@ -1,76 +1,76 @@
-import ImgLaptop from "../../public/laptop.jpg";
-import ImgTrofeo from "../../public/trofeo.png";
-import ImgTimeline2 from "../../public/timeline2.jpg";
-import ImgTimeline3 from "../../public/timeline3.jpg";
-import ImgTimeline4 from "../../public/timeline4.jpg";
+import ImgLaptop from '../../public/laptop.jpg'
+import ImgTrofeo from '../../public/trofeo.png'
+import ImgTimeline2 from '../../public/timeline2.jpg'
+import ImgTimeline3 from '../../public/timeline3.jpg'
+import ImgTimeline4 from '../../public/timeline4.jpg'
 
 export const SectionsData: SectionData[] = [
   {
-    title: "Cursos Multipremiados",
+    title: 'Cursos Multipremiados',
     excerpt:
-      "En México DC lo visual es tan importante como el contenido, diseñamos cursos con video y animaciones personalizadas para impulsar el aprendizaje. Este tipo de factores generan entusiasmo y aumenta el interes en sus empleados a la hora de tomar un curso.",
+      'En México DC lo visual es tan importante como el contenido, diseñamos cursos con video y animaciones personalizadas para impulsar el aprendizaje. Este tipo de factores generan entusiasmo y aumenta el interes en sus empleados a la hora de tomar un curso.',
     link: {
-      slug: "libreria",
-      text: "Casos de éxito",
+      slug: 'libreria',
+      text: 'Casos de éxito'
     },
     MainImage: {
       src: ImgLaptop,
-      alt: "Laptop abierta, en la pantalla se muestra un curso de capacitacion de México development center.",
+      alt: 'Laptop abierta, en la pantalla se muestra un curso de capacitacion de México development center.'
     },
     sideImage: {
       src: ImgTrofeo,
-      alt: "trofeo",
+      alt: 'trofeo'
     },
-    colorClass: "secondary",
+    colorClass: 'secondary',
     layoutLeft: false,
-    ColorSchemaDark: false,
+    ColorSchemaDark: false
   },
   {
-    title: "Interactividad",
+    title: 'Interactividad',
     excerpt:
-      "Nuestros productos han tenido reconocimiento internacional ganando más de 40 premios como MarCom Awards, Davey Awards, W³ Awards, Golden Bridge Awards, Summit Creative Awards, Network Products Guide IT World Awards, Omni Awards, Interactive Media Awards.",
+      'Nuestros productos han tenido reconocimiento internacional ganando más de 40 premios como MarCom Awards, Davey Awards, W³ Awards, Golden Bridge Awards, Summit Creative Awards, Network Products Guide IT World Awards, Omni Awards, Interactive Media Awards.',
     link: {
-      slug: "libreria#catalogoCursos",
-      text: "Ver demos",
+      slug: 'libreria#catalogoCursos',
+      text: 'Ver demos'
     },
     MainImage: {
       src: ImgTimeline2,
-      alt: "chica frente a la pantalla de una laptop",
+      alt: 'chica frente a la pantalla de una laptop'
     },
-    colorClass: "TropicalBlue",
+    colorClass: 'TropicalBlue',
     layoutLeft: true,
-    ColorSchemaDark: true,
+    ColorSchemaDark: true
   },
   {
-    title: "Mobile Ready",
+    title: 'Mobile Ready',
     excerpt:
-      "Creamos cursos fácilmente accesibles en tabletas, dispositivos móviles, así como en computadoras. Cada aspecto de la capacitación se diseña cuidadosamente, desde el contenido hasta la pantalla, para proporcionar a los usuarios materiales efectivos y disponibles desde cualquier dispositivo.",
+      'Creamos cursos fácilmente accesibles en tabletas, dispositivos móviles, así como en computadoras. Cada aspecto de la capacitación se diseña cuidadosamente, desde el contenido hasta la pantalla, para proporcionar a los usuarios materiales efectivos y disponibles desde cualquier dispositivo.',
     link: {
-      slug: "libreria",
-      text: "Catálogo de cursos",
+      slug: 'libreria',
+      text: 'Catálogo de cursos'
     },
     MainImage: {
       src: ImgTimeline3,
-      alt: "mano tocando una pantalla con el indice",
+      alt: 'mano tocando una pantalla con el indice'
     },
-    colorClass: "MintGreen",
+    colorClass: 'MintGreen',
     layoutLeft: false,
-    ColorSchemaDark: true,
+    ColorSchemaDark: true
   },
   {
-    title: "Plataforma LMS Intuitiva",
+    title: 'Plataforma LMS Intuitiva',
     excerpt:
-      "Nuestros productos han tenido reconocimiento internacional ganando más de 40 premios como MarCom Awards, Davey Awards, W³ Awards, Golden Bridge Awards, Summit Creative Awards, Network Products Guide IT World Awards, Omni Awards, Interactive Media Awards.",
+      'Nuestros productos han tenido reconocimiento internacional ganando más de 40 premios como MarCom Awards, Davey Awards, W³ Awards, Golden Bridge Awards, Summit Creative Awards, Network Products Guide IT World Awards, Omni Awards, Interactive Media Awards.',
     link: {
-      slug: "libreria#precios",
-      text: "Planes y precios",
+      slug: 'libreria#precios',
+      text: 'Planes y precios'
     },
     MainImage: {
       src: ImgTimeline4,
-      alt: "Hombre pensativo viendo graficas de datos en la pantalla de su computadora",
+      alt: 'Hombre pensativo viendo graficas de datos en la pantalla de su computadora'
     },
-    colorClass: "BrightGreen",
+    colorClass: 'BrightGreen',
     layoutLeft: true,
-    ColorSchemaDark: true,
-  },
-];
+    ColorSchemaDark: true
+  }
+]

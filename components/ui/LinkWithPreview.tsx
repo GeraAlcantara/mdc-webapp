@@ -1,4 +1,3 @@
-import axios from 'axios'
 import { useEffect, useState } from 'react'
 
 import Loading from './Loading'
@@ -10,9 +9,6 @@ export default function LinkWithPreview({ link }: { link: string }) {
 
   useEffect(() => {
     const getPreview = async () => {
-      // get url from env
-      console.log(process.env.NEXT_PUBLIC_API_URL)
-
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/getLinkPreview`, {
         method: 'POST',
         headers: {

@@ -37,7 +37,7 @@ export const getSubcategoryByName = (name: string, categories: Categories) => {
       return subcategory
     }
   }
-  console.log(`Subcategory with name ${name} not found`)
+  //console.log(`Subcategory with name ${name} not found`)
 
   return null
 }

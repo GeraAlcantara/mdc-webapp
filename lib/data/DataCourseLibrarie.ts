@@ -1,5 +1,3 @@
-import { StaticImageData } from 'next/image'
-
 import ThumbnailHBEA from '../../public/thumbnail/thumbnail_R_HB_EA.jpg'
 import ThumbnailHBME from '../../public/thumbnail/thumbnail_R_HB_ME.jpg'
 import ThumbnailHD01 from '../../public/thumbnail/thumbnail_R_HD_01.jpg'

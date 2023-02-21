@@ -1,29 +1,33 @@
-import Footer from "./Footer";
-import Header from "./Header";
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react'
+
+import Footer from './Footer'
+import Header from './Header'
 
 function Layout({ children }: { children: React.ReactNode }): JSX.Element {
   // show btnscrolltop when scroll down
-  const [showBtnScrollTop, setShowBtnScrollTop] = useState(false);
+  const [showBtnScrollTop, setShowBtnScrollTop] = useState(false)
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
-        setShowBtnScrollTop(true);
+        setShowBtnScrollTop(true)
       } else {
-        setShowBtnScrollTop(false);
+        setShowBtnScrollTop(false)
       }
-    };
-    window.addEventListener("scroll", handleScroll);
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   /* arrow up btn on click go to top of the page  */
   function scrollToTop() {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
-    });
+      behavior: 'smooth'
+    })
   }
 
   return (
@@ -32,12 +36,23 @@ function Layout({ children }: { children: React.ReactNode }): JSX.Element {
       {showBtnScrollTop ? (
         <div>
           <button
-            title='Scroll to the top'
+            className="fixed bottom-4 lg:bottom-8 right-4 lg:right-8 bg-brandBlue-400 text-brandWhite rounded-full p-2 z-20"
+            title="Scroll to the top"
             onClick={scrollToTop}
-            className='fixed bottom-4 lg:bottom-8 right-4 lg:right-8 bg-brandBlue-400 text-brandWhite rounded-full p-2 z-20'
           >
-            <svg xmlns='http://www.w3.org/2000/svg' className='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M5 10l7-7m0 0l7 7m-7-7v18' />
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 10l7-7m0 0l7 7m-7-7v18"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+              />
             </svg>
           </button>
         </div>
@@ -45,7 +60,7 @@ function Layout({ children }: { children: React.ReactNode }): JSX.Element {
       <main>{children}</main>
       <Footer />
     </>
-  );
+  )
 }
 
-export default Layout;
+export default Layout

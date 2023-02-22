@@ -3,8 +3,8 @@ import React from 'react'
 
 import { DataHeadQuienesSomos } from '../lib/data/DataHeader'
 import HelperHead from '../lib/helpers/HelperHead'
-import Clients from '../components/ui/Clients'
-import Hero from '../components/ui/Hero'
+import Clients from '../components/ui/inicio/Clients'
+import Hero from '../components/ui/inicio/Hero'
 
 function About() {
   return (

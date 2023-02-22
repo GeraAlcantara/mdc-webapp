@@ -4,13 +4,13 @@ import { NextPage } from 'next/types'
 
 import HelperHead from '../lib/helpers/HelperHead'
 import { DataHeadHome } from '../lib/data/DataHeader'
-import Hero from '../components/ui/Hero'
+import Hero from '../components/ui/inicio/Hero'
 import { SectionsData } from '../lib/data/SectionTimeLineData'
 import Capacite from '../public/icons/capacitePersonal.svg'
-import Clients from '../components/ui/Clients'
-import Timeline from '../components/ui/Timeline'
+import Clients from '../components/ui/inicio/Clients'
+import Timeline from '../components/ui/inicio/Timeline'
 import BannerParallax from '../components/ui/BannerParallax'
-import SectionTimeline from '../components/ui/SectionTimeline'
+import SectionTimeline from '../components/ui/inicio/SectionTimeline'
 import ModalDemoReel from '../components/ui/ModalDemoReel'
 import MonitorVideoReel from '../public/videoreel.png'
 
@@ -84,17 +84,17 @@ const Home: NextPage = () => {
         <div className="mdc-ui-container">
           <div className="flex flex-col md:flex-row justify-between bg-gradient-to-br from-[#386fdd] via-[#439dc0] to-[#67dd80] rounded-3xl relative xl:py-12">
             <div className="px-10 py-6 xl:px-20 w-full lg:w-1/2 lg:text-left">
-              <h2 className="uppercase mb-4">Demo Reel</h2>
               <div className="pb-8">
                 <h3 className="text-6xl md:text-6xl lg:text-8xl font-extrabold">
                   <small className="text-2xl md:text-4xl xl:text-[2.75rem] text-gray-900">
                     Una Muestra de
-                  </small>{' '}
+                  </small>
                   <br />
                   Nuestro <br /> Trabajo
                 </h3>
                 <p className="mb-10 tetx-lg md:text-xl font-semibold text-gray-900 mt-4 md:w-[34ch]">
-                  Esta es una pequeña muestra de lo que hemos realizado en nuestros casos de éxito.
+                  Esta es una pequeña muestra de nuestro trabajo. Dé clic en la pantalla para ver el
+                  video.
                 </p>
                 <div className="md:pb-20">
                   <ModalDemoReel btnTheme="btnDark" />

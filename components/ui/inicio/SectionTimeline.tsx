@@ -3,9 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useRef, useEffect } from 'react'
 
-import ImgLaptop from '../../public/laptop.jpg'
-
-import TimelineCheckmark from './TimelineCheckmark'
+import ImgLaptop from '../../../public/laptop.jpg'
+import TimelineCheckmark from '../TimelineCheckmark'
 
 function SectionTimeline({
   ColorSchemaDark = false,

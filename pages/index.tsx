@@ -48,13 +48,11 @@ const Home: NextPage = () => {
           <Capacite className="text-8xl m-auto mb-4" />
           <h2 className="text-3xl font-extrabold  pb-8 text-center">Capacite a su personal</h2>
           <p className="max-w-prose m-auto pb-8">
-            Desde pequeñas empresas hasta empresas globales e instituciones públicas, los empleados
-            son el activo más importante en cualquier organización, pero también son el punto débil
-            en defensa de ciberseguridad. Podemos cambiar eso. Nuestras soluciones de capacitación
-            sobre seguridad efectúan cambios significativos y sostenibles en cualquier fuerza
-            laboral. Con nuestros cursos, los empleados no solo son conscientes de los peligros que
-            presenta un panorama de amenazas en constante cambio: están capacitados para proteger a
-            su organización de ellos.
+            En la actualidad, la educación a distancia es la mejor herramienta para cumplir los
+            objetivos de formación de las empresas. Nuestras soluciones de e-learning le permitirán
+            reducir su inversión de tiempo y dinero, al mismo tiempo que otorgan flexibilidad sobre
+            la ubicación y horario de las capacitaciones, y posibilitan un mejor seguimiento de las
+            métricas y los logros alcanzados.
           </p>
         </div>
       </div>

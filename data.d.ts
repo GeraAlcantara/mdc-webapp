@@ -1,87 +1,92 @@
 interface CourseFeatures {
-  library: { name: string; skuPrefix: string };
-  subcategory: { name: string; skuPrefix: string };
-  title: string;
-  slug: string;
-  identifier: { prefix: string; courseNumber: string };
-  duration: number;
-  description: string[];
-  topics: string[];
-  features: { id: number; name: string; qt: number; ICON: React.FunctionComponent<React.SVGProps<SVGSVGElement>> }[];
-  lessons: { title: string; duration: string }[];
+  library: { name: string; skuPrefix: string }
+  subcategory: { name: string; skuPrefix: string }
+  title: string
+  slug: string
+  identifier: { prefix: string; courseNumber: string }
+  duration: number
+  description: string[]
+  topics: string[]
+  features: {
+    id: number
+    name: string
+    qt: number
+    ICON: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+  }[]
+  lessons: { title: string; duration: string }[]
 }
 interface Course {
-  library: { name: string; skuPrefix: string };
-  subcategory: { name: string; skuPrefix: string };
-  title: string;
-  slug: string;
-  thumbnail: { src: StaticImageData; alt: string };
-  cover: string;
-  identifier: { prefix: string; courseNumber: string };
-  duration: number;
-  description: string[];
-  topics: string[];
-  features: Feature[];
-  modules: Module[];
+  library: { name: string; skuPrefix: string }
+  subcategory: { name: string; skuPrefix: string }
+  title: string
+  slug: string
+  thumbnail: { src: StaticImageData; alt: string }
+  cover: string
+  identifier: { prefix: string; courseNumber: string }
+  duration: number
+  description: string[]
+  topics: string[]
+  features: Feature[]
+  modules: Module[]
 }
 
 interface Module {
-  name: string;
-  lessons: Lesson[];
+  name: string
+  lessons: Lesson[]
 }
 
 interface Feature {
-  name: string;
-  qt: number;
-  iconSrc: string;
+  name: string
+  qt: number
+  iconSrc: string
 }
 
 interface Lesson {
-  title: string;
-  duration: string;
+  title: string
+  duration: string
 }
 interface Category {
-  name: string;
-  slug: string;
-  subcategories: Subcategory[];
+  name: string
+  slug: string
+  subcategories: Subcategory[]
 }
 
 interface Subcategory {
-  name: string;
-  slug: string;
-  colorid: string;
-  courses: Course[];
+  name: string
+  slug: string
+  colorid: string
+  courses: Course[]
 }
 
 interface Categories extends Array<Category> {}
 
 // Interfaces for meta data in pages
 interface DataHead {
-  twitterHandle: string;
-  siteName: string;
-  currentURL: string;
+  twitterHandle: string
+  siteName: string
+  currentURL: string
 }
 
 interface HeadData {
-  previewImage: string;
-  previewImageAlt: string;
-  pageTitle: string;
-  pageDescription: string;
-  slug: string;
+  previewImage: string
+  previewImageAlt: string
+  pageTitle: string
+  pageDescription: string
+  slug: string
 }
 // Path: components/Section.tsx
 // convert enum Colors to interface object freezed
-type Colors = "TropicalBlue" | "MintGreen" | "BrightGreen" | "secondary";
+type Colors = 'TropicalBlue' | 'MintGreen' | 'BrightGreen' | 'secondary'
 
 interface SectionData {
-  ColorSchemaDark: boolean;
-  layoutLeft: boolean;
-  colorClass: Colors; //TropicalBlue | MintGreen | Bright Green | secondary
-  MainImage: { src: StaticImageData; alt: string };
-  link: { slug: string; text: string };
-  excerpt: string;
-  title: string;
-  sideImage?: { src: StaticImageData; alt: string };
+  ColorSchemaDark: boolean
+  layoutLeft: boolean
+  colorClass: Colors //TropicalBlue | MintGreen | Bright Green | secondary
+  MainImage: { src: StaticImageData; alt: string }
+  link: { slug: string; text: string }
+  excerpt: JSX.Element | string
+  title: string
+  sideImage?: { src: StaticImageData; alt: string }
 }
 
 // Post Schema
@@ -109,48 +114,48 @@ interface SectionData {
  */
 
 interface PostMeta {
-  slug: string;
-  title: string;
-  tags: string[];
-  date: string;
-  excerpt: string;
-  descriptionSEO: string;
-  imageSEO: string;
-  imageAltSEO: string;
-  coverImageSrc: string;
-  coverImageAlt: string;
-  authorAvatar: string;
-  authorName: string;
-  readTime: number;
-  articleType: "noticias" | "articulo";
+  slug: string
+  title: string
+  tags: string[]
+  date: string
+  excerpt: string
+  descriptionSEO: string
+  imageSEO: string
+  imageAltSEO: string
+  coverImageSrc: string
+  coverImageAlt: string
+  authorAvatar: string
+  authorName: string
+  readTime: number
+  articleType: 'noticias' | 'articulo'
 }
 interface Post {
-  content: string;
-  meta: PostMeta;
+  content: string
+  meta: PostMeta
 }
 
 interface Values {
-  [key: string]: string;
+  [key: string]: string
 }
 
 interface InputProps {
-  id: number;
-  name: string;
-  label: string;
-  placeholder: string;
-  type: string;
-  errorMessage: string;
-  pattern?: string;
-  required: boolean;
-  errors?: string;
+  id: number
+  name: string
+  label: string
+  placeholder: string
+  type: string
+  errorMessage: string
+  pattern?: string
+  required: boolean
+  errors?: string
 }
 interface PreviewCardData {
-  title?: string;
-  titleog?: string;
-  description?: string;
-  image?: string;
-  imageAlt?: string;
-  url?: string;
-  canonical?: string;
-  siteName?: string;
+  title?: string
+  titleog?: string
+  description?: string
+  image?: string
+  imageAlt?: string
+  url?: string
+  canonical?: string
+  siteName?: string
 }

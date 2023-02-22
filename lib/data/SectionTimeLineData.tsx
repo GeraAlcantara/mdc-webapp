@@ -8,10 +8,10 @@ export const SectionsData: SectionData[] = [
   {
     title: 'Cursos Multipremiados',
     excerpt:
-      'En México DC lo visual es tan importante como el contenido, diseñamos cursos con video y animaciones personalizadas para impulsar el aprendizaje. Este tipo de factores generan entusiasmo y aumenta el interes en sus empleados a la hora de tomar un curso.',
+      'Nuestros productos han sido reconocidos internacionalmente con más de 40 premios, como MarCom Awards, Davey Awards, W³ Awards, Golden Bridge Awards, Summit Creative Awards, Network Products Guide IT World Awards, Omni Awards, Interactive Media Awards.',
     link: {
       slug: 'libreria',
-      text: 'Casos de éxito'
+      text: 'libreria de Cursos'
     },
     MainImage: {
       src: ImgLaptop,
@@ -26,9 +26,9 @@ export const SectionsData: SectionData[] = [
     ColorSchemaDark: false
   },
   {
-    title: 'Interactividad',
+    title: 'Contenido interactivo',
     excerpt:
-      'Nuestros productos han tenido reconocimiento internacional ganando más de 40 premios como MarCom Awards, Davey Awards, W³ Awards, Golden Bridge Awards, Summit Creative Awards, Network Products Guide IT World Awards, Omni Awards, Interactive Media Awards.',
+      'En México DC creamos un e-learning de impacto. Por eso diseñamos cursos con videos, animaciones, cuestionarios y ejercicios interactivos que impulsan y refuerzan el aprendizaje. Estos elementos motivan a los usuarios y aumentan su interés en el momento de tomar un curso.',
     link: {
       slug: 'libreria#catalogoCursos',
       text: 'Ver demos'
@@ -43,8 +43,14 @@ export const SectionsData: SectionData[] = [
   },
   {
     title: 'Mobile Ready',
-    excerpt:
-      'Creamos cursos fácilmente accesibles en tabletas, dispositivos móviles, así como en computadoras. Cada aspecto de la capacitación se diseña cuidadosamente, desde el contenido hasta la pantalla, para proporcionar a los usuarios materiales efectivos y disponibles desde cualquier dispositivo.',
+    excerpt: (
+      <span>
+        Nuestros cursos <b>son accesibles desde cualquier dispositivo</b>, incluyendo tabletas y
+        teléfonos inteligentes. Cada detalle de nuestros cursos se diseña cuidadosamente para
+        proporcionar materiales efectivos y de fácil acceso, que permitan a las empresas ofrecer
+        <b> mayor flexibilidad</b> para la capacitación de sus trabajadores.
+      </span>
+    ),
     link: {
       slug: 'libreria',
       text: 'Catálogo de cursos'
@@ -58,9 +64,9 @@ export const SectionsData: SectionData[] = [
     ColorSchemaDark: true
   },
   {
-    title: 'Plataforma LMS Intuitiva',
+    title: 'Integración con LMS',
     excerpt:
-      'Nuestros productos han tenido reconocimiento internacional ganando más de 40 premios como MarCom Awards, Davey Awards, W³ Awards, Golden Bridge Awards, Summit Creative Awards, Network Products Guide IT World Awards, Omni Awards, Interactive Media Awards.',
+      'Contamos con el servicio de “llave en mano”, lo que significa que entregamos nuestros cursos exportados en formato SCORM y listos para integrarse en cualquier plataforma LMS.',
     link: {
       slug: 'libreria#precios',
       text: 'Planes y precios'

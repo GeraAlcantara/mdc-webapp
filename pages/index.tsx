@@ -15,7 +15,6 @@ import SectionTimeline from '../components/ui/inicio/SectionTimeline'
 import ModalDemoReel from '../components/ui/ModalDemoReel'
 import MonitorVideoReel from '../public/videoreel.png'
 import FormContact from '../components/ui/FormContact'
-import Address from '../components/ui/Address'
 
 import { newCaptchaImages } from './api/captcha-image'
 

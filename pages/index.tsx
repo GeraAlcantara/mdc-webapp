@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { NextPage } from 'next/types'
+import { withIronSessionSsr } from 'iron-session/next'
 
 import HelperHead from '../lib/helpers/HelperHead'
 import { DataHeadHome } from '../lib/data/DataHeader'
@@ -13,8 +14,16 @@ import BannerParallax from '../components/ui/BannerParallax'
 import SectionTimeline from '../components/ui/inicio/SectionTimeline'
 import ModalDemoReel from '../components/ui/ModalDemoReel'
 import MonitorVideoReel from '../public/videoreel.png'
+import FormContact from '../components/ui/FormContact'
+import Address from '../components/ui/Address'
 
-const Home: NextPage = () => {
+import { newCaptchaImages } from './api/captcha-image'
+
+interface HomeProps {
+  defaultCaptchaKey: string
+}
+
+const Home: NextPage<HomeProps> = ({ defaultCaptchaKey }) => {
   return (
     <>
       <HelperHead {...DataHeadHome} />
@@ -77,6 +86,7 @@ const Home: NextPage = () => {
           />
         ))}
       </section>
+
       {/* video reel Section */}
       <section className="flex items-center pb-8 md:pt-28 md:pb-[8.5rem] ">
         <div className="mdc-ui-container">
@@ -129,8 +139,43 @@ const Home: NextPage = () => {
           <BannerParallax />
         </div>
       </section>
+
+      <section className="mdc-ui-container py-10">
+        <header className="mb-10">
+          <hgroup className="text-center">
+            <h2 className="text-xl mb-2">Ponte en contacto</h2>
+            <h3 className="text-4xl xl:text-5xl font-bold">¿Cómo podemos ayudarte?</h3>
+          </hgroup>
+        </header>
+        <div className="">
+          <div className="">
+            <FormContact defaultCaptchaKey={defaultCaptchaKey} />
+          </div>
+        </div>
+      </section>
     </>
   )
 }
 
 export default Home
+
+export const getServerSideProps = withIronSessionSsr(
+  async function getIronSession({ req }) {
+    {
+      if (!req.session.captchaImages) {
+        req.session.captchaImages = newCaptchaImages()
+        await req.session.save()
+      }
+
+      return {
+        props: {
+          defaultCaptchaKey: new Date().getTime()
+        }
+      }
+    }
+  },
+  {
+    cookieName: 'MDC_SESSION',
+    password: process.env.SESSION_SECRET as string
+  }
+)

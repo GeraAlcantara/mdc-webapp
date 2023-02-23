@@ -1,5 +1,4 @@
 import { RiPhoneFill } from 'react-icons/ri'
-import { MdMail } from 'react-icons/md'
 
 function Address() {
   return (

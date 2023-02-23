@@ -18,11 +18,7 @@ import FormContact from '../components/ui/FormContact'
 
 import { newCaptchaImages } from './api/captcha-image'
 
-interface HomeProps {
-  defaultCaptchaKey: string
-}
-
-const Home: NextPage<HomeProps> = ({ defaultCaptchaKey }) => {
+const Home: NextPage<CaptchaKeyProps> = ({ defaultCaptchaKey }) => {
   return (
     <>
       <HelperHead {...DataHeadHome} />
@@ -146,11 +142,7 @@ const Home: NextPage<HomeProps> = ({ defaultCaptchaKey }) => {
             <h3 className="text-4xl xl:text-5xl font-bold">¿Cómo podemos ayudarte?</h3>
           </hgroup>
         </header>
-        <div className="">
-          <div className="">
-            <FormContact defaultCaptchaKey={defaultCaptchaKey} />
-          </div>
-        </div>
+        <FormContact defaultCaptchaKey={defaultCaptchaKey} />
       </section>
     </>
   )

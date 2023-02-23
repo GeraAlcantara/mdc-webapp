@@ -80,10 +80,10 @@ function Libreria() {
         {/* Section Libreria  */}
         <section className="lg:m-10">
           <header>
-            <hgroup className="text-center">
+            <div className="text-center">
               <p className="text-xl">Conoce toda nuestra</p>
               <h2 className="text-4xl font-bold">Librería lista para usarse.</h2>
-            </hgroup>
+            </div>
           </header>
           {/* tabs filter carrousel */}
           <TabsCarousel />

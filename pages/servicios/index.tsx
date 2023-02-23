@@ -1,26 +1,29 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { withIronSessionSsr } from 'iron-session/next'
 
-import HelperHead from '../lib/helpers/HelperHead'
-import { DataHeadServicios } from '../lib/data/DataHeader'
-import BannerCTContact from '../components/ui/BannerCTContact'
-import CheckBackImg from '../public/heroProductosCheckback.png'
-import PlayImg from '../public/heroserviciosPlayIconFront.png'
-import ChatImg from '../public/heroserviciosChatIconMiddle.png'
-import ServHeroMenImg from '../public/heroServiciosMen.png'
-import Iconlibrary from '../public/icons/libreria.svg'
-import IconServices from '../public/icons/servicios.svg'
-import ImgBannerServices from '../public/bannerServicios.jpg'
-import ProducionImgGraph from '../public/produccionesImgGraph.png'
-import ProducionImgPerson from '../public/produccionesImgPerson.png'
-import ProducionImgSet from '../public/produccionesImgSet.png'
-import SociosImgHandData from '../public/sociosImgHandData.png'
-import SociosImgPersons from '../public/sociosImgPersons.png'
-import TradImgLightEQ from '../public/traduccionesImgLightEQ.jpg'
-import TradImgLocutora from '../public/traduccionesImgLocutora.png'
-import TradImgMicrofono from '../public/traduccionesImgMicrofono.png'
+import HelperHead from '../../lib/helpers/HelperHead'
+import { DataHeadServicios } from '../../lib/data/DataHeader'
+import BannerCTContact from '../../components/ui/BannerCTContact'
+import CheckBackImg from '../../public/heroProductosCheckback.png'
+import PlayImg from '../../public/heroserviciosPlayIconFront.png'
+import ChatImg from '../../public/heroserviciosChatIconMiddle.png'
+import ServHeroMenImg from '../../public/heroServiciosMen.png'
+import Iconlibrary from '../../public/icons/libreria.svg'
+import IconServices from '../../public/icons/servicios.svg'
+import ImgBannerServices from '../../public/bannerServicios.jpg'
+import ProducionImgGraph from '../../public/produccionesImgGraph.png'
+import ProducionImgPerson from '../../public/produccionesImgPerson.png'
+import ProducionImgSet from '../../public/produccionesImgSet.png'
+import SociosImgHandData from '../../public/sociosImgHandData.png'
+import SociosImgPersons from '../../public/sociosImgPersons.png'
+import TradImgLightEQ from '../../public/traduccionesImgLightEQ.jpg'
+import TradImgLocutora from '../../public/traduccionesImgLocutora.png'
+import TradImgMicrofono from '../../public/traduccionesImgMicrofono.png'
+import FormContact from '../../components/ui/FormContact'
+import { newCaptchaImages } from '../api/captcha-image'
 
-export default function Servicios() {
+export default function Servicios({ defaultCaptchaKey }: CaptchaKeyProps) {
   return (
     <>
       <HelperHead {...DataHeadServicios} />
@@ -230,7 +233,38 @@ export default function Servicios() {
             />
           </div>
         </section>
+        <section className="mdc-ui-container py-10">
+          <header className="mb-10">
+            <hgroup className="text-center">
+              <h2 className="text-xl mb-2">Ponte en contacto</h2>
+              <h3 className="text-4xl xl:text-5xl font-bold">¿Cómo podemos ayudarte?</h3>
+            </hgroup>
+          </header>
+
+          <FormContact defaultCaptchaKey={defaultCaptchaKey} />
+        </section>
       </div>
     </>
   )
 }
+
+export const getServerSideProps = withIronSessionSsr(
+  async function getIronSession({ req }) {
+    {
+      if (!req.session.captchaImages) {
+        req.session.captchaImages = newCaptchaImages()
+        await req.session.save()
+      }
+
+      return {
+        props: {
+          defaultCaptchaKey: new Date().getTime()
+        }
+      }
+    }
+  },
+  {
+    cookieName: 'MDC_SESSION',
+    password: process.env.SESSION_SECRET as string
+  }
+)

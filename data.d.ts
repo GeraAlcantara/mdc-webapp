@@ -159,3 +159,7 @@ interface PreviewCardData {
   canonical?: string
   siteName?: string
 }
+
+interface CaptchaKeyProps {
+  defaultCaptchaKey: string
+}

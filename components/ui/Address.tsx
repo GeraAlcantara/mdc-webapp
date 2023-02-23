@@ -33,15 +33,8 @@ function Address() {
         <div>
           <h2 className="font-bold text-brandWhite">Oficinas</h2>
           <div className=" flex items-center gap-2">
-            <RiPhoneFill className="text-accent" />{' '}
+            <RiPhoneFill className="text-accent" />
             <a href="tel:+529848033746">+52 984 803 3746 </a>
-          </div>
-        </div>
-        <div className="pb-8">
-          <h2 className="font-bold text-brandWhite">Nuestro correo</h2>
-          <div className=" flex items-center gap-2">
-            <MdMail className="text-accent" />{' '}
-            <a href="mailto:info@mexicodc.com">info@mexicodc.com</a>
           </div>
         </div>
       </div>

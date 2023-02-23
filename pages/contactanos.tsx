@@ -26,8 +26,8 @@ export default function contactanos({ defaultCaptchaKey }: { defaultCaptchaKey: 
         <section className="mdc-ui-container ">
           <header className="mb-10">
             <hgroup className="text-center">
-              <h1 className="text-xl">Ponte en contacto</h1>
-              <h2 className="text-4xl font-bold">¿Cómo podemos ayudarte?</h2>
+              <h2 className="text-xl">Ponte en contacto</h2>
+              <h3 className="text-4xl font-bold">¿Cómo podemos ayudarte?</h3>
             </hgroup>
           </header>
           <div className="">

@@ -106,12 +106,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
   //get the course by slug
   const course = getCourseBySlug(slug, allCoursesBySubcategory.flat())
 
-  // if not found trow an error
-  if (!course) {
-    console.log('No course found' + slug)
-  }
-
-  // Pass post data to the page via props
   return { props: { params, course } }
 }
 

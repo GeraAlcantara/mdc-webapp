@@ -1229,13 +1229,13 @@ export const DataCourseLibrarie: Categories = [
     slug: 'seguridad-de-la-informacion',
     subcategories: [
       {
-        name: 'Esenciales',
+        name: 'Seguridad Esenciales',
         slug: 'esenciales',
         colorid: '#4a6eb5',
         courses: [
           {
             library: { name: 'Seguridad de la información', skuPrefix: 'S' },
-            subcategory: { name: 'Esenciales', skuPrefix: 'E' },
+            subcategory: { name: 'Seguridad Esenciales', skuPrefix: 'E' },
             title: 'Prácticas Esenciales',
             slug: 'practicas-esenciales',
             thumbnail: {
@@ -1320,13 +1320,13 @@ export const DataCourseLibrarie: Categories = [
         ]
       },
       {
-        name: 'Micro Módulos',
+        name: 'Seguridad Micro Módulos',
         slug: 'micro-modulos',
         colorid: '#4a6eb5',
         courses: [
           {
             library: { name: 'Seguridad de la información', skuPrefix: 'S' },
-            subcategory: { name: 'Micro Módulos', skuPrefix: 'MM' },
+            subcategory: { name: 'Seguridad Micro Módulos', skuPrefix: 'MM' },
             title: 'Contraseñas Seguras',
             slug: 'contrasenas-seguras',
             thumbnail: {
@@ -1385,7 +1385,7 @@ export const DataCourseLibrarie: Categories = [
           },
           {
             library: { name: 'Seguridad de la información', skuPrefix: 'S' },
-            subcategory: { name: 'Micro Módulos', skuPrefix: 'MM' },
+            subcategory: { name: 'Seguridad Micro Módulos', skuPrefix: 'MM' },
             title: 'Malware',
             slug: 'malware',
             thumbnail: {
@@ -1445,7 +1445,7 @@ export const DataCourseLibrarie: Categories = [
           },
           {
             library: { name: 'Seguridad de la información', skuPrefix: 'S' },
-            subcategory: { name: 'Micro Módulos', skuPrefix: 'MM' },
+            subcategory: { name: 'Seguridad Micro Módulos', skuPrefix: 'MM' },
             title: 'Phishing',
             slug: 'phishing',
             thumbnail: {

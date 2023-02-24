@@ -1229,7 +1229,7 @@ export const DataCourseLibrarie: Categories = [
     slug: 'seguridad-de-la-informacion',
     subcategories: [
       {
-        name: 'Seguridad Esenciales',
+        name: 'Esenciales',
         slug: 'esenciales',
         colorid: '#4a6eb5',
         courses: [
@@ -1320,7 +1320,7 @@ export const DataCourseLibrarie: Categories = [
         ]
       },
       {
-        name: 'Seguridad Micro Módulos',
+        name: 'Micro Módulos',
         slug: 'micro-modulos',
         colorid: '#4a6eb5',
         courses: [

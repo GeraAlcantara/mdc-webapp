@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { RiPaypalFill, RiVisaLine, RiMastercardFill } from 'react-icons/ri'
+import { withIronSessionSsr } from 'iron-session/next'
 
 import HelperHead from '../../lib/helpers/HelperHead'
 import { DataHeadProd } from '../../lib/data/DataHeader'
@@ -18,8 +19,10 @@ import ImgBannerProd from '../../public/bannerProds.jpg'
 import PricesSection from '../../components/ui/PricesSection'
 import TabletImg from '../../public/tablet_card.png'
 import WomanMobileImg from '../../public/woman_mobile.jpg'
+import { newCaptchaImages } from '../api/captcha-image'
+import FormContact from '../../components/ui/FormContact'
 
-function Libreria() {
+function Libreria({ defaultCaptchaKey }: CaptchaKeyProps) {
   return (
     <>
       <HelperHead {...DataHeadProd} />
@@ -228,8 +231,38 @@ function Libreria() {
             </div>
           </div>
         </section>
+        <section className="mdc-ui-container py-10">
+          <header className="mb-10">
+            <hgroup className="text-center">
+              <h2 className="text-xl mb-2">Ponte en contacto</h2>
+              <h3 className="text-4xl xl:text-5xl font-bold">¿Cómo podemos ayudarte?</h3>
+            </hgroup>
+          </header>
+          <FormContact defaultCaptchaKey={defaultCaptchaKey} />
+        </section>
       </div>
     </>
   )
 }
 export default Libreria
+
+export const getServerSideProps = withIronSessionSsr(
+  async function getIronSession({ req }) {
+    {
+      if (!req.session.captchaImages) {
+        req.session.captchaImages = newCaptchaImages()
+        await req.session.save()
+      }
+
+      return {
+        props: {
+          defaultCaptchaKey: new Date().getTime()
+        }
+      }
+    }
+  },
+  {
+    cookieName: 'MDC_SESSION',
+    password: process.env.SESSION_SECRET as string
+  }
+)

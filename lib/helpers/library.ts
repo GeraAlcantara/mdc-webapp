@@ -26,14 +26,19 @@ export const getSubcategoriesSlugs = (categories: Categories) => {
     .flat()
 }
 
-export const getSubcategoryByName = (name: string, categories: Categories): Subcategory | null => {
-  const normalizedSearchName = name.toLowerCase().trim()
+export const getSubcategoryByName = (name: string, categories: Categories) => {
+  // iterate over categories and find the subcategory by the name
+  for (let category of categories) {
+    const subcategory = category.subcategories.find(
+      (subcategory) => subcategory.name.toLowerCase().trim() === name.toLowerCase().trim()
+    )
 
-  const foundSubcategory = categories
-    .flatMap(({ subcategories }) => subcategories)
-    .find(({ name }) => name.toLowerCase().trim() === normalizedSearchName)
+    if (subcategory) {
+      return subcategory
+    }
+  }
 
-  return foundSubcategory || null
+  return null
 }
 
 // courses
@@ -41,8 +46,8 @@ export const coursesHB = getSubcategoryByName('Habilidades Blandas', data)!.cour
 export const coursesHD = getSubcategoryByName('Habilidades Directivas', data)!.courses
 export const coursesTT = getSubcategoryByName('Habilidades Tecnológicas', data)!.courses
 export const coursesRJ = getSubcategoryByName('Jurídico', data)!.courses
-export const coursesSE = getSubcategoryByName('Seguridad Esenciales', data)!.courses
-export const coursesMM = getSubcategoryByName('Seguridad Micro Módulos', data)!.courses
+export const coursesSE = getSubcategoryByName('Esenciales', data)!.courses
+export const coursesMM = getSubcategoryByName('Micro Módulos', data)!.courses
 export const coursesPV = getSubcategoryByName('Capacitación Ventas', data)!.courses
 
 export const getCourseBySlug = (slug: string, courses: Course[]) => {

@@ -4,7 +4,7 @@ import LogoNav from './LogoNav'
 import MenuOverlay from './MenuOverlay'
 import Nav from './Nav'
 
-function Header() {
+export default function Header() {
   const [toogleON, setToggleOn] = useState(false)
   const [background, setBackground] = useState(false)
 
@@ -57,5 +57,3 @@ function Header() {
     </div>
   )
 }
-
-export default Header

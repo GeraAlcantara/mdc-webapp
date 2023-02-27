@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
-import MENU_ITEMS from '../../lib/data/MenuItems'
-
+import MENU_ITEMS from './Header.constants'
 import LogoNav from './LogoNav'
 
 interface MenuOverlayProps {

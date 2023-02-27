@@ -1,6 +1,5 @@
-import MENU_ITEMS from '../../lib/data/MenuItems'
-
 import NavLink from './NavLink'
+import MENU_ITEMS from './Header.constants'
 
 function Nav() {
   return (

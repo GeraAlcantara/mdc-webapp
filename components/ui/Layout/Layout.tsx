@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 import Footer from '../Footer'
-import Header from '../Header'
+import Header from '../../Header/Header'
 
 function Layout({ children }: { children: React.ReactNode }): JSX.Element {
   // show btnscrolltop when scroll down

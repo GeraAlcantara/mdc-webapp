@@ -20,7 +20,7 @@ import PricesSection from '../../components/ui/PricesSection'
 import TabletImg from '../../public/tablet_card.png'
 import WomanMobileImg from '../../public/woman_mobile.jpg'
 import { newCaptchaImages } from '../api/captcha-image'
-import FormContact from '../../components/ui/FormContact'
+import FormContact from '../../components/FormContact/FormContact'
 
 function Libreria({ defaultCaptchaKey }: CaptchaKeyProps) {
   return (

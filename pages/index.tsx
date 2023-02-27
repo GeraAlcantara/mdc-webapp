@@ -14,7 +14,7 @@ import BannerParallax from '../components/ui/BannerParallax'
 import SectionTimeline from '../components/SectionTimeline'
 import ModalDemoReel from '../components/ui/ModalDemoReel'
 import MonitorVideoReel from '../public/videoreel.png'
-import FormContact from '../components/ui/FormContact'
+import FormContact from '../components/FormContact/FormContact'
 
 import { newCaptchaImages } from './api/captcha-image'
 

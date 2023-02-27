@@ -20,7 +20,7 @@ import SociosImgPersons from '../../public/sociosImgPersons.png'
 import TradImgLightEQ from '../../public/traduccionesImgLightEQ.jpg'
 import TradImgLocutora from '../../public/traduccionesImgLocutora.png'
 import TradImgMicrofono from '../../public/traduccionesImgMicrofono.png'
-import FormContact from '../../components/ui/FormContact'
+import FormContact from '../../components/FormContact/FormContact'
 import { newCaptchaImages } from '../api/captcha-image'
 
 export default function Servicios({ defaultCaptchaKey }: CaptchaKeyProps) {

@@ -3,7 +3,7 @@ import { withIronSessionSsr } from 'iron-session/next'
 import HelperHead from '../lib/helpers/HelperHead'
 import { DataHeadContact } from '../lib/data/DataHeader'
 import Address from '../components/ui/Address'
-import FormContact from '../components/ui/FormContact'
+import FormContact from '../components/FormContact/FormContact'
 import IconContacto from '../public/icons/contacto.svg'
 
 import { newCaptchaImages } from './api/captcha-image'

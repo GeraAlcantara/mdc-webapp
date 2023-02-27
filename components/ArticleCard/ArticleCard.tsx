@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { RiNewspaperLine } from 'react-icons/ri'
 import { HiOutlineEye } from 'react-icons/hi'
-import React from 'react'
 import Link from 'next/link'
 
 import AuthorPostInfo from './AuthorPostInfo'

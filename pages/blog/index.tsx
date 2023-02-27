@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next'
 
 import { DataHeadBlog } from '../../lib/data/DataHeader'
 import HelperHead from '../../lib/helpers/HelperHead'
-import ArticleCard from '../../components/ui/ArticleCard'
+import ArticleCard from '../../components/ArticleCard'
 import { getAllPosts } from '../api/blogApi'
 
 interface BlogProps {

@@ -1,7 +1,7 @@
-import Facebook from '../../components/svgs/facebook.svg'
-import Twitter from '../../components/svgs/twitter.svg'
-import Instagram from '../../components/svgs/instagram.svg'
-import Linkedin from '../../components/svgs/linkedin.svg'
+import Facebook from './../svgs/facebook.svg'
+import Twitter from './../svgs/twitter.svg'
+import Instagram from './../svgs/instagram.svg'
+import Linkedin from './../svgs/linkedin.svg'
 
 export const coursesLinks = [
   {

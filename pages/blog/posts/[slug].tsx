@@ -12,7 +12,7 @@ import { GetStaticProps } from 'next'
 
 import HelperHead from '../../../lib/helpers/HelperHead'
 import { DataHeadDefault } from '../../../lib/data/DataHeader'
-import AuthorPostInfo from '../../../components/ui/AuthorPostInfo'
+import AuthorPostInfo from '../../../components/ArticleCard/AuthorPostInfo'
 import { getSlugs, getPostBySlug } from '../../api/blogApi'
 import YouTube from '../../../components/ui/YouTube'
 import LinkWithPreview from '../../../components/ui/LinkWithPreview'

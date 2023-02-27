@@ -7,7 +7,7 @@ import Nprogress from 'nprogress'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { DefaultSeo } from 'next-seo'
 
-import Layout from '../components/ui/Layout/Layout'
+import Layout from '../components/Layout'
 import SEO from '../next-seo.config'
 
 function MyApp({ Component, pageProps }: AppProps) {

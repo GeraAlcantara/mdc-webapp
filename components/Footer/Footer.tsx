@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { socialMedia, FooterLinks } from '../../lib/data/FooterLinks'
 import LogoFooter from '../../public/logoMDCfooter.png'
 
-function Footer() {
+import * as CONSTANT from './Footer.constants'
+
+export default function Footer() {
   const getdate = new Date()
   const year = getdate.getFullYear()
 
@@ -15,7 +16,7 @@ function Footer() {
           <Image alt="logo" src={LogoFooter} />
         </div>
 
-        {FooterLinks.map((footerlink, idx) => (
+        {CONSTANT.FooterLinks.map((footerlink, idx) => (
           <div
             key={footerlink.title + idx}
             className="flex flex-col my-4 min-w-[240px] md:min-w-[140px] "
@@ -40,7 +41,7 @@ function Footer() {
         <div className="mdc-ui-container flex justify-between mx-auto items-center md:flex-row flex-col border-t-[1px] border-t-[#192641] sm:py-10 py-3 ">
           <p className="font-normal text-center">{`Copyright @ ${year} Mexico Development Center. | Todos los derechos reservados.`}</p>
           <ul className="flex flex-row md:my-0 my-6" role="list">
-            {socialMedia.map(({ id, Icon, link, name }, idx) => {
+            {CONSTANT.socialMedia.map(({ id, Icon, link, name }, idx) => {
               return (
                 <li key={id}>
                   <a
@@ -52,7 +53,7 @@ function Footer() {
                     <span className="sr-only">{name}</span>
                     <Icon
                       className={`text-3xl hover:scale-105 ${
-                        idx !== socialMedia.length - 1 ? 'mr-6' : 'mr-0'
+                        idx !== CONSTANT.socialMedia.length - 1 ? 'mr-6' : 'mr-0'
                       }`}
                     />
                   </a>
@@ -65,5 +66,3 @@ function Footer() {
     </section>
   )
 }
-
-export default Footer

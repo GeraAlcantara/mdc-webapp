@@ -1,10 +1,10 @@
 import Image from 'next/image'
 
-import IberostarLogo from '../../../public/clientes/iberostarLogo.png'
-import MedixLogo from '../../../public/clientes/medixLogo.png'
-import MeetmeLogo from '../../../public/clientes/meetmeLogo.png'
-import IelLogo from '../../../public/clientes/logo_iel-white.png'
-import VipreLogo from '../../../public/clientes/VIPRE_HeaderLogo.svg'
+import IberostarLogo from '../../public/clientes/iberostarLogo.png'
+import MedixLogo from '../../public/clientes/medixLogo.png'
+import MeetmeLogo from '../../public/clientes/meetmeLogo.png'
+import IelLogo from '../../public/clientes/logo_iel-white.png'
+import VipreLogo from '../../public/clientes/VIPRE_HeaderLogo.svg'
 function LogosClientes() {
   return (
     <>

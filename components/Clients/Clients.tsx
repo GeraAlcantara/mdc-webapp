@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import LogosClientes from './LogosClientes'
 
-function Clients() {
+export default function Clients() {
   const [isMobile, setIsMobile] = useState(false)
   //check the screen size
   const handleResize = () => {
@@ -53,5 +53,3 @@ function Clients() {
     </section>
   )
 }
-
-export default Clients

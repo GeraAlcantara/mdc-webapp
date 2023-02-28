@@ -34,7 +34,7 @@ function CourseSpecs({
 }: CourseSpecsProps) {
   return (
     <div className=" mdc-ui-container select-none">
-      <div className="grid w-full grid-cols-1 gap-5 mt-10 mb-4 md:grid-cols-5 md:gap-16">
+      <div className="grid w-full grid-cols-1 gap-5 mt-4 mb-4 md:grid-cols-5 md:gap-16">
         <div className="flex flex-col w-full h-full mx-auto md:col-span-3 md:row-start-auto max-w-screen-2xl">
           <header>
             <div className="flex items-center justify-center md:hidden my-4 flex-col">

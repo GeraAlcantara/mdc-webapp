@@ -10,7 +10,7 @@ export default function Footer() {
   const year = getdate.getFullYear()
 
   return (
-    <section className="pb-6 lg:pb-0">
+    <footer className="pb-6 lg:pb-0">
       <div className="mdc-ui-container flex flex-row flex-wrap justify-between mx-auto border-t-[1px] border-t-[#192641] sm:py-10 py-3">
         <div className="my-4 lg:my-0 flex justify-center lg:block lg:mt-4  w-full lg:w-1/4 justify-self-center">
           <Image alt="logo" src={LogoFooter} />
@@ -63,6 +63,6 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-    </section>
+    </footer>
   )
 }

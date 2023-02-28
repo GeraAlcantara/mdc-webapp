@@ -8,6 +8,7 @@ import {
   getCourseBySlug
 } from '../../lib/helpers/library'
 import CourseSpecs from '../../components/ui/CourseSpecs'
+import Breadcrumbs from '../../components/Breadcrumbs'
 
 const subcategoriesnames = getSubcategoriesNames(data)
 const allSubcategories = subcategoriesnames.map((subcategoryname) =>
@@ -66,6 +67,21 @@ function Cursos({ params, course }: CourseProps) {
 
   const colorid = category!.colorid
 
+  const breadcrumbs = [
+    {
+      name: 'Inicio',
+      url: '/'
+    },
+    {
+      name: 'Librería',
+      url: '/libreria'
+    },
+    {
+      name: params.slug![params.slug!.length - 1].replace(/-/g, ' '),
+      url: `${params.slug.map((slug) => slug).join('/')}`
+    }
+  ]
+
   return (
     <>
       <HelperHead
@@ -78,6 +94,9 @@ function Cursos({ params, course }: CourseProps) {
         }`}
       />
       <div className="pt-[68px]">
+        <section className="mdc-ui-container lg:mt-10 lg:mb-10">
+          <Breadcrumbs breadcrumbs={breadcrumbs} />
+        </section>
         <CourseSpecs
           color={colorid}
           cover={course.cover}

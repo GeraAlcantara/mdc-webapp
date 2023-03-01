@@ -27,36 +27,36 @@ function CardCourse({
   slug
 }: CardCourseProps) {
   return (
-    <div className="group flex flex-col min-h-[450px] min-w-[250px] rounded-2xl bg-brandBlue-600 hover:bg-brandBlue-500 overflow-hidden justify-between  ">
-      <div className="min-h-[230px] w-full relative  ">
-        <Image
-          alt={thumbnailAlt}
-          className="group-hover:scale-110 transition-all duration-300 ease-out "
-          layout="fill"
-          loading="lazy"
-          objectFit="cover"
-          objectPosition={'top center'}
-          placeholder="blur"
-          src={thumbnail}
-        />
-      </div>
-      <div className="flex flex-col gap-y-2 p-6">
-        <h3 className="text-lg text-gray-100">{coursename}</h3>
-        <div className="">
-          <p className="text-gray-300 text-sm mt-2">
-            <span>{numtopics}</span> Temas, <span>{numlessons}</span> Lecciones
-          </p>
-          <p className="text-gray-300 text-sm">{`Duración: ${duration} minutos (Aprox.)`}</p>
+    <Link href={duration <= 15 ? slug : '#contacto'}>
+      <div className="group flex flex-col min-h-[450px] min-w-[250px] rounded-2xl bg-brandBlue-600 hover:bg-brandBlue-500 overflow-hidden justify-between  hover:cursor-pointer ">
+        <div className="min-h-[230px] w-full relative  ">
+          <Image
+            alt={thumbnailAlt}
+            className="group-hover:scale-110 transition-all duration-300 ease-out "
+            layout="fill"
+            loading="lazy"
+            objectFit="cover"
+            objectPosition={'top center'}
+            placeholder="blur"
+            src={thumbnail}
+          />
         </div>
-        <Link href={duration <= 15 ? slug : '#contacto'}>
+        <div className="flex flex-col gap-y-2 p-6">
+          <h3 className="text-lg text-gray-100">{coursename}</h3>
+          <div className="">
+            <p className="text-gray-300 text-sm mt-2">
+              <span>{numtopics}</span> Temas, <span>{numlessons}</span> Lecciones
+            </p>
+            <p className="text-gray-300 text-sm">{`Duración: ${duration} minutos (Aprox.)`}</p>
+          </div>
           <a
             className={`self-start mt-4 hover:cursor-pointer uppercase rounded-full bg-secondary text-brandWhite py-2 px-8 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 hover:scale-[.98] hover:contrast-150 transition-all`}
           >
             {duration <= 15 ? 'Ver Demo' : 'Solicita Acceso'}
           </a>
-        </Link>
+        </div>
       </div>
-    </div>
+    </Link>
   )
 }
 

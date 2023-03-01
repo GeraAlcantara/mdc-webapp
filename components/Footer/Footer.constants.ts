@@ -169,7 +169,7 @@ export const FooterLinks: FooterLinksDef[] = [
       },
       {
         name: 'Prácticas Esenciales',
-        link: '/rutas-de-aprendizaje/#esenciales'
+        link: '/rutas-de-aprendizaje/#seguridadesenciales'
       },
       {
         name: 'Micro Módulos',

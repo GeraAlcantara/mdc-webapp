@@ -6,6 +6,7 @@ export const MENU_ITEMS: MenuItem[] = [
   { name: 'inicio', slug: '/' },
   { name: 'servicios', slug: '/servicios' },
   { name: 'Librería', slug: '/libreria' },
+  { name: 'contacto', slug: '/contactanos' },
   { name: 'blog', slug: '/blog' }
 ]
 export default MENU_ITEMS

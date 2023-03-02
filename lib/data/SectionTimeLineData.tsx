@@ -68,8 +68,8 @@ export const SectionsData: SectionData[] = [
     excerpt:
       'Contamos con el servicio de “llave en mano”, lo que significa que entregamos nuestros cursos exportados en formato SCORM y listos para integrarse en cualquier plataforma LMS.',
     link: {
-      slug: 'libreria#precios',
-      text: 'Planes y precios'
+      slug: 'servicios',
+      text: 'Servicios'
     },
     MainImage: {
       src: ImgTimeline4,

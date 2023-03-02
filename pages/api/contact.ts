@@ -12,21 +12,35 @@ export default withIronSessionApiRoute(
       return res.status(200).json({ message: 'Method not allowed' })
     }
     /* verify if req.body have {name & email & message}  */
-    if (!req.body.name || !req.body.email || !req.body.message) {
+    if (!req.body.FirstName || !req.body.Email || !req.body.LastName || !req.body.Phone) {
       return res.status(400).json({ message: 'Bad request' })
     }
-    const { name, email, message, selectedIndexes } = req.body
+    const { FirstName, LastName, Company, CompanySize, Email, Phone, Country, selectedIndexes } =
+      req.body
 
     /* validade name, email, message with zod to prevent XSS  */
     const schema = z.object({
-      name: z.string().min(3).max(40),
-      email: z.string().email(),
-      message: z.string().min(10).max(150),
+      FirstName: z.string().min(3).max(30),
+      LastName: z.string().min(3).max(40),
+      Company: z.string(),
+      CompanySize: z.string(),
+      Email: z.string().email(),
+      Phone: z.string().min(10).max(15),
+      Country: z.string(),
       selectedIndexes: z.array(z.number()).min(1).max(9)
     })
 
     try {
-      schema.parse({ name, email, message, selectedIndexes })
+      schema.parse({
+        FirstName,
+        LastName,
+        Company,
+        CompanySize,
+        Email,
+        Phone,
+        Country,
+        selectedIndexes
+      })
       /* check wich image from the captcha are correct */
     } catch (error) {
       return res.status(400).json({ message: 'schema fail Bad request' })
@@ -56,10 +70,13 @@ export default withIronSessionApiRoute(
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: 'gerardo_alcantara_rmz@hotmail.com',
-      subject: `Forma de Contacto enviada por ${name}`,
-      html: `<h1>Nombre: ${name}</h1>
-          <h2>Email: ${email}</h2>
-          <p>Mensaje: ${message}</p>`
+      subject: `Forma de Contacto enviada por ${FirstName} ${LastName}`,
+      html: `<h1>Nombre: ${FirstName} ${LastName}</h1>
+          <h2>Compañia: ${Company}</h2>
+          <h2>Tamaño de la Compañia: ${CompanySize}</h2>
+          <h2>Telefono: ${Phone}</h2>
+          <h2>País: ${Country}</h2>
+          <h2>Email: ${Email}</h2>`
     }
 
     try {

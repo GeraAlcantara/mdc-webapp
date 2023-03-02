@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next'
+import { type NextApiRequest, type NextApiResponse } from 'next'
 import { withIronSessionApiRoute } from 'iron-session/next'
 import nodemailer from 'nodemailer'
 import { z } from 'zod'
@@ -51,10 +51,11 @@ export default withIronSessionApiRoute(
 
     const captchaIsOK = correctIndexes.toString() === selectedIndexes.sort().toString()
 
-    if (captchaIsOK === false) {
+    if (!captchaIsOK) {
       // reset captcha images
-      req.session.captchaImages = newCaptchaImages()
       await req.session.save()
+
+      return (req.session.captchaImages = newCaptchaImages())
     }
 
     /* create transporter */
@@ -70,13 +71,13 @@ export default withIronSessionApiRoute(
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: 'gerardo_alcantara_rmz@hotmail.com',
-      subject: `Forma de Contacto enviada por ${FirstName} ${LastName}`,
-      html: `<h1>Nombre: ${FirstName} ${LastName}</h1>
-          <h2>Compañia: ${Company}</h2>
-          <h2>Tamaño de la Compañia: ${CompanySize}</h2>
-          <h2>Telefono: ${Phone}</h2>
-          <h2>País: ${Country}</h2>
-          <h2>Email: ${Email}</h2>`
+      subject: `Forma de Contacto enviada por ${FirstName as string} ${LastName as string}`,
+      html: `<h1>Nombre: ${FirstName as string} ${LastName as string}</h1>
+          <h2>Compañia: ${Company as string}</h2>
+          <h2>Tamaño de la Compañia: ${CompanySize as string}</h2>
+          <h2>Telefono: ${Phone as string}</h2>
+          <h2>País: ${Country as string}</h2>
+          <h2>Email: ${Email as string}</h2>`
     }
 
     try {
@@ -91,7 +92,7 @@ export default withIronSessionApiRoute(
 
       return res.status(200).json({ message: 'Email not sent', captchaIsOK, send })
     } catch (error) {
-      res.status(500).json({ message: 'Error sending email', error: error })
+      return res.status(500).json({ message: 'Error sending email', error })
     }
   },
   {

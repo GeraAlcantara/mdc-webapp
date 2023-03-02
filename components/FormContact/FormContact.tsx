@@ -49,7 +49,7 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
   }
 
   const sendEmail = async (values: Values) => {
-    let config = {
+    const config = {
       method: 'post',
       url: `${process.env.NEXT_PUBLIC_API_URL}/contact`,
       headers: {
@@ -62,16 +62,14 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
       const response = await axios(config)
 
       if (response.status === 200) {
-        //console.log(response.data)
         const { captchaIsOK, send } = response.data
 
         if (!captchaIsOK) {
           setCaptchaKey(new Date().getTime().toString())
           setCaptchaError(true)
-          //console.log('The captcha is not correct')
         }
         if (send) {
-          //console.log('Message sent')
+          // console.log('Message sent')
           /* clear message */
           setValues({
             FirstName: '',
@@ -85,26 +83,29 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
           /* clear errors */
           setErrors({})
         }
-        if (captchaIsOK) {
+        if (captchaIsOK === true) {
           setCaptchaError(false)
           setCaptchaSolved(true)
 
-          router.replace('/gracias')
+          try {
+            await router.replace('/gracias')
+          } catch (error) {
+            // console.log(error)
+          }
         }
       }
-      if (response.status === 400) {
-        //console.log('Error' + response.data.message)
-        setFormError(response.data.message)
+      // post 400
+    } catch (error: any) {
+      if (error.response) {
+        setFormError(error.response.data.message)
       }
-    } catch (error) {
-      //console.log(error)
     }
   }
 
-  const validation = (data: Values) => {
-    let errors: Values = {}
+  const validation = (data: Values): void => {
+    const errors: Values = {}
 
-    if (!data.FirstName) {
+    if (data.FirstName === '') {
       errors.FirstName = 'El nombre es obligatorio'
     } else if (!/^[a-zA-ZÀ-ÿ\s]{3,30}$/.test(data.FirstName)) {
       errors.FirstName =
@@ -203,7 +204,6 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
               </label>
               <select
                 className="p-2 self-start rounded-2xl border-slate-300 border-2"
-                defaultValue="Selecciona una opción"
                 id="CompanySize"
                 name="CompanySize"
                 required={false}
@@ -264,7 +264,6 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
               </label>
               <select
                 className="p-2 self-start rounded-2xl border-slate-300 border-2 "
-                defaultValue="Selecciona una opción"
                 id="Country"
                 name="Country"
                 required={false}
@@ -288,13 +287,14 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
           ) : (
             <p className="text-red-600 pb-6" />
           )}
+          {formError && <p className="text-red-600 pb-4">{formError}</p>}
         </div>
 
         <div className="flex justify-end">
           <div className="inline-flex">
             <button
               className="bg-secondary py-2 px-8 text-brandWhite rounded-full w-full mt-4 hover:bg-brandBlue-400 hover:scale-105 transition-all duration-150 will-change-transform disabled:bg-gray-400 disabled:text-gray-600"
-              disabled={selectedIndexes.length > 0 ? false : true}
+              disabled={!(selectedIndexes.length > 0)}
               type="submit"
             >
               Enviar

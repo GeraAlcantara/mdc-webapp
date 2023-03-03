@@ -29,7 +29,7 @@ function RutasAprendizaje({ data }: RutasAprendizajeProps) {
               .toLowerCase()}
           >
             <h2 className="text-4xl mb-4 font-bold text-brandWhite">{subcategoriesnames[index]}</h2>
-            <div className="grid  md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-4 w-full">
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-4 w-full">
               {courses.map((course, index) => (
                 <CardsCourse
                   key={index + course.subcategory.skuPrefix}

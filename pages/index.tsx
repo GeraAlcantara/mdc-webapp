@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { NextPage } from 'next/types'
 import { withIronSessionSsr } from 'iron-session/next'
 
@@ -15,6 +14,7 @@ import SectionTimeline from '../components/SectionTimeline'
 import ModalDemoReel from '../components/ui/ModalDemoReel'
 import MonitorVideoReel from '../public/videoreel.png'
 import FormContact from '../components/FormContact/FormContact'
+import { heroData } from '../components/Hero/Hero.constanst'
 
 import { newCaptchaImages } from './api/captcha-image'
 
@@ -22,30 +22,8 @@ const Home: NextPage<CaptchaKeyProps> = ({ defaultCaptchaKey }) => {
   return (
     <>
       <HelperHead {...DataHeadHome} />
-      <Hero>
-        <h1 className=" portrait:text-center md:portrait:text-left md:text-left text-6xl md:text-7xl xl:text-9xl leading-[60px] text-accent font-extrabold md:pb-8">
-          <small className="text-brandWhite text-2xl md:text-4xl xl:text-6xl leading-normal flex-1">
-            Concientización de
-          </small>
-          <br />
-          Seguridad
-        </h1>
-        <div className="my-4 pb-4 w-full sm:landscape:w-1/2 md:w-2/4">
-          <p className="text-center md:text-left xl:text-xl max-w-prose ">
-            Sus colaboradores podrían ser el punto más débil en la infraestructura de seguridad en
-            su empresa. ¡Hágalos más fuertes!
-          </p>
-        </div>
-        <div className="flex justify-around md:justify-start sm:landscape:w-1/2">
-          <div className="">
-            <Link href="/libreria">
-              <a className=" flex justify-center items-center uppercase rounded-full bg-secondary px-8 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 hover:scale-[.98] hover:contrast-150 transition-all  ">
-                Soluciones
-              </a>
-            </Link>
-          </div>
-        </div>
-      </Hero>
+      <Hero bannerData={heroData} />
+
       <Clients />
       <div className="lg:text-lg md:text-center bg-white text-gray-900 py-4 lg:py-8 xl:py-12">
         <div className=" p-10">

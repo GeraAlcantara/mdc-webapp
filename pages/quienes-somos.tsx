@@ -1,39 +1,16 @@
-import Link from 'next/link'
 import React from 'react'
 
 import { DataHeadQuienesSomos } from '../lib/data/DataHeader'
 import HelperHead from '../lib/helpers/HelperHead'
 import Clients from '../components/Clients'
 import Hero from '../components/Hero'
+import { heroData } from '../components/Hero/Hero.constanst'
 
 function About() {
   return (
     <>
       <HelperHead {...DataHeadQuienesSomos} />
-      <Hero>
-        <h1 className=" portrait:text-center md:portrait:text-left md:text-left text-6xl md:text-7xl xl:text-9xl leading-[60px] text-accent font-extrabold md:pb-8">
-          <small className="text-brandWhite text-2xl md:text-4xl xl:text-6xl leading-normal flex-1">
-            Nuestras soluciones de
-          </small>
-          <br />
-          e-Learning
-        </h1>
-        <div className="my-4 pb-4 w-full sm:landscape:w-1/2 md:w-2/4">
-          <p className="text-center md:text-left xl:text-xl max-w-prose ">
-            Te permitirán cumplir los objetivos de formación de tu empresa y alcanzar un desarrollo
-            organizacional exitoso.
-          </p>
-        </div>
-        <div className="flex justify-around md:justify-start sm:landscape:w-1/2">
-          <div className="">
-            <Link href="/libreria">
-              <a className=" flex justify-center items-center uppercase rounded-full bg-secondary px-8 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 hover:scale-[.98] hover:contrast-150 transition-all  ">
-                CONOCER MÁS
-              </a>
-            </Link>
-          </div>
-        </div>
-      </Hero>
+      <Hero bannerData={heroData} />
       <Clients />
       <div className="lg:text-lg  bg-white text-gray-900 py-4 lg:py-8 xl:py-12">
         <div className="mdc-ui-container md:p-10">

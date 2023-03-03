@@ -28,32 +28,25 @@ function RutasAprendizaje({ data }: RutasAprendizajeProps) {
               .replace(' ', '')
               .toLowerCase()}
           >
-            <h2 className="text-4xl font-bold text-brandWhite">{subcategoriesnames[index]}</h2>
-            <div
-              className={`mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-start gap-6 `}
-            >
+            <h2 className="text-4xl mb-4 font-bold text-brandWhite">{subcategoriesnames[index]}</h2>
+            <div className="grid  md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-4 w-full">
               {courses.map((course, index) => (
-                <div
-                  key={index + course.identifier.courseNumber + course.identifier.prefix}
-                  className="w-full"
-                >
-                  <CardsCourse
-                    key={index + course.subcategory.skuPrefix}
-                    coursename={course.title}
-                    duration={course.duration}
-                    numlessons={course.modules.reduce(
-                      (acc, module) => acc + module.lessons.length,
-                      0
-                    )}
-                    numtopics={course.topics.length}
-                    slug={`cursos/${course.library.skuPrefix.toLocaleLowerCase()}/${course.subcategory.skuPrefix.toLocaleLowerCase()}/${
-                      course.slug
-                    }`}
-                    thumbnail={course.thumbnail.src}
-                    thumbnailAlt={course.thumbnail.alt}
-                    //get the amount of lessons in the al the modules
-                  />
-                </div>
+                <CardsCourse
+                  key={index + course.subcategory.skuPrefix}
+                  coursename={course.title}
+                  duration={course.duration}
+                  numlessons={course.modules.reduce(
+                    (acc, module) => acc + module.lessons.length,
+                    0
+                  )}
+                  numtopics={course.topics.length}
+                  slug={`cursos/${course.library.skuPrefix.toLocaleLowerCase()}/${course.subcategory.skuPrefix.toLocaleLowerCase()}/${
+                    course.slug
+                  }`}
+                  thumbnail={course.thumbnail.src}
+                  thumbnailAlt={course.thumbnail.alt}
+                  //get the amount of lessons in the al the modules
+                />
               ))}
             </div>
           </div>

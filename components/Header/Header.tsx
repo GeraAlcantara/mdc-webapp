@@ -14,7 +14,10 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      window.scrollY > 0 ? setBackground(true) : setBackground(false)
+      setBackground(true)
+      const checkScrolltop = window.scrollY > 0
+
+      setBackground(checkScrolltop)
     }
 
     window.addEventListener('scroll', handleScroll)

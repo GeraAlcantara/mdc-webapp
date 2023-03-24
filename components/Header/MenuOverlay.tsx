@@ -7,7 +7,7 @@ interface MenuOverlayProps {
   istoggle: () => void
 }
 
-function MenuOverlay(props: MenuOverlayProps) {
+function MenuOverlay({ istoggle }: MenuOverlayProps) {
   let year = new Date()
 
   return (
@@ -15,10 +15,7 @@ function MenuOverlay(props: MenuOverlayProps) {
       <header className="flex justify-between">
         <LogoNav />
         <nav>
-          <button
-            className="bg-none text-brandWhite uppercase tracking-widest"
-            onClick={props.istoggle}
-          >
+          <button className="bg-none text-brandWhite uppercase tracking-widest" onClick={istoggle}>
             CLOSE
           </button>
         </nav>
@@ -31,7 +28,7 @@ function MenuOverlay(props: MenuOverlayProps) {
               <a
                 className="opacity-75 pb-1 text-brandWhite uppercase w-full"
                 style={{ boxShadow: 'rgb(229 225 230 / 25%) 0px 1px 0px' }}
-                onClick={props.istoggle}
+                onClick={istoggle}
               >
                 {item.name}
               </a>

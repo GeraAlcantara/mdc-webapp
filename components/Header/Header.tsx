@@ -5,8 +5,8 @@ import MenuOverlay from './MenuOverlay'
 import Nav from './Nav'
 
 export default function Header() {
-  const [toogleON, setToggleOn] = useState(false)
-  const [background, setBackground] = useState(false)
+  const [toogleON, setToggleOn] = useState<boolean>(false)
+  const [background, setBackground] = useState<boolean>(false)
 
   const handleMenu = () => {
     setToggleOn((prev) => !prev)
@@ -40,6 +40,7 @@ export default function Header() {
             ? 'opacity-100 visible md:hidden bg-black h-full left-0 fixed top-0 w-full px-8 py-10 max-h-full bottom-3 landscape:overflow-y-scroll'
             : 'hidden '
         }
+        data-testid="menumobile"
       >
         <MenuOverlay istoggle={handleMenu} />
       </div>

@@ -217,9 +217,7 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
                 <option value="101-500">101-500</option>
                 <option value="501-1000">501-1000</option>
                 <option value="1001-5000">1001-5000</option>
-                <option value="5001-10000">5001-10000</option>
-                <option value="10001-50000">10001-50000</option>
-                <option value="50001-100000">50001-100000</option>
+                <option value="5001-10000">5001-o más</option>
               </select>
             </div>
             <div className="flex flex-col text-black my-4 contactInput">

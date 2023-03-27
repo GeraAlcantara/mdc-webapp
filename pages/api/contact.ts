@@ -20,14 +20,14 @@ export default withIronSessionApiRoute(
 
     /* validade name, email, message with zod to prevent XSS  */
     const schema = z.object({
-      FirstName: z.string().min(3).max(30),
-      LastName: z.string().min(3).max(40),
+      FirstName: z.string().min(2).max(30),
+      LastName: z.string().min(2).max(40),
       Company: z.string(),
       CompanySize: z.string(),
       Email: z.string().email(),
-      Phone: z.string().min(10).max(15),
+      Phone: z.string().min(10).max(20),
       Country: z.string(),
-      selectedIndexes: z.array(z.number()).min(1).max(9)
+      selectedIndexes: z.array(z.number())
     })
 
     try {
@@ -45,6 +45,9 @@ export default withIronSessionApiRoute(
     } catch (error) {
       return res.status(400).json({ message: 'schema fail Bad request' })
     }
+    if (selectedIndexes.length === 0) {
+      return res.status(400).json({ message: 'Bad request' })
+    }
     const correctIndexes = req.session.captchaImages
       .map((path, index) => (path.includes('smartcatch/smartphone') ? index : -1))
       .filter((index) => index !== -1)
@@ -53,9 +56,8 @@ export default withIronSessionApiRoute(
 
     if (!captchaIsOK) {
       // reset captcha images
+      req.session.captchaImages = newCaptchaImages()
       await req.session.save()
-
-      return (req.session.captchaImages = newCaptchaImages())
     }
 
     /* create transporter */
@@ -90,7 +92,7 @@ export default withIronSessionApiRoute(
         return res.status(200).json({ message: 'Email sent successfully', captchaIsOK, send })
       }
 
-      return res.status(200).json({ message: 'Email not sent', captchaIsOK, send })
+      res.status(200).json({ message: 'Email not sent', captchaIsOK, send })
     } catch (error) {
       return res.status(500).json({ message: 'Error sending email', error })
     }

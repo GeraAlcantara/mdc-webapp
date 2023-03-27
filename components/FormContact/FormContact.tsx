@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 
@@ -22,6 +22,7 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
   const [errors, setErrors] = useState<Values>({})
   const [captchaError, setCaptchaError] = useState<boolean>(false)
   const [formError, setFormError] = useState<string>('')
+  const [validationOk, setValidationOk] = useState<boolean>(false)
 
   const onChange = (
     e:
@@ -48,74 +49,20 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
     validation(values)
   }
 
-  const sendEmail = async (values: Values) => {
-    const config = {
-      method: 'post',
-      url: `${process.env.NEXT_PUBLIC_API_URL}/contact`,
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      data: { ...values, selectedIndexes }
-    }
-
-    try {
-      const response = await axios(config)
-
-      if (response.status === 200) {
-        const { captchaIsOK, send } = response.data
-
-        if (!captchaIsOK) {
-          setCaptchaKey(new Date().getTime().toString())
-          setCaptchaError(true)
-        }
-        if (send) {
-          // console.log('Message sent')
-          /* clear message */
-          setValues({
-            FirstName: '',
-            LastName: '',
-            Company: '',
-            CompanySize: '',
-            Email: '',
-            Phone: '',
-            Country: ''
-          })
-          /* clear errors */
-          setErrors({})
-        }
-        if (captchaIsOK === true) {
-          setCaptchaError(false)
-          setCaptchaSolved(true)
-
-          try {
-            await router.replace('/gracias')
-          } catch (error) {
-            // console.log(error)
-          }
-        }
-      }
-      // post 400
-    } catch (error: any) {
-      if (error.response) {
-        setFormError(error.response.data.message)
-      }
-    }
-  }
-
   const validation = (data: Values): void => {
     const errors: Values = {}
 
     if (data.FirstName === '') {
       errors.FirstName = 'El nombre es obligatorio'
-    } else if (!/^[a-zA-ZÀ-ÿ\s]{3,30}$/.test(data.FirstName)) {
+    } else if (!/^[a-zA-ZÀ-ÿ\s]{2,30}$/.test(data.FirstName)) {
       errors.FirstName =
-        'El primer nombre debe tener entre 10 y 30 caracteres y no contener números o símbolos'
+        'El primer nombre debe tener entre 2 y 30 caracteres y no contener números o símbolos.'
     }
     if (!data.LastName) {
       errors.LastName = 'El apellido es obligatorio'
-    } else if (!/^[a-zA-ZÀ-ÿ\s]{3,40}$/.test(data.LastName)) {
+    } else if (!/^[a-zA-ZÀ-ÿ\s]{2,40}$/.test(data.LastName)) {
       errors.LastName =
-        'El apellido debe tener entre 10 y 40 caracteres y no contener números o símbolos'
+        'El apellido debe tener entre 2 y 30 caracteres y no contener números o símbolos.'
     }
     if (!data.Email) {
       errors.Email = 'El correo es obligatorio'
@@ -124,17 +71,85 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
     }
     if (!data.Phone) {
       errors.Phone = 'El teléfono es obligatorio'
-    } else if (!/^[0-9]{10,15}$/.test(data.Phone)) {
-      errors.Phone = 'El teléfono debe tener entre 10 y 15 caracteres'
+      // use this regex to validate phone numbers ([+]?\d{1,2}[.-\s]?)?(\d{3}[.-]?){2}\d{4}
+    } else if (!/([+]?\d{1,3}[.-\s]?)?(\d{3}[.-]?){2}\d{4}/.test(data.Phone)) {
+      errors.Phone = 'Ejemplo: +52 551 234 5678 ó 525512345678 Formato de teléfono incorrecto.'
     }
 
     if (Object.keys(errors).length === 0) {
-      sendEmail(data)
+      setValidationOk(true)
     }
+    /* if (Object.keys(errors).length === 0) {
+      sendEmail(data)
+    } */
 
     /* setErrors */
     setErrors(errors)
   }
+
+  useEffect(() => {
+    const sendEmail = async (values: Values) => {
+      const config = {
+        method: 'post',
+        url: `${process.env.NEXT_PUBLIC_API_URL}/contact`,
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        data: { ...values, selectedIndexes }
+      }
+
+      try {
+        const response = await axios(config)
+
+        if (response.status === 200) {
+          const { captchaIsOK, send } = response.data
+
+          if (!captchaIsOK) {
+            setCaptchaKey(new Date().getTime().toString())
+            setCaptchaError(true)
+          }
+          if (send) {
+            // console.log('Message sent')
+            /* clear message */
+            setValues({
+              FirstName: '',
+              LastName: '',
+              Company: '',
+              CompanySize: '',
+              Email: '',
+              Phone: '',
+              Country: ''
+            })
+            /* clear errors */
+            setErrors({})
+          }
+          if (captchaIsOK === true) {
+            setCaptchaError(false)
+            setCaptchaSolved(true)
+
+            try {
+              await router.replace('/gracias')
+            } catch (error) {
+              // console.log(error)
+            }
+          }
+        }
+        // post 400
+      } catch (error: any) {
+        if (error.response) {
+          setFormError(error.response.data.message)
+        }
+      }
+    }
+
+    if (validationOk && Object.keys(errors).length === 0) {
+      sendEmail(values)
+    }
+
+    return () => {
+      setValidationOk(false)
+    }
+  }, [validationOk, values, errors, router])
 
   return (
     <div className="py-5 px-7 xl:py-10 xl:px-14 bg-slate-200 rounded-3xl h-full">
@@ -150,37 +165,35 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
             </div>
             <div className="flex flex-col text-black my-4 contactInput">
               <label className="ml-2 mb-1 text-gray-400" htmlFor="FirstName">
-                Nombre
+                <span className="text-red-600">*</span> Nombre
               </label>
               <input
                 className="p-2 w-full rounded-2xl border-slate-300 border-2"
                 id="FirstName"
                 name="FirstName"
-                pattern="^[a-zA-ZÀ-ÿ\s]{3,30}$"
                 placeholder="Escribe tu primer nombre"
                 required={true}
                 type="text"
                 value={values.FirstName}
                 onChange={onChange}
               />
-              {errors.FirstName && <p className="text-red-600">{errors.FirstName}</p>}
+              {errors.FirstName && <p className="text-red-600 px-2">{errors.FirstName}</p>}
             </div>
             <div className="flex flex-col text-black my-4 contactInput">
               <label className="ml-2 mb-1 text-gray-400" htmlFor="LastName">
-                Apellido
+                <span className="text-red-600">*</span> Apellido
               </label>
               <input
                 className="p-2 w-full rounded-2xl border-slate-300 border-2 "
                 id="LastName"
                 name="LastName"
-                pattern="^[a-zA-ZÀ-ÿ\s]{3,40}$"
                 placeholder="Escribe tu apellido"
                 required={true}
                 type="text"
                 value={values.LastName}
                 onChange={onChange}
               />
-              {errors.LastName && <p className="text-red-600">{errors.LastName}</p>}
+              {errors.LastName && <p className="text-red-600 px-3">{errors.LastName}</p>}
             </div>
             <div className="flex flex-col text-black my-4 contactInput">
               <label className="ml-2 mb-1 text-gray-400" htmlFor="Company">
@@ -222,7 +235,7 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
             </div>
             <div className="flex flex-col text-black my-4 contactInput">
               <label className="ml-2 mb-1 text-gray-400" htmlFor="Email">
-                Correo electrónico
+                <span className="text-red-600">*</span> Correo electrónico
               </label>
               <input
                 className="p-2 w-full rounded-2xl border-slate-300 border-2"
@@ -240,14 +253,13 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
             {/* Phone */}
             <div className="flex flex-col text-black my-4 contactInput">
               <label className="ml-2 mb-1 text-gray-400" htmlFor="Phone">
-                Teléfono
+                <span className="text-red-600">*</span> Teléfono
               </label>
               <input
                 className="p-2 w-full rounded-2xl border-slate-300 border-2"
                 id="Phone"
                 name="Phone"
-                pattern="^[0-9]{10,15}$"
-                placeholder="Escribe tu número de teléfono"
+                placeholder="+52 551 234 5678 ó 525512345678"
                 required={true}
                 type="tel"
                 value={values.Phone}

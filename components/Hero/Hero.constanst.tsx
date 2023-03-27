@@ -89,8 +89,8 @@ export const heroData: HeroDATA[] = [
       },
       text: (
         <span>
-          Sus colaboradores podrían ser el punto más débil en la infraestructura de seguridad en su
-          empresa. ¡Hágalos más fuertes!
+          Los trabajadores son “el eslabón más débil” en la cadena de seguridad de su empresa.
+          ¡Hágalos más fuertes!
         </span>
       )
     },

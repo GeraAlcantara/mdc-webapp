@@ -19,7 +19,7 @@ export default function Clients() {
     window.addEventListener('resize', handleResize)
 
     return () => {
-      window.removeEventListener('scroll', handleResize)
+      window.removeEventListener('resize', handleResize)
     }
   }, [])
 

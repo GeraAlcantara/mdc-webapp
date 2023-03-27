@@ -57,7 +57,7 @@ module.exports = {
       },
       animation: {
         sectionhr: "slidehrright 5s ease infinite both",
-        carousel: "scroll 30s linear infinite",
+        carousel: "scroll 25s linear infinite",
         FadeInSlidein: "fadeInSlidein 1s forwards",
         FadeOutSlideout: "fadeOutSlideout 1s forwards",
         heartbeat: "heartbeat 1.5s ease-in-out infinite both",
@@ -95,7 +95,7 @@ module.exports = {
             transform: "translateX(0px)",
           },
           "100%": {
-            transform: "translateX(calc(-150px * 5))",
+            transform: "translateX(calc(-120px * 5))",
           },
         },
         fadeInSlidein: {

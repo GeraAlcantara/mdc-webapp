@@ -165,7 +165,7 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
             </div>
             <div className="flex flex-col text-black my-4 contactInput">
               <label className="ml-2 mb-1 text-gray-400" htmlFor="FirstName">
-                <span className="text-red-600">*</span> Nombre
+                Nombre<span className="text-red-600">*</span>
               </label>
               <input
                 className="p-2 w-full rounded-2xl border-slate-300 border-2"
@@ -181,7 +181,7 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
             </div>
             <div className="flex flex-col text-black my-4 contactInput">
               <label className="ml-2 mb-1 text-gray-400" htmlFor="LastName">
-                <span className="text-red-600">*</span> Apellido
+                Apellido<span className="text-red-600">*</span>
               </label>
               <input
                 className="p-2 w-full rounded-2xl border-slate-300 border-2 "
@@ -235,7 +235,7 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
             </div>
             <div className="flex flex-col text-black my-4 contactInput">
               <label className="ml-2 mb-1 text-gray-400" htmlFor="Email">
-                <span className="text-red-600">*</span> Correo electrónico
+                Correo electrónico<span className="text-red-600">*</span>
               </label>
               <input
                 className="p-2 w-full rounded-2xl border-slate-300 border-2"
@@ -253,13 +253,13 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
             {/* Phone */}
             <div className="flex flex-col text-black my-4 contactInput">
               <label className="ml-2 mb-1 text-gray-400" htmlFor="Phone">
-                <span className="text-red-600">*</span> Teléfono
+                Teléfono<span className="text-red-600">*</span>
               </label>
               <input
                 className="p-2 w-full rounded-2xl border-slate-300 border-2"
                 id="Phone"
                 name="Phone"
-                placeholder="+52 551 234 5678 ó 525512345678"
+                placeholder="Telefono de contacto"
                 required={true}
                 type="tel"
                 value={values.Phone}

@@ -26,10 +26,10 @@ const Home: NextPage<CaptchaKeyProps> = ({ defaultCaptchaKey }) => {
 
       <Clients />
       <div className="lg:text-lg md:text-center bg-white text-gray-900 py-4 lg:py-8 xl:py-12">
-        <div className=" p-10">
+        <div className="mdc-ui-container">
           <Capacite className="text-8xl m-auto mb-4" />
           <h2 className="text-3xl font-extrabold  pb-8 text-center">Capacite a su personal</h2>
-          <p className="max-w-prose m-auto pb-8">
+          <p className=" pb-8">
             En la actualidad, la educación a distancia es la mejor herramienta para cumplir los
             objetivos de formación de las empresas. Nuestras soluciones de e-learning le permitirán
             reducir su inversión de tiempo y dinero, al mismo tiempo que otorgan flexibilidad sobre

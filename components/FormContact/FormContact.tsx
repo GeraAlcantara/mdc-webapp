@@ -14,7 +14,9 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
     FirstName: '',
     LastName: '',
     Company: '',
+    Position: '',
     CompanySize: '',
+    Enquiry: '',
     Email: '',
     Phone: '',
     Country: ''
@@ -41,7 +43,9 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
       FirstName: data.get('FirstName') as string,
       LastName: data.get('LastName') as string,
       Company: data.get('Company') as string,
+      Position: data.get('Position') as string,
       CompanySize: data.get('CompanySize') as string,
+      Enquiry: data.get('Enquiry') as string,
       Email: data.get('Email') as string,
       Phone: data.get('Phone') as string,
       Country: data.get('Country') as string
@@ -72,8 +76,8 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
     if (!data.Phone) {
       errors.Phone = 'El teléfono es obligatorio'
       // use this regex to validate phone numbers ([+]?\d{1,2}[.-\s]?)?(\d{3}[.-]?){2}\d{4}
-    } else if (!/([+]?\d{1,3}[.-\s]?)?(\d{3}[.-]?){2}\d{4}/.test(data.Phone)) {
-      errors.Phone = 'Ejemplo: +52 551 234 5678 ó 525512345678 Formato de teléfono incorrecto.'
+    } else if (!/([+]?\d{1,2}[.-\s]?)?(\d{3}[.-]?){2}\d{4}/.test(data.Phone)) {
+      errors.Phone = 'Ejemplo: +52-551-234-5678 ó 525512345678 Formato de teléfono incorrecto.'
     }
 
     if (Object.keys(errors).length === 0) {
@@ -115,13 +119,16 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
               FirstName: '',
               LastName: '',
               Company: '',
+              Position: '',
               CompanySize: '',
+              Enquiry: '',
               Email: '',
               Phone: '',
               Country: ''
             })
             /* clear errors */
             setErrors({})
+            setFormError('')
           }
           if (captchaIsOK === true) {
             setCaptchaError(false)
@@ -197,7 +204,7 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
             </div>
             <div className="flex flex-col text-black my-4 contactInput">
               <label className="ml-2 mb-1 text-gray-400" htmlFor="Company">
-                Empresa
+                Compañia
               </label>
               <input
                 className="p-2 w-full rounded-2xl border-slate-300 border-2"
@@ -208,6 +215,22 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
                 required={false}
                 type="text"
                 value={values.Company}
+                onChange={onChange}
+              />
+            </div>
+            <div className="flex flex-col text-black my-4 contactInput">
+              <label className="ml-2 mb-1 text-gray-400" htmlFor="Position">
+                Puesto
+              </label>
+              <input
+                className="p-2 w-full rounded-2xl border-slate-300 border-2"
+                id="Position"
+                name="Position"
+                pattern="^[a-zA-ZÀ-ÿ\s]{3,30}$"
+                placeholder="Escribe el nombre de tu empresa"
+                required={false}
+                type="text"
+                value={values.Position}
                 onChange={onChange}
               />
             </div>
@@ -231,6 +254,26 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
                 <option value="501-1000">501-1000</option>
                 <option value="1001-5000">1001-5000</option>
                 <option value="5001-10000">5001- o más</option>
+              </select>
+            </div>
+            <div className="flex flex-col text-black my-4 contactInput">
+              <label className="ml-2 mb-1 text-gray-400" htmlFor="Enquiry">
+                Interesado en
+              </label>
+              <select
+                className="p-2 self-start rounded-2xl border-slate-300 border-2 "
+                id="Enquiry"
+                name="Enquiry"
+                required={false}
+                value={values.Enquiry}
+                onChange={onChange}
+              >
+                <option value="Selecciona una opción">Selecciona una opción</option>
+                <option value="Cursos de Librería">Cursos de Librería</option>
+                <option value="Cursos a medida">Cursos a medida</option>
+                <option value="Traducciones">Traducciones</option>
+                <option value="Aumento de personal">Aumento de personal</option>
+                <option value="Otras producciones">Otras producciones</option>
               </select>
             </div>
             <div className="flex flex-col text-black my-4 contactInput">
@@ -291,7 +334,7 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
           </div>
           <Captcha captchaKey={captchaKey} onChange={setSelectedIndexes} />
         </div>
-        <div className="flex justify-end h-4">
+        <div className="flex flex-col items-end justify-end ">
           {captchaError ? (
             <p className="text-red-600 pb-4">The captcha is not correct, Please try Again </p>
           ) : (

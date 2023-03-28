@@ -15,15 +15,27 @@ export default withIronSessionApiRoute(
     if (!req.body.FirstName || !req.body.Email || !req.body.LastName || !req.body.Phone) {
       return res.status(400).json({ message: 'Bad request' })
     }
-    const { FirstName, LastName, Company, CompanySize, Email, Phone, Country, selectedIndexes } =
-      req.body
+    const {
+      FirstName,
+      LastName,
+      Company,
+      Position,
+      CompanySize,
+      Enquiry,
+      Email,
+      Phone,
+      Country,
+      selectedIndexes
+    } = req.body
 
     /* validade name, email, message with zod to prevent XSS  */
     const schema = z.object({
       FirstName: z.string().min(2).max(30),
       LastName: z.string().min(2).max(40),
       Company: z.string(),
+      Position: z.string(),
       CompanySize: z.string(),
+      Enquiry: z.string(),
       Email: z.string().email(),
       Phone: z.string().min(10).max(20),
       Country: z.string(),
@@ -35,7 +47,9 @@ export default withIronSessionApiRoute(
         FirstName,
         LastName,
         Company,
+        Position,
         CompanySize,
+        Enquiry,
         Email,
         Phone,
         Country,
@@ -76,10 +90,12 @@ export default withIronSessionApiRoute(
       subject: `Forma de Contacto enviada por ${FirstName as string} ${LastName as string}`,
       html: `<h1>Nombre: ${FirstName as string} ${LastName as string}</h1>
           <h2>Compañia: ${Company as string}</h2>
-          <h2>Tamaño de la Compañia: ${CompanySize as string}</h2>
-          <h2>Telefono: ${Phone as string}</h2>
-          <h2>País: ${Country as string}</h2>
-          <h2>Email: ${Email as string}</h2>`
+          <h3>Puesto: ${Position as string}</h3>
+          <h3>Tamaño de la Compañia: ${CompanySize as string}</h3>
+          <h3>Interesado en: ${Enquiry as string}</h3>
+          <h3>Telefono: ${Phone as string}</h3>
+          <h3>País: ${Country as string}</h3>
+          <h3>Email: ${Email as string}</h3>`
     }
 
     try {

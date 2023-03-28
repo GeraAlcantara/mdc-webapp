@@ -210,7 +210,7 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
                 className="p-2 w-full rounded-2xl border-slate-300 border-2"
                 id="Company"
                 name="Company"
-                pattern="^[a-zA-ZÀ-ÿ\s]{3,30}$"
+                pattern="^[a-zA-ZÀ-ÿ\s]{3,40}$"
                 placeholder="Escribe el nombre de tu empresa"
                 required={false}
                 type="text"
@@ -226,7 +226,7 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
                 className="p-2 w-full rounded-2xl border-slate-300 border-2"
                 id="Position"
                 name="Position"
-                pattern="^[a-zA-ZÀ-ÿ\s]{3,30}$"
+                pattern="^[a-zA-ZÀ-ÿ\s]{3,40}$"
                 placeholder="Escribe el nombre de tu empresa"
                 required={false}
                 type="text"

@@ -202,6 +202,7 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
               />
               {errors.LastName && <p className="text-red-600 px-3">{errors.LastName}</p>}
             </div>
+            {/* TODO: Letras y numeros */}
             <div className="flex flex-col text-black my-4 contactInput">
               <label className="ml-2 mb-1 text-gray-400" htmlFor="Company">
                 Compañia
@@ -210,7 +211,7 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
                 className="p-2 w-full rounded-2xl border-slate-300 border-2"
                 id="Company"
                 name="Company"
-                pattern="^[a-zA-ZÀ-ÿ\s]{3,40}$"
+                pattern="^[a-zA-ZÀ-ÿ0-9\s]{1,40}$"
                 placeholder="Escribe el nombre de tu empresa"
                 required={false}
                 type="text"
@@ -226,7 +227,7 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
                 className="p-2 w-full rounded-2xl border-slate-300 border-2"
                 id="Position"
                 name="Position"
-                pattern="^[a-zA-ZÀ-ÿ\s]{3,40}$"
+                pattern="^[a-zA-ZÀ-ÿ0-9\s]{1,40}$"
                 placeholder="Escribe el nombre de tu empresa"
                 required={false}
                 type="text"

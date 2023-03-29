@@ -20,6 +20,7 @@ interface Course {
   subcategory: { name: string; skuPrefix: string }
   title: string
   slug: string
+  linkCourse: string
   thumbnail: { src: StaticImageData; alt: string }
   cover: string
   identifier: { prefix: string; courseNumber: string }

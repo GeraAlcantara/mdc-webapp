@@ -105,6 +105,7 @@ function Cursos({ params, course }: CourseProps) {
           features={course.features}
           lessons={lessons}
           libraryName={course.library.name}
+          linkCourse={course.linkCourse}
           slug={course.slug}
           subcategoryName={course.subcategory.name}
           title={course.title}

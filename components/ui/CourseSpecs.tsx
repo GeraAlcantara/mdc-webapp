@@ -9,6 +9,7 @@ import CCIcon from '../svgs/closecaption.svg'
 import CourseContent from './CourseContent'
 interface CourseSpecsProps {
   slug: string
+  linkCourse: string
   title: string
   libraryName: string
   subcategoryName: string
@@ -22,6 +23,7 @@ interface CourseSpecsProps {
 }
 function CourseSpecs({
   title,
+  linkCourse,
   libraryName,
   subcategoryName,
   duration,
@@ -50,12 +52,15 @@ function CourseSpecs({
               </div>
               <div className=" space-y-6 md:hidden ">
                 <div className="flex justify-center mt-10 mb-4 ">
-                  <Link href="#">
-                    <button className="inline-flex items-center justify-center px-6 py-4 font-semibold text-brandWhite transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 ">
-                      <RiArrowRightSFill className="text-3xl mr-2 " />
-                      <span>Comienza</span>
-                    </button>
-                  </Link>
+                  <a
+                    className="inline-flex items-center justify-center px-6 py-4 font-semibold text-brandWhite transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 "
+                    href={linkCourse}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <RiArrowRightSFill className="text-3xl mr-2 " />
+                    <span>Comienza</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -160,12 +165,15 @@ function CourseSpecs({
           </div>
           <div className="hidden space-y-6 md:block ">
             <div className="flex justify-center mt-10 mb-4 ">
-              <Link href="#">
-                <button className="inline-flex items-center justify-center px-8 py-2 font-semibold text-brandWhite transition-all duration-200 bg-blue-600 rounded-full hover:bg-blue-700 ">
-                  <RiArrowRightSFill className="text-3xl mr-1 " />
-                  <span>Comienza</span>
-                </button>
-              </Link>
+              <a
+                className="inline-flex items-center justify-center px-8 py-2 font-semibold text-brandWhite transition-all duration-200 bg-blue-600 rounded-full hover:bg-blue-700 "
+                href={linkCourse}
+                rel="noreferrer"
+                target="_blank"
+              >
+                <RiArrowRightSFill className="text-3xl mr-1 " />
+                <span>Comienza</span>
+              </a>
             </div>
           </div>
           {/* course Content */}

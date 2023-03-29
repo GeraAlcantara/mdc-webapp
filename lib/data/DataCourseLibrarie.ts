@@ -48,6 +48,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Habilidades directivas', skuPrefix: 'HD' },
             title: 'Liderazgo Efectivo',
             slug: 'liderazgo-efectivo',
+            linkCourse: 'https://mexicodc.com/demos/liderazgo_efectivo_RHD01/',
             thumbnail: {
               src: ThumbnailHD01,
               alt: 'Supervisor teniendo una reunion con colaboradores'
@@ -118,6 +119,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Habilidades directivas', skuPrefix: 'HD' },
             title: 'Equipos de alto rendimiento',
             slug: 'equipos-alto-rendimiento',
+            linkCourse: 'https://mexicodc.com/demos/equipos_alto_rendimiento_RHD02/',
             thumbnail: {
               src: ThumbnailHD02,
               alt: 'ejecutiva liderando una reunion con su equipo'
@@ -183,6 +185,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Habilidades directivas', skuPrefix: 'HD' },
             title: 'Comunicación Efectiva',
             slug: 'comunicacion-efectiva',
+            linkCourse: 'https://mexicodc.com/demos/comunicacion_efectiva_RHD03/',
             thumbnail: {
               src: ThumbnailHD03,
               alt: 'sala de junta con ejecutivos, mujer mayor dirigiendo la reunion'
@@ -249,6 +252,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Habilidades directivas', skuPrefix: 'HD' },
             title: 'Inteligencia emocional para la gestión de conflictos',
             slug: 'inteligencia-emocional-gestion-de-conflictos',
+            linkCourse: 'https://mexicodc.com/demos/inteligencia_emocional_RHD04/',
             thumbnail: {
               src: ThumbnailHD04,
               alt: 'bodega con cajas de mercancia, mujer mayor dirigiendo el trabajo'
@@ -328,6 +332,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Habilidades directivas', skuPrefix: 'HD' },
             title: 'Gestión del Tiempo',
             slug: 'gestion-del-tiempo',
+            linkCourse: 'https://mexicodc.com/demos/gestion_tiempo_RHD05/',
             thumbnail: {
               src: ThumbnailHD05,
               alt: 'ejecutiva joven en sala de juntas revisa la hora en su reloj'
@@ -396,6 +401,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Habilidades directivas', skuPrefix: 'HD' },
             title: 'Evaluación del Desempeño',
             slug: 'evaluacion-del-desempeño',
+            linkCourse: 'https://mexicodc.com/demos/evaluacion_desempeno_RHD06/',
             thumbnail: {
               src: ThumbnailHD06,
               alt: 'supervisor de bodega revisando un informe '
@@ -494,6 +500,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Habilidades directivas', skuPrefix: 'HD' },
             title: '¿Cómo dar retroalimentación?',
             slug: 'como-dar-retroalimentacion',
+            linkCourse: 'https://mexicodc.com/demos/como_dar_retro_RHD07/',
             thumbnail: {
               src: ThumbnailHD07,
               alt: 'dos obreros revisan juntos un manual de instrucciones'
@@ -583,6 +590,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Habilidades Blandas', skuPrefix: 'HB' },
             title: 'Escucha Activa',
             slug: 'escucha-activa',
+            linkCourse: '#',
             thumbnail: {
               src: ThumbnailHBEA,
               alt: 'dos compañeros de trabajo entablando una conversación '
@@ -679,6 +687,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Habilidades Blandas', skuPrefix: 'HB' },
             title: 'Manejo del estrés laboral',
             slug: 'manejo-del-estres-laboral',
+            linkCourse: '#',
             thumbnail: {
               src: ThumbnailHBME,
               alt: 'hombre con lentres frente a la computadora pensativo'
@@ -803,6 +812,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Habilidades Tecnológicas', skuPrefix: 'HT' },
             title: 'Mejores prácticas para el teletrabajo',
             slug: 'mejores-practicas-para-el-teletrabajo',
+            linkCourse: 'https://mexicodc.com/demos/teletrabajo_colabora_TT101/',
             thumbnail: {
               src: ThumbnailHTTT101,
               alt: 'Hombre mayor realiza trabajo de forma remota en su laptop'
@@ -867,6 +877,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Habilidades Tecnológicas', skuPrefix: 'HT' },
             title: 'Fundamentos del Teletrabajo para supervisores',
             slug: 'fundamentos-del-teletrabajo-para-supervisores',
+            linkCourse: '#',
             thumbnail: {
               src: ThumbnailHTTT201,
               alt: 'mujer realiza trabajo remoto desde la sala de su casa con su laptop'
@@ -963,6 +974,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Jurídico', skuPrefix: 'J' },
             title: 'Fundamentos de la NOM-035',
             slug: 'fundamentos-de-la-nom-035',
+            linkCourse: '#',
             thumbnail: {
               src: ThumbnailRJN35,
               alt: 'colaboradores teniendo una conversacion intensa'
@@ -1058,6 +1070,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Jurídico', skuPrefix: 'J' },
             title: 'Prevención de violencia laboral y acoso sexual',
             slug: 'prevencion-de-violencia-laboral-y-acoso-sexual',
+            linkCourse: '#',
             thumbnail: {
               src: ThumbnailRJV101,
               alt: 'ejecutivo le llama la atencion verbalmente a empleada en la oficina'
@@ -1141,6 +1154,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Jurídico', skuPrefix: 'J' },
             title: 'Prevención, atención y erradicación de la violencia laboral para supervisores',
             slug: 'prevencion-atencion-y-erradicacion-de-la-violencia-laboral',
+            linkCourse: '#',
             thumbnail: {
               src: ThumbnailRJV201,
               alt: 'En una sala de juntas un supervisor agita papeles mientras habla con un empleado que se ve intimidado'
@@ -1238,6 +1252,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Seguridad Esenciales', skuPrefix: 'E' },
             title: 'Prácticas Esenciales',
             slug: 'practicas-esenciales',
+            linkCourse: '#',
             thumbnail: {
               src: ThumbnailSE101,
               alt: 'hombre con lentes mirando a la computadora'
@@ -1329,6 +1344,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Seguridad Micro Módulos', skuPrefix: 'MM' },
             title: 'Contraseñas Seguras',
             slug: 'contrasenas-seguras',
+            linkCourse: 'https://mexicodc.com/demos/contras_seguras_SC01/',
             thumbnail: {
               src: ThumbnailSC01,
               alt: 'hombre inicia secion con 2 factores de autenticacion atravez de su mobile.'
@@ -1388,6 +1404,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Seguridad Micro Módulos', skuPrefix: 'MM' },
             title: 'Malware',
             slug: 'malware',
+            linkCourse: 'https://mexicodc.com/demos/malware_SM01/',
             thumbnail: {
               src: ThumbnailSM01,
               alt: 'empleada de oficina con un virus en su computadora.'
@@ -1448,6 +1465,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Seguridad Micro Módulos', skuPrefix: 'MM' },
             title: 'Phishing',
             slug: 'phishing',
+            linkCourse: 'https://mexicodc.com/demos/malware_SM01/',
             thumbnail: {
               src: ThumbnailSP01,
               alt: 'persona con un teléfono celular en la mano, recibe una llamada de un número desconocido.'
@@ -1521,6 +1539,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Capacitación Ventas', skuPrefix: 'PV' },
             title: 'Proceso de Ventas',
             slug: 'proceso-de-ventas',
+            linkCourse: '#',
             thumbnail: {
               src: ThumbnailVPV101,
               alt: 'ejecutiva de ventas finaliza un trato con cliente.'

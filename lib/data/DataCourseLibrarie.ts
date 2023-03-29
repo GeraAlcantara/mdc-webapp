@@ -1465,7 +1465,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Seguridad Micro Módulos', skuPrefix: 'MM' },
             title: 'Phishing',
             slug: 'phishing',
-            linkCourse: 'https://mexicodc.com/demos/malware_SM01/',
+            linkCourse: 'https://mexicodc.com/demos/phishing_SP01/',
             thumbnail: {
               src: ThumbnailSP01,
               alt: 'persona con un teléfono celular en la mano, recibe una llamada de un número desconocido.'

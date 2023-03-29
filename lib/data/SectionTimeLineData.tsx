@@ -11,7 +11,7 @@ export const SectionsData: SectionData[] = [
       'Nuestros productos han sido reconocidos internacionalmente con más de 40 premios, como MarCom Awards, Davey Awards, W³ Awards, Golden Bridge Awards, Summit Creative Awards, Network Products Guide IT World Awards, Omni Awards, Interactive Media Awards.',
     link: {
       slug: 'libreria',
-      text: 'libreria de Cursos'
+      text: 'librería de Cursos'
     },
     MainImage: {
       src: ImgLaptop,

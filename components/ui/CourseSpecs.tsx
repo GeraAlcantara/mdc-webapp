@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { RiArrowRightSFill } from 'react-icons/ri'
 
 import LogoSolid from '../svgs/logoSolid.svg'

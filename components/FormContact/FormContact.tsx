@@ -75,17 +75,20 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
     }
     if (!data.Phone) {
       errors.Phone = 'El teléfono es obligatorio'
-      // use this regex to validate phone numbers ([+]?\d{1,2}[.-\s]?)?(\d{3}[.-]?){2}\d{4}
-    } else if (!/([+]?\d{1,2}[.-\s]?)?(\d{3}[.-]?){2}\d{4}/.test(data.Phone)) {
+    } else if (!/([+]?\d{1,2}[.-\s]?)?(\d{3}[.-]?){2}\d{4}/g.test(data.Phone)) {
       errors.Phone = 'Ejemplo: +52-551-234-5678 ó 525512345678 Formato de teléfono incorrecto.'
+    }
+
+    if (!/^[a-zA-ZÀ-ÿ0-9\s]{1,40}$/g.test(data.Company)) {
+      errors.Company = 'No debe contener símbolos, usar solo letras y numeros.'
+    }
+    if (!/^[a-zA-ZÀ-ÿ0-9\s]{1,40}$/g.test(data.Position)) {
+      errors.Position = 'No debe contener símbolos, usar solo letras y numeros.'
     }
 
     if (Object.keys(errors).length === 0) {
       setValidationOk(true)
     }
-    /* if (Object.keys(errors).length === 0) {
-      sendEmail(data)
-    } */
 
     /* setErrors */
     setErrors(errors)
@@ -211,13 +214,13 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
                 className="p-2 w-full rounded-2xl border-slate-300 border-2"
                 id="Company"
                 name="Company"
-                pattern="^[a-zA-ZÀ-ÿ0-9\s]{1,40}$"
                 placeholder="Escribe el nombre de tu empresa"
                 required={false}
                 type="text"
                 value={values.Company}
                 onChange={onChange}
               />
+              {errors.Company && <p className="text-red-600 px-3">{errors.Company}</p>}
             </div>
             <div className="flex flex-col text-black my-4 contactInput">
               <label className="ml-2 mb-1 text-gray-400" htmlFor="Position">
@@ -227,13 +230,13 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
                 className="p-2 w-full rounded-2xl border-slate-300 border-2"
                 id="Position"
                 name="Position"
-                pattern="^[a-zA-ZÀ-ÿ0-9\s]{1,40}$"
                 placeholder="Escribe el nombre de tu empresa"
                 required={false}
                 type="text"
                 value={values.Position}
                 onChange={onChange}
               />
+              {errors.Position && <p className="text-red-600 px-3">{errors.Position}</p>}
             </div>
             <div className="flex flex-col text-black my-4 contactInput">
               <label className="ml-2 mb-1 text-gray-400" htmlFor="CompanySize">

@@ -42,9 +42,6 @@ function Libreria({ defaultCaptchaKey, courses }: LibreriaProps) {
               Conoce nuestro catálogo de cursos con &quot;llave en mano&quot;, exportados en formato
               SCORM y listos para integrarse en cualquier plataforma LMS.
             </p>
-            <div className="pt-2">
-              <ModalDemoReel btnTheme="btnBlue" />
-            </div>
           </div>
           <div className="relative w-full xl:w-1/2">
             <div className="relative top-0 left-0 grid grid-cols-7 grid-rows-3">
@@ -103,7 +100,7 @@ function Libreria({ defaultCaptchaKey, courses }: LibreriaProps) {
           {/* Big Card with Text */}
           <div className="flex flex-col md:flex-row gap-4 lg:gap-10 h-full lg:min-h-[350px] xl:min-h-[600px] transition-all duration-300">
             <div className="flex flex-col md:flex-row xl:gap-10 w-full md:w-4/6 ">
-              <div className="bg-gradient-to-br from-[#386fdd] via-[#439dc0] to-[#67dd80] rounded-3xl flex flex-col-reverse md:grid md:grid-cols-3 px-4 md:px-8 pt-4 ">
+              <div className="w-full bg-gradient-to-br from-[#386fdd] via-[#439dc0] to-[#67dd80] rounded-3xl flex flex-col-reverse md:grid md:grid-cols-3 px-4 md:px-8 pt-4 ">
                 <div className="relative md:row-start-1 md:col-start-1 md:col-span-2 h-[350px] md:h-auto w-full mt-4 md:mt-0">
                   <Image
                     alt="Tablet con estadisticas"
@@ -116,18 +113,27 @@ function Libreria({ defaultCaptchaKey, courses }: LibreriaProps) {
                   />
                 </div>
                 <div className="md:col-start-2 col-span-2 md:row-start-1 text-center md:text-right flex flex-col gap-2 md:gap-6 md:justify-center">
-                  <p className="text-brandWhite  xl:text-2xl lg:pl-8 xl:pl-16">
-                    Cursos exportados en formato SCORM y listos para integrarse en cualquier
-                  </p>
+                  <h3 className="text-bg_primary font-extrabold text-xl xl:text-2xl 2xl:text-4xl lg:pl-8 xl:pl-16">
+                    ¿Qué solución necesita <br />
+                    <span className="text-xl xl:text-4xl 2xl:text-5xl ">tu empresa?</span>
+                  </h3>
+                  <ul className="text-bg_primary text-base lg:text-lg font-semibold ">
+                    <li>Habilidades Directivas</li>
+                    <li>Seguridad de la información</li>
+                    <li>Jurídico</li>
+                    <li>Habilidades Blandas</li>
+                    <li>Teletrabajo</li>
+                    <li>Ventas</li>
+                  </ul>
 
-                  <h3 className="text-4xl xl:text-6xl 2xl:text-7xl font-extrabold text-bg_primary">
+                  {/*  <h3 className="text-4xl xl:text-6xl 2xl:text-7xl  text-bg_primary">
                     Plataforma <br />
                     <span className="text-6xl xl:text-8xl 2xl:text-9xl ">LMS</span>
-                  </h3>
+                  </h3> */}
                   <div className="flex justify-center md:justify-end">
-                    <Link href="/contactanos">
+                    <Link href="/rutas-de-aprendizaje">
                       <span className="text-gray-900 uppercase py-2 px-4 cursor-pointer bg-white rounded-full inline-flex hover:bg-slate-50 transition-all will-change-transform hover:scale-105 duration-150 ease-in">
-                        Contáctanos
+                        Rutas de aprendizaje
                       </span>
                     </Link>
                   </div>

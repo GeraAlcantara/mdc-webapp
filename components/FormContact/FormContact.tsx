@@ -274,9 +274,9 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
               >
                 <option value="Selecciona una opción">Selecciona una opción</option>
                 <option value="Cursos de Librería">Cursos de Librería</option>
-                <option value="Cursos a medida">Cursos a medida</option>
+                <option value="Cursos a medida">Cursos a la medida</option>
                 <option value="Traducciones">Traducciones</option>
-                <option value="Aumento de personal">Aumento de personal</option>
+                <option value="Socios Estratégicos">Socios Estratégicos</option>
                 <option value="Otras producciones">Otras producciones</option>
               </select>
             </div>

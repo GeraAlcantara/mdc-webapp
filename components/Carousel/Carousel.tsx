@@ -18,7 +18,7 @@ function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
 
   return (
     /* Wrapper contenedor carusel */
-    <section className="carousel relative w-full overflow-hidden">
+    <section className="h-full carousel relative w-full overflow-hidden pb-24">
       <div ref={trackRef} className="carousel__track flex h-full transition-all duration-500">
         {SlidesData.map((banner, i) => (
           /* Carrusel slide */
@@ -56,16 +56,20 @@ function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
           </div>
         ))}
       </div>
-      <div className="pagination">
-        {SlidesData.map((_, i) => (
-          <button
-            key={i}
-            className={`pagination__button w-3 h-3 rounded-full bg-red-500 ${
-              currentIndex === i ? 'pagination__button--active' : ''
-            }`}
-            onClick={() => setCurrentIndex(i)}
-          />
-        ))}
+      <div className="pagination absolute bottom-0 w-full h-10 2xl:pb-16">
+        <div className=" flex justify-center">
+          <div className="w-1/2 xl:w-1/12 flex justify-between">
+            {SlidesData.map((_, i) => (
+              <button
+                key={i}
+                className={`w-4 h-4 rounded-full  ${
+                  currentIndex === i ? 'bg-brightGreen ' : 'border-brandWhite border-2 '
+                }`}
+                onClick={() => setCurrentIndex(i)}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )

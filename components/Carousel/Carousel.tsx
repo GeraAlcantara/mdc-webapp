@@ -6,32 +6,26 @@ import { CarouselDATA } from './Carousel.constanst'
 
 function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
-  const slideRef = useRef(null)
+  const slideRef = useRef<HTMLDivElement>(null)
   const trackRef = useRef<HTMLDivElement>(null)
   const [slideWidth, setSlideWidth] = useState(0)
 
   useEffect(() => {
-    const slideRefCurrent = slideRef.current
-    const trackRefCurrent = trackRef.current
-
-    const handleWindowResize = () => {
-      const newSlideWidth = slideRefCurrent?.clientWidth
-
-      if (newSlideWidth) {
-        setSlideWidth(newSlideWidth)
-        trackRef.current?.style.transform = `translateX(-${newSlideWidth * currentIndex}px)`
+    const handleResize = () => {
+      if (trackRef.current && slideRef.current) {
+        setSlideWidth(slideRef.current.clientWidth)
+        trackRef.current.style.transform = `translateX(-${slideWidth * currentIndex}px)`
       }
     }
 
-    window.addEventListener('resize', handleWindowResize)
-
-    setSlideWidth(slideRefCurrent!.clientWidth)
-    trackRefCurrent!.style.transform = `translateX(-${slideWidth! * currentIndex}px)`
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize)
+    window.addEventListener('resize', handleResize)
+    if (trackRef.current && slideRef.current) {
+      setSlideWidth(slideRef.current?.clientWidth)
+      trackRef.current.style.transform = `translateX(-${slideWidth * currentIndex}px)`
     }
-  }, [currentIndex])
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [currentIndex, slideWidth])
 
   return (
     /* Wrapper contenedor carusel */

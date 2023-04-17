@@ -7,7 +7,6 @@ import { CarouselDATA } from './Carousel.constanst'
 function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
   const trackRef = useRef<HTMLDivElement>(null)
-  const slideRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const trackElement = trackRef.current
@@ -23,7 +22,7 @@ function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
       <div ref={trackRef} className="carousel__track flex h-full transition-all duration-500">
         {SlidesData.map((banner, i) => (
           /* Carrusel slide */
-          <div key={i} ref={slideRef} className="w-full flex-grow-0 flex-shrink-0 basis-full ">
+          <div key={i} className="w-full flex-grow-0 flex-shrink-0 basis-full ">
             <div className="pb-8 md:grid md:grid-cols-2 landscape:grid landscape:grid-cols-2">
               {/* cover images  */}
               <div className="-z-10 md:col-span-2 md:row-start-1 md:col-start-1 landscape:col-span-2 landscape:row-start-1 landscape:col-start-1 flex justify-end">

@@ -6,38 +6,24 @@ import { CarouselDATA } from './Carousel.constanst'
 
 function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
-  const slideRef = useRef<HTMLDivElement>(null)
   const trackRef = useRef<HTMLDivElement>(null)
-  const [slideWidth, setSlideWidth] = useState(0)
+  const slideRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const handleResize = () => {
-      if (trackRef.current && slideRef.current) {
-        setSlideWidth(slideRef.current.clientWidth)
-        trackRef.current.style.transform = `translateX(-${slideWidth * currentIndex}px)`
-      }
-    }
+    const trackElement = trackRef.current
 
-    window.addEventListener('resize', handleResize)
-    if (trackRef.current && slideRef.current) {
-      setSlideWidth(slideRef.current?.clientWidth)
-      trackRef.current.style.transform = `translateX(-${slideWidth * currentIndex}px)`
+    if (trackElement) {
+      trackElement.style.transform = `translateX(-${currentIndex * 100}%)`
     }
-
-    return () => window.removeEventListener('resize', handleResize)
-  }, [currentIndex, slideWidth])
+  }, [currentIndex])
 
   return (
     /* Wrapper contenedor carusel */
     <section className="carousel relative w-full overflow-hidden">
-      <div ref={trackRef} className="carousel__track flex h-full">
+      <div ref={trackRef} className="carousel__track flex h-full transition-all duration-500">
         {SlidesData.map((banner, i) => (
           /* Carrusel slide */
-          <div
-            key={i}
-            ref={slideRef}
-            className="w-full flex-grow-0 flex-shrink-0 basis-full transition duration-500"
-          >
+          <div key={i} ref={slideRef} className="w-full flex-grow-0 flex-shrink-0 basis-full ">
             <div className="pb-8 md:grid md:grid-cols-2 landscape:grid landscape:grid-cols-2">
               {/* cover images  */}
               <div className="-z-10 md:col-span-2 md:row-start-1 md:col-start-1 landscape:col-span-2 landscape:row-start-1 landscape:col-start-1 flex justify-end">

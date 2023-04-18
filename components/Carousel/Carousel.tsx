@@ -6,7 +6,38 @@ import { CarouselDATA } from './Carousel.constanst'
 
 function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
+  const [initialTouchPosition, setInitialTouchPosition] = useState<number | null>(null)
+  const [currentTouchPosition, setCurrentTouchPosition] = useState<number | null>(null)
+
   const trackRef = useRef<HTMLDivElement>(null)
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    setInitialTouchPosition(e.touches[0].clientX)
+  }
+
+  function handleTouchMove(event: React.TouchEvent<HTMLDivElement>) {
+    if (initialTouchPosition === null) {
+      return
+    }
+    setCurrentTouchPosition(event.touches[0].clientX)
+  }
+  const handleTouchEnd = () => {
+    if (initialTouchPosition === null || currentTouchPosition === null) {
+      return
+    }
+    const distance = currentTouchPosition - initialTouchPosition
+    const trackElement = trackRef.current
+
+    if (trackElement) {
+      if (distance > 0) {
+        setCurrentIndex(Math.max(0, currentIndex - 1))
+      } else if (distance < 0) {
+        setCurrentIndex(Math.min(SlidesData.length - 1, currentIndex + 1))
+      }
+    }
+    setInitialTouchPosition(null)
+    setCurrentTouchPosition(null)
+  }
 
   useEffect(() => {
     const trackElement = trackRef.current
@@ -30,7 +61,12 @@ function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
     <section className=" carousel relative w-full overflow-hidden ">
       <div
         ref={trackRef}
-        className={`flex  ${currentIndex === 0 ? '' : 'transition-all duration-500'}  `}
+        className={`flex  ${
+          currentIndex === 0 && initialTouchPosition !== null ? '' : 'transition-all duration-500'
+        }  `}
+        onTouchEnd={handleTouchEnd}
+        onTouchMove={handleTouchMove}
+        onTouchStart={handleTouchStart}
       >
         {SlidesData.map((banner, i) => (
           /* Carrusel slide */

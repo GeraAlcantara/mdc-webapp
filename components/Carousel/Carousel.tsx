@@ -61,7 +61,7 @@ function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
     <section className=" carousel relative w-full overflow-hidden ">
       <div
         ref={trackRef}
-        className={`flex  ${
+        className={`flex touch-pan-y ${
           currentIndex === 0 && initialTouchPosition !== null ? '' : 'transition-all duration-500'
         }  `}
         onTouchEnd={handleTouchEnd}

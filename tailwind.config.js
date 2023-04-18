@@ -61,8 +61,23 @@ module.exports = {
         FadeInSlidein: "fadeInSlidein 1s forwards",
         FadeOutSlideout: "fadeOutSlideout 1s forwards",
         heartbeat: "heartbeat 1.5s ease-in-out infinite both",
+        swipeIcon: "swipeIcon 1.8s ease-in-out infinite both",
       },
       keyframes: {
+        swipeIcon: {
+          "0%": {
+            transform: "rotate(20deg)",
+          },
+          
+
+          "50%": {
+            transform: "rotate(-20deg)",
+          },
+          "100%": {
+            transform: "rotate(20deg)",
+          },
+          
+        },
         heartbeat: {
           from: {
             transform: "scale(1)",

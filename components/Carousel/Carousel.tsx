@@ -2,6 +2,9 @@ import Link from 'next/dist/client/link'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
+/* import swipe svg from svg componets */
+import SwipeIcon from '../svgs/swipe.svg'
+
 import { CarouselDATA } from './Carousel.constanst'
 
 function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
@@ -91,18 +94,21 @@ function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
                   </p>
                 </div>
                 <div className="flex justify-around md:justify-start sm:landscape:w-1/2">
-                  <div className="">
-                    <Link href="/libreria">
-                      <a className=" flex justify-center items-center uppercase rounded-full bg-secondary px-8 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 hover:scale-[.98] hover:contrast-150 transition-all  ">
-                        {banner.cta}
-                      </a>
-                    </Link>
-                  </div>
+                  <Link href="/libreria">
+                    <a className=" flex justify-center items-center uppercase rounded-full bg-secondary px-8 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 hover:scale-[.98] hover:contrast-150 transition-all  ">
+                      {banner.cta}
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex justify-center items-center md:hidden">
+        <div className="w-8 h-8 mb-2 ">
+          <SwipeIcon className="text-white animate-swipeIcon h-full w-full origin-bottom rotate-[20deg] " />
+        </div>
       </div>
       <div className="hidden md:block pagination absolute bottom-0 w-full h-10 lg:mb-6 2xl:mb-16">
         <div className=" flex justify-center">

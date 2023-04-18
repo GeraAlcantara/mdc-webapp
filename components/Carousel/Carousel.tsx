@@ -79,9 +79,9 @@ function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
               {/* cover text */}
               <div className="md:col-span-2 md:col-start-1 md:row-start-1 landscape:col-span-2 landscape:col-start-1 landscape:row-start-1 mdc-ui-container -mt-5 md:mt-0 md:self-center landscape:mt-[68px] md:landscape:mt-0 ">
                 <h2 className=" portrait:text-center md:portrait:text-left md:text-left text-6xl md:text-7xl xl:text-9xl leading-[60px] text-accent font-extrabold md:pb-8">
-                  <small className="text-brandWhite text-2xl md:text-3xl xl:text-5xl leading-normal flex-1">
+                  <span className="text-brandWhite text-xl md:text-3xl xl:text-5xl leading-normal flex-1">
                     {banner.content.title.small}
-                  </small>
+                  </span>
                   <br />
                   {banner.content.title.highlight}
                 </h2>

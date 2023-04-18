@@ -16,17 +16,29 @@ function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
     }
   }, [currentIndex])
 
+  useEffect(() => {
+    const maxSlidesLength = SlidesData.length
+    const autoplayInterval = setInterval(() => {
+      setCurrentIndex((pevidx) => (pevidx + 1) % maxSlidesLength)
+    }, 5000) // Change this value to adjust the autoplay speed (in milliseconds)
+
+    return () => clearInterval(autoplayInterval)
+  }, [currentIndex, SlidesData.length])
+
   return (
     /* Wrapper contenedor carusel */
-    <section className="h-full carousel relative w-full overflow-hidden pb-24">
-      <div ref={trackRef} className="carousel__track flex h-full transition-all duration-500">
+    <section className=" carousel relative w-full overflow-hidden ">
+      <div
+        ref={trackRef}
+        className={`flex  ${currentIndex === 0 ? '' : 'transition-all duration-500'}  `}
+      >
         {SlidesData.map((banner, i) => (
           /* Carrusel slide */
           <div key={i} className="w-full flex-grow-0 flex-shrink-0 basis-full ">
             <div className="pb-8 md:grid md:grid-cols-2 landscape:grid landscape:grid-cols-2">
               {/* cover images  */}
               <div className="-z-10 md:col-span-2 md:row-start-1 md:col-start-1 landscape:col-span-2 landscape:row-start-1 landscape:col-start-1 flex justify-end">
-                <Image alt={banner.alt} loading="lazy" objectFit="fill" src={banner.src} />
+                <Image priority alt={banner.alt} objectFit="fill" src={banner.src} />
               </div>
               {/* cover text */}
               <div className="md:col-span-2 md:col-start-1 md:row-start-1 landscape:col-span-2 landscape:col-start-1 landscape:row-start-1 mdc-ui-container -mt-5 md:mt-0 md:self-center landscape:mt-[68px] md:landscape:mt-0 ">
@@ -56,9 +68,9 @@ function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
           </div>
         ))}
       </div>
-      <div className="pagination absolute bottom-0 w-full h-10 2xl:pb-16">
+      <div className="hidden md:block pagination absolute bottom-0 w-full h-10 lg:mb-6 2xl:mb-16">
         <div className=" flex justify-center">
-          <div className="w-1/2 xl:w-1/12 flex justify-between">
+          <div className="w-1/4 xl:w-1/12 flex justify-between">
             {SlidesData.map((_, i) => (
               <button
                 key={i}

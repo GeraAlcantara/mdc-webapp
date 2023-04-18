@@ -4,7 +4,6 @@ import { withIronSessionSsr } from 'iron-session/next'
 
 import HelperHead from '../lib/helpers/HelperHead'
 import { DataHeadHome } from '../lib/data/DataHeader'
-import Hero from '../components/Hero'
 import { SectionsData } from '../lib/data/SectionTimeLineData'
 import Capacite from '../public/icons/capacitePersonal.svg'
 import Clients from '../components/Clients'

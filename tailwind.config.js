@@ -68,15 +68,12 @@ module.exports = {
           "0%": {
             transform: "rotate(20deg)",
           },
-          
-
           "50%": {
             transform: "rotate(-20deg)",
           },
           "100%": {
             transform: "rotate(20deg)",
           },
-          
         },
         heartbeat: {
           from: {

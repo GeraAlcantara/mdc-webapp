@@ -48,13 +48,14 @@ export const carouselData: CarouselDATA[] = [
     src: imgHero1,
     content: {
       title: {
-        small: 'Transforma tu empresa con',
+        small: 'Cursos a la medida',
         highlight: 'e-learning'
       },
       text: (
         <span>
-          Nuestras soluciones de e-learning te permitirán <strong>cumplir los objetivos</strong> de
-          formación de tu empresa y <strong>alcanzar un desarrollo organizacional exitoso</strong>.
+          Convertimos tu capacitación actual, ya sean documentos de PowerPoint, videos, manuales o
+          políticas en <strong>atractivos cursos e-learning</strong> compatibles con{' '}
+          <strong>SCORM</strong>.
         </span>
       )
     },

@@ -14,7 +14,7 @@ import SectionTimeline from '../components/SectionTimeline'
 import ModalDemoReel from '../components/ui/ModalDemoReel'
 import MonitorVideoReel from '../public/videoreel.png'
 import FormContact from '../components/FormContact/FormContact'
-import { heroData } from '../components/Hero/Hero.constanst'
+import { carouselData } from '../components/Carousel/Carousel.constanst'
 import Carousel from '../components/Carousel/Carousel'
 
 import { newCaptchaImages } from './api/captcha-image'
@@ -24,7 +24,7 @@ const Home: NextPage<CaptchaKeyProps> = ({ defaultCaptchaKey }) => {
     <>
       <HelperHead {...DataHeadHome} />
 
-      <Carousel SlidesData={heroData} />
+      <Carousel SlidesData={carouselData} />
 
       <Clients />
       <div className="lg:text-lg md:text-center bg-white text-gray-900 py-4 lg:py-8 xl:py-12">

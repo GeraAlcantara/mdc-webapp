@@ -29,14 +29,48 @@ const Home: NextPage<CaptchaKeyProps> = ({ defaultCaptchaKey }) => {
       <div className="lg:text-lg md:text-center bg-white text-gray-900 py-4 lg:py-8 xl:py-12">
         <div className="mdc-ui-container">
           <Capacite className="text-8xl m-auto mb-4" />
-          <h2 className="text-3xl font-extrabold  pb-8 text-center">Capacite a su personal</h2>
-          <p className=" pb-8">
-            En la actualidad, la educación a distancia es la mejor herramienta para cumplir los
-            objetivos de formación de las empresas. Nuestras soluciones de e-learning le permitirán
-            reducir su inversión de tiempo y dinero, al mismo tiempo que otorgan flexibilidad sobre
-            la ubicación y horario de las capacitaciones, y posibilitan un mejor seguimiento de las
-            métricas y los logros alcanzados.
+          <h2 className="text-3xl font-extrabold pb-8 text-center">¿Por qué e-learning?</h2>
+          <p className="w-4/5 m-auto pb-8">
+            En la actualidad el e-learning se ha convertido en una de las mejores herramientas para
+            cumplir los objetivos de formación de las empresas. Nuestras soluciones le permitirán
+            <strong> reducir su inversión</strong> de tiempo y dinero,
+            <strong> ofrecer flexibilidad</strong> de ubicación y horario a los usuarios, además de
+            facilitar el <strong>seguimiento de métricas</strong> y logros alcanzados.
           </p>
+        </div>
+        <div className="mdc-ui-container text-left my-6 lg:my-10 xl:my-14">
+          <ul className="flex flex-col lg:flex-row justify-between ">
+            <li className="p-4 xl:p-6">
+              <h2 className="font-extrabold text-xl xl:text-2xl flex gap-x-1 ">
+                <span>✔</span>
+                <span>Servicio completo de producción de cursos</span>
+              </h2>
+              <p className="pl-8 mt-2 ">
+                Crea una capacitación personalizada para tu empresa. Cuéntanos qué necesitas y
+                nosotros lo desarrollamos.
+              </p>
+            </li>
+
+            <li className="p-4 xl:p-6">
+              <h2 className="font-extrabold text-xl xl:text-2xl flex gap-x-1 ">
+                <span>✔</span>
+                <span>E-learning de las más alta calidad en tiempo récord</span>
+              </h2>
+              <p className="pl-8 mt-2 self-end">
+                Con más de 15 años de experiencia, nuestro equipo trabaja de forma ágil para
+                entregar los mejores resultados en el menor tiempo posible.
+              </p>
+            </li>
+            <li className="p-4 xl:p-6">
+              <h2 className="font-extrabold text-xl xl:text-2xl flex gap-x-1 ">
+                <span>✔</span> <span>Diseño gráfico ganador de premios</span>
+              </h2>
+              <p className="pl-8 mt-2">
+                Apariencia profesional y estimulante que fortalece el aprendizaje e impulsa la
+                identidad corporativa de tu empresa.
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
       {/* Section Timeline */}

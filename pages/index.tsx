@@ -39,8 +39,8 @@ const Home: NextPage<CaptchaKeyProps> = ({ defaultCaptchaKey }) => {
           </p>
         </div>
         <div className="mdc-ui-container text-left my-6 lg:my-10 xl:my-14">
-          <ul className="flex flex-col lg:flex-row justify-between ">
-            <li className="p-4 xl:p-6">
+          <ul className="flex flex-col gap-y-4 lg:gap-y-0 lg:flex-row justify-between ">
+            <li className="lg:p-4 xl:p-6">
               <h2 className="font-extrabold text-xl xl:text-2xl flex gap-x-1 ">
                 <span>✔</span>
                 <span>Servicio completo de producción de cursos</span>
@@ -51,7 +51,7 @@ const Home: NextPage<CaptchaKeyProps> = ({ defaultCaptchaKey }) => {
               </p>
             </li>
 
-            <li className="p-4 xl:p-6">
+            <li className="lg:p-4 xl:p-6">
               <h2 className="font-extrabold text-xl xl:text-2xl flex gap-x-1 ">
                 <span>✔</span>
                 <span>E-learning de las más alta calidad en tiempo récord</span>
@@ -61,7 +61,7 @@ const Home: NextPage<CaptchaKeyProps> = ({ defaultCaptchaKey }) => {
                 entregar los mejores resultados en el menor tiempo posible.
               </p>
             </li>
-            <li className="p-4 xl:p-6">
+            <li className="lg:p-4 xl:p-6">
               <h2 className="font-extrabold text-xl xl:text-2xl flex gap-x-1 ">
                 <span>✔</span> <span>Diseño gráfico ganador de premios</span>
               </h2>

@@ -8,7 +8,7 @@ function Timeline() {
   return (
     <div
       ref={ref}
-      className="origin-top w-[2px] bg-gradient-to-b from-secondary to-accent bg-[#4cafb8] h-[78%] top-[12%] absolute hidden lg:block"
+      className="origin-top w-[2px] bg-gradient-to-b from-secondary to-accent bg-[#4cafb8] h-[76%] top-[12%] absolute hidden lg:block"
     />
   )
 }

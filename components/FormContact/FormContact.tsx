@@ -78,12 +78,17 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
     } else if (!/([+]?\d{1,2}[.-\s]?)?(\d{3}[.-]?){2}\d{4}/g.test(data.Phone)) {
       errors.Phone = 'Ejemplo: +52-551-234-5678 ó 525512345678 Formato de teléfono incorrecto.'
     }
-
-    if (!/^[a-zA-ZÀ-ÿ0-9\s]{1,40}$/g.test(data.Company)) {
-      errors.Company = 'No debe contener símbolos, usar solo letras y numeros.'
+    if (data.Company.length > 0) {
+      if (!/^[a-zA-ZÀ-ÿ0-9\s]{1,80}$/g.test(data.Company)) {
+        errors.Company =
+          'No debe contener símbolos, usar solo letras y números, máximo 80 caracteres.'
+      }
     }
-    if (!/^[a-zA-ZÀ-ÿ0-9\s]{1,40}$/g.test(data.Position)) {
-      errors.Position = 'No debe contener símbolos, usar solo letras y numeros.'
+    if (data.Position.length > 0) {
+      if (!/^[a-zA-ZÀ-ÿ0-9\s]{1,80}$/g.test(data.Position)) {
+        errors.Position =
+          'No debe contener símbolos, usar solo letras y números, máximo 80 caracteres.'
+      }
     }
 
     if (Object.keys(errors).length === 0) {
@@ -215,7 +220,6 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
                 id="Company"
                 name="Company"
                 placeholder="Escribe el nombre de tu empresa"
-                required={false}
                 type="text"
                 value={values.Company}
                 onChange={onChange}
@@ -231,7 +235,6 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
                 id="Position"
                 name="Position"
                 placeholder="Escribe el nombre de tu empresa"
-                required={false}
                 type="text"
                 value={values.Position}
                 onChange={onChange}

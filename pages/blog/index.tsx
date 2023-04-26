@@ -1,14 +1,17 @@
-import { GetStaticProps } from 'next'
+import { withIronSessionSsr } from 'iron-session/next'
 
 import { DataHeadBlog } from '../../lib/data/DataHeader'
 import HelperHead from '../../lib/helpers/HelperHead'
 import ArticleCard from '../../components/ArticleCard'
 import { getAllPosts } from '../api/blogApi'
+import { newCaptchaImages } from '../api/captcha-image'
+import FormContact from '../../components/FormContact/FormContact'
 
 interface BlogProps {
   posts: PostMeta[]
+  defaultCaptchaKey: string
 }
-export default function Blog({ posts }: BlogProps) {
+export default function Blog({ posts, defaultCaptchaKey }: BlogProps) {
   return (
     <>
       <HelperHead {...DataHeadBlog} />
@@ -32,20 +35,42 @@ export default function Blog({ posts }: BlogProps) {
         {posts.map((post) => (
           <ArticleCard key={post.slug} {...post} />
         ))}
+        <hr className="hidden md:block my-8 border-brandBlue-50/50" />
+      </section>
+      <section className="mdc-ui-container py-10">
+        <header className="mb-10">
+          <hgroup className="text-center">
+            <h2 className="text-xl mb-2">Ponte en contacto</h2>
+            <h3 className="text-4xl xl:text-5xl font-bold">¿Cómo podemos ayudarte?</h3>
+          </hgroup>
+        </header>
+        <FormContact defaultCaptchaKey={defaultCaptchaKey} />
       </section>
     </>
   )
 }
 
-export const getStaticProps: GetStaticProps = async (_context) => {
-  // get the latest 9 posts from the api only the meta data
-  const postsMDXMeta = getAllPosts()
-    .slice(0, 9)
-    .map((post) => post.meta)
+export const getServerSideProps = withIronSessionSsr(
+  async function getIronSession({ req }) {
+    {
+      if (!req.session.captchaImages) {
+        req.session.captchaImages = newCaptchaImages()
+        await req.session.save()
+      }
+      const postsMDXMeta = getAllPosts()
+        .slice(0, 9)
+        .map((post) => post.meta)
 
-  return {
-    props: {
-      posts: postsMDXMeta
+      return {
+        props: {
+          defaultCaptchaKey: new Date().getTime(),
+          posts: postsMDXMeta
+        }
+      }
     }
+  },
+  {
+    cookieName: 'MDC_SESSION',
+    password: process.env.SESSION_SECRET as string
   }
-}
+)

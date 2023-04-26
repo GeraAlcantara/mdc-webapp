@@ -128,7 +128,7 @@ export default function Servicios({ defaultCaptchaKey }: CaptchaKeyProps) {
             {/* text  */}
             <div className="md:w-1/2 flex flex-col md:items-start md:justify-center text-gray-400 text-lg">
               <h2 className={`font-bold text-4xl mb-6 capitalize text-lineGradient_3 w-[12ch] `}>
-                Producciones a tu medida.
+                Cursos a la medida.
               </h2>
               <p className="max-w-prose md:text-left mb-4">
                 Podemos desarrollar la capacitación que tu empresa necesita, desde el diseño

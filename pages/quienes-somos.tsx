@@ -3,14 +3,14 @@ import React from 'react'
 import { DataHeadQuienesSomos } from '../lib/data/DataHeader'
 import HelperHead from '../lib/helpers/HelperHead'
 import Clients from '../components/Clients'
-import Hero from '../components/Hero'
-import { heroData } from '../components/Hero/Hero.constanst'
+import Carousel from '../components/Carousel/Carousel'
+import { carouselData } from '../components/Carousel/Carousel.constanst'
 
 function About() {
   return (
     <>
       <HelperHead {...DataHeadQuienesSomos} />
-      <Hero bannerData={heroData} />
+      <Carousel SlidesData={carouselData} />
       <Clients />
       <div className="lg:text-lg  bg-white text-gray-900 py-4 lg:py-8 xl:py-12">
         <div className="mdc-ui-container md:p-10">

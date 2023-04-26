@@ -61,10 +61,10 @@ function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
 
   return (
     /* Wrapper contenedor carusel */
-    <section className=" carousel relative w-full overflow-hidden ">
+    <section className="relative w-full landscape:h-screen md:h-full overflow-hidden ">
       <div
         ref={trackRef}
-        className={`flex touch-pan-y transition-all duration-500   ${
+        className={`flex touch-pan-y transition-all duration-500 h-full  ${
           currentIndex === 0 ? 'md:transition-none' : ''
         }  `}
         onTouchEnd={handleTouchEnd}
@@ -73,27 +73,33 @@ function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
       >
         {SlidesData.map((banner, i) => (
           /* Carrusel slide */
-          <div key={i} className="w-full flex-grow-0 flex-shrink-0 basis-full ">
-            <div className="pb-8 md:grid md:grid-cols-2 landscape:grid landscape:grid-cols-2">
+          <div key={i} className="w-full flex-grow-0 flex-shrink-0 basis-full relative">
+            <div className=" w-full h-full flex flex-col sm:landscape:flex-row md:mdc-ui-container items-center  ">
               {/* cover images  */}
-              <div className="-z-10 md:col-span-2 md:row-start-1 md:col-start-1 landscape:col-span-2 landscape:row-start-1 landscape:col-start-1 flex justify-end">
-                <Image priority alt={banner.alt} objectFit="fill" src={banner.src} />
+              <div className="-z-10 landscape:absolute sm:landscape:inset-0 lg:absolute max-h-screen w-full flex justify-end lg:inset-0">
+                <Image
+                  priority
+                  alt={banner.alt}
+                  objectFit="cover"
+                  objectPosition="top"
+                  src={banner.src}
+                />
               </div>
               {/* cover text */}
-              <div className="md:col-span-2 md:col-start-1 md:row-start-1 landscape:col-span-2 landscape:col-start-1 landscape:row-start-1 mdc-ui-container -mt-5 md:mt-0 md:self-center landscape:mt-[68px] md:landscape:mt-0 ">
-                <h2 className=" portrait:text-center md:portrait:text-left md:text-left text-6xl md:text-7xl xl:text-9xl leading-[60px] text-accent font-extrabold md:pb-8">
+              <div className="pb-6 md:pb-16 sm:landscape:pl-6 lg:landscape:pl-0 ">
+                <h2 className=" portrait:text-center md:text-left text-6xl md:text-7xl xl:text-9xl leading-[60px] text-accent font-extrabold md:pb-8">
                   <span className="text-brandWhite text-xl md:text-3xl xl:text-5xl leading-normal flex-1">
                     {banner.content.title.small}
                   </span>
                   <br />
                   {banner.content.title.highlight}
                 </h2>
-                <div className="my-4 pb-4 w-full sm:landscape:w-1/2 md:w-2/4">
-                  <p className="text-center md:text-left xl:text-xl max-w-prose ">
+                <div className="my-4 pb-4 w-full sm:landscape:w-1/2 md:w-2/4 portrait:m-auto">
+                  <p className="text-center sm:landscape:text-left portrait:text-center md:text-left xl:text-xl max-w-prose ">
                     {banner.content.text}
                   </p>
                 </div>
-                <div className="flex justify-around md:justify-start sm:landscape:w-1/2">
+                <div className="flex justify-around sm:landscape:justify-start md:justify-center sm:landscape:w-1/2">
                   <Link href="/libreria">
                     <a className=" flex justify-center items-center uppercase rounded-full bg-secondary px-8 py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 hover:scale-[.98] hover:contrast-150 transition-all  ">
                       {banner.cta}
@@ -106,7 +112,7 @@ function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
         ))}
       </div>
       <div className="flex justify-center items-center md:hidden">
-        <div className="w-8 h-8 mb-2 ">
+        <div className="w-8 h-8 mb-2 landscape:hidden ">
           <SwipeIcon className="text-white animate-swipeIcon h-full w-full origin-bottom rotate-[20deg] " />
         </div>
       </div>

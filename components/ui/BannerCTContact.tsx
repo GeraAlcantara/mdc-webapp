@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from 'next/image'
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax'
-import Link from 'next/link'
 
 function BannerCTContact({ imgBanner, txtalt }: { imgBanner: StaticImageData; txtalt: string }) {
   return (

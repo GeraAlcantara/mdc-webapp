@@ -25,6 +25,7 @@ function FormInput(props: InputProps) {
   const HandleFocus = (
     e: React.FocusEvent<HTMLInputElement> | React.FocusEvent<HTMLTextAreaElement>
   ) => {
+    e.preventDefault()
     setFocus(true)
   }
 

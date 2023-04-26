@@ -34,8 +34,13 @@ function Captcha({ onChange, captchaKey }: CaptchaProps) {
   return (
     <div className="flex flex-col flex-1">
       <div className="bg-secondary p-4 ">
-        <p className="text-lg">Seleccione las personas con un</p>
-        <p className="text-4xl ">
+        <h2 className="text-4xl ">
+          <strong className="font-extrabold font-sans">CAPTCHA</strong>
+        </h2>
+        <p className="text-lg">
+          Para enviar el formulario es necesario que seleccione las personas con un
+        </p>
+        <p className="text-2xl ">
           <strong className="font-extrabold">smartphone</strong>
         </p>
       </div>

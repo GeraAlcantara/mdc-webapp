@@ -27,7 +27,7 @@ function CardCourse({
   slug
 }: CardCourseProps) {
   return (
-    <Link href={duration <= 15 ? slug : '#contacto'}>
+    <Link href={slug}>
       <div className="group flex flex-col min-h-[450px] min-w-[250px] rounded-2xl bg-[#0d2237] hover:bg-brandBlue-500 overflow-hidden justify-between  hover:cursor-pointer ">
         <div className="min-h-[230px] w-full relative  ">
           <Image
@@ -52,7 +52,7 @@ function CardCourse({
           <a
             className={`self-start mt-4 hover:cursor-pointer uppercase rounded-full bg-secondary text-brandWhite py-2 px-8 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 hover:scale-[.98] hover:contrast-150 transition-all`}
           >
-            {duration <= 15 ? 'Ver Demo' : 'Mas Información'}
+            Más información
           </a>
         </div>
       </div>

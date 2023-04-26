@@ -9,6 +9,7 @@ import {
 } from '../../lib/helpers/library'
 import CourseSpecs from '../../components/ui/CourseSpecs'
 import Breadcrumbs from '../../components/Breadcrumbs'
+import CardCourse from '../../components/ui/CardCourse'
 
 const subcategoriesnames = getSubcategoriesNames(data)
 const allSubcategories = subcategoriesnames.map((subcategoryname) =>
@@ -55,8 +56,9 @@ interface CourseProps {
     slug: string[]
   }
   course: Course
+  similarCourses: Course[]
 }
-function Cursos({ params, course }: CourseProps) {
+function Cursos({ params, course, similarCourses }: CourseProps) {
   //get all lessos from the course modules
   const lessons = course.modules.map((module) => module.lessons).flat()
 
@@ -111,6 +113,31 @@ function Cursos({ params, course }: CourseProps) {
           title={course.title}
           topics={course.topics}
         />
+        {similarCourses.length > 0 && (
+          <section className="mdc-ui-container py-14 ">
+            <h2 className="text-4xl mb-4 font-bold text-brandWhite">Cursos Similares</h2>
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-4 w-full">
+              {similarCourses.slice(0, 3).map((course, index) => (
+                <CardCourse
+                  key={index + course.subcategory.skuPrefix}
+                  coursename={course.title}
+                  duration={course.duration}
+                  numlessons={course.modules.reduce(
+                    (acc, module) => acc + module.lessons.length,
+                    0
+                  )}
+                  numtopics={course.topics.length}
+                  slug={`cursos/${course.library.skuPrefix.toLocaleLowerCase()}/${course.subcategory.skuPrefix.toLocaleLowerCase()}/${
+                    course.slug
+                  }`}
+                  thumbnail={course.thumbnail.src}
+                  thumbnailAlt={course.thumbnail.alt}
+                  //get the amount of lessons in the al the modules
+                />
+              ))}
+            </div>
+          </section>
+        )}
       </div>
     </>
   )
@@ -126,7 +153,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
   //get the course by slug
   const course = getCourseBySlug(slug, allCoursesBySubcategory.flat())
 
-  return { props: { params, course } }
+  const similarCourses = getSubcategoryByName(course!.subcategory.name, data)!.courses.filter(
+    (course) => course.slug !== slug
+  )
+
+  return { props: { params, course, similarCourses } }
 }
 
 export default Cursos

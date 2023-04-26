@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { RiArrowRightSFill } from 'react-icons/ri'
+import Link from 'next/link'
 
 import LogoSolid from '../svgs/logoSolid.svg'
 import TimeIcon from '../svgs/time.svg'
@@ -51,15 +52,16 @@ function CourseSpecs({
               </div>
               <div className=" space-y-6 md:hidden ">
                 <div className="flex justify-center mt-10 mb-4 ">
-                  <a
-                    className="inline-flex items-center justify-center px-6 py-4 font-semibold text-brandWhite transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 "
-                    href={linkCourse}
+                  <Link
+                    href={duration <= 15 ? linkCourse : '/contactanos'}
                     rel="noreferrer"
-                    target="_blank"
+                    {...(duration <= 15 && { target: '_blank' })}
                   >
-                    <RiArrowRightSFill className="text-3xl mr-2 " />
-                    <span>Comienza</span>
-                  </a>
+                    <a className="inline-flex items-center justify-center px-6 py-4 font-semibold text-brandWhite transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 ">
+                      <RiArrowRightSFill className="text-3xl mr-2 " />
+                      <span>{duration <= 15 ? 'Comienza' : 'Solicita acceso'}</span>
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -164,15 +166,17 @@ function CourseSpecs({
           </div>
           <div className="hidden space-y-6 md:block ">
             <div className="flex justify-center mt-10 mb-4 ">
-              <a
+              <Link
                 className="inline-flex items-center justify-center px-8 py-2 font-semibold text-brandWhite transition-all duration-200 bg-blue-600 rounded-full hover:bg-blue-700 "
-                href={linkCourse}
+                href={duration <= 15 ? linkCourse : '/contactanos'}
                 rel="noreferrer"
-                target="_blank"
+                {...(duration <= 15 && { target: '_blank' })}
               >
-                <RiArrowRightSFill className="text-3xl mr-1 " />
-                <span>Comienza</span>
-              </a>
+                <a className="inline-flex items-center justify-center px-8 py-2 font-semibold text-brandWhite transition-all duration-200 bg-blue-600 rounded-full hover:bg-blue-700 ">
+                  <RiArrowRightSFill className="text-3xl mr-2 " />
+                  <span>{duration <= 15 ? 'Comienza' : 'Solicita acceso'}</span>
+                </a>
+              </Link>
             </div>
           </div>
           {/* course Content */}

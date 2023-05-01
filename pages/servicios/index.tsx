@@ -127,7 +127,7 @@ export default function Servicios({ defaultCaptchaKey }: CaptchaKeyProps) {
             {/* grid layout images END */}
             {/* text  */}
             <div className="md:w-1/2 flex flex-col md:items-start md:justify-center text-gray-400 text-lg">
-              <h2 className={`font-bold text-4xl mb-6 capitalize text-lineGradient_3 w-[12ch] `}>
+              <h2 className={`font-bold text-4xl mb-6 text-lineGradient_3 w-[12ch] `}>
                 Cursos a la medida.
               </h2>
               <p className="max-w-prose md:text-left mb-4">
@@ -205,7 +205,7 @@ export default function Servicios({ defaultCaptchaKey }: CaptchaKeyProps) {
             {/* grid layout images END */}
             {/* text  */}
             <div className="md:w-1/2 flex flex-col md:items-start md:justify-center text-gray-400 text-lg">
-              <h2 className={`font-bold text-4xl mb-6 capitalize text-secondary w-[12ch] `}>
+              <h2 className={`font-bold text-4xl mb-6 text-secondary w-[12ch] `}>
                 Socios Estratégicos.
               </h2>
               <p className="max-w-prose md:text-left mb-4">

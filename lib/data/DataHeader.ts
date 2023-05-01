@@ -1,7 +1,7 @@
 export const DataHeadDefault: DataHead = {
   twitterHandle: '@MexicoDC',
   siteName: 'Mexico Development Center',
-  currentURL: 'https://mdc-webapp.vercel.app'
+  currentURL: 'https://sitio.mexicodc.com'
 }
 
 export const DataHeadHome: HeadData = {

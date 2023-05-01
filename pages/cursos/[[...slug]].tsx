@@ -91,7 +91,7 @@ function Cursos({ params, course, similarCourses }: CourseProps) {
         pageTitle={course.title}
         previewImage={'/socialCards/fichasTecnicas.jpg'}
         previewImageAlt="imagen social"
-        slug={`cursos/${course.library.skuPrefix.toLocaleLowerCase()}/${course.subcategory.skuPrefix.toLocaleLowerCase()}/${
+        slug={`/cursos/${course.library.skuPrefix.toLocaleLowerCase()}/${course.subcategory.skuPrefix.toLocaleLowerCase()}/${
           course.slug
         }`}
       />
@@ -127,7 +127,7 @@ function Cursos({ params, course, similarCourses }: CourseProps) {
                     0
                   )}
                   numtopics={course.topics.length}
-                  slug={`cursos/${course.library.skuPrefix.toLocaleLowerCase()}/${course.subcategory.skuPrefix.toLocaleLowerCase()}/${
+                  slug={`/cursos/${course.library.skuPrefix.toLocaleLowerCase()}/${course.subcategory.skuPrefix.toLocaleLowerCase()}/${
                     course.slug
                   }`}
                   thumbnail={course.thumbnail.src}

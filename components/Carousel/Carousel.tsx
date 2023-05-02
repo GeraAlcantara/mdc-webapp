@@ -7,11 +7,14 @@ import SwipeIcon from '../svgs/swipe.svg'
 
 import { CarouselDATA } from './Carousel.constanst'
 
+// [0123[4][01234][0]1234]
+
 function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
-  const [currentIndex, setCurrentIndex] = useState<number>(0)
+  const [currentIndex, setCurrentIndex] = useState<number>(1)
   const [initialTouchPosition, setInitialTouchPosition] = useState<number | null>(null)
   const [currentTouchPosition, setCurrentTouchPosition] = useState<number | null>(null)
 
+  const slides = [SlidesData[SlidesData.length - 1], ...SlidesData, SlidesData[0]]
   const trackRef = useRef<HTMLDivElement>(null)
 
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
@@ -33,9 +36,13 @@ function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
 
     if (trackElement) {
       if (distance > 0) {
-        setCurrentIndex(Math.max(0, currentIndex - 1))
+        setTimeout(() => {
+          setCurrentIndex(Math.max(0, currentIndex - 1))
+        }, 300)
       } else if (distance < 0) {
-        setCurrentIndex(Math.min(SlidesData.length - 1, currentIndex + 1))
+        setTimeout(() => {
+          setCurrentIndex(Math.min(slides.length - 1, currentIndex + 1))
+        }, 300)
       }
     }
     setInitialTouchPosition(null)
@@ -51,27 +58,50 @@ function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
   }, [currentIndex])
 
   useEffect(() => {
-    const maxSlidesLength = SlidesData.length
+    const trackElement = trackRef.current
+
+    if (!trackElement) {
+      return
+    }
+
+    if (currentIndex === slides.length - 1) {
+      setTimeout(() => {
+        trackElement.classList.add('transition-none')
+        setCurrentIndex(1)
+      }, 490)
+    } else if (currentIndex === 0) {
+      setTimeout(() => {
+        trackElement.classList.add('transition-none')
+        setCurrentIndex(slides.length - 2)
+      }, 490)
+    } else if (currentIndex !== 0 && currentIndex !== slides.length - 1) {
+      setTimeout(() => {
+        trackElement.classList.remove('transition-none')
+      }, 490)
+    }
+  }, [currentIndex, slides.length])
+
+  useEffect(() => {
+    const maxSlidesLength = slides.length
     const autoplayInterval = setInterval(() => {
       setCurrentIndex((pevidx) => (pevidx + 1) % maxSlidesLength)
     }, 5000) // Change this value to adjust the autoplay speed (in milliseconds)
 
     return () => clearInterval(autoplayInterval)
-  }, [currentIndex, SlidesData.length])
+  }, [currentIndex, slides.length])
 
   return (
     /* Wrapper contenedor carusel */
     <section className="relative w-full landscape:h-screen md:h-full overflow-hidden ">
       <div
         ref={trackRef}
-        className={`flex touch-pan-y transition-all duration-500 h-full  ${
-          currentIndex === 0 ? 'md:transition-none' : ''
-        }  `}
+        className={`flex touch-pan-y transition-all duration-500 h-full `}
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         onTouchEnd={handleTouchEnd}
         onTouchMove={handleTouchMove}
         onTouchStart={handleTouchStart}
       >
-        {SlidesData.map((banner, i) => (
+        {slides.map((banner, i) => (
           /* Carrusel slide */
           <div key={i} className="w-full flex-grow-0 flex-shrink-0 basis-full relative">
             <div className=" w-full h-full flex flex-col sm:landscape:flex-row md:mdc-ui-container items-center  ">
@@ -123,9 +153,9 @@ function Carousel({ SlidesData }: { SlidesData: CarouselDATA[] }): JSX.Element {
               <button
                 key={i}
                 className={`w-4 h-4 rounded-full  ${
-                  currentIndex === i ? 'bg-brightGreen ' : 'border-brandWhite border-2 '
+                  currentIndex === i + 1 ? 'bg-brightGreen ' : 'border-brandWhite border-2 '
                 }`}
-                onClick={() => setCurrentIndex(i)}
+                onClick={() => setCurrentIndex(i + 1)}
               />
             ))}
           </div>

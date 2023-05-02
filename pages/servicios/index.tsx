@@ -22,6 +22,9 @@ import TradImgLocutora from '../../public/traduccionesImgLocutora.png'
 import TradImgMicrofono from '../../public/traduccionesImgMicrofono.png'
 import FormContact from '../../components/FormContact/FormContact'
 import { newCaptchaImages } from '../api/captcha-image'
+import CatalogoImgMen from '../../public/servicesCatalogo_01.png'
+import CatalogoImgHand from '../../public/servicesCatalogo_02.png'
+import CatalogoImgBook from '../../public/servicesCatalogo_03.png'
 
 export default function Servicios({ defaultCaptchaKey }: CaptchaKeyProps) {
   return (
@@ -223,6 +226,45 @@ export default function Servicios({ defaultCaptchaKey }: CaptchaKeyProps) {
             </div>
           </div>
           {/* blocke Socios END */}
+          {/* blocke Catalogo */}
+          <div className="mdc-ui-container flex flex-col gap-4 md:gap-8 xl:gap-28 md:flex-row my-8">
+            {/* text  */}
+            <div className="md:w-1/2 flex flex-col md:items-end md:justify-center text-gray-400 text-lg">
+              <h2 className={`font-bold md:text-right text-4xl mb-6 text-lineGradient_1 w-[12ch] `}>
+                Catálogo de Cursos.
+              </h2>
+              <p className="max-w-prose md:text-right mb-4">
+                Ponemos a su disposición una librería de cursos enfocados en fortalecer la seguridad
+                de la información, el liderazgo empresarial, las dinámicas de los equipos de trabajo
+                y el ambiente laboral en general.
+              </p>
+            </div>
+            {/* grid layout images */}
+            <div className="grid grid-cols-5 grid-rows-3  md:w-1/2 md:h-3/4 lg:h-full shrink ">
+              <div className="col-start-1 row-start-1 col-span-3 row-span-3 ">
+                <Image alt="microfono de locutor" src={CatalogoImgMen} />
+              </div>
+              <div className="flex justify-end items-center col-start-3 col-span-3 row-start-1 row-end-3">
+                <div className="w-full pl-10">
+                  <Image
+                    alt="locutora con audifonos hablando frente al microfono"
+                    src={CatalogoImgHand}
+                  />
+                </div>
+              </div>
+              <div className="flex justify-end col-start-2 col-span-5 row-start-3 row-end-4 relative ">
+                <div className="ml-20 ">
+                  <Image
+                    alt="graficos de sonido equalizador"
+                    objectFit="contain"
+                    src={CatalogoImgBook}
+                  />
+                </div>
+              </div>
+            </div>
+            {/* grid layout images END */}
+          </div>
+          {/* blocke Catalogo END */}
         </section>
         <section className="py-4 md:py-8">
           {/* banner CT Contactanos */}

@@ -23,17 +23,10 @@ function Address() {
           </div> */}
         </address>
         <div>
-          <h2 className="font-bold text-brandWhite">Ventas</h2>
-          <div className=" flex items-center gap-2">
-            <RiPhoneFill className="text-accent" />{' '}
-            <a href="tel:+525575839925">+52 55 7583 9925 </a>
-          </div>
-        </div>
-        <div>
           <h2 className="font-bold text-brandWhite">Oficinas</h2>
           <div className=" flex items-center gap-2">
             <RiPhoneFill className="text-accent" />
-            <a href="tel:+529848033746">+52 984 803 3746 </a>
+            <a href="tel:+525575839925">+52 55 7583 9925 </a>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 let year = new Date().getFullYear()
 
 class MyDocument extends Document {
@@ -6,6 +7,25 @@ class MyDocument extends Document {
     return (
       <Html lang="es">
         <Head>
+          <Script
+            id="google-tag-manager"
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
+            strategy="afterInteractive"
+          />
+
+          <Script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
+              `
+            }}
+            id="google-tag-manager-data"
+            strategy="afterInteractive"
+          />
           <meta lang="es" />
           <meta content="Mexico Development Center" name="author" />
           <meta content={`Copyright ${year} by Mexico Development Center`} name="copyright" />

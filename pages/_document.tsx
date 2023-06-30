@@ -12,7 +12,6 @@ class MyDocument extends Document {
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
             strategy="afterInteractive"
           />
-
           <Script
             dangerouslySetInnerHTML={{
               __html: `

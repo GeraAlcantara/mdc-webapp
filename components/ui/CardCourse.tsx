@@ -37,7 +37,6 @@ function CardCourse({
             loading="lazy"
             objectFit="cover"
             objectPosition={'top center'}
-            placeholder="blur"
             src={thumbnail}
           />
         </div>

@@ -1,23 +1,3 @@
-import ThumbnailHBEA from '../../public/thumbnail/thumbnail_R_HB_EA.jpg'
-import ThumbnailHBME from '../../public/thumbnail/thumbnail_R_HB_ME.jpg'
-import ThumbnailHD01 from '../../public/thumbnail/thumbnail_R_HD_01.jpg'
-import ThumbnailHD02 from '../../public/thumbnail/thumbnail_R_HD_02.jpg'
-import ThumbnailHD03 from '../../public/thumbnail/thumbnail_R_HD_03.jpg'
-import ThumbnailHD04 from '../../public/thumbnail/thumbnail_R_HD_04.jpg'
-import ThumbnailHD05 from '../../public/thumbnail/thumbnail_R_HD_05.jpg'
-import ThumbnailHD06 from '../../public/thumbnail/thumbnail_R_HD_06.jpg'
-import ThumbnailHD07 from '../../public/thumbnail/thumbnail_R_HD_07.jpg'
-import ThumbnailHTTT101 from '../../public/thumbnail/thumbnail_R_HT_TT_101.jpg'
-import ThumbnailHTTT201 from '../../public/thumbnail/thumbnail_R_HT_TT_201.jpg'
-import ThumbnailRJN35 from '../../public/thumbnail/thumbnail_R_J_N35_201.jpg'
-import ThumbnailRJV101 from '../../public/thumbnail/thumbnail_R_J_VL_101.jpg'
-import ThumbnailRJV201 from '../../public/thumbnail/thumbnail_R_J_VL_201.jpg'
-import ThumbnailSC01 from '../../public/thumbnail/thumbnail_S_C_01.jpg'
-import ThumbnailSE101 from '../../public/thumbnail/thumbnail_S_E_101.jpg'
-import ThumbnailSM01 from '../../public/thumbnail/thumbnail_S_M_01.jpg'
-import ThumbnailSP01 from '../../public/thumbnail/thumbnail_S_P_01.jpg'
-import ThumbnailVPV101 from '../../public/thumbnail/thumbnail_V_PV_101.jpg'
-
 /**
  * @typedef {{name:string, slug:string, subcategories:Array<Subcategory>}} Category
  * @typedef {{name:string, slug:string, colorid:string, courses:Array<Course>}} Subcategory
@@ -50,7 +30,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'liderazgo-efectivo',
             linkCourse: 'https://mexicodc.com/demos/liderazgo_efectivo_RHD01/',
             thumbnail: {
-              src: ThumbnailHD01,
+              src: '/thumbnail/thumbnail_R_HD_01.jpg',
               alt: 'Supervisor teniendo una reunion con colaboradores'
             },
             cover: '/covers/cover_R_HD_01.svg',
@@ -121,7 +101,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'equipos-alto-rendimiento',
             linkCourse: 'https://mexicodc.com/demos/equipos_alto_rendimiento_RHD02/',
             thumbnail: {
-              src: ThumbnailHD02,
+              src: '/thumbnail/thumbnail_R_HD_02.jpg',
               alt: 'ejecutiva liderando una reunion con su equipo'
             },
             cover: '/covers/cover_R_HD_02.svg',
@@ -187,7 +167,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'comunicacion-efectiva',
             linkCourse: 'https://mexicodc.com/demos/comunicacion_efectiva_RHD03/',
             thumbnail: {
-              src: ThumbnailHD03,
+              src: '/thumbnail/thumbnail_R_HD_03.jpg',
               alt: 'sala de junta con ejecutivos, mujer mayor dirigiendo la reunion'
             },
             cover: '/covers/cover_R_HD_03.svg',
@@ -254,7 +234,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'inteligencia-emocional-gestion-de-conflictos',
             linkCourse: 'https://mexicodc.com/demos/inteligencia_emocional_RHD04/',
             thumbnail: {
-              src: ThumbnailHD04,
+              src: '/thumbnail/thumbnail_R_HD_04.jpg',
               alt: 'bodega con cajas de mercancia, mujer mayor dirigiendo el trabajo'
             },
             cover: '/covers/cover_R_HD_04.svg',
@@ -334,7 +314,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'gestion-del-tiempo',
             linkCourse: 'https://mexicodc.com/demos/gestion_tiempo_RHD05/',
             thumbnail: {
-              src: ThumbnailHD05,
+              src: '/thumbnail/thumbnail_R_HD_05.jpg',
               alt: 'ejecutiva joven en sala de juntas revisa la hora en su reloj'
             },
             cover: '/covers/cover_R_HD_05.svg',
@@ -403,7 +383,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'evaluacion-del-desempeño',
             linkCourse: 'https://mexicodc.com/demos/evaluacion_desempeno_RHD06/',
             thumbnail: {
-              src: ThumbnailHD06,
+              src: '/thumbnail/thumbnail_R_HD_06.jpg',
               alt: 'supervisor de bodega revisando un informe '
             },
             cover: '/covers/cover_R_HD_06.svg',
@@ -502,7 +482,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'como-dar-retroalimentacion',
             linkCourse: 'https://mexicodc.com/demos/como_dar_retro_RHD07/',
             thumbnail: {
-              src: ThumbnailHD07,
+              src: '/thumbnail/thumbnail_R_HD_07.jpg',
               alt: 'dos obreros revisan juntos un manual de instrucciones'
             },
             cover: '/covers/cover_R_HD_07.svg',
@@ -592,7 +572,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'escucha-activa',
             linkCourse: '#',
             thumbnail: {
-              src: ThumbnailHBEA,
+              src: '/thumbnail/thumbnail_R_HB_EA.jpg',
               alt: 'dos compañeros de trabajo entablando una conversación '
             },
             cover: '/covers/cover_R_HB_EA.svg',
@@ -689,7 +669,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'manejo-del-estres-laboral',
             linkCourse: '#',
             thumbnail: {
-              src: ThumbnailHBME,
+              src: '/thumbnail/thumbnail_R_HB_ME.jpg',
               alt: 'hombre con lentres frente a la computadora pensativo'
             },
             cover: '/covers/cover_R_HB_ME.svg',
@@ -799,6 +779,134 @@ export const DataCourseLibrarie: Categories = [
                 lessons: [{ title: 'Conclusión', duration: '0:17' }]
               }
             ]
+          },
+          {
+            library: { name: 'Recursos Humanos ', skuPrefix: 'R' },
+            subcategory: { name: 'Habilidades Blandas', skuPrefix: 'HB' },
+            title: 'Hablar en público',
+            slug: 'hablar-en-publico',
+            linkCourse: 'https://mexicodc.com/demos/hablar-en-publico-HB-HP/',
+            thumbnail: {
+              src: '/thumbnail/thumbnail_R_HB_HP.jpg',
+              alt: 'TODO'
+            },
+            cover: '/covers/cover_R_HB_HP.svg',
+            identifier: { prefix: 'HB', courseNumber: 'HP' },
+            duration: 35,
+            description: [
+              'En este curso dirigido a profesionales, gerentes, líderes y emprendedores, los usuarios conocerán diversas estrategias que les permitirán desarrollar y perfeccionar su habilidad de hablar en público.',
+              'Asimismo, comprenderán cuáles son las características y elementos necesarios para dar un discurso efectivo y conocerán herramientas para controlar los nervios y optimizar sus niveles de energía antes de hablar en público.',
+              'También identiﬁcarán las habilidades de lenguaje verbal y no verbal que puede utilizar durante un discurso, así como los diferentes recursos que puede usar, tomando en cuenta los 3 estilos de aprendizaje (visual, auditivo, kinestésico).'
+            ],
+            topics: [
+              'Preparación de una presentación efectiva',
+              'Lenguaje corporal',
+              'Trabajo de voz',
+              'Mejorar niveles de conﬁanza y energía',
+              '¿Cómo elaborar tu discurso?',
+              'Estilos de aprendizaje de la audiencia'
+            ],
+            features: [
+              { name: 'Texto + Locución', qt: 1, iconSrc: '/svgs/txtLocucion.svg' },
+              { name: 'Autoevaluación', qt: 0, iconSrc: '/svgs/autoeval.svg' },
+              { name: 'Video de Introducción', qt: 1, iconSrc: '/svgs/video.svg' },
+              { name: 'Interactividades', qt: 0, iconSrc: '/svgs/interact.svg' },
+              { name: 'Cuestionario', qt: 4, iconSrc: '/svgs/cuestionario.svg' },
+              { name: 'Examen Final', qt: 0, iconSrc: '/svgs/examen.svg' }
+            ],
+            modules: [
+              {
+                name: 'Hablar en público',
+                lessons: [
+                  { title: 'Introducción', duration: '0:50' },
+                  { title: 'Preparación 1', duration: '0:17' },
+                  { title: 'Preparación 2', duration: '0:27' },
+                  { title: '¿Cuál es tu objetivo? 1', duration: '0:20' },
+                  { title: '¿Cuál es tu objetivo? 2', duration: '0:23' },
+                  { title: '¿Cuál es tu objetivo? 3', duration: '0:22' },
+                  { title: '¿A quién vas a dirigirte? 1', duration: '0:31' },
+                  { title: '¿A quién vas a dirigirte? 2', duration: '0:30' },
+                  { title: '¿De qué vas a hablar? 1', duration: '0:22' },
+                  { title: '¿De qué vas a hablar? 2', duration: '0:25' },
+                  { title: '¿De qué vas a hablar? 3', duration: '0:27' },
+                  { title: '¿Cuándo es la presentación?', duration: '0:19' },
+                  { title: '¿Cómo será la presentación?', duration: '0:25' },
+                  { title: '¿Por qué te han solicitado hablar en público?', duration: '0:33' },
+                  { title: 'Resumen', duration: '0:26' },
+                  { title: 'Introducción de interactividad 1', duration: '1:00' },
+                  { title: 'Pregunta de desafío 1', duration: '1:00' },
+                  { title: 'Pregunta de desafío 2', duration: '0:40' },
+                  { title: 'Pregunta de desafío 3', duration: '0:42' },
+                  { title: 'Pregunta de desafío 4', duration: '0:40' }
+                ]
+              },
+              {
+                name: 'Lenguaje corporal, voz y energía',
+                lessons: [
+                  { title: 'Lenguaje corporal 1', duration: '0:17' },
+                  { title: 'Lenguaje corporal 2', duration: '0:20' },
+                  { title: 'Lenguaje corporal 3', duration: '0:33' },
+                  { title: 'Lenguaje corporal 4', duration: '0:27' },
+                  { title: 'Lenguaje corporal 5', duration: '0:24' },
+                  { title: 'Lenguaje corporal 6', duration: '0:34' },
+                  { title: 'Lenguaje corporal 7', duration: '0:39' },
+                  { title: 'Trabaja tu voz 1', duration: '0:28' },
+                  { title: 'Trabaja tu voz 2', duration: '0:22' },
+                  { title: 'Tono', duration: '0:19' },
+                  { title: 'Melodía', duration: '0:29' },
+                  { title: 'Volumen', duration: '0:24' },
+                  { title: 'Articulación 1', duration: '0:32' },
+                  { title: 'Articulación 2', duration: '0:30' },
+                  { title: 'Haz uso de las pausas y silencios', duration: '0:49' },
+                  { title: 'Confianza y relajación 1', duration: '0:40' },
+                  { title: 'Confianza y relajación 2', duration: '0:36' },
+                  { title: 'Cuida tu nivel de energía 1', duration: '0:19' },
+                  { title: 'Cuida tu nivel de energía 2', duration: '0:28' },
+                  { title: 'Práctica 1', duration: '0:23' },
+                  { title: 'Práctica 2', duration: '0:25' },
+                  { title: 'Introducción de interactividad 2', duration: '1:00' },
+                  { title: 'Pregunta de desafío 1', duration: '1:00' },
+                  { title: 'Pregunta de desafío 2', duration: '1:00' },
+                  { title: 'Práctica - Interactividad', duration: '1:00' },
+                  { title: 'Pregunta de desafío 3', duration: '1:00' }
+                ]
+              },
+              {
+                name: 'Elabora tu discurso',
+                lessons: [
+                  { title: 'Cómo elaborar tu discurso', duration: '0:18' },
+                  { title: 'Utiliza una frase clave de apertura', duration: '0:34' },
+                  { title: 'Cómo elaborar mi apertura 1', duration: '0:14' },
+                  { title: 'Cómo elaborar mi apertura 2', duration: '0:28' },
+                  { title: 'Cuenta una historia', duration: '0:36' },
+                  { title: 'Utiliza 3 puntos clave', duration: '0:34' },
+                  { title: 'Cierra fuerte', duration: '0:40' },
+                  { title: 'Introducción de interactividad 3', duration: '1:00' },
+                  { title: 'Construye tu discurso - Interactividad', duration: '1:00' },
+                  { title: 'Pregunta de desafío 1', duration: '1:00' },
+                  { title: 'Pregunta de desafío 2', duration: '1:00' },
+                  { title: 'Pregunta de desafío 3', duration: '1:00' }
+                ]
+              },
+              {
+                name: 'Recomendaciones adicionales',
+                lessons: [
+                  { title: 'Estilos de aprendizaje', duration: '0:26' },
+                  { title: 'Aprendizaje visual', duration: '0:30' },
+                  { title: 'Aprendizaje auditivo', duration: '0:28' },
+                  { title: 'Aprendizaje de lectura/escritura', duration: '0:28' },
+                  { title: 'Aprendizaje kinestésico', duration: '0:26' },
+                  { title: 'Apégate a tu tiempo', duration: '0:28' },
+                  { title: 'Cómo manejar la sesión de preguntas y respuestas', duration: '0:38' },
+                  { title: 'Introducción de interactividad 4', duration: '1:00' },
+                  { title: 'Buenas prácticas - Interactividad', duration: '1:00' }
+                ]
+              },
+              {
+                name: 'Conclusión',
+                lessons: [{ title: 'Conclusión', duration: '0:22' }]
+              }
+            ]
           }
         ]
       },
@@ -814,7 +922,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'mejores-practicas-para-el-teletrabajo',
             linkCourse: 'https://mexicodc.com/demos/teletrabajo_colabora_TT101/',
             thumbnail: {
-              src: ThumbnailHTTT101,
+              src: '/thumbnail/thumbnail_R_HT_TT_101.jpg',
               alt: 'Hombre mayor realiza trabajo de forma remota en su laptop'
             },
             cover: '/covers/cover_R_HT_TT_101.png',
@@ -879,7 +987,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'fundamentos-del-teletrabajo-para-supervisores',
             linkCourse: '#',
             thumbnail: {
-              src: ThumbnailHTTT201,
+              src: '/thumbnail/thumbnail_R_HT_TT_201.jpg',
               alt: 'mujer realiza trabajo remoto desde la sala de su casa con su laptop'
             },
             cover: '/covers/cover_R_HT_TT_201.png',
@@ -976,7 +1084,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'fundamentos-de-la-nom-035',
             linkCourse: '#',
             thumbnail: {
-              src: ThumbnailRJN35,
+              src: '/thumbnail/thumbnail_R_J_N35_201.jpg',
               alt: 'colaboradores teniendo una conversacion intensa'
             },
             cover: '/covers/cover_R_J_N35_201.png',
@@ -1072,7 +1180,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'prevencion-de-violencia-laboral-y-acoso-sexual',
             linkCourse: '#',
             thumbnail: {
-              src: ThumbnailRJV101,
+              src: '/thumbnail/thumbnail_R_J_VL_101.jpg',
               alt: 'ejecutivo le llama la atencion verbalmente a empleada en la oficina'
             },
             cover: '/covers/cover_R_J_VL_101.svg',
@@ -1156,7 +1264,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'prevencion-atencion-y-erradicacion-de-la-violencia-laboral',
             linkCourse: '#',
             thumbnail: {
-              src: ThumbnailRJV201,
+              src: '/thumbnail/thumbnail_R_J_VL_201.jpg',
               alt: 'En una sala de juntas un supervisor agita papeles mientras habla con un empleado que se ve intimidado'
             },
             cover: '/covers/cover_R_J_VL_201.svg',
@@ -1254,7 +1362,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'practicas-esenciales',
             linkCourse: '#',
             thumbnail: {
-              src: ThumbnailSE101,
+              src: '/thumbnail/thumbnail_S_E_101.jpg',
               alt: 'hombre con lentes mirando a la computadora'
             },
             cover: '/covers/cover_S_E_101.png',
@@ -1346,7 +1454,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'contrasenas-seguras',
             linkCourse: 'https://mexicodc.com/demos/contras_seguras_SC01/',
             thumbnail: {
-              src: ThumbnailSC01,
+              src: '/thumbnail/thumbnail_S_C_01.jpg',
               alt: 'hombre inicia secion con 2 factores de autenticacion atravez de su mobile.'
             },
             cover: '/covers/cover_S_C_01.svg',
@@ -1406,7 +1514,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'malware',
             linkCourse: 'https://mexicodc.com/demos/malware_SM01/',
             thumbnail: {
-              src: ThumbnailSM01,
+              src: '/thumbnail/thumbnail_S_M_01.jpg',
               alt: 'empleada de oficina con un virus en su computadora.'
             },
             cover: '/covers/cover_S_M_01.svg',
@@ -1467,7 +1575,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'phishing',
             linkCourse: 'https://mexicodc.com/demos/phishing_SP01/',
             thumbnail: {
-              src: ThumbnailSP01,
+              src: '/thumbnail/thumbnail_S_P_01.jpg',
               alt: 'persona con un teléfono celular en la mano, recibe una llamada de un número desconocido.'
             },
             cover: '/covers/cover_S_P_01.svg',
@@ -1541,7 +1649,7 @@ export const DataCourseLibrarie: Categories = [
             slug: 'proceso-de-ventas',
             linkCourse: '#',
             thumbnail: {
-              src: ThumbnailVPV101,
+              src: '/thumbnail/thumbnail_V_PV_101.jpg',
               alt: 'ejecutiva de ventas finaliza un trato con cliente.'
             },
             cover: '/covers/cover_V_PV_101.svg',

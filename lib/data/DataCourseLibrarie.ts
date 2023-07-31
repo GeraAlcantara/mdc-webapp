@@ -570,7 +570,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Habilidades Blandas', skuPrefix: 'HB' },
             title: 'Escucha Activa',
             slug: 'escucha-activa',
-            linkCourse: '#',
+            linkCourse: 'https://mexicodc.com/demos/escucha_activa_RHBEA/',
             thumbnail: {
               src: '/thumbnail/thumbnail_R_HB_EA.jpg',
               alt: 'dos compañeros de trabajo entablando una conversación '
@@ -667,7 +667,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Habilidades Blandas', skuPrefix: 'HB' },
             title: 'Manejo del estrés laboral',
             slug: 'manejo-del-estres-laboral',
-            linkCourse: '#',
+            linkCourse: 'https://mexicodc.com/demos/manejo-de-estres-RHBME/',
             thumbnail: {
               src: '/thumbnail/thumbnail_R_HB_ME.jpg',
               alt: 'hombre con lentres frente a la computadora pensativo'
@@ -985,7 +985,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Habilidades Tecnológicas', skuPrefix: 'HT' },
             title: 'Fundamentos del Teletrabajo para supervisores',
             slug: 'fundamentos-del-teletrabajo-para-supervisores',
-            linkCourse: '#',
+            linkCourse: 'https://mexicodc.com/demos/teletrabajo_sup_TT201/',
             thumbnail: {
               src: '/thumbnail/thumbnail_R_HT_TT_201.jpg',
               alt: 'mujer realiza trabajo remoto desde la sala de su casa con su laptop'
@@ -1082,7 +1082,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Jurídico', skuPrefix: 'J' },
             title: 'Fundamentos de la NOM-035',
             slug: 'fundamentos-de-la-nom-035',
-            linkCourse: '#',
+            linkCourse: 'https://mexicodc.com/demos/nom35_RJN35/',
             thumbnail: {
               src: '/thumbnail/thumbnail_R_J_N35_201.jpg',
               alt: 'colaboradores teniendo una conversacion intensa'
@@ -1178,7 +1178,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Jurídico', skuPrefix: 'J' },
             title: 'Prevención de violencia laboral y acoso sexual',
             slug: 'prevencion-de-violencia-laboral-y-acoso-sexual',
-            linkCourse: '#',
+            linkCourse: 'https://mexicodc.com/demos/violencia_laboral_VL101/',
             thumbnail: {
               src: '/thumbnail/thumbnail_R_J_VL_101.jpg',
               alt: 'ejecutivo le llama la atencion verbalmente a empleada en la oficina'
@@ -1262,7 +1262,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Jurídico', skuPrefix: 'J' },
             title: 'Prevención, atención y erradicación de la violencia laboral para supervisores',
             slug: 'prevencion-atencion-y-erradicacion-de-la-violencia-laboral',
-            linkCourse: '#',
+            linkCourse: 'https://mexicodc.com/demos/violencia_laboral_sup_VL201/',
             thumbnail: {
               src: '/thumbnail/thumbnail_R_J_VL_201.jpg',
               alt: 'En una sala de juntas un supervisor agita papeles mientras habla con un empleado que se ve intimidado'
@@ -1360,7 +1360,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Seguridad Esenciales', skuPrefix: 'E' },
             title: 'Prácticas Esenciales',
             slug: 'practicas-esenciales',
-            linkCourse: '#',
+            linkCourse: 'https://mexicodc.com/demos/seguridad_informacion_SE101/',
             thumbnail: {
               src: '/thumbnail/thumbnail_S_E_101.jpg',
               alt: 'hombre con lentes mirando a la computadora'
@@ -1647,7 +1647,7 @@ export const DataCourseLibrarie: Categories = [
             subcategory: { name: 'Capacitación Ventas', skuPrefix: 'PV' },
             title: 'Proceso de Ventas',
             slug: 'proceso-de-ventas',
-            linkCourse: '#',
+            linkCourse: 'https://mexicodc.com/demos/ventas_VPV101/',
             thumbnail: {
               src: '/thumbnail/thumbnail_V_PV_101.jpg',
               alt: 'ejecutiva de ventas finaliza un trato con cliente.'

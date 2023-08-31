@@ -163,8 +163,8 @@ export const DataCourseLibrarie: Categories = [
           {
             library: { name: 'Recursos Humanos', skuPrefix: 'R' },
             subcategory: { name: 'Habilidades directivas', skuPrefix: 'HD' },
-            title: 'Comunicación Efectiva',
-            slug: 'comunicacion-efectiva',
+            title: 'Comunicación efectiva para Supervisores',
+            slug: 'comunicacion-efectiva-supervisores',
             linkCourse: 'https://mexicodc.com/demos/comunicacion_efectiva_RHD03/',
             thumbnail: {
               src: '/thumbnail/thumbnail_R_HD_03.jpg',
@@ -230,8 +230,8 @@ export const DataCourseLibrarie: Categories = [
           {
             library: { name: 'Recursos Humanos', skuPrefix: 'R' },
             subcategory: { name: 'Habilidades directivas', skuPrefix: 'HD' },
-            title: 'Inteligencia emocional para la gestión de conflictos',
-            slug: 'inteligencia-emocional-gestion-de-conflictos',
+            title: 'Inteligencia emocional para la gestión de conflictos supervisores',
+            slug: 'inteligencia-emocional-gestion-de-conflictos-supervisores',
             linkCourse: 'https://mexicodc.com/demos/inteligencia_emocional_RHD04/',
             thumbnail: {
               src: '/thumbnail/thumbnail_R_HD_04.jpg',
@@ -310,8 +310,8 @@ export const DataCourseLibrarie: Categories = [
           {
             library: { name: 'Recursos Humanos', skuPrefix: 'R' },
             subcategory: { name: 'Habilidades directivas', skuPrefix: 'HD' },
-            title: 'Gestión del Tiempo',
-            slug: 'gestion-del-tiempo',
+            title: 'Gestión del tiempo para supervisores',
+            slug: 'gestion-del-tiempo-supervisores',
             linkCourse: 'https://mexicodc.com/demos/gestion_tiempo_RHD05/',
             thumbnail: {
               src: '/thumbnail/thumbnail_R_HD_05.jpg',

@@ -907,6 +907,73 @@ export const DataCourseLibrarie: Categories = [
                 lessons: [{ title: 'Conclusión', duration: '0:22' }]
               }
             ]
+          },
+          {
+            library: { name: 'Recursos Humanos', skuPrefix: 'R' },
+            subcategory: { name: 'Habilidades Blandas', skuPrefix: 'HB' },
+            title: 'Gestión del tiempo',
+            slug: 'gestion-del-tiempo',
+            linkCourse: 'https://mexicodc.com/demos/gestion_tiempo/',
+            thumbnail: {
+              src: '/thumbnail/thumbnail_R-HB-GT.jpg',
+              alt: 'trabajadora realizando apuntes en su agenda'
+            },
+            cover: '/covers/cover_R_HD_05.svg',
+            identifier: { prefix: 'R-HB-', courseNumber: 'GT' },
+            duration: 12,
+            description: [
+              'Los estudiantes conocerán qué es la gestión del tiempo, sus beneficios, y los efectos negativos de una mala gestión. Asimismo, conocerán cómo desarrollar un proceso de planeación efectivo, así como diferentes estrategias para optimizarlo y lograr un equilibrio entre su vida profesional y familiar. A través de cuestionarios y ejercicios interactivos los usuarios podrán reforzar el conocimiento adquirido.',
+              'Este curso tiene los mismos contenidos que el curso para líderes (R-HD-05), pero está dirigido a todos los colaboradores de la organización.'
+            ],
+            topics: [
+              'Definición y beneficios',
+              'Matriz de organización del tiempo',
+              '¿Cómo organizarte?',
+              'Estrategias y recomendaciones',
+              'Equilibrio en la vida profesional y familiar'
+            ],
+            features: [
+              { name: 'Texto + Locución', qt: 1, iconSrc: '/svgs/txtLocucion.svg' },
+              { name: 'Autoevaluación', qt: 1, iconSrc: '/svgs/autoeval.svg' },
+              { name: 'Video de Introducción', qt: 1, iconSrc: '/svgs/video.svg' },
+              { name: 'Interactividades', qt: 5, iconSrc: '/svgs/interact.svg' },
+              { name: 'Cuestionario', qt: 0, iconSrc: '/svgs/cuestionario.svg' },
+              { name: 'Examen Final', qt: 0, iconSrc: '/svgs/examen.svg' }
+            ],
+            modules: [
+              {
+                name: 'Gestión del tiempo',
+                lessons: [{ title: 'Introducción', duration: '0:51' }]
+              },
+              {
+                name: 'Autoevaluación',
+                lessons: [
+                  { title: 'Introducción a la autoevaluación', duration: '0:10' },
+                  { title: 'Autoevaluación de gestión del tiempo', duration: '1:00' }
+                ]
+              },
+              {
+                name: '¿Cómo gestionar el tiempo?',
+                lessons: [
+                  { title: 'Caso de estudio: Conoce a Eva', duration: '0:34' },
+                  { title: 'Objetivos y tareas', duration: '0:32' },
+                  { title: '¿Cómo priorizar las tareas?', duration: '1:06' },
+                  { title: 'Introducción de interactividad 1', duration: '0:25' },
+                  { title: 'Prioridades', duration: '1:10' },
+                  { title: '¿Cómo organizarte?', duration: '0:30' },
+                  { title: 'Recomendaciones para gestionar tu tiempo', duration: '2:00' },
+                  { title: 'Introducción de interactividad 2', duration: '2:07' },
+                  { title: 'Organízate', duration: '1:10' },
+                  { title: 'Pregunta 1', duration: '1:10' },
+                  { title: 'Pregunta 2', duration: '1:10' },
+                  { title: 'Ordena los pasos', duration: '1:00' }
+                ]
+              },
+              {
+                name: 'Conclusión',
+                lessons: [{ title: 'Conclusión', duration: '0:15' }]
+              }
+            ]
           }
         ]
       },

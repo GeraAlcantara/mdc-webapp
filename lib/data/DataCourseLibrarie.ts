@@ -911,6 +911,166 @@ export const DataCourseLibrarie: Categories = [
           {
             library: { name: 'Recursos Humanos', skuPrefix: 'R' },
             subcategory: { name: 'Habilidades Blandas', skuPrefix: 'HB' },
+            title: 'Comunicación efectiva',
+            slug: 'comunicacion-efectiva',
+            linkCourse: 'https://mexicodc.com/demos/comunicacion_efectiva/',
+            thumbnail: {
+              src: '/thumbnail/thumbnail_R-HB-CE.jpg',
+              alt: 'reunion de empleados en sala de juntas'
+            },
+            cover: '/covers/cover_R_HD_03.svg',
+            identifier: { prefix: 'R-HD-', courseNumber: 'CE' },
+            duration: 12,
+            description: [
+              'En este curso los usuarios conocerán la importancia de comunicarse correctamente para que sus mensajes sean comprendidos, y puedan lograrse los objetivos que se han propuesto. Se presentan los diferentes estilos de comunicación, las características de una comunicación efectiva que potencia las relaciones y la productividad de una organización, así como una estrategia para comunicar las malas noticias y poder enfrentarlas adecuadamente. A través de escenarios e interactividades, los usuarios podrán poner en práctica y reforzar el aprendizaje.',
+              'Este curso tiene los mismos contenidos que el curso para líderes (R-HD-03), pero está dirigido a todos los colaboradores de la organización.'
+            ],
+            topics: [
+              'Estilos de comunicación',
+              'Las 7 C’s de la comunicación efectiva ',
+              '¿Cómo comunicar malas noticias?'
+            ],
+            features: [
+              { name: 'Texto + Locución', qt: 1, iconSrc: '/svgs/txtLocucion.svg' },
+              { name: 'Autoevaluación', qt: 0, iconSrc: '/svgs/autoeval.svg' },
+              { name: 'Video de Introducción', qt: 1, iconSrc: '/svgs/video.svg' },
+              { name: 'Interactividades', qt: 7, iconSrc: '/svgs/interact.svg' },
+              { name: 'Cuestionario', qt: 0, iconSrc: '/svgs/cuestionario.svg' },
+              { name: 'Examen Final', qt: 0, iconSrc: '/svgs/examen.svg' }
+            ],
+            modules: [
+              {
+                name: 'Comunicación efectiva',
+                lessons: [{ title: 'Introducción', duration: '0:53' }]
+              },
+              {
+                name: '¿Cómo nos comunicamos?',
+                lessons: [
+                  { title: 'Estilos de comunicación', duration: '2:10' },
+                  { title: 'Introducción a interactividad 1', duration: '0:10' },
+                  { title: 'Escenario 1', duration: '0:12' },
+                  { title: 'Escenario 2', duration: '0:11' }
+                ]
+              },
+              {
+                name: '¿Cómo lograr una comunicación efectiva?',
+                lessons: [
+                  { title: "Las 7 C's de la comunicación efectiva 1", duration: '0:31' },
+                  { title: "Las 7 C's de la comunicación efectiva 2", duration: '0:34' },
+                  { title: "Las 7 C's de la comunicación efectiva 3", duration: '0:27' },
+                  { title: 'Introducción a interactividad 2', duration: '0:10' },
+                  { title: "Aplicando las 7 C's", duration: '0:25' }
+                ]
+              },
+              {
+                name: '¿Cómo comunicarnos a distancia?',
+                lessons: [
+                  { title: 'Comunicación a distancia', duration: '0:45' },
+                  { title: 'Videollamadas 1', duration: '0:35' },
+                  { title: 'Videollamadas 2', duration: '0:39' },
+                  { title: 'Introducción a interactividad 3', duration: '0:10' },
+                  { title: 'Escenario 1', duration: '0:15' },
+                  { title: 'Escenario 2', duration: '0:10' }
+                ]
+              },
+              {
+                name: 'Comunicaciones desafiantes',
+                lessons: [
+                  { title: '¿Cómo comunicar malas noticias? 1', duration: '0:35' },
+                  { title: '¿Cómo comunicar malas noticias? 2', duration: '0:35' },
+                  { title: '¿Cómo comunicar malas noticias? 3', duration: '0:35' },
+                  { title: '¿Cómo comunicar malas noticias? 4', duration: '0:26' },
+                  { title: 'Introducción a interactividad 4', duration: '0:10' },
+                  { title: 'Escenario 1', duration: '0:12' },
+                  { title: 'Escenario 2', duration: '0:11' }
+                ]
+              },
+              {
+                name: 'Conclusión',
+                lessons: [{ title: 'Conclusión', duration: '0:17' }]
+              }
+            ]
+          },
+          {
+            library: { name: 'Recursos Humanos', skuPrefix: 'R' },
+            subcategory: { name: 'Habilidades Blandas', skuPrefix: 'HB' },
+            title: 'Inteligencia emocional para la gestión de conflictos',
+            slug: 'inteligencia-emocional-gestion-de-conflictos',
+            linkCourse: 'https://mexicodc.com/demos/inteligencia_emocional/',
+            thumbnail: {
+              src: '/thumbnail/thumbnail_R-HB-IE.jpg',
+              alt: 'reunion de colaboradores en una oficina'
+            },
+            cover: '/covers/cover_R_HD_04.svg',
+            identifier: { prefix: 'R-HD-', courseNumber: '04' },
+            duration: 15,
+            description: [
+              'Este curso tiene como objetivo dar a conocer la importancia de utilizar la Inteligencia Emocional para la gestión de conflictos en el contexto laboral. Incluye exactamente los mismos contenidos que el curso para líderes (R-HD-04), pero está dirigido a todos los colaboradores de la organización. Para comenzar, los usuarios podrán autoevaluar su forma de gestionar los conflictos, después aprenderán qué es la Inteligencia Emocional, cuáles son los dominios que la conforman, así como estrategias que les ayudarán a solucionar y prevenir los conflictos laborales. A través de casos de estudio con escenarios reales, podrán reforzar y poner en práctica los conocimientos adquiridos.',
+              'Este curso tiene los mismos contenidos que el curso para líderes (R-HD-05), pero está dirigido a todos los colaboradores de la organización.'
+            ],
+            topics: [
+              'La inteligencia emocional en el trabajo',
+              'Los dominios de la inteligencia emocional',
+              'Autoconocimiento',
+              'Autogestión',
+              'Conciencia social',
+              'Gestión de las relaciones',
+              'Estrategias para solucionar conflictos',
+              'Acuerdos justos y sostenibles'
+            ],
+            features: [
+              { name: 'Texto + Locución', qt: 1, iconSrc: '/svgs/txtLocucion.svg' },
+              { name: 'Autoevaluación', qt: 1, iconSrc: '/svgs/autoeval.svg' },
+              { name: 'Video de Introducción', qt: 0, iconSrc: '/svgs/video.svg' },
+              { name: 'Interactividades', qt: 8, iconSrc: '/svgs/interact.svg' },
+              { name: 'Cuestionario', qt: 0, iconSrc: '/svgs/cuestionario.svg' },
+              { name: 'Examen Final', qt: 0, iconSrc: '/svgs/examen.svg' }
+            ],
+            modules: [
+              {
+                name: 'Resolución de conflictos con Inteligencia emocional',
+                lessons: []
+              },
+              {
+                name: 'Autoevaluación',
+                lessons: [
+                  { title: 'Introducción a la autoevaluación', duration: '0:43' },
+                  { title: 'Autoevaluación de inteligencia emocional', duration: '2:17' }
+                ]
+              },
+              {
+                name: '¿Qué es la inteligencia emocional?',
+                lessons: [
+                  { title: 'La inteligencia emocional', duration: '0:13' },
+                  { title: 'IE: Los 4 dominios', duration: '0:39' },
+                  { title: 'Introducción de interactividad 1', duration: '0:25' },
+                  { title: 'Pregunta 1', duration: '1:10' },
+                  { title: 'Pregunta 2', duration: '1:25' },
+                  { title: 'Estrategias para solucionar conflictos 1', duration: '2:07' },
+                  { title: 'Estrategias para solucionar conflictos 2', duration: '0:10' },
+                  { title: 'Introducción de interactividad 2', duration: '1:00' },
+                  { title: 'Pregunta 1', duration: '1:10' },
+                  { title: 'Pregunta 2', duration: '1:10' },
+                  { title: 'Mantener objetivos claros 1', duration: '0:40' },
+                  { title: 'Mantener objetivos claros 2', duration: '0:30' },
+                  { title: 'Introducción a escenario', duration: '0:10' },
+                  { title: 'Acuerdos justos y sostenibles', duration: '0:38' },
+                  { title: 'Introducción de interactividad 3', duration: '1:00' },
+                  { title: 'Pregunta 1', duration: '1:10' },
+                  { title: 'Pregunta 2', duration: '1:10' },
+                  { title: 'Pregunta 3', duration: '1:10' },
+                  { title: 'Pregunta 4', duration: '1:10' }
+                ]
+              },
+              {
+                name: 'Conclusión',
+                lessons: [{ title: 'Conclusión', duration: '0:17' }]
+              }
+            ]
+          },
+          {
+            library: { name: 'Recursos Humanos', skuPrefix: 'R' },
+            subcategory: { name: 'Habilidades Blandas', skuPrefix: 'HB' },
             title: 'Gestión del tiempo',
             slug: 'gestion-del-tiempo',
             linkCourse: 'https://mexicodc.com/demos/gestion_tiempo/',

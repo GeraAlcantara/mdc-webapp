@@ -97,7 +97,7 @@ function CourseSpecs({
             </div>
           </div>
 
-          <div className="p-5 mt-8 border border-gray-100 rounded-md dark:border-gray-700">
+          <div className="p-5 mt-8 border border-gray-100 rounded-md dark:border-gray-700 flex flex-col gap-2 xl:gap-4">
             <h4 className="text-3xl font-bold mb-3">Descripción</h4>
             {description.map((paragrah, index) => (
               <p

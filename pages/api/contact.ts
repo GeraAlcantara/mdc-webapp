@@ -77,13 +77,18 @@ export default withIronSessionApiRoute(
     /* create transporter */
     const transporter = nodemailer.createTransport({
       /* get from .env data */
-      service: 'gmail',
-      secure: false,
+      /* comercial@mexicodc.com */
+      host: process.env.MDC_EMAIL_HOST,
+      secure: true,
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
+        user: process.env.MDC_EMAIL_USER,
+        pass: process.env.MDC_EMAIL_PASS
+      },
+      tls: {
+        rejectUnauthorized: false
       }
     })
+
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: 'gerardo_alcantara_rmz@hotmail.com',

@@ -78,7 +78,6 @@ export default withIronSessionApiRoute(
 
     const transporter = nodemailer.createTransport({
       /* get from .env data */
-      /* comercial@mexicodc.com */
       host: process.env.MDC_EMAIL_HOST,
       secure: true,
       auth: {
@@ -92,8 +91,7 @@ export default withIronSessionApiRoute(
 
     const mailOptions = {
       from: process.env.MDC_EMAIL_USER,
-      to: 'gerardo_alcantara_rmz@hotmail.com',
-      cc: 'comercial@mexicodc.com',
+      to: 'comercial@mexicodc.com',
       subject: `Forma de Contacto enviada por ${FirstName as string} ${LastName as string}`,
       html: `<h1>Nombre: ${FirstName as string} ${LastName as string}</h1>
           <h2>Compañia: ${Company as string}</h2>

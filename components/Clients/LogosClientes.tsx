@@ -10,8 +10,8 @@ import CinepolisLogo from '../../public/clientes/cinepolis_logo.png'
 import GrupoAxoLogo from '../../public/clientes/grupo_axo_logo.png'
 function LogosClientes() {
   return (
-    <>
-      <div className="w-20">
+    <div className="flex gap-8 items-center mr-6">
+      <div className="w-24">
         <Image alt="Iberostar Logo" src={IberostarLogo} />
       </div>
       <div className="w-20 ">
@@ -48,7 +48,7 @@ function LogosClientes() {
       <div className="w-24 h-fit ">
         <Image alt="Grupo Axo Logo" className="object-contain w-full h-full" src={GrupoAxoLogo} />
       </div>
-    </>
+    </div>
   )
 }
 

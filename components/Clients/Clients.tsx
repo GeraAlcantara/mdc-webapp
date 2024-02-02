@@ -31,17 +31,29 @@ export default function Clients() {
           <span className="">Nuestros Clientes</span>
         </div>
         {/* logos */}
-        <div className="hidden lg:flex flex-row items-center flex-shrink-0 lg:min-w-[80%] justify-between">
-          <LogosClientes />
+
+        <div className="lg:grid place-items-center overflow-hidden hidden">
+          <div
+            className={`  ${
+              isMobile
+                ? 'hidden'
+                : 'w-full flex justify-between gap-2 items-center animate-carousel'
+            }`}
+          >
+            {/* <!-- same 3 duplicate for Caroussel --> */}
+            <LogosClientes />
+            <LogosClientes />
+            <LogosClientes />
+          </div>
         </div>
+        {/* <LogosClientes /> */}
       </div>
+
       {/* Caroussel logos */}
       <div className="w-full grid place-items-center overflow-hidden lg:hidden">
         <div
           className={`  ${
-            isMobile
-              ? 'w-[calc(132px*24)] flex justify-between gap-2 items-center animate-carousel'
-              : 'hidden'
+            isMobile ? 'w-fit flex justify-between gap-2 items-center animate-carousel' : 'hidden'
           }`}
         >
           {/* <!-- same 3 duplicate for Caroussel --> */}

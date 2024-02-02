@@ -40,7 +40,7 @@ export default function Clients() {
         <div
           className={`  ${
             isMobile
-              ? 'w-[calc(120px*15)] flex justify-between items-center animate-carousel'
+              ? 'w-[calc(132px*24)] flex justify-between gap-2 items-center animate-carousel'
               : 'hidden'
           }`}
         >

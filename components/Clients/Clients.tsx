@@ -59,9 +59,7 @@ export default function Clients() {
       {/* Caroussel logos */}
       <div className="w-full grid place-items-center overflow-hidden lg:hidden">
         <div
-          className={`  ${
-            isMobile ? 'w-fit flex justify-between gap-2 items-center animate-carousel' : 'hidden'
-          }`}
+          className={`  ${isMobile ? 'w-fit flex justify-between gap-2 items-center' : 'hidden'}`}
         >
           {/* <!-- same 3 duplicate for Caroussel --> */}
           <Marquee>

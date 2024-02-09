@@ -11,42 +11,30 @@ import GrupoAxoLogo from '../../public/clientes/grupo_axo_logo.png'
 function LogosClientes() {
   return (
     <div className="flex gap-8 items-center mr-6">
-      <div className="w-24">
+      <div className="w-32 ">
         <Image alt="Iberostar Logo" src={IberostarLogo} />
       </div>
-      <div className="w-20 ">
-        <Image alt="Medix Logo" src={MedixLogo} />
+      <div className="w-32 ">
+        <Image alt="Medix Logo" objectFit="contain" src={MedixLogo} />
       </div>
-      <div className="w-32">
-        <Image
-          alt="Inspired e-Learning Logo"
-          className="object-contain w-full h-full"
-          src={IelLogo}
-        />
+      <div className="w-32 ">
+        <Image alt="Inspired e-Learning Logo" className=" w-full h-full" src={IelLogo} />
       </div>
       <div className=" brightness-0 invert">
         <VipreLogo className="text-9xl " />
       </div>
-      <div className="w-24 ">
-        <Image
-          alt="Meet me in the cloud Logo"
-          className="object-contain w-full h-full"
-          src={MeetmeLogo}
-        />
+      <div className="">
+        <Image alt="Meet me in the cloud Logo" src={MeetmeLogo} />
       </div>
 
-      <div className="w-36 h-fit ">
-        <Image
-          alt="Continental Logo"
-          className="object-contain w-full h-full"
-          src={ContinentalLogo}
-        />
+      <div className="w-32 ">
+        <Image alt="Continental Logo" className=" w-full h-full" src={ContinentalLogo} />
       </div>
       <div className="w-32 ">
-        <Image alt="Cinepolis Logo" className="object-contain w-full h-full" src={CinepolisLogo} />
+        <Image alt="Cinepolis Logo" className=" w-full h-full" src={CinepolisLogo} />
       </div>
-      <div className="w-24 h-fit ">
-        <Image alt="Grupo Axo Logo" className="object-contain w-full h-full" src={GrupoAxoLogo} />
+      <div className="w-32 ">
+        <Image alt="Grupo Axo Logo" className=" w-full h-full" src={GrupoAxoLogo} />
       </div>
     </div>
   )

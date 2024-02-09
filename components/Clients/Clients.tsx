@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Marquee from 'react-fast-marquee'
 
 import LogosClientes from './LogosClientes'
 
@@ -41,10 +42,16 @@ export default function Clients() {
             }`}
           >
             {/* <!-- same 3 duplicate for Caroussel --> */}
+
+            {/*  <LogosClientes />
             <LogosClientes />
-            <LogosClientes />
-            <LogosClientes />
+            <LogosClientes /> */}
           </div>
+          <Marquee>
+            <LogosClientes />
+            <LogosClientes />
+            <LogosClientes />
+          </Marquee>
         </div>
         {/* <LogosClientes /> */}
       </div>
@@ -57,9 +64,11 @@ export default function Clients() {
           }`}
         >
           {/* <!-- same 3 duplicate for Caroussel --> */}
-          <LogosClientes />
-          <LogosClientes />
-          <LogosClientes />
+          <Marquee>
+            <LogosClientes />
+            <LogosClientes />
+            <LogosClientes />
+          </Marquee>
         </div>
       </div>
     </section>

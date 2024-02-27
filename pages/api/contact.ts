@@ -55,6 +55,7 @@ export default withIronSessionApiRoute(
         Country,
         selectedIndexes
       })
+
       /* check wich image from the captcha are correct */
     } catch (error) {
       return res.status(400).json({ message: 'schema fail Bad request' })
@@ -90,7 +91,7 @@ export default withIronSessionApiRoute(
     })
 
     const mailOptions = {
-      from: process.env.MDC_EMAIL_USER,
+      from: Email as string,
       to: 'comercial@mexicodc.com',
       subject: `Forma de Contacto enviada por ${FirstName as string} ${LastName as string}`,
       html: `<h1>Nombre: ${FirstName as string} ${LastName as string}</h1>

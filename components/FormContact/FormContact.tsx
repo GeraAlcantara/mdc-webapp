@@ -234,7 +234,7 @@ function FormContact({ defaultCaptchaKey }: { defaultCaptchaKey: string }) {
                 className="p-2 w-full rounded-2xl border-slate-300 border-2"
                 id="Position"
                 name="Position"
-                placeholder="Escribe el nombre de tu empresa"
+                placeholder="Escribe tu puesto"
                 type="text"
                 value={values.Position}
                 onChange={onChange}

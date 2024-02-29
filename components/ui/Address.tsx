@@ -16,7 +16,7 @@ function Address() {
       <div className="flex flex-row flex-wrap lg:flex-col lg:flex-nowrap gap-4 lg:ml-5">
         <address>
           <h2 className="font-bold text-brandWhite">Palmeiras Business Center</h2>
-          <p>Oficina 4, Calle 11 Sur,</p>
+          <p>Oficina 3, Calle 11 Sur,</p>
           <p>Playa del Carmen</p>
           {/* <div className='text-accent flex items-center gap-2'>
             <MdLocationOn /> <span>Ubicación en Mapa</span>

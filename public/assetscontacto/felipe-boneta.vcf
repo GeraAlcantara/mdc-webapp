@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N;CHARSET=utf-8:Boneta;Felipe;;;
+ADR;INTL;PARCEL;WORK;CHARSET=utf-8:;;Palmeiras Business Center Oficina 3, 11 Sur Playa del Carmen, Q.Roo CP 77712
+EMAIL;PREF;INTERNET:felipe.boneta@mexicodc.com
+TEL;TYPE=CELL:+52 984 131 3964
+TEL;TYPE=WORK:+52 55 75 83 9925
+ORG;CHARSET=utf-8:México Development Center;
+FN;CHARSET=utf-8:Felipe Boneta
+PHOTO;VALUE=URL;TYPE=PNG:https://sitio.mexicodc.com/assetscontacto/felipe.png
+END:VCARD
